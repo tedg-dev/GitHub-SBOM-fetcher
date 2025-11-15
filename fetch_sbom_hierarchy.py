@@ -42,14 +42,18 @@ class GitHubAPIError(Exception):
 class GitHubSBOMFetcher:
     """Fetches SBOMs from GitHub repositories."""
 
-    def __init__(self, github_token: str):
-        """Initialize the GitHub SBOM fetcher."""
-        self.github_token = github_token
+    def __init__(self, token: str):
+        """Initialize the GitHub SBOM fetcher.
+        
+        Args:
+            token: GitHub personal access token
+        """
+        self.token = token
         self.session = requests.Session()
         self.session.headers.update({
-            "Authorization": f"token {github_token}",
-            "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "SBOM-Fetcher/1.0"
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28"
         })
         self.rate_limit_remaining = 5000
         self.rate_limit_reset = 0
@@ -330,7 +334,7 @@ class GitHubSBOMFetcher:
             raise GitHubAPIError("Failed to parse repository data") from e
 
 
-def main() -> int:
+def main(argv: Optional[List[str]] = None) -> int:
     """Main function to fetch and process SBOMs from GitHub repositories.
 
     This script will:
@@ -349,7 +353,7 @@ def main() -> int:
     parser.add_argument("--debug", action="store_true",
                       help="Enable debug logging")
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
 
     # Configure logging
     log_level = logging.DEBUG if args.debug else logging.INFO
