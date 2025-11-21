@@ -77,8 +77,19 @@ else
 fi
 
 # Activate the virtual environment
-echo -e "\n🚀 Activating virtual environment..."
-source venv/bin/activate || error "Failed to activate virtual environment"
+if [[ -n "$VIRTUAL_ENV" ]]; then
+  echo "Virtual environment is active: $VIRTUAL_ENV"
+else
+  echo -e "\n🚀 Activating virtual environment..."
+  source venv/bin/activate || error "Failed to activate virtual environment"
+fi
+
+# ==== THIS SECTION WAS FOR TESTING  ====
+echo "VIRTUAL_ENV = " $VIRTUAL_ENV
+# source deactivate
+# source venv/bin/activate
+# echo "VIRTUAL_ENV = " $VIRTUAL_ENV
+
 
 # Upgrade pip to the latest version
 echo -e "\n🔄 Upgrading pip..."
@@ -97,23 +108,44 @@ if [ -f "requirements.txt" ]; then
 else
     error "requirements.txt not found. Please ensure you're in the project root directory"
 fi
+
+# Install development dependencies if requirements-dev.txt exists
+if [ -f "requirements-dev.txt" ]; then
+    echo -e "\n📦 Installing development dependencies..."
+    pip install -r requirements-dev.txt || warning "Failed to install some development dependencies"
+    echo "✅ Development dependencies installed"
+fi
 # =============================================
 # Post-Installation Checks
 # =============================================
 section "Running Post-Installation Checks"
 
-# Check for key.json
+# Check for keys.json
 echo "🔑 Checking for GitHub credentials..."
-if [ ! -f "key.json" ]; then
-    warning "key.json not found. You'll need to create this file with your GitHub credentials."
-    echo "Create a key.json file with the following format:"
+if [ ! -f "keys.json" ]; then
+    warning "keys.json not found. You'll need to create this file with your GitHub credentials."
+    echo "Create a keys.json file with the following format:"
     echo '{
   "github_token": "your_github_token_here"
 }'
     echo -e "\nYou can create a GitHub personal access token at: https://github.com/settings/tokens"
     echo "Make sure to give it 'repo' scope permissions."
 else
-    echo "✅ Found key.json"
+    echo "✅ Found keys.json"
+fi
+
+# =============================================
+# Run Tests (if requested)
+# =============================================
+if [ "$1" = "--test" ]; then
+    section "Running Tests"
+    if [ -f "pytest.ini" ] && [ -d "tests" ]; then
+        echo "🧪 Running tests with pytest..."
+        PYTHONPATH=$PYTHONPATH:. pytest tests/ -v || warning "Some tests failed"
+    else
+        warning "Test files not found. Skipping tests."
+    fi
+    exit 0
 fi
 
 # =============================================
@@ -122,8 +154,8 @@ fi
 if [ "$1" = "--run" ]; then
     section "Running SBOM Fetcher"
     if [ -f "fetch_sbom_hierarchy.py" ]; then
-        if [ ! -f "key.json" ]; then
-            warning "key.json not found. Running in dry-run mode..."
+        if [ ! -f "keys.json" ]; then
+            warning "keys.json not found. Running in dry-run mode..."
             python fetch_sbom_hierarchy.py --dry-run
         else
             python fetch_sbom_hierarchy.py --debug
@@ -141,14 +173,21 @@ section "Setup Complete! 🎉"
 echo -e "${GREEN}✅ Environment is ready!${NC}"
 echo -e "\nNext steps:"
 echo "1. Activate the virtual environment:"
-echo "   ${YELLOW}source venv/bin/activate${NC}"
-echo -e "\n2. Run the SBOM fetcher:"
-echo "   ${YELLOW}python fetch_sbom_hierarchy.py [options]${NC}"
-echo -e "\n   Example (analyze a specific repository):"
-echo "   ${YELLOW}python fetch_sbom_hierarchy.py --repo owner/repo${NC}"
-echo -e "\n   For help with all options:"
-echo "   ${YELLOW}python fetch_sbom_hierarchy.py --help${NC}"
+echo "   source venv/bin/activate"
+echo -e "\n2. Run one of the SBOM fetchers:"
+echo -e "\n   ${GREEN}a) Hierarchy fetcher (fetch entire dependency tree):${NC}"
+echo "      python fetch_sbom_hierarchy.py --repo owner/repo"
+echo -e "\n   ${GREEN}b) Scraper (match GitHub Dependency Graph UI):${NC}"
+echo "      python github_sbom_scraper.py --gh-user owner --gh-repo repo"
+echo -e "\n   For help with options:"
+echo "      python fetch_sbom_hierarchy.py --help"
+echo "      python github_sbom_scraper.py --help"
 
-echo -e "\n💡 ${YELLOW}Tip:${NC} Run ${YELLOW}./setup_environment.sh --run${NC} to set up and run immediately\n"
+echo -e "\n💡 Tips:"
+echo "   - Run ./setup_environment.sh --run to set up and run immediately"
+echo "   - Run ./setup_environment.sh --test to run tests"
+echo "   - The scraper includes rate limit handling and progress resumption"
+echo "   - Use --debug flag for detailed logging"
+echo "   - Run PYTHONPATH=\$PYTHONPATH:. pytest tests/ -v to run tests with more options\n"
 
-exit 0
+# exit 0
