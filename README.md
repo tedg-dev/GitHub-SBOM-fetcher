@@ -1,28 +1,49 @@
-# GitHub SBOM Fetcher
+# GitHub SBOM Scraper & Fetcher
 
-Fetches Dependency Graph SBOMs for repositories from GitHub. Includes two tools:
+Tools for extracting and downloading Software Bill of Materials (SBOM) from GitHub repositories.
 
-1. **`fetch_sbom.py`** - Fetches SBOMs for all repos accessible by your GitHub account(s)
-2. **`github_sbom_scraper.py`** - Scrapes a specific repo's dependency graph and downloads all dependency SBOMs
+## Primary Tool: github_sbom_scraper.py
 
-## Features
+**Scrapes a repository's dependency graph and downloads SBOMs for all dependencies**
 
-### fetch_sbom.py
-- Multi-account support via a single `keys.json` (or single-account format).
-- Lists all accessible repos using `/user/repos` with affiliation.
-- Saves SBOM JSON as `owner-repo-sbom.json`.
-- Handles rate limits and common SBOM response cases (200 saved, 202/403/404 skipped).
-- Optional archived repos inclusion.
-- VS Code run/debug and testing integration (pytest).
+Perfect for security audits, vulnerability scanning, and dependency analysis. Matches the GitHub UI dependency graph with 97%+ accuracy.
 
-### github_sbom_scraper.py
-- Scrapes GitHub dependency graph pages to extract all dependencies
-- Downloads SBOM for each discovered dependency
-- Supports full semantic versioning (X.Y.Z-prerelease+build)
-- Progress tracking with resume capability for interrupted runs
-- Automatic pagination across all dependency graph pages
-- Detailed reporting of repositories with multiple versions
-- 97%+ capture rate of dependencies shown in GitHub UI
+### Key Features
+- 🔍 **Comprehensive Scraping** - Extracts all dependencies from GitHub dependency graph pages
+- 📦 **Complete SBOM Collection** - Downloads SBOM for root repo + all discovered dependencies
+- 🔄 **Smart Version Handling** - Supports full semantic versioning (X.Y.Z-prerelease+build)
+- 💾 **Resume Capability** - Progress tracking with ability to resume interrupted runs
+- 📊 **Detailed Reporting** - Shows repositories with multiple versions and missing entries
+- ⚡ **Rate Limit Handling** - Automatic retry logic with intelligent wait times
+- 🎯 **97%+ Capture Rate** - Extracts nearly all dependencies shown in GitHub UI
+
+### Quick Start
+```bash
+# Basic usage
+python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot
+
+# With debug output
+python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot --debug
+
+# Resume interrupted run
+python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot --resume sboms/sbom_export_2025-11-20_14.06.39
+```
+
+📖 **Full documentation:** [github_sbom_scraper_README.md](github_sbom_scraper_README.md)
+
+---
+
+## Secondary Tool: fetch_sbom.py
+
+**Fetches SBOMs for all repositories accessible by your GitHub account(s)**
+
+Useful for organization-wide SBOM collection across multiple repositories.
+
+### Features
+- Multi-account support via `keys.json`
+- Lists all accessible repos using `/user/repos`
+- Optional archived repos inclusion
+- VS Code integration and pytest support
 
 ## Requirements
 - Python 3.9+
@@ -61,54 +82,69 @@ Use `key.sample.json` in this repo as a template. Ensure `keys.json` is in `.git
 
 ## Usage
 
-### fetch_sbom.py
-Save SBOMs for all accounts in `keys.json`:
+### github_sbom_scraper.py (Recommended)
+
+**Basic usage** - Scrape and download all dependency SBOMs:
 ```bash
-python fetch_sbom.py --key-file keys.json --output-dir sboms
+python github_sbom_scraper.py --gh-user <owner> --gh-repo <repo>
 ```
 
-Only for a specific account (by username/login):
-```bash
-python fetch_sbom.py --key-file keys.json --account acct2 --output-dir sboms
-```
-
-Include archived repos:
-```bash
-python fetch_sbom.py --key-file keys.json --include-archived --output-dir sboms
-```
-
-Output files: `owner-repo-sbom.json` inside the chosen output dir.
-
-### github_sbom_scraper.py
-Scrape dependencies and download SBOMs for a specific repository:
+**Example:**
 ```bash
 python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot
 ```
 
-With debug output for troubleshooting:
+**Common options:**
 ```bash
+# Debug mode - see detailed extraction logs
 python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot --debug
+
+# Resume interrupted run
+python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot --resume sboms/sbom_export_2025-11-20_14.06.39
+
+# Custom output directory
+python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot --output-base-dir ./my_sboms
 ```
 
-Resume a previous interrupted run:
-```bash
-python github_sbom_scraper.py --gh-user tedg-dev --gh-repo beatBot --resume <export_dir>
-```
-
-Output structure:
+**Output structure:**
 ```
 sboms/
   sbom_export_2025-11-20_14.06.39/
     tedg-dev_beatBot/
       tedg-dev_beatBot_root.json          # Root repository SBOM
-      dependencies/                        # Dependency SBOMs
-        owner_repo_version.json
+      dependencies/                        # Dependency SBOMs (166+ files)
+        babel_babel_7.0.0-beta.19.json
+        lodash_lodash_4.17.5.json
         ...
-      errors/                              # Error logs
-      progress.json                        # Progress tracking file
+      errors/                              # Error logs (if any)
+        owner_repo_version_error.txt
+      progress.json                        # Progress tracking
 ```
 
-See [github_sbom_scraper_README.md](github_sbom_scraper_README.md) for detailed documentation.
+**What you get:**
+- ✅ Root repository SBOM
+- ✅ All dependency SBOMs (typically 150-200+ files)
+- ✅ Version information for each dependency
+- ✅ Progress tracking for resumable runs
+- ✅ Error logs for dependencies with issues
+
+📖 **See [github_sbom_scraper_README.md](github_sbom_scraper_README.md) for detailed documentation**
+
+---
+
+### fetch_sbom.py (For Multi-Repo Collection)
+
+**Save SBOMs for all accessible repos:**
+```bash
+python fetch_sbom.py --key-file keys.json --output-dir sboms
+```
+
+**For specific account:**
+```bash
+python fetch_sbom.py --key-file keys.json --account acct2 --output-dir sboms
+```
+
+Output: `owner-repo-sbom.json` files in the output directory.
 
 ## VS Code
 - Run/Debug: use the provided `.vscode/launch.json` ("Run fetch_sbom.py").
@@ -149,21 +185,38 @@ PYTHONPATH=$PYTHONPATH:. pytest tests/ -v
 
 ## Troubleshooting
 
-### fetch_sbom.py
-- 401/403 on token validation: token scope or repo access missing.
-- 422 listing error: we avoid incompatible `type` with `affiliation` (fixed). If you still see 422, check inputs.
-- Skipped repos: SBOM 202 (not ready) or Dependency Graph disabled.
-- Rate limits: script sleeps until reset when needed.
-- "Not found" errors for npm dependencies: The fallback mechanism should handle these automatically.
-
 ### github_sbom_scraper.py
-- **Missing dependencies**: GitHub UI shows 229 but scraper finds 223 (~97%)
-  - Expected due to JavaScript-loaded content not in static HTML
-  - Some npm packages may not have public GitHub repos
-- **404 errors**: "Dependency graph likely not enabled" - repository has dependency graph disabled
-- **Rate limits**: Script automatically handles rate limiting with wait/retry
-- **Incomplete runs**: Use `--resume <dir>` to continue from last progress
-- **Low capture rate**: Use `--debug` to see detailed extraction logs per page
+
+**Missing dependencies** (GitHub UI shows more than scraper finds)
+- Expected: ~97% capture rate due to JavaScript-loaded content
+- Some npm packages don't have public GitHub repos
+- Use `--debug` to see detailed extraction logs per page
+
+**404 errors: "Dependency graph likely not enabled"**
+- The repository has dependency graph disabled
+- Check: https://github.com/owner/repo/network/dependencies
+
+**Rate limits**
+- Script automatically handles rate limiting with wait/retry
+- If rate limited, it will pause and resume automatically
+
+**Incomplete/interrupted runs**
+- Use `--resume <dir>` to continue from where it stopped
+- Example: `--resume sboms/sbom_export_2025-11-20_14.06.39`
+
+**Low extraction count**
+- Verify you're scraping the correct repository
+- Check if dependency graph is enabled
+- Use `--debug` to see what's being extracted vs skipped
+
+---
+
+### fetch_sbom.py
+
+- **401/403**: Token scope or repo access missing
+- **422 error**: Check input parameters  
+- **Skipped repos**: SBOM not ready (202) or dependency graph disabled
+- **Rate limits**: Script sleeps until reset automatically
 
 ## Security
 - `keys.json` contains secrets. Do not commit it. Use `key.sample.json` as a template.
