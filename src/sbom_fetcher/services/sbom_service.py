@@ -98,7 +98,7 @@ class SBOMFetcherService:
         logger.info("STEP 2: Parsing Dependency Packages")
         logger.info("=" * 70)
 
-        packages = self._parser.extract_packages(sbom_data)
+        packages = self._parser.extract_packages(sbom_data, owner, repo)
         stats.packages_in_sbom = len(packages)
 
         if not packages:

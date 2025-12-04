@@ -77,15 +77,21 @@ class SBOMParser:
         self._purl_parser = PURLParser()
         self._logger = logging.getLogger(__name__)
 
-    def extract_packages(self, sbom_data: Dict[str, Any]) -> List[PackageDependency]:
+    def extract_packages(
+        self, sbom_data: Dict[str, Any], owner: str = "", repo: str = ""
+    ) -> List[PackageDependency]:
         """
         Extract package dependencies from SBOM data.
 
+        Excludes the root repository package (a repo cannot be a dependency of itself).
+
         Args:
             sbom_data: Full SBOM response from GitHub API
+            owner: Repository owner (to filter out root package)
+            repo: Repository name (to filter out root package)
 
         Returns:
-            List of PackageDependency objects
+            List of PackageDependency objects (excluding root repository)
 
         Raises:
             ValidationError: If SBOM structure is invalid
@@ -98,6 +104,9 @@ class SBOMParser:
         package_list = sbom.get("packages", [])
 
         self._logger.info(f"Parsing SBOM with {len(package_list)} packages...")
+
+        # Track root package for filtering
+        root_purl = f"pkg:github/{owner}/{repo}" if owner and repo else None
 
         for pkg in package_list:
             if pkg.get("SPDXID") == "SPDXRef-DOCUMENT":
@@ -115,6 +124,11 @@ class SBOMParser:
 
             if not purl:
                 self._logger.debug(f"No purl for package: {name}")
+                continue
+
+            # Skip root repository package (cannot be a dependency of itself)
+            if root_purl and purl.startswith(root_purl):
+                self._logger.debug(f"Skipping root repository package: {name}")
                 continue
 
             ecosystem, parsed_name, parsed_version = self._purl_parser.parse(purl)
