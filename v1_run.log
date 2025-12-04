@@ -1,0 +1,1136 @@
+2025-12-04 12:28:44 - INFO - Loading GitHub token...
+2025-12-04 12:28:44 - INFO - Output directory: ./comparison_outputs_v1/sbom_api_export_2025-12-04_12.28.44/tedg-dev_beatBot
+2025-12-04 12:28:44 - INFO - 
+======================================================================
+2025-12-04 12:28:44 - INFO - STEP 1: Fetching Root SBOM
+2025-12-04 12:28:44 - INFO - ======================================================================
+2025-12-04 12:28:44 - INFO - Fetching root SBOM: tedg-dev/beatBot
+2025-12-04 12:28:44 - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-12-04 12:28:45 - DEBUG - https://api.github.com:443 "GET /repos/tedg-dev/beatBot/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:28:45 - INFO - ✅ Root SBOM fetched successfully
+2025-12-04 12:28:45 - INFO - Saved root SBOM: tedg-dev_beatBot_root.json
+2025-12-04 12:28:45 - INFO - 
+======================================================================
+2025-12-04 12:28:45 - INFO - STEP 2: Parsing Dependency Packages
+2025-12-04 12:28:45 - INFO - ======================================================================
+2025-12-04 12:28:45 - INFO - Parsing SBOM packages...
+2025-12-04 12:28:45 - INFO - Found 230 packages in SBOM
+2025-12-04 12:28:45 - INFO - 
+======================================================================
+2025-12-04 12:28:45 - INFO - STEP 3: Mapping Packages to GitHub Repositories
+2025-12-04 12:28:45 - INFO - ======================================================================
+2025-12-04 12:28:45 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:45 - DEBUG - https://registry.npmjs.org:443 "GET /gauge HTTP/1.1" 200 None
+2025-12-04 12:28:46 - DEBUG - Mapped gauge → npm/gauge
+2025-12-04 12:28:46 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:46 - DEBUG - https://registry.npmjs.org:443 "GET /glob HTTP/1.1" 200 None
+2025-12-04 12:28:46 - DEBUG - Mapped glob → isaacs/node-glob
+2025-12-04 12:28:46 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:46 - DEBUG - https://registry.npmjs.org:443 "GET /ecc-jsbn HTTP/1.1" 200 None
+2025-12-04 12:28:46 - DEBUG - Mapped ecc-jsbn → quartzjer/ecc-jsbn
+2025-12-04 12:28:46 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:46 - DEBUG - https://registry.npmjs.org:443 "GET /underscore.string HTTP/1.1" 200 None
+2025-12-04 12:28:46 - DEBUG - Mapped underscore.string → epeli/underscore.string
+2025-12-04 12:28:46 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:47 - DEBUG - https://registry.npmjs.org:443 "GET /har-schema HTTP/1.1" 200 None
+2025-12-04 12:28:47 - DEBUG - Mapped har-schema → ahmadnassri/har-schema
+2025-12-04 12:28:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:47 - DEBUG - https://registry.npmjs.org:443 "GET /async HTTP/1.1" 200 None
+2025-12-04 12:28:47 - DEBUG - Mapped async → caolan/async
+2025-12-04 12:28:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:47 - DEBUG - https://registry.npmjs.org:443 "GET /which HTTP/1.1" 200 None
+2025-12-04 12:28:47 - DEBUG - Mapped which → npm/node-which
+2025-12-04 12:28:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:48 - DEBUG - https://registry.npmjs.org:443 "GET /path-is-absolute HTTP/1.1" 200 None
+2025-12-04 12:28:48 - DEBUG - Mapped path-is-absolute → sindresorhus/path-is-absolute
+2025-12-04 12:28:48 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:48 - DEBUG - https://registry.npmjs.org:443 "GET /taffydb HTTP/1.1" 200 None
+2025-12-04 12:28:48 - DEBUG - Mapped taffydb → typicaljoe/taffydb
+2025-12-04 12:28:48 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:49 - DEBUG - https://registry.npmjs.org:443 "GET /grunt-legacy-log-utils HTTP/1.1" 200 None
+2025-12-04 12:28:49 - DEBUG - Mapped grunt-legacy-log-utils → gruntjs/grunt-legacy-log-utils
+2025-12-04 12:28:49 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:50 - DEBUG - https://registry.npmjs.org:443 "GET /sntp HTTP/1.1" 200 None
+2025-12-04 12:28:50 - DEBUG - Mapped sntp → hueniverse/sntp
+2025-12-04 12:28:50 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:51 - DEBUG - https://registry.npmjs.org:443 "GET /tunnel-agent HTTP/1.1" 200 None
+2025-12-04 12:28:51 - DEBUG - Mapped tunnel-agent → mikeal/tunnel-agent
+2025-12-04 12:28:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:51 - DEBUG - https://registry.npmjs.org:443 "GET /jsbn HTTP/1.1" 200 None
+2025-12-04 12:28:51 - DEBUG - Mapped jsbn → andyperlitch/jsbn
+2025-12-04 12:28:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:51 - DEBUG - https://registry.npmjs.org:443 "GET /caseless HTTP/1.1" 200 None
+2025-12-04 12:28:51 - DEBUG - Mapped caseless → mikeal/caseless
+2025-12-04 12:28:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:52 - DEBUG - https://registry.npmjs.org:443 "GET /brace-expansion HTTP/1.1" 200 None
+2025-12-04 12:28:52 - DEBUG - Mapped brace-expansion → juliangruber/brace-expansion
+2025-12-04 12:28:52 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:52 - DEBUG - https://registry.npmjs.org:443 "GET /nan HTTP/1.1" 200 None
+2025-12-04 12:28:52 - DEBUG - Mapped nan → nodejs/nan
+2025-12-04 12:28:52 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:52 - DEBUG - https://registry.npmjs.org:443 "GET /which HTTP/1.1" 200 None
+2025-12-04 12:28:52 - DEBUG - Mapped which → npm/node-which
+2025-12-04 12:28:52 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:53 - DEBUG - https://registry.npmjs.org:443 "GET /isarray HTTP/1.1" 200 None
+2025-12-04 12:28:53 - DEBUG - Mapped isarray → juliangruber/isarray
+2025-12-04 12:28:53 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:53 - DEBUG - https://registry.npmjs.org:443 "GET /bcrypt-pbkdf HTTP/1.1" 200 None
+2025-12-04 12:28:53 - DEBUG - Mapped bcrypt-pbkdf → joyent/node-bcrypt-pbkdf
+2025-12-04 12:28:53 - INFO - Mapping progress: 20/230
+2025-12-04 12:28:53 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:53 - DEBUG - https://registry.npmjs.org:443 "GET /tweetnacl HTTP/1.1" 200 None
+2025-12-04 12:28:53 - DEBUG - Mapped tweetnacl → dchest/tweetnacl-js
+2025-12-04 12:28:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:54 - DEBUG - https://registry.npmjs.org:443 "GET /fs.realpath HTTP/1.1" 200 None
+2025-12-04 12:28:54 - DEBUG - Mapped fs.realpath → isaacs/fs.realpath
+2025-12-04 12:28:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:54 - DEBUG - https://registry.npmjs.org:443 "GET /@ffmpeg-installer/ffmpeg HTTP/1.1" 200 None
+2025-12-04 12:28:54 - DEBUG - Mapped @ffmpeg-installer/ffmpeg → kribblo/node-ffmpeg-installer
+2025-12-04 12:28:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:55 - DEBUG - https://registry.npmjs.org:443 "GET /lodash.padstart HTTP/1.1" 200 None
+2025-12-04 12:28:55 - DEBUG - Mapped lodash.padstart → lodash/lodash
+2025-12-04 12:28:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:55 - DEBUG - https://registry.npmjs.org:443 "GET /domutils HTTP/1.1" 200 None
+2025-12-04 12:28:55 - DEBUG - Mapped domutils → fb55/domutils
+2025-12-04 12:28:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:55 - DEBUG - https://registry.npmjs.org:443 "GET /miniget HTTP/1.1" 200 None
+2025-12-04 12:28:55 - DEBUG - Mapped miniget → fent/node-miniget
+2025-12-04 12:28:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:55 - DEBUG - https://registry.npmjs.org:443 "GET /json-schema-traverse HTTP/1.1" 200 None
+2025-12-04 12:28:55 - DEBUG - Mapped json-schema-traverse → epoberezkin/json-schema-traverse
+2025-12-04 12:28:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:55 - DEBUG - https://registry.npmjs.org:443 "GET /grunt-jsdoc HTTP/1.1" 200 None
+2025-12-04 12:28:55 - DEBUG - Mapped grunt-jsdoc → krampstudio/grunt-jsdoc
+2025-12-04 12:28:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:56 - DEBUG - https://registry.npmjs.org:443 "GET /qs HTTP/1.1" 200 None
+2025-12-04 12:28:56 - DEBUG - Mapped qs → ljharb/qs
+2025-12-04 12:28:56 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:56 - DEBUG - https://registry.npmjs.org:443 "GET /hoek HTTP/1.1" 200 None
+2025-12-04 12:28:56 - DEBUG - Mapped hoek → hapijs/hoek
+2025-12-04 12:28:56 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:56 - DEBUG - https://registry.npmjs.org:443 "GET /aws-sign2 HTTP/1.1" 200 None
+2025-12-04 12:28:56 - DEBUG - Mapped aws-sign2 → mikeal/aws-sign
+2025-12-04 12:28:57 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:57 - DEBUG - https://registry.npmjs.org:443 "GET /domelementtype HTTP/1.1" 200 None
+2025-12-04 12:28:57 - DEBUG - Mapped domelementtype → fb55/domelementtype
+2025-12-04 12:28:57 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:57 - DEBUG - https://registry.npmjs.org:443 "GET /grunt-cli HTTP/1.1" 200 None
+2025-12-04 12:28:57 - DEBUG - Mapped grunt-cli → gruntjs/grunt-cli
+2025-12-04 12:28:57 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:58 - DEBUG - https://registry.npmjs.org:443 "GET /graceful-fs HTTP/1.1" 200 None
+2025-12-04 12:28:58 - DEBUG - Mapped graceful-fs → isaacs/node-graceful-fs
+2025-12-04 12:28:58 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:58 - DEBUG - https://registry.npmjs.org:443 "GET /verror HTTP/1.1" 200 None
+2025-12-04 12:28:58 - DEBUG - Mapped verror → joyent/node-verror
+2025-12-04 12:28:58 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:58 - DEBUG - https://registry.npmjs.org:443 "GET /wrappy HTTP/1.1" 200 None
+2025-12-04 12:28:59 - DEBUG - Mapped wrappy → npm/wrappy
+2025-12-04 12:28:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:59 - DEBUG - https://registry.npmjs.org:443 "GET /pkginfo HTTP/1.1" 200 None
+2025-12-04 12:28:59 - DEBUG - Mapped pkginfo → indexzero/node-pkginfo
+2025-12-04 12:28:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:59 - DEBUG - https://registry.npmjs.org:443 "GET /lame HTTP/1.1" 200 None
+2025-12-04 12:28:59 - DEBUG - Mapped lame → tootallnate/node-lame
+2025-12-04 12:28:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:28:59 - DEBUG - https://registry.npmjs.org:443 "GET /combined-stream HTTP/1.1" 200 None
+2025-12-04 12:28:59 - DEBUG - Mapped combined-stream → felixge/node-combined-stream
+2025-12-04 12:28:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:00 - DEBUG - https://registry.npmjs.org:443 "GET /string_decoder HTTP/1.1" 200 None
+2025-12-04 12:29:00 - DEBUG - Mapped string_decoder → nodejs/string_decoder
+2025-12-04 12:29:00 - INFO - Mapping progress: 40/230
+2025-12-04 12:29:00 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:00 - DEBUG - https://registry.npmjs.org:443 "GET /eventemitter2 HTTP/1.1" 200 None
+2025-12-04 12:29:00 - DEBUG - Mapped eventemitter2 → hij1nx/eventemitter2
+2025-12-04 12:29:00 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:01 - DEBUG - https://registry.npmjs.org:443 "GET /sigmund HTTP/1.1" 200 None
+2025-12-04 12:29:01 - DEBUG - Mapped sigmund → isaacs/sigmund
+2025-12-04 12:29:01 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:01 - DEBUG - https://registry.npmjs.org:443 "GET /forever-agent HTTP/1.1" 200 None
+2025-12-04 12:29:01 - DEBUG - Mapped forever-agent → mikeal/forever-agent
+2025-12-04 12:29:01 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:01 - DEBUG - https://registry.npmjs.org:443 "GET /util-deprecate HTTP/1.1" 200 None
+2025-12-04 12:29:01 - DEBUG - Mapped util-deprecate → tootallnate/util-deprecate
+2025-12-04 12:29:01 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:02 - DEBUG - https://registry.npmjs.org:443 "GET /vlc-player HTTP/1.1" 200 None
+2025-12-04 12:29:02 - DEBUG - Mapped vlc-player → 131/node-vlc-player
+2025-12-04 12:29:02 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:02 - DEBUG - https://registry.npmjs.org:443 "GET /mkdirp HTTP/1.1" 200 None
+2025-12-04 12:29:02 - DEBUG - Mapped mkdirp → isaacs/node-mkdirp
+2025-12-04 12:29:02 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:02 - DEBUG - https://registry.npmjs.org:443 "GET /extsprintf HTTP/1.1" 200 None
+2025-12-04 12:29:02 - DEBUG - Mapped extsprintf → davepacheco/node-extsprintf
+2025-12-04 12:29:02 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:03 - DEBUG - https://registry.npmjs.org:443 "GET /dom-serializer HTTP/1.1" 200 None
+2025-12-04 12:29:03 - DEBUG - Mapped dom-serializer → cheeriojs/dom-serializer
+2025-12-04 12:29:03 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:03 - DEBUG - https://registry.npmjs.org:443 "GET /cheerio HTTP/1.1" 200 None
+2025-12-04 12:29:03 - DEBUG - Mapped cheerio → cheeriojs/cheerio
+2025-12-04 12:29:03 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:03 - DEBUG - https://registry.npmjs.org:443 "GET /performance-now HTTP/1.1" 200 None
+2025-12-04 12:29:03 - DEBUG - Mapped performance-now → braveg1rl/performance-now
+2025-12-04 12:29:03 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:04 - DEBUG - https://registry.npmjs.org:443 "GET /getpass HTTP/1.1" 200 None
+2025-12-04 12:29:04 - DEBUG - Mapped getpass → arekinath/node-getpass
+2025-12-04 12:29:04 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:05 - DEBUG - https://registry.npmjs.org:443 "GET /sshpk HTTP/1.1" 200 None
+2025-12-04 12:29:05 - DEBUG - Mapped sshpk → joyent/node-sshpk
+2025-12-04 12:29:05 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:05 - DEBUG - https://registry.npmjs.org:443 "GET /request HTTP/1.1" 200 None
+2025-12-04 12:29:06 - DEBUG - Mapped request → request/request
+2025-12-04 12:29:06 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:06 - DEBUG - https://registry.npmjs.org:443 "GET /http-signature HTTP/1.1" 200 None
+2025-12-04 12:29:06 - DEBUG - Mapped http-signature → tritondatacenter/node-http-signature
+2025-12-04 12:29:06 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:07 - DEBUG - https://registry.npmjs.org:443 "GET /@ffmpeg-installer/linux-ia32 HTTP/1.1" 200 None
+2025-12-04 12:29:07 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:07 - DEBUG - https://registry.npmjs.org:443 "GET /lodash HTTP/1.1" 200 None
+2025-12-04 12:29:07 - DEBUG - Mapped lodash → lodash/lodash
+2025-12-04 12:29:07 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:07 - DEBUG - https://registry.npmjs.org:443 "GET /boom HTTP/1.1" 200 None
+2025-12-04 12:29:07 - DEBUG - Mapped boom → hapijs/boom
+2025-12-04 12:29:07 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:08 - DEBUG - https://registry.npmjs.org:443 "GET /graceful-fs HTTP/1.1" 200 None
+2025-12-04 12:29:08 - DEBUG - Mapped graceful-fs → isaacs/node-graceful-fs
+2025-12-04 12:29:08 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:08 - DEBUG - https://registry.npmjs.org:443 "GET /asn1 HTTP/1.1" 200 None
+2025-12-04 12:29:08 - DEBUG - Mapped asn1 → joyent/node-asn1
+2025-12-04 12:29:08 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:08 - DEBUG - https://registry.npmjs.org:443 "GET /jsprim HTTP/1.1" 200 None
+2025-12-04 12:29:08 - DEBUG - Mapped jsprim → joyent/node-jsprim
+2025-12-04 12:29:08 - INFO - Mapping progress: 60/230
+2025-12-04 12:29:08 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:09 - DEBUG - https://registry.npmjs.org:443 "GET /inherits HTTP/1.1" 200 None
+2025-12-04 12:29:09 - DEBUG - Mapped inherits → isaacs/inherits
+2025-12-04 12:29:09 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:09 - DEBUG - https://registry.npmjs.org:443 "GET /lru-cache HTTP/1.1" 200 None
+2025-12-04 12:29:09 - DEBUG - Mapped lru-cache → isaacs/node-lru-cache
+2025-12-04 12:29:09 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:10 - DEBUG - https://registry.npmjs.org:443 "GET /rimraf HTTP/1.1" 200 None
+2025-12-04 12:29:10 - DEBUG - Mapped rimraf → isaacs/rimraf
+2025-12-04 12:29:10 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:10 - DEBUG - https://registry.npmjs.org:443 "GET /cycle HTTP/1.1" 200 None
+2025-12-04 12:29:10 - DEBUG - Mapped cycle → dscape/cycle
+2025-12-04 12:29:10 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:11 - DEBUG - https://registry.npmjs.org:443 "GET /domhandler HTTP/1.1" 200 None
+2025-12-04 12:29:11 - DEBUG - Mapped domhandler → fb55/domhandler
+2025-12-04 12:29:11 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:11 - DEBUG - https://registry.npmjs.org:443 "GET /isexe HTTP/1.1" 200 None
+2025-12-04 12:29:11 - DEBUG - Mapped isexe → isaacs/isexe
+2025-12-04 12:29:11 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:12 - DEBUG - https://registry.npmjs.org:443 "GET /prompt HTTP/1.1" 200 None
+2025-12-04 12:29:12 - DEBUG - Mapped prompt → flatiron/prompt
+2025-12-04 12:29:12 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:12 - DEBUG - https://registry.npmjs.org:443 "GET /entities HTTP/1.1" 200 None
+2025-12-04 12:29:12 - DEBUG - Mapped entities → fb55/entities
+2025-12-04 12:29:12 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:13 - DEBUG - https://registry.npmjs.org:443 "GET /readable-stream HTTP/1.1" 200 None
+2025-12-04 12:29:13 - DEBUG - Mapped readable-stream → nodejs/readable-stream
+2025-12-04 12:29:13 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:13 - DEBUG - https://registry.npmjs.org:443 "GET /async HTTP/1.1" 200 None
+2025-12-04 12:29:13 - DEBUG - Mapped async → caolan/async
+2025-12-04 12:29:13 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:14 - DEBUG - https://registry.npmjs.org:443 "GET /ctype HTTP/1.1" 200 None
+2025-12-04 12:29:14 - DEBUG - Mapped ctype → rmustacc/node-ctype
+2025-12-04 12:29:14 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:15 - DEBUG - https://registry.npmjs.org:443 "GET /boolbase HTTP/1.1" 200 None
+2025-12-04 12:29:15 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:15 - DEBUG - https://registry.npmjs.org:443 "GET /balanced-match HTTP/1.1" 200 None
+2025-12-04 12:29:15 - DEBUG - Mapped balanced-match → juliangruber/balanced-match
+2025-12-04 12:29:15 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:15 - DEBUG - https://registry.npmjs.org:443 "GET /colors HTTP/1.1" 200 None
+2025-12-04 12:29:15 - DEBUG - Mapped colors → marak/colors.js
+2025-12-04 12:29:15 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:16 - DEBUG - https://registry.npmjs.org:443 "GET /forever-agent HTTP/1.1" 200 None
+2025-12-04 12:29:16 - DEBUG - Mapped forever-agent → mikeal/forever-agent
+2025-12-04 12:29:16 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:16 - DEBUG - https://registry.npmjs.org:443 "GET /esprima HTTP/1.1" 200 None
+2025-12-04 12:29:16 - DEBUG - Mapped esprima → jquery/esprima
+2025-12-04 12:29:16 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:16 - DEBUG - https://registry.npmjs.org:443 "GET /underscore HTTP/1.1" 200 None
+2025-12-04 12:29:17 - DEBUG - Mapped underscore → jashkenas/underscore
+2025-12-04 12:29:17 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:17 - DEBUG - https://registry.npmjs.org:443 "GET /form-data HTTP/1.1" 200 None
+2025-12-04 12:29:17 - DEBUG - Mapped form-data → form-data/form-data
+2025-12-04 12:29:17 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:17 - DEBUG - https://registry.npmjs.org:443 "GET /glob HTTP/1.1" 200 None
+2025-12-04 12:29:17 - DEBUG - Mapped glob → isaacs/node-glob
+2025-12-04 12:29:17 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:18 - DEBUG - https://registry.npmjs.org:443 "GET /lodash.pad HTTP/1.1" 200 None
+2025-12-04 12:29:18 - DEBUG - Mapped lodash.pad → lodash/lodash
+2025-12-04 12:29:18 - INFO - Mapping progress: 80/230
+2025-12-04 12:29:18 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:18 - DEBUG - https://registry.npmjs.org:443 "GET /cryptiles HTTP/1.1" 200 None
+2025-12-04 12:29:18 - DEBUG - Mapped cryptiles → hapijs/cryptiles
+2025-12-04 12:29:19 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:19 - DEBUG - https://registry.npmjs.org:443 "GET /asynckit HTTP/1.1" 200 None
+2025-12-04 12:29:19 - DEBUG - Mapped asynckit → alexindigo/asynckit
+2025-12-04 12:29:19 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:20 - DEBUG - https://registry.npmjs.org:443 "GET /sax HTTP/1.1" 200 None
+2025-12-04 12:29:20 - DEBUG - Mapped sax → isaacs/sax-js
+2025-12-04 12:29:20 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:20 - DEBUG - https://registry.npmjs.org:443 "GET /pkginfo HTTP/1.1" 200 None
+2025-12-04 12:29:20 - DEBUG - Mapped pkginfo → indexzero/node-pkginfo
+2025-12-04 12:29:20 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:20 - DEBUG - https://registry.npmjs.org:443 "GET /rimraf HTTP/1.1" 200 None
+2025-12-04 12:29:21 - DEBUG - Mapped rimraf → isaacs/rimraf
+2025-12-04 12:29:21 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:21 - DEBUG - https://registry.npmjs.org:443 "GET /lodash HTTP/1.1" 200 None
+2025-12-04 12:29:21 - DEBUG - Mapped lodash → lodash/lodash
+2025-12-04 12:29:21 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:21 - DEBUG - https://registry.npmjs.org:443 "GET /iconv-lite HTTP/1.1" 200 None
+2025-12-04 12:29:21 - DEBUG - Mapped iconv-lite → pillarjs/iconv-lite
+2025-12-04 12:29:21 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:22 - DEBUG - https://registry.npmjs.org:443 "GET /lodash HTTP/1.1" 200 None
+2025-12-04 12:29:22 - DEBUG - Mapped lodash → lodash/lodash
+2025-12-04 12:29:22 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:22 - DEBUG - https://registry.npmjs.org:443 "GET /domelementtype HTTP/1.1" 200 None
+2025-12-04 12:29:23 - DEBUG - Mapped domelementtype → fb55/domelementtype
+2025-12-04 12:29:23 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:23 - DEBUG - https://registry.npmjs.org:443 "GET /is-typedarray HTTP/1.1" 200 None
+2025-12-04 12:29:23 - DEBUG - Mapped is-typedarray → hughsk/is-typedarray
+2025-12-04 12:29:23 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:23 - DEBUG - https://registry.npmjs.org:443 "GET /grunt-legacy-log HTTP/1.1" 200 None
+2025-12-04 12:29:23 - DEBUG - Mapped grunt-legacy-log → gruntjs/grunt-legacy-log
+2025-12-04 12:29:24 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:24 - DEBUG - https://registry.npmjs.org:443 "GET /assert-plus HTTP/1.1" 200 None
+2025-12-04 12:29:24 - DEBUG - Mapped assert-plus → mcavage/node-assert-plus
+2025-12-04 12:29:24 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:24 - DEBUG - https://registry.npmjs.org:443 "GET /json-stringify-safe HTTP/1.1" 200 None
+2025-12-04 12:29:24 - DEBUG - Mapped json-stringify-safe → isaacs/json-stringify-safe
+2025-12-04 12:29:24 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:25 - DEBUG - https://registry.npmjs.org:443 "GET /delayed-stream HTTP/1.1" 200 None
+2025-12-04 12:29:25 - DEBUG - Mapped delayed-stream → felixge/node-delayed-stream
+2025-12-04 12:29:25 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:25 - DEBUG - https://registry.npmjs.org:443 "GET /hooker HTTP/1.1" 200 None
+2025-12-04 12:29:25 - DEBUG - Mapped hooker → cowboy/javascript-hooker
+2025-12-04 12:29:25 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:25 - DEBUG - https://registry.npmjs.org:443 "GET /node-uuid HTTP/1.1" 200 None
+2025-12-04 12:29:25 - DEBUG - Mapped node-uuid → broofa/node-uuid
+2025-12-04 12:29:25 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:26 - DEBUG - https://registry.npmjs.org:443 "GET /http-signature HTTP/1.1" 200 None
+2025-12-04 12:29:26 - DEBUG - Mapped http-signature → tritondatacenter/node-http-signature
+2025-12-04 12:29:26 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:26 - DEBUG - https://registry.npmjs.org:443 "GET /ansi HTTP/1.1" 200 None
+2025-12-04 12:29:26 - DEBUG - Mapped ansi → tootallnate/ansi.js
+2025-12-04 12:29:26 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:26 - DEBUG - https://registry.npmjs.org:443 "GET /har-validator HTTP/1.1" 200 None
+2025-12-04 12:29:26 - DEBUG - Mapped har-validator → ahmadnassri/node-har-validator
+2025-12-04 12:29:26 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:27 - DEBUG - https://registry.npmjs.org:443 "GET /once HTTP/1.1" 200 None
+2025-12-04 12:29:27 - DEBUG - Mapped once → isaacs/once
+2025-12-04 12:29:27 - INFO - Mapping progress: 100/230
+2025-12-04 12:29:27 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:27 - DEBUG - https://registry.npmjs.org:443 "GET /jsdoc HTTP/1.1" 200 None
+2025-12-04 12:29:27 - DEBUG - Mapped jsdoc → jsdoc/jsdoc
+2025-12-04 12:29:27 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:28 - DEBUG - https://registry.npmjs.org:443 "GET /speaker HTTP/1.1" 200 None
+2025-12-04 12:29:28 - DEBUG - Mapped speaker → tootallnate/node-speaker
+2025-12-04 12:29:28 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:29 - DEBUG - https://registry.npmjs.org:443 "GET /utile HTTP/1.1" 200 None
+2025-12-04 12:29:29 - DEBUG - Mapped utile → flatiron/utile
+2025-12-04 12:29:29 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:29 - DEBUG - https://registry.npmjs.org:443 "GET /minimatch HTTP/1.1" 200 None
+2025-12-04 12:29:29 - DEBUG - Mapped minimatch → isaacs/minimatch
+2025-12-04 12:29:29 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:29 - DEBUG - https://registry.npmjs.org:443 "GET /getobject HTTP/1.1" 200 None
+2025-12-04 12:29:29 - DEBUG - Mapped getobject → cowboy/node-getobject
+2025-12-04 12:29:29 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:30 - DEBUG - https://registry.npmjs.org:443 "GET /eyes HTTP/1.1" 200 None
+2025-12-04 12:29:30 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:30 - DEBUG - https://registry.npmjs.org:443 "GET /abbrev HTTP/1.1" 200 None
+2025-12-04 12:29:30 - DEBUG - Mapped abbrev → npm/abbrev-js
+2025-12-04 12:29:30 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:30 - DEBUG - https://registry.npmjs.org:443 "GET /safe-buffer HTTP/1.1" 200 None
+2025-12-04 12:29:30 - DEBUG - Mapped safe-buffer → feross/safe-buffer
+2025-12-04 12:29:30 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:31 - DEBUG - https://registry.npmjs.org:443 "GET /findup-sync HTTP/1.1" 200 None
+2025-12-04 12:29:31 - DEBUG - Mapped findup-sync → gulpjs/findup-sync
+2025-12-04 12:29:31 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:31 - DEBUG - https://registry.npmjs.org:443 "GET /ajv HTTP/1.1" 200 None
+2025-12-04 12:29:31 - DEBUG - Mapped ajv → ajv-validator/ajv
+2025-12-04 12:29:31 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:31 - DEBUG - https://registry.npmjs.org:443 "GET /hawk HTTP/1.1" 200 None
+2025-12-04 12:29:31 - DEBUG - Mapped hawk → mozilla/hawk
+2025-12-04 12:29:32 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:32 - DEBUG - https://registry.npmjs.org:443 "GET /assert-plus HTTP/1.1" 200 None
+2025-12-04 12:29:32 - DEBUG - Mapped assert-plus → mcavage/node-assert-plus
+2025-12-04 12:29:32 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:32 - DEBUG - https://registry.npmjs.org:443 "GET /readable-stream HTTP/1.1" 200 None
+2025-12-04 12:29:32 - DEBUG - Mapped readable-stream → nodejs/readable-stream
+2025-12-04 12:29:32 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:33 - DEBUG - https://registry.npmjs.org:443 "GET /ncp HTTP/1.1" 200 None
+2025-12-04 12:29:33 - DEBUG - Mapped ncp → avianflu/ncp
+2025-12-04 12:29:33 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:33 - DEBUG - https://registry.npmjs.org:443 "GET /mute-stream HTTP/1.1" 200 None
+2025-12-04 12:29:33 - DEBUG - Mapped mute-stream → npm/mute-stream
+2025-12-04 12:29:33 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:34 - DEBUG - https://registry.npmjs.org:443 "GET /cryptiles HTTP/1.1" 200 None
+2025-12-04 12:29:34 - DEBUG - Mapped cryptiles → hapijs/cryptiles
+2025-12-04 12:29:34 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:34 - DEBUG - https://registry.npmjs.org:443 "GET /yallist HTTP/1.1" 200 None
+2025-12-04 12:29:34 - DEBUG - Mapped yallist → isaacs/yallist
+2025-12-04 12:29:34 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:34 - DEBUG - https://registry.npmjs.org:443 "GET /marked HTTP/1.1" 200 None
+2025-12-04 12:29:34 - DEBUG - Mapped marked → markedjs/marked
+2025-12-04 12:29:34 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:35 - DEBUG - https://registry.npmjs.org:443 "GET /winston HTTP/1.1" 200 None
+2025-12-04 12:29:35 - DEBUG - Mapped winston → winstonjs/winston
+2025-12-04 12:29:35 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:37 - DEBUG - https://registry.npmjs.org:443 "GET /bl HTTP/1.1" 200 None
+2025-12-04 12:29:37 - DEBUG - Mapped bl → rvagg/bl
+2025-12-04 12:29:37 - INFO - Mapping progress: 120/230
+2025-12-04 12:29:37 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:37 - DEBUG - https://registry.npmjs.org:443 "GET /nopt HTTP/1.1" 200 None
+2025-12-04 12:29:37 - DEBUG - Mapped nopt → npm/nopt
+2025-12-04 12:29:37 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:38 - DEBUG - https://registry.npmjs.org:443 "GET /hawk HTTP/1.1" 200 None
+2025-12-04 12:29:38 - DEBUG - Mapped hawk → mozilla/hawk
+2025-12-04 12:29:38 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:38 - DEBUG - https://registry.npmjs.org:443 "GET /dateformat HTTP/1.1" 200 None
+2025-12-04 12:29:38 - DEBUG - Mapped dateformat → felixge/node-dateformat
+2025-12-04 12:29:38 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:39 - DEBUG - https://registry.npmjs.org:443 "GET /are-we-there-yet HTTP/1.1" 200 None
+2025-12-04 12:29:39 - DEBUG - Mapped are-we-there-yet → npm/are-we-there-yet
+2025-12-04 12:29:39 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:39 - DEBUG - https://registry.npmjs.org:443 "GET /js-yaml HTTP/1.1" 200 None
+2025-12-04 12:29:39 - DEBUG - Mapped js-yaml → nodeca/js-yaml
+2025-12-04 12:29:39 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:40 - DEBUG - https://registry.npmjs.org:443 "GET /fast-deep-equal HTTP/1.1" 200 None
+2025-12-04 12:29:40 - DEBUG - Mapped fast-deep-equal → epoberezkin/fast-deep-equal
+2025-12-04 12:29:40 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:40 - DEBUG - https://registry.npmjs.org:443 "GET /xmlcreate HTTP/1.1" 200 None
+2025-12-04 12:29:40 - DEBUG - Mapped xmlcreate → michaelkourlas/node-xmlcreate
+2025-12-04 12:29:40 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:41 - DEBUG - https://registry.npmjs.org:443 "GET /@ffmpeg-installer/linux-x64 HTTP/1.1" 200 None
+2025-12-04 12:29:41 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:41 - DEBUG - https://registry.npmjs.org:443 "GET /delegates HTTP/1.1" 200 None
+2025-12-04 12:29:41 - DEBUG - Mapped delegates → visionmedia/node-delegates
+2025-12-04 12:29:41 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:41 - DEBUG - https://registry.npmjs.org:443 "GET /bindings HTTP/1.1" 200 None
+2025-12-04 12:29:41 - DEBUG - Mapped bindings → tootallnate/node-bindings
+2025-12-04 12:29:41 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:41 - DEBUG - https://registry.npmjs.org:443 "GET /process-nextick-args HTTP/1.1" 200 None
+2025-12-04 12:29:41 - DEBUG - Mapped process-nextick-args → calvinmetcalf/process-nextick-args
+2025-12-04 12:29:42 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:42 - DEBUG - https://registry.npmjs.org:443 "GET /asn1 HTTP/1.1" 200 None
+2025-12-04 12:29:42 - DEBUG - Mapped asn1 → joyent/node-asn1
+2025-12-04 12:29:42 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:43 - DEBUG - https://registry.npmjs.org:443 "GET /colors HTTP/1.1" 200 None
+2025-12-04 12:29:43 - DEBUG - Mapped colors → marak/colors.js
+2025-12-04 12:29:43 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:43 - DEBUG - https://registry.npmjs.org:443 "GET /get-youtube-id HTTP/1.1" 200 None
+2025-12-04 12:29:43 - DEBUG - Mapped get-youtube-id → jmorrell/get-youtube-id
+2025-12-04 12:29:43 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:43 - DEBUG - https://registry.npmjs.org:443 "GET /deep-equal HTTP/1.1" 200 None
+2025-12-04 12:29:43 - DEBUG - Mapped deep-equal → inspect-js/node-deep-equal
+2025-12-04 12:29:43 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:44 - DEBUG - https://registry.npmjs.org:443 "GET /dotenv HTTP/1.1" 200 None
+2025-12-04 12:29:44 - DEBUG - Mapped dotenv → motdotla/dotenv
+2025-12-04 12:29:44 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:44 - DEBUG - https://registry.npmjs.org:443 "GET /facebook-chat-api HTTP/1.1" 200 None
+2025-12-04 12:29:44 - DEBUG - Mapped facebook-chat-api → schmavery/facebook-chat-api
+2025-12-04 12:29:44 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:45 - DEBUG - https://registry.npmjs.org:443 "GET /isarray HTTP/1.1" 200 None
+2025-12-04 12:29:45 - DEBUG - Mapped isarray → juliangruber/isarray
+2025-12-04 12:29:45 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:45 - DEBUG - https://registry.npmjs.org:443 "GET /request HTTP/1.1" 200 None
+2025-12-04 12:29:45 - DEBUG - Mapped request → request/request
+2025-12-04 12:29:45 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:45 - DEBUG - https://registry.npmjs.org:443 "GET /oauth-sign HTTP/1.1" 200 None
+2025-12-04 12:29:45 - DEBUG - Mapped oauth-sign → mikeal/oauth-sign
+2025-12-04 12:29:45 - INFO - Mapping progress: 140/230
+2025-12-04 12:29:45 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:45 - DEBUG - https://registry.npmjs.org:443 "GET /inflight HTTP/1.1" 200 None
+2025-12-04 12:29:45 - DEBUG - Mapped inflight → npm/inflight
+2025-12-04 12:29:46 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:46 - DEBUG - https://registry.npmjs.org:443 "GET /@ffmpeg-installer/win32-ia32 HTTP/1.1" 200 None
+2025-12-04 12:29:46 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:47 - DEBUG - https://registry.npmjs.org:443 "GET /htmlparser2 HTTP/1.1" 200 None
+2025-12-04 12:29:47 - DEBUG - Mapped htmlparser2 → fb55/htmlparser2
+2025-12-04 12:29:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:47 - DEBUG - https://registry.npmjs.org:443 "GET /lodash HTTP/1.1" 200 None
+2025-12-04 12:29:47 - DEBUG - Mapped lodash → lodash/lodash
+2025-12-04 12:29:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:47 - DEBUG - https://registry.npmjs.org:443 "GET /escape-string-regexp HTTP/1.1" 200 None
+2025-12-04 12:29:47 - DEBUG - Mapped escape-string-regexp → sindresorhus/escape-string-regexp
+2025-12-04 12:29:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:47 - DEBUG - https://registry.npmjs.org:443 "GET /ytdl-core HTTP/1.1" 200 None
+2025-12-04 12:29:47 - DEBUG - Mapped ytdl-core → fent/node-ytdl-core
+2025-12-04 12:29:47 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:48 - DEBUG - https://registry.npmjs.org:443 "GET /@ffmpeg-installer/win32-x64 HTTP/1.1" 200 None
+2025-12-04 12:29:48 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:48 - DEBUG - https://registry.npmjs.org:443 "GET /resolve HTTP/1.1" 200 None
+2025-12-04 12:29:48 - DEBUG - Mapped resolve → browserify/resolve
+2025-12-04 12:29:48 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:48 - DEBUG - https://registry.npmjs.org:443 "GET /debug HTTP/1.1" 200 None
+2025-12-04 12:29:48 - DEBUG - Mapped debug → debug-js/debug
+2025-12-04 12:29:48 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:49 - DEBUG - https://registry.npmjs.org:443 "GET /revalidator HTTP/1.1" 200 None
+2025-12-04 12:29:49 - DEBUG - Mapped revalidator → flatiron/revalidator
+2025-12-04 12:29:49 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:49 - DEBUG - https://registry.npmjs.org:443 "GET /html-entities HTTP/1.1" 200 None
+2025-12-04 12:29:49 - DEBUG - Mapped html-entities → mdevils/html-entities
+2025-12-04 12:29:50 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:50 - DEBUG - https://registry.npmjs.org:443 "GET /delayed-stream HTTP/1.1" 200 None
+2025-12-04 12:29:50 - DEBUG - Mapped delayed-stream → felixge/node-delayed-stream
+2025-12-04 12:29:50 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:51 - DEBUG - https://registry.npmjs.org:443 "GET /isstream HTTP/1.1" 200 None
+2025-12-04 12:29:51 - DEBUG - Mapped isstream → rvagg/isstream
+2025-12-04 12:29:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:51 - DEBUG - https://registry.npmjs.org:443 "GET /coffee-script HTTP/1.1" 200 None
+2025-12-04 12:29:51 - DEBUG - Mapped coffee-script → jashkenas/coffeescript
+2025-12-04 12:29:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:51 - DEBUG - https://registry.npmjs.org:443 "GET /underscore HTTP/1.1" 200 None
+2025-12-04 12:29:51 - DEBUG - Mapped underscore → jashkenas/underscore
+2025-12-04 12:29:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:51 - DEBUG - https://registry.npmjs.org:443 "GET /underscore.string HTTP/1.1" 200 None
+2025-12-04 12:29:51 - DEBUG - Mapped underscore.string → epeli/underscore.string
+2025-12-04 12:29:51 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:52 - DEBUG - https://registry.npmjs.org:443 "GET /punycode HTTP/1.1" 200 None
+2025-12-04 12:29:52 - DEBUG - Mapped punycode → mathiasbynens/punycode.js
+2025-12-04 12:29:52 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:52 - DEBUG - https://registry.npmjs.org:443 "GET /css-select HTTP/1.1" 200 None
+2025-12-04 12:29:52 - DEBUG - Mapped css-select → fb55/css-select
+2025-12-04 12:29:52 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:52 - DEBUG - https://registry.npmjs.org:443 "GET /cross-spawn HTTP/1.1" 200 None
+2025-12-04 12:29:52 - DEBUG - Mapped cross-spawn → moxystudio/node-cross-spawn
+2025-12-04 12:29:52 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:52 - DEBUG - https://registry.npmjs.org:443 "GET /combined-stream HTTP/1.1" 200 None
+2025-12-04 12:29:53 - DEBUG - Mapped combined-stream → felixge/node-combined-stream
+2025-12-04 12:29:53 - INFO - Mapping progress: 160/230
+2025-12-04 12:29:53 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:53 - DEBUG - https://registry.npmjs.org:443 "GET /domutils HTTP/1.1" 200 None
+2025-12-04 12:29:53 - DEBUG - Mapped domutils → fb55/domutils
+2025-12-04 12:29:53 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:53 - DEBUG - https://registry.npmjs.org:443 "GET /requizzle HTTP/1.1" 200 None
+2025-12-04 12:29:53 - DEBUG - Mapped requizzle → hegemonic/requizzle
+2025-12-04 12:29:53 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:54 - DEBUG - https://registry.npmjs.org:443 "GET /ms HTTP/1.1" 200 None
+2025-12-04 12:29:54 - DEBUG - Mapped ms → vercel/ms
+2025-12-04 12:29:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:54 - DEBUG - https://registry.npmjs.org:443 "GET /minimatch HTTP/1.1" 200 None
+2025-12-04 12:29:54 - DEBUG - Mapped minimatch → isaacs/minimatch
+2025-12-04 12:29:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:54 - DEBUG - https://registry.npmjs.org:443 "GET /grunt HTTP/1.1" 200 None
+2025-12-04 12:29:54 - DEBUG - Mapped grunt → gruntjs/grunt
+2025-12-04 12:29:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:54 - DEBUG - https://registry.npmjs.org:443 "GET /exit HTTP/1.1" 200 None
+2025-12-04 12:29:54 - DEBUG - Mapped exit → cowboy/node-exit
+2025-12-04 12:29:54 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:55 - DEBUG - https://registry.npmjs.org:443 "GET /inherits HTTP/1.1" 200 None
+2025-12-04 12:29:55 - DEBUG - Mapped inherits → isaacs/inherits
+2025-12-04 12:29:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:55 - DEBUG - https://registry.npmjs.org:443 "GET /strip-json-comments HTTP/1.1" 200 None
+2025-12-04 12:29:55 - DEBUG - Mapped strip-json-comments → sindresorhus/strip-json-comments
+2025-12-04 12:29:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:55 - DEBUG - https://registry.npmjs.org:443 "GET /core-util-is HTTP/1.1" 200 None
+2025-12-04 12:29:55 - DEBUG - Mapped core-util-is → isaacs/core-util-is
+2025-12-04 12:29:55 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:56 - DEBUG - https://registry.npmjs.org:443 "GET /mime-types HTTP/1.1" 200 None
+2025-12-04 12:29:56 - DEBUG - Mapped mime-types → jshttp/mime-types
+2025-12-04 12:29:56 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:56 - DEBUG - https://registry.npmjs.org:443 "GET /mime-db HTTP/1.1" 200 None
+2025-12-04 12:29:56 - DEBUG - Mapped mime-db → jshttp/mime-db
+2025-12-04 12:29:57 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:57 - DEBUG - https://registry.npmjs.org:443 "GET /caseless HTTP/1.1" 200 None
+2025-12-04 12:29:57 - DEBUG - Mapped caseless → mikeal/caseless
+2025-12-04 12:29:57 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:57 - DEBUG - https://registry.npmjs.org:443 "GET /underscore HTTP/1.1" 200 None
+2025-12-04 12:29:57 - DEBUG - Mapped underscore → jashkenas/underscore
+2025-12-04 12:29:57 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:58 - DEBUG - https://registry.npmjs.org:443 "GET /sntp HTTP/1.1" 200 None
+2025-12-04 12:29:58 - DEBUG - Mapped sntp → hueniverse/sntp
+2025-12-04 12:29:58 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:58 - DEBUG - https://registry.npmjs.org:443 "GET /minimatch HTTP/1.1" 200 None
+2025-12-04 12:29:58 - DEBUG - Mapped minimatch → isaacs/minimatch
+2025-12-04 12:29:58 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:58 - DEBUG - https://registry.npmjs.org:443 "GET /glob HTTP/1.1" 200 None
+2025-12-04 12:29:58 - DEBUG - Mapped glob → isaacs/node-glob
+2025-12-04 12:29:58 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:59 - DEBUG - https://registry.npmjs.org:443 "GET /tough-cookie HTTP/1.1" 200 None
+2025-12-04 12:29:59 - DEBUG - Mapped tough-cookie → salesforce/tough-cookie
+2025-12-04 12:29:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:59 - DEBUG - https://registry.npmjs.org:443 "GET /underscore-contrib HTTP/1.1" 200 None
+2025-12-04 12:29:59 - DEBUG - Mapped underscore-contrib → documentcloud/underscore-contrib
+2025-12-04 12:29:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:29:59 - DEBUG - https://registry.npmjs.org:443 "GET /@ffmpeg-installer/darwin-x64 HTTP/1.1" 200 None
+2025-12-04 12:29:59 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:00 - DEBUG - https://registry.npmjs.org:443 "GET /grunt-known-options HTTP/1.1" 200 None
+2025-12-04 12:30:00 - DEBUG - Mapped grunt-known-options → gruntjs/grunt-known-options
+2025-12-04 12:30:00 - INFO - Mapping progress: 180/230
+2025-12-04 12:30:00 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:00 - DEBUG - https://registry.npmjs.org:443 "GET /nopt HTTP/1.1" 200 None
+2025-12-04 12:30:00 - DEBUG - Mapped nopt → npm/nopt
+2025-12-04 12:30:01 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:01 - DEBUG - https://registry.npmjs.org:443 "GET /hoek HTTP/1.1" 200 None
+2025-12-04 12:30:01 - DEBUG - Mapped hoek → hapijs/hoek
+2025-12-04 12:30:01 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:02 - DEBUG - https://registry.npmjs.org:443 "GET /boom HTTP/1.1" 200 None
+2025-12-04 12:30:02 - DEBUG - Mapped boom → hapijs/boom
+2025-12-04 12:30:02 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:02 - DEBUG - https://registry.npmjs.org:443 "GET /aws4 HTTP/1.1" 200 None
+2025-12-04 12:30:02 - DEBUG - Mapped aws4 → mhart/aws4
+2025-12-04 12:30:02 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:03 - DEBUG - https://registry.npmjs.org:443 "GET /glob HTTP/1.1" 200 None
+2025-12-04 12:30:03 - DEBUG - Mapped glob → isaacs/node-glob
+2025-12-04 12:30:03 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:03 - DEBUG - https://registry.npmjs.org:443 "GET /async HTTP/1.1" 200 None
+2025-12-04 12:30:03 - DEBUG - Mapped async → caolan/async
+2025-12-04 12:30:03 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:03 - DEBUG - https://registry.npmjs.org:443 "GET /m3u8stream HTTP/1.1" 200 None
+2025-12-04 12:30:03 - DEBUG - Mapped m3u8stream → fent/node-m3u8stream
+2025-12-04 12:30:03 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:04 - DEBUG - https://registry.npmjs.org:443 "GET /qs HTTP/1.1" 200 None
+2025-12-04 12:30:04 - DEBUG - Mapped qs → ljharb/qs
+2025-12-04 12:30:04 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:04 - DEBUG - https://registry.npmjs.org:443 "GET /string_decoder HTTP/1.1" 200 None
+2025-12-04 12:30:04 - DEBUG - Mapped string_decoder → nodejs/string_decoder
+2025-12-04 12:30:04 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:05 - DEBUG - https://registry.npmjs.org:443 "GET /bluebird HTTP/1.1" 200 None
+2025-12-04 12:30:05 - DEBUG - Mapped bluebird → petkaantonov/bluebird
+2025-12-04 12:30:05 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:05 - DEBUG - https://registry.npmjs.org:443 "GET /stringstream HTTP/1.1" 200 None
+2025-12-04 12:30:05 - DEBUG - Mapped stringstream → mhart/stringstream
+2025-12-04 12:30:06 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:06 - DEBUG - https://registry.npmjs.org:443 "GET /nth-check HTTP/1.1" 200 None
+2025-12-04 12:30:06 - DEBUG - Mapped nth-check → fb55/nth-check
+2025-12-04 12:30:06 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:06 - DEBUG - https://registry.npmjs.org:443 "GET /npmlog HTTP/1.1" 200 None
+2025-12-04 12:30:06 - DEBUG - Mapped npmlog → npm/npmlog
+2025-12-04 12:30:06 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:06 - DEBUG - https://registry.npmjs.org:443 "GET /babylon HTTP/1.1" 200 None
+2025-12-04 12:30:06 - DEBUG - Mapped babylon → babel/babylon
+2025-12-04 12:30:06 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:07 - DEBUG - https://registry.npmjs.org:443 "GET /css-what HTTP/1.1" 200 None
+2025-12-04 12:30:07 - DEBUG - Mapped css-what → fb55/css-what
+2025-12-04 12:30:07 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:07 - DEBUG - https://registry.npmjs.org:443 "GET /fluent-ffmpeg HTTP/1.1" 200 None
+2025-12-04 12:30:07 - DEBUG - Mapped fluent-ffmpeg → fluent-ffmpeg/node-fluent-ffmpeg
+2025-12-04 12:30:07 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:08 - DEBUG - https://registry.npmjs.org:443 "GET /lodash.padend HTTP/1.1" 200 None
+2025-12-04 12:30:08 - DEBUG - Mapped lodash.padend → lodash/lodash
+2025-12-04 12:30:08 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:08 - DEBUG - https://registry.npmjs.org:443 "GET /stack-trace HTTP/1.1" 200 None
+2025-12-04 12:30:08 - DEBUG - Mapped stack-trace → felixge/node-stack-trace
+2025-12-04 12:30:08 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:09 - DEBUG - https://registry.npmjs.org:443 "GET /mime-types HTTP/1.1" 200 None
+2025-12-04 12:30:09 - DEBUG - Mapped mime-types → jshttp/mime-types
+2025-12-04 12:30:09 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:09 - DEBUG - https://registry.npmjs.org:443 "GET /mime-db HTTP/1.1" 200 None
+2025-12-04 12:30:09 - DEBUG - Mapped mime-db → jshttp/mime-db
+2025-12-04 12:30:09 - INFO - Mapping progress: 200/230
+2025-12-04 12:30:09 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:10 - DEBUG - https://registry.npmjs.org:443 "GET /boom HTTP/1.1" 200 None
+2025-12-04 12:30:10 - DEBUG - Mapped boom → hapijs/boom
+2025-12-04 12:30:10 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:10 - DEBUG - https://registry.npmjs.org:443 "GET /youtube-node HTTP/1.1" 200 None
+2025-12-04 12:30:10 - DEBUG - Mapped youtube-node → paulomcnally/youtube-node
+2025-12-04 12:30:10 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:11 - DEBUG - https://registry.npmjs.org:443 "GET /tunnel-agent HTTP/1.1" 200 None
+2025-12-04 12:30:11 - DEBUG - Mapped tunnel-agent → mikeal/tunnel-agent
+2025-12-04 12:30:11 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:11 - DEBUG - https://registry.npmjs.org:443 "GET /i HTTP/1.1" 200 None
+2025-12-04 12:30:11 - DEBUG - Mapped i → pksunkara/inflect
+2025-12-04 12:30:11 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:11 - DEBUG - https://registry.npmjs.org:443 "GET /dashdash HTTP/1.1" 200 None
+2025-12-04 12:30:11 - DEBUG - Mapped dashdash → trentm/node-dashdash
+2025-12-04 12:30:11 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:12 - DEBUG - https://registry.npmjs.org:443 "GET /co HTTP/1.1" 200 None
+2025-12-04 12:30:12 - DEBUG - Mapped co → tj/co
+2025-12-04 12:30:12 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:12 - DEBUG - https://registry.npmjs.org:443 "GET /entities HTTP/1.1" 200 None
+2025-12-04 12:30:12 - DEBUG - Mapped entities → fb55/entities
+2025-12-04 12:30:12 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:12 - DEBUG - https://registry.npmjs.org:443 "GET /catharsis HTTP/1.1" 200 None
+2025-12-04 12:30:12 - DEBUG - Mapped catharsis → hegemonic/catharsis
+2025-12-04 12:30:12 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:13 - DEBUG - https://registry.npmjs.org:443 "GET /bluebird HTTP/1.1" 200 None
+2025-12-04 12:30:13 - DEBUG - Mapped bluebird → petkaantonov/bluebird
+2025-12-04 12:30:13 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:13 - DEBUG - https://registry.npmjs.org:443 "GET /lru-cache HTTP/1.1" 200 None
+2025-12-04 12:30:13 - DEBUG - Mapped lru-cache → isaacs/node-lru-cache
+2025-12-04 12:30:13 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:13 - DEBUG - https://registry.npmjs.org:443 "GET /json-schema HTTP/1.1" 200 None
+2025-12-04 12:30:13 - DEBUG - Mapped json-schema → kriszyp/json-schema
+2025-12-04 12:30:14 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:14 - DEBUG - https://registry.npmjs.org:443 "GET /has-unicode HTTP/1.1" 200 None
+2025-12-04 12:30:14 - DEBUG - Mapped has-unicode → iarna/has-unicode
+2025-12-04 12:30:14 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:15 - DEBUG - https://registry.npmjs.org:443 "GET /argparse HTTP/1.1" 200 None
+2025-12-04 12:30:15 - DEBUG - Mapped argparse → nodeca/argparse
+2025-12-04 12:30:15 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:15 - DEBUG - https://registry.npmjs.org:443 "GET /findup-sync HTTP/1.1" 200 None
+2025-12-04 12:30:15 - DEBUG - Mapped findup-sync → gulpjs/findup-sync
+2025-12-04 12:30:15 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:16 - DEBUG - https://registry.npmjs.org:443 "GET /async HTTP/1.1" 200 None
+2025-12-04 12:30:16 - DEBUG - Mapped async → caolan/async
+2025-12-04 12:30:16 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:16 - DEBUG - https://registry.npmjs.org:443 "GET /read HTTP/1.1" 200 None
+2025-12-04 12:30:16 - DEBUG - Mapped read → npm/read
+2025-12-04 12:30:16 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:16 - DEBUG - https://registry.npmjs.org:443 "GET /klaw HTTP/1.1" 200 None
+2025-12-04 12:30:16 - DEBUG - Mapped klaw → jprichardson/node-klaw
+2025-12-04 12:30:16 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:17 - DEBUG - https://registry.npmjs.org:443 "GET /uuid HTTP/1.1" 200 None
+2025-12-04 12:30:17 - DEBUG - Mapped uuid → uuidjs/uuid
+2025-12-04 12:30:17 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:17 - DEBUG - https://registry.npmjs.org:443 "GET /minimist HTTP/1.1" 200 None
+2025-12-04 12:30:17 - DEBUG - Mapped minimist → minimistjs/minimist
+2025-12-04 12:30:17 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:17 - DEBUG - https://registry.npmjs.org:443 "GET /readable-stream HTTP/1.1" 200 None
+2025-12-04 12:30:17 - DEBUG - Mapped readable-stream → nodejs/readable-stream
+2025-12-04 12:30:17 - INFO - Mapping progress: 220/230
+2025-12-04 12:30:17 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:17 - DEBUG - https://registry.npmjs.org:443 "GET /underscore.string HTTP/1.1" 200 None
+2025-12-04 12:30:17 - DEBUG - Mapped underscore.string → epeli/underscore.string
+2025-12-04 12:30:18 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:18 - DEBUG - https://registry.npmjs.org:443 "GET /grunt-legacy-util HTTP/1.1" 200 None
+2025-12-04 12:30:18 - DEBUG - Mapped grunt-legacy-util → gruntjs/grunt-legacy-util
+2025-12-04 12:30:18 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:18 - DEBUG - https://registry.npmjs.org:443 "GET /form-data HTTP/1.1" 200 None
+2025-12-04 12:30:19 - DEBUG - Mapped form-data → form-data/form-data
+2025-12-04 12:30:19 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:19 - DEBUG - https://registry.npmjs.org:443 "GET /extend HTTP/1.1" 200 None
+2025-12-04 12:30:19 - DEBUG - Mapped extend → justmoon/node-extend
+2025-12-04 12:30:19 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:19 - DEBUG - https://registry.npmjs.org:443 "GET /pseudomap HTTP/1.1" 200 None
+2025-12-04 12:30:19 - DEBUG - Mapped pseudomap → isaacs/pseudomap
+2025-12-04 12:30:19 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:19 - DEBUG - https://registry.npmjs.org:443 "GET /fast-json-stable-stringify HTTP/1.1" 200 None
+2025-12-04 12:30:19 - DEBUG - Mapped fast-json-stable-stringify → epoberezkin/fast-json-stable-stringify
+2025-12-04 12:30:19 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:20 - DEBUG - https://registry.npmjs.org:443 "GET /aws-sign2 HTTP/1.1" 200 None
+2025-12-04 12:30:20 - DEBUG - Mapped aws-sign2 → mikeal/aws-sign
+2025-12-04 12:30:20 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:20 - DEBUG - https://registry.npmjs.org:443 "GET /js2xmlparser HTTP/1.1" 200 None
+2025-12-04 12:30:20 - DEBUG - Mapped js2xmlparser → michaelkourlas/node-js2xmlparser
+2025-12-04 12:30:20 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:20 - DEBUG - https://registry.npmjs.org:443 "GET /oauth-sign HTTP/1.1" 200 None
+2025-12-04 12:30:21 - DEBUG - Mapped oauth-sign → mikeal/oauth-sign
+2025-12-04 12:30:21 - DEBUG - Starting new HTTPS connection (1): registry.npmjs.org:443
+2025-12-04 12:30:21 - DEBUG - https://registry.npmjs.org:443 "GET /concat-map HTTP/1.1" 200 None
+2025-12-04 12:30:21 - DEBUG - Mapped concat-map → ljharb/concat-map
+2025-12-04 12:30:21 - DEBUG - Unsupported ecosystem: github for com.github.tedg-dev/beatBot
+2025-12-04 12:30:22 - INFO - Mapped 222 packages to GitHub repos
+2025-12-04 12:30:22 - INFO - Packages without GitHub repos: 8
+2025-12-04 12:30:22 - INFO - 
+======================================================================
+2025-12-04 12:30:22 - INFO - STEP 4: Downloading Dependency SBOMs (Deduplicated)
+2025-12-04 12:30:22 - INFO - ======================================================================
+2025-12-04 12:30:22 - INFO - Total packages: 222
+2025-12-04 12:30:22 - INFO - Unique repositories: 166
+2025-12-04 12:30:22 - INFO - Duplicates to skip: 56
+2025-12-04 12:30:22 - INFO - 
+2025-12-04 12:30:22 - INFO - [1/166] Fetching SBOM for npm/gauge (versions: 1.2.7)
+2025-12-04 12:30:22 - DEBUG - Resetting dropped connection: api.github.com
+2025-12-04 12:30:22 - DEBUG - https://api.github.com:443 "GET /repos/npm/gauge/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:22 - INFO - [2/166] Fetching SBOM for isaacs/node-glob (versions: 3.2.11, 7.1.2, 3.1.21, +1 more)
+2025-12-04 12:30:23 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/node-glob/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:23 - INFO - [3/166] Fetching SBOM for quartzjer/ecc-jsbn (versions: 0.1.1)
+2025-12-04 12:30:23 - DEBUG - https://api.github.com:443 "GET /repos/quartzjer/ecc-jsbn/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:30:24 - DEBUG - https://api.github.com:443 "GET /repositories/17422085/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:24 - INFO - [4/166] Fetching SBOM for epeli/underscore.string (versions: 2.3.3, 2.4.0, 2.2.1)
+2025-12-04 12:30:24 - DEBUG - https://api.github.com:443 "GET /repos/epeli/underscore.string/dependency-graph/sbom HTTP/1.1" 301 217
+2025-12-04 12:30:24 - DEBUG - https://api.github.com:443 "GET /repositories/800115/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:24 - INFO - [5/166] Fetching SBOM for ahmadnassri/har-schema (versions: 2.0.0)
+2025-12-04 12:30:25 - DEBUG - https://api.github.com:443 "GET /repos/ahmadnassri/har-schema/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:25 - INFO - [6/166] Fetching SBOM for caolan/async (versions: 0.1.22, 0.9.2, 2.6.0, +1 more)
+2025-12-04 12:30:26 - DEBUG - https://api.github.com:443 "GET /repos/caolan/async/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:26 - INFO - [7/166] Fetching SBOM for npm/node-which (versions: 1.0.9, 1.3.0)
+2025-12-04 12:30:27 - DEBUG - https://api.github.com:443 "GET /repos/npm/node-which/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:27 - INFO - [8/166] Fetching SBOM for sindresorhus/path-is-absolute (versions: 1.0.1)
+2025-12-04 12:30:28 - DEBUG - https://api.github.com:443 "GET /repos/sindresorhus/path-is-absolute/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:28 - INFO - [9/166] Fetching SBOM for typicaljoe/taffydb (versions: 2.6.2)
+2025-12-04 12:30:28 - DEBUG - https://api.github.com:443 "GET /repos/typicaljoe/taffydb/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:28 - INFO - [10/166] Fetching SBOM for gruntjs/grunt-legacy-log-utils (versions: 0.1.1)
+2025-12-04 12:30:28 - DEBUG - https://api.github.com:443 "GET /repos/gruntjs/grunt-legacy-log-utils/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:29 - INFO - [11/166] Fetching SBOM for hueniverse/sntp (versions: 1.0.9, 2.1.0)
+2025-12-04 12:30:30 - DEBUG - https://api.github.com:443 "GET /repos/hueniverse/sntp/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:30 - DEBUG - https://api.github.com:443 "GET /repositories/7724556/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:30 - INFO - [12/166] Fetching SBOM for mikeal/tunnel-agent (versions: 0.6.0, 0.4.3)
+2025-12-04 12:30:30 - DEBUG - https://api.github.com:443 "GET /repos/mikeal/tunnel-agent/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:31 - DEBUG - https://api.github.com:443 "GET /repositories/8509942/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:31 - INFO - [13/166] Fetching SBOM for andyperlitch/jsbn (versions: 0.1.1)
+2025-12-04 12:30:31 - DEBUG - https://api.github.com:443 "GET /repos/andyperlitch/jsbn/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:31 - INFO - [14/166] Fetching SBOM for mikeal/caseless (versions: 0.12.0, 0.9.0)
+2025-12-04 12:30:32 - DEBUG - https://api.github.com:443 "GET /repos/mikeal/caseless/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:30:32 - DEBUG - https://api.github.com:443 "GET /repositories/12804889/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:32 - INFO - [15/166] Fetching SBOM for juliangruber/brace-expansion (versions: 1.1.11)
+2025-12-04 12:30:33 - DEBUG - https://api.github.com:443 "GET /repos/juliangruber/brace-expansion/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:33 - INFO - [16/166] Fetching SBOM for nodejs/nan (versions: 2.8.0)
+2025-12-04 12:30:33 - DEBUG - https://api.github.com:443 "GET /repos/nodejs/nan/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:33 - INFO - [17/166] Fetching SBOM for juliangruber/isarray (versions: 1.0.0, 0.0.1)
+2025-12-04 12:30:33 - DEBUG - https://api.github.com:443 "GET /repos/juliangruber/isarray/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:33 - INFO - [18/166] Fetching SBOM for joyent/node-bcrypt-pbkdf (versions: 1.0.1)
+2025-12-04 12:30:34 - DEBUG - https://api.github.com:443 "GET /repos/joyent/node-bcrypt-pbkdf/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:30:34 - DEBUG - https://api.github.com:443 "GET /repositories/65848667/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:34 - INFO - [19/166] Fetching SBOM for dchest/tweetnacl-js (versions: 0.14.5)
+2025-12-04 12:30:35 - DEBUG - https://api.github.com:443 "GET /repos/dchest/tweetnacl-js/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:35 - INFO - [20/166] Fetching SBOM for isaacs/fs.realpath (versions: 1.0.0)
+2025-12-04 12:30:35 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/fs.realpath/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:36 - INFO - [21/166] Fetching SBOM for kribblo/node-ffmpeg-installer (versions: 1.0.13)
+2025-12-04 12:30:37 - DEBUG - https://api.github.com:443 "GET /repos/kribblo/node-ffmpeg-installer/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:37 - INFO - [22/166] Fetching SBOM for lodash/lodash (versions: 4.6.1, 0.9.2, 4.5.1, +4 more)
+2025-12-04 12:30:38 - DEBUG - https://api.github.com:443 "GET /repos/lodash/lodash/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:38 - INFO - [23/166] Fetching SBOM for fb55/domutils (versions: 1.4.3, 1.5.1)
+2025-12-04 12:30:39 - DEBUG - https://api.github.com:443 "GET /repos/fb55/domutils/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:39 - INFO - [24/166] Fetching SBOM for fent/node-miniget (versions: 1.1.0)
+2025-12-04 12:30:39 - DEBUG - https://api.github.com:443 "GET /repos/fent/node-miniget/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:39 - INFO - [25/166] Fetching SBOM for epoberezkin/json-schema-traverse (versions: 0.3.1)
+2025-12-04 12:30:40 - DEBUG - https://api.github.com:443 "GET /repos/epoberezkin/json-schema-traverse/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:40 - INFO - [26/166] Fetching SBOM for krampstudio/grunt-jsdoc (versions: 2.2.1)
+2025-12-04 12:30:41 - DEBUG - https://api.github.com:443 "GET /repos/krampstudio/grunt-jsdoc/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:41 - INFO - [27/166] Fetching SBOM for ljharb/qs (versions: 2.3.3, 6.5.1)
+2025-12-04 12:30:41 - DEBUG - https://api.github.com:443 "GET /repos/ljharb/qs/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:41 - INFO - [28/166] Fetching SBOM for hapijs/hoek (versions: 4.2.0, 2.16.3)
+2025-12-04 12:30:42 - DEBUG - https://api.github.com:443 "GET /repos/hapijs/hoek/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:42 - INFO - [29/166] Fetching SBOM for mikeal/aws-sign (versions: 0.7.0, 0.5.0)
+2025-12-04 12:30:42 - DEBUG - https://api.github.com:443 "GET /repos/mikeal/aws-sign/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:42 - DEBUG - https://api.github.com:443 "GET /repositories/8509348/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:42 - INFO - [30/166] Fetching SBOM for fb55/domelementtype (versions: 1.3.0, 1.1.3)
+2025-12-04 12:30:43 - DEBUG - https://api.github.com:443 "GET /repos/fb55/domelementtype/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:44 - INFO - [31/166] Fetching SBOM for gruntjs/grunt-cli (versions: 1.2.0)
+2025-12-04 12:30:44 - DEBUG - https://api.github.com:443 "GET /repos/gruntjs/grunt-cli/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:44 - INFO - [32/166] Fetching SBOM for isaacs/node-graceful-fs (versions: 1.2.3, 4.1.11)
+2025-12-04 12:30:45 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/node-graceful-fs/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:45 - INFO - [33/166] Fetching SBOM for joyent/node-verror (versions: 1.10.0)
+2025-12-04 12:30:45 - DEBUG - https://api.github.com:443 "GET /repos/joyent/node-verror/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:46 - DEBUG - https://api.github.com:443 "GET /repositories/4058372/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:46 - INFO - [34/166] Fetching SBOM for npm/wrappy (versions: 1.0.2)
+2025-12-04 12:30:46 - DEBUG - https://api.github.com:443 "GET /repos/npm/wrappy/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:30:47 - DEBUG - https://api.github.com:443 "GET /repositories/24208073/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:47 - INFO - [35/166] Fetching SBOM for indexzero/node-pkginfo (versions: 0.3.1, 0.4.1)
+2025-12-04 12:30:47 - DEBUG - https://api.github.com:443 "GET /repos/indexzero/node-pkginfo/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:47 - INFO - [36/166] Fetching SBOM for tootallnate/node-lame (versions: 1.2.4)
+2025-12-04 12:30:48 - DEBUG - https://api.github.com:443 "GET /repos/tootallnate/node-lame/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:48 - INFO - [37/166] Fetching SBOM for felixge/node-combined-stream (versions: 1.0.5, 0.0.7)
+2025-12-04 12:30:49 - DEBUG - https://api.github.com:443 "GET /repos/felixge/node-combined-stream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:49 - INFO - [38/166] Fetching SBOM for nodejs/string_decoder (versions: 0.10.31, 1.0.3)
+2025-12-04 12:30:49 - DEBUG - https://api.github.com:443 "GET /repos/nodejs/string_decoder/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:49 - INFO - [39/166] Fetching SBOM for hij1nx/eventemitter2 (versions: 0.4.14)
+2025-12-04 12:30:49 - DEBUG - https://api.github.com:443 "GET /repos/hij1nx/eventemitter2/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:51 - DEBUG - https://api.github.com:443 "GET /repositories/1823764/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:51 - INFO - [40/166] Fetching SBOM for isaacs/sigmund (versions: 1.0.1)
+2025-12-04 12:30:51 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/sigmund/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:52 - INFO - [41/166] Fetching SBOM for mikeal/forever-agent (versions: 0.6.1, 0.5.2)
+2025-12-04 12:30:53 - DEBUG - https://api.github.com:443 "GET /repos/mikeal/forever-agent/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:53 - DEBUG - https://api.github.com:443 "GET /repositories/8509819/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:53 - INFO - [42/166] Fetching SBOM for tootallnate/util-deprecate (versions: 1.0.2)
+2025-12-04 12:30:54 - DEBUG - https://api.github.com:443 "GET /repos/tootallnate/util-deprecate/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:54 - INFO - [43/166] Fetching SBOM for 131/node-vlc-player (versions: 0.12.0)
+2025-12-04 12:30:54 - DEBUG - https://api.github.com:443 "GET /repos/131/node-vlc-player/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:30:54 - DEBUG - https://api.github.com:443 "GET /repositories/51482199/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:54 - INFO - [44/166] Fetching SBOM for isaacs/node-mkdirp (versions: 0.5.1)
+2025-12-04 12:30:55 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/node-mkdirp/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:55 - INFO - [45/166] Fetching SBOM for davepacheco/node-extsprintf (versions: 1.3.0)
+2025-12-04 12:30:56 - DEBUG - https://api.github.com:443 "GET /repos/davepacheco/node-extsprintf/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:30:56 - DEBUG - https://api.github.com:443 "GET /repositories/4058064/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:56 - INFO - [46/166] Fetching SBOM for cheeriojs/dom-serializer (versions: 0.1.0)
+2025-12-04 12:30:57 - DEBUG - https://api.github.com:443 "GET /repos/cheeriojs/dom-serializer/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:30:57 - INFO - [47/166] Fetching SBOM for cheeriojs/cheerio (versions: 0.19.0)
+2025-12-04 12:31:00 - DEBUG - https://api.github.com:443 "GET /repos/cheeriojs/cheerio/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:00 - INFO - [48/166] Fetching SBOM for braveg1rl/performance-now (versions: 2.1.0)
+2025-12-04 12:31:01 - DEBUG - https://api.github.com:443 "GET /repos/braveg1rl/performance-now/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:01 - INFO - [49/166] Fetching SBOM for arekinath/node-getpass (versions: 0.1.7)
+2025-12-04 12:31:01 - DEBUG - https://api.github.com:443 "GET /repos/arekinath/node-getpass/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:01 - INFO - [50/166] Fetching SBOM for joyent/node-sshpk (versions: 1.13.1)
+2025-12-04 12:31:01 - DEBUG - https://api.github.com:443 "GET /repos/joyent/node-sshpk/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:31:02 - DEBUG - https://api.github.com:443 "GET /repositories/42750423/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:03 - INFO - [51/166] Fetching SBOM for request/request (versions: 2.83.0, 2.53.0)
+2025-12-04 12:31:03 - DEBUG - https://api.github.com:443 "GET /repos/request/request/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:03 - INFO - [52/166] Fetching SBOM for tritondatacenter/node-http-signature (versions: 0.10.1, 1.2.0)
+2025-12-04 12:31:03 - DEBUG - https://api.github.com:443 "GET /repos/tritondatacenter/node-http-signature/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:03 - INFO - [53/166] Fetching SBOM for hapijs/boom (versions: 4.3.1, 2.10.1, 5.2.0)
+2025-12-04 12:31:04 - DEBUG - https://api.github.com:443 "GET /repos/hapijs/boom/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:04 - INFO - [54/166] Fetching SBOM for joyent/node-asn1 (versions: 0.2.3, 0.1.11)
+2025-12-04 12:31:04 - DEBUG - https://api.github.com:443 "GET /repos/joyent/node-asn1/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:31:04 - DEBUG - https://api.github.com:443 "GET /repositories/2073924/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:04 - INFO - [55/166] Fetching SBOM for joyent/node-jsprim (versions: 1.4.1)
+2025-12-04 12:31:05 - DEBUG - https://api.github.com:443 "GET /repos/joyent/node-jsprim/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:31:06 - DEBUG - https://api.github.com:443 "GET /repositories/4066155/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:06 - INFO - [56/166] Fetching SBOM for isaacs/inherits (versions: 2.0.3, 1.0.2)
+2025-12-04 12:31:07 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/inherits/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:07 - INFO - [57/166] Fetching SBOM for isaacs/node-lru-cache (versions: 4.1.1, 2.7.3)
+2025-12-04 12:31:07 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/node-lru-cache/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:07 - INFO - [58/166] Fetching SBOM for isaacs/rimraf (versions: 2.6.2, 2.2.8)
+2025-12-04 12:31:08 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/rimraf/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:08 - INFO - [59/166] Fetching SBOM for dscape/cycle (versions: 1.0.3)
+2025-12-04 12:31:09 - DEBUG - https://api.github.com:443 "GET /repos/dscape/cycle/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:09 - INFO - [60/166] Fetching SBOM for fb55/domhandler (versions: 2.3.0)
+2025-12-04 12:31:10 - DEBUG - https://api.github.com:443 "GET /repos/fb55/domhandler/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:11 - INFO - [61/166] Fetching SBOM for isaacs/isexe (versions: 2.0.0)
+2025-12-04 12:31:12 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/isexe/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:12 - INFO - [62/166] Fetching SBOM for flatiron/prompt (versions: 0.2.14)
+2025-12-04 12:31:12 - DEBUG - https://api.github.com:443 "GET /repos/flatiron/prompt/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:12 - INFO - [63/166] Fetching SBOM for fb55/entities (versions: 1.1.1, 1.0.0)
+2025-12-04 12:31:13 - DEBUG - https://api.github.com:443 "GET /repos/fb55/entities/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:13 - INFO - [64/166] Fetching SBOM for nodejs/readable-stream (versions: 1.0.34, 1.1.14, 2.3.4)
+2025-12-04 12:31:14 - DEBUG - https://api.github.com:443 "GET /repos/nodejs/readable-stream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:14 - INFO - [65/166] Fetching SBOM for rmustacc/node-ctype (versions: 0.5.3)
+2025-12-04 12:31:14 - DEBUG - https://api.github.com:443 "GET /repos/rmustacc/node-ctype/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:31:14 - DEBUG - https://api.github.com:443 "GET /repositories/1370618/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:14 - INFO - [66/166] Fetching SBOM for juliangruber/balanced-match (versions: 1.0.0)
+2025-12-04 12:31:15 - DEBUG - https://api.github.com:443 "GET /repos/juliangruber/balanced-match/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:15 - INFO - [67/166] Fetching SBOM for marak/colors.js (versions: 0.6.2, 1.0.3)
+2025-12-04 12:31:16 - DEBUG - https://api.github.com:443 "GET /repos/marak/colors.js/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:16 - INFO - [68/166] Fetching SBOM for jquery/esprima (versions: 1.0.4)
+2025-12-04 12:31:17 - DEBUG - https://api.github.com:443 "GET /repos/jquery/esprima/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:17 - INFO - [69/166] Fetching SBOM for jashkenas/underscore (versions: 1.7.0, 1.8.3, 1.6.0)
+2025-12-04 12:31:18 - DEBUG - https://api.github.com:443 "GET /repos/jashkenas/underscore/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:18 - INFO - [70/166] Fetching SBOM for form-data/form-data (versions: 2.3.1, 0.2.0)
+2025-12-04 12:31:18 - DEBUG - https://api.github.com:443 "GET /repos/form-data/form-data/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:19 - INFO - [71/166] Fetching SBOM for hapijs/cryptiles (versions: 2.0.5, 3.1.2)
+2025-12-04 12:31:20 - DEBUG - https://api.github.com:443 "GET /repos/hapijs/cryptiles/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:20 - INFO - [72/166] Fetching SBOM for alexindigo/asynckit (versions: 0.4.0)
+2025-12-04 12:31:20 - DEBUG - https://api.github.com:443 "GET /repos/alexindigo/asynckit/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:20 - INFO - [73/166] Fetching SBOM for isaacs/sax-js (versions: 1.2.4)
+2025-12-04 12:31:21 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/sax-js/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:21 - INFO - [74/166] Fetching SBOM for pillarjs/iconv-lite (versions: 0.2.11)
+2025-12-04 12:31:21 - DEBUG - https://api.github.com:443 "GET /repos/pillarjs/iconv-lite/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:21 - INFO - [75/166] Fetching SBOM for hughsk/is-typedarray (versions: 1.0.0)
+2025-12-04 12:31:22 - DEBUG - https://api.github.com:443 "GET /repos/hughsk/is-typedarray/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:22 - INFO - [76/166] Fetching SBOM for gruntjs/grunt-legacy-log (versions: 0.1.3)
+2025-12-04 12:31:22 - DEBUG - https://api.github.com:443 "GET /repos/gruntjs/grunt-legacy-log/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:22 - INFO - [77/166] Fetching SBOM for mcavage/node-assert-plus (versions: 1.0.0, 0.1.5)
+2025-12-04 12:31:23 - DEBUG - https://api.github.com:443 "GET /repos/mcavage/node-assert-plus/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:31:23 - DEBUG - https://api.github.com:443 "GET /repositories/4767976/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:23 - INFO - [78/166] Fetching SBOM for isaacs/json-stringify-safe (versions: 5.0.1)
+2025-12-04 12:31:23 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/json-stringify-safe/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:31:24 - DEBUG - https://api.github.com:443 "GET /repositories/8297078/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:24 - INFO - [79/166] Fetching SBOM for felixge/node-delayed-stream (versions: 1.0.0, 0.0.5)
+2025-12-04 12:31:24 - DEBUG - https://api.github.com:443 "GET /repos/felixge/node-delayed-stream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:24 - INFO - [80/166] Fetching SBOM for cowboy/javascript-hooker (versions: 0.2.3)
+2025-12-04 12:31:25 - DEBUG - https://api.github.com:443 "GET /repos/cowboy/javascript-hooker/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:26 - INFO - [81/166] Fetching SBOM for broofa/node-uuid (versions: 1.4.8)
+2025-12-04 12:31:26 - DEBUG - https://api.github.com:443 "GET /repos/broofa/node-uuid/dependency-graph/sbom HTTP/1.1" 404 None
+2025-12-04 12:31:26 - WARNING -   Failed (permanent): Dependency graph not enabled
+2025-12-04 12:31:26 - INFO - [82/166] Fetching SBOM for tootallnate/ansi.js (versions: 0.3.1)
+2025-12-04 12:31:26 - DEBUG - https://api.github.com:443 "GET /repos/tootallnate/ansi.js/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:26 - INFO - [83/166] Fetching SBOM for ahmadnassri/node-har-validator (versions: 5.0.3)
+2025-12-04 12:31:27 - DEBUG - https://api.github.com:443 "GET /repos/ahmadnassri/node-har-validator/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:27 - INFO - [84/166] Fetching SBOM for isaacs/once (versions: 1.4.0)
+2025-12-04 12:31:28 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/once/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:28 - INFO - [85/166] Fetching SBOM for jsdoc/jsdoc (versions: 3.5.5)
+2025-12-04 12:31:30 - DEBUG - https://api.github.com:443 "GET /repos/jsdoc/jsdoc/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:30 - INFO - [86/166] Fetching SBOM for tootallnate/node-speaker (versions: 0.3.1)
+2025-12-04 12:31:30 - DEBUG - https://api.github.com:443 "GET /repos/tootallnate/node-speaker/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:30 - INFO - [87/166] Fetching SBOM for flatiron/utile (versions: 0.2.1)
+2025-12-04 12:31:30 - DEBUG - https://api.github.com:443 "GET /repos/flatiron/utile/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:30 - INFO - [88/166] Fetching SBOM for isaacs/minimatch (versions: 3.0.4, 0.3.0, 0.2.14)
+2025-12-04 12:31:31 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/minimatch/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:31 - INFO - [89/166] Fetching SBOM for cowboy/node-getobject (versions: 0.1.0)
+2025-12-04 12:31:32 - DEBUG - https://api.github.com:443 "GET /repos/cowboy/node-getobject/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:32 - INFO - [90/166] Fetching SBOM for npm/abbrev-js (versions: 1.1.1)
+2025-12-04 12:31:32 - DEBUG - https://api.github.com:443 "GET /repos/npm/abbrev-js/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:33 - INFO - [91/166] Fetching SBOM for feross/safe-buffer (versions: 5.1.1)
+2025-12-04 12:31:34 - DEBUG - https://api.github.com:443 "GET /repos/feross/safe-buffer/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:34 - INFO - [92/166] Fetching SBOM for gulpjs/findup-sync (versions: 0.1.3, 0.3.0)
+2025-12-04 12:31:34 - DEBUG - https://api.github.com:443 "GET /repos/gulpjs/findup-sync/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:34 - INFO - [93/166] Fetching SBOM for ajv-validator/ajv (versions: 5.5.2)
+2025-12-04 12:31:35 - DEBUG - https://api.github.com:443 "GET /repos/ajv-validator/ajv/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:35 - INFO - [94/166] Fetching SBOM for mozilla/hawk (versions: 6.0.2, 2.3.1)
+2025-12-04 12:31:35 - DEBUG - https://api.github.com:443 "GET /repos/mozilla/hawk/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:35 - INFO - [95/166] Fetching SBOM for avianflu/ncp (versions: 0.4.2)
+2025-12-04 12:31:35 - DEBUG - https://api.github.com:443 "GET /repos/avianflu/ncp/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:35 - INFO - [96/166] Fetching SBOM for npm/mute-stream (versions: 0.0.7)
+2025-12-04 12:31:36 - DEBUG - https://api.github.com:443 "GET /repos/npm/mute-stream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:36 - INFO - [97/166] Fetching SBOM for isaacs/yallist (versions: 2.1.2)
+2025-12-04 12:31:37 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/yallist/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:37 - INFO - [98/166] Fetching SBOM for markedjs/marked (versions: 0.3.12)
+2025-12-04 12:31:38 - DEBUG - https://api.github.com:443 "GET /repos/markedjs/marked/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:38 - INFO - [99/166] Fetching SBOM for winstonjs/winston (versions: 0.8.3)
+2025-12-04 12:31:39 - DEBUG - https://api.github.com:443 "GET /repos/winstonjs/winston/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:39 - INFO - [100/166] Fetching SBOM for rvagg/bl (versions: 0.9.5)
+2025-12-04 12:31:39 - DEBUG - https://api.github.com:443 "GET /repos/rvagg/bl/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:40 - INFO - [101/166] Fetching SBOM for npm/nopt (versions: 1.0.10, 3.0.6)
+2025-12-04 12:31:41 - DEBUG - https://api.github.com:443 "GET /repos/npm/nopt/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:41 - INFO - [102/166] Fetching SBOM for felixge/node-dateformat (versions: 1.0.2-1.2.3)
+2025-12-04 12:31:42 - DEBUG - https://api.github.com:443 "GET /repos/felixge/node-dateformat/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:42 - INFO - [103/166] Fetching SBOM for npm/are-we-there-yet (versions: 1.0.6)
+2025-12-04 12:31:42 - DEBUG - https://api.github.com:443 "GET /repos/npm/are-we-there-yet/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:42 - INFO - [104/166] Fetching SBOM for nodeca/js-yaml (versions: 2.0.5)
+2025-12-04 12:31:42 - DEBUG - https://api.github.com:443 "GET /repos/nodeca/js-yaml/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:42 - INFO - [105/166] Fetching SBOM for epoberezkin/fast-deep-equal (versions: 1.0.0)
+2025-12-04 12:31:43 - DEBUG - https://api.github.com:443 "GET /repos/epoberezkin/fast-deep-equal/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:43 - INFO - [106/166] Fetching SBOM for michaelkourlas/node-xmlcreate (versions: 1.0.2)
+2025-12-04 12:31:43 - DEBUG - https://api.github.com:443 "GET /repos/michaelkourlas/node-xmlcreate/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:43 - INFO - [107/166] Fetching SBOM for visionmedia/node-delegates (versions: 1.0.0)
+2025-12-04 12:31:43 - DEBUG - https://api.github.com:443 "GET /repos/visionmedia/node-delegates/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:31:44 - DEBUG - https://api.github.com:443 "GET /repositories/15870218/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:44 - INFO - [108/166] Fetching SBOM for tootallnate/node-bindings (versions: 1.3.0)
+2025-12-04 12:31:44 - DEBUG - https://api.github.com:443 "GET /repos/tootallnate/node-bindings/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:44 - INFO - [109/166] Fetching SBOM for calvinmetcalf/process-nextick-args (versions: 2.0.0)
+2025-12-04 12:31:45 - DEBUG - https://api.github.com:443 "GET /repos/calvinmetcalf/process-nextick-args/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:45 - INFO - [110/166] Fetching SBOM for jmorrell/get-youtube-id (versions: 1.0.0)
+2025-12-04 12:31:45 - DEBUG - https://api.github.com:443 "GET /repos/jmorrell/get-youtube-id/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:46 - INFO - [111/166] Fetching SBOM for inspect-js/node-deep-equal (versions: 1.0.1)
+2025-12-04 12:31:47 - DEBUG - https://api.github.com:443 "GET /repos/inspect-js/node-deep-equal/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:47 - INFO - [112/166] Fetching SBOM for motdotla/dotenv (versions: 2.0.0)
+2025-12-04 12:31:47 - DEBUG - https://api.github.com:443 "GET /repos/motdotla/dotenv/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:47 - INFO - [113/166] Fetching SBOM for schmavery/facebook-chat-api (versions: 1.2.0)
+2025-12-04 12:31:48 - DEBUG - https://api.github.com:443 "GET /repos/schmavery/facebook-chat-api/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:48 - INFO - [114/166] Fetching SBOM for mikeal/oauth-sign (versions: 0.8.2, 0.6.0)
+2025-12-04 12:31:48 - DEBUG - https://api.github.com:443 "GET /repos/mikeal/oauth-sign/dependency-graph/sbom HTTP/1.1" 301 218
+2025-12-04 12:31:49 - DEBUG - https://api.github.com:443 "GET /repositories/8509604/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:49 - INFO - [115/166] Fetching SBOM for npm/inflight (versions: 1.0.6)
+2025-12-04 12:31:49 - DEBUG - https://api.github.com:443 "GET /repos/npm/inflight/dependency-graph/sbom HTTP/1.1" 301 219
+2025-12-04 12:31:49 - DEBUG - https://api.github.com:443 "GET /repositories/19442260/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:49 - INFO - [116/166] Fetching SBOM for fb55/htmlparser2 (versions: 3.8.3)
+2025-12-04 12:31:50 - DEBUG - https://api.github.com:443 "GET /repos/fb55/htmlparser2/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:50 - INFO - [117/166] Fetching SBOM for sindresorhus/escape-string-regexp (versions: 1.0.5)
+2025-12-04 12:31:50 - DEBUG - https://api.github.com:443 "GET /repos/sindresorhus/escape-string-regexp/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:50 - INFO - [118/166] Fetching SBOM for fent/node-ytdl-core (versions: 0.20.1)
+2025-12-04 12:31:51 - DEBUG - https://api.github.com:443 "GET /repos/fent/node-ytdl-core/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:51 - INFO - [119/166] Fetching SBOM for browserify/resolve (versions: 1.1.7)
+2025-12-04 12:31:52 - DEBUG - https://api.github.com:443 "GET /repos/browserify/resolve/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:52 - INFO - [120/166] Fetching SBOM for debug-js/debug (versions: 2.6.9)
+2025-12-04 12:31:52 - DEBUG - https://api.github.com:443 "GET /repos/debug-js/debug/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:53 - INFO - [121/166] Fetching SBOM for flatiron/revalidator (versions: 0.1.8)
+2025-12-04 12:31:53 - DEBUG - https://api.github.com:443 "GET /repos/flatiron/revalidator/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:53 - INFO - [122/166] Fetching SBOM for mdevils/html-entities (versions: 1.2.1)
+2025-12-04 12:31:55 - DEBUG - https://api.github.com:443 "GET /repos/mdevils/html-entities/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:55 - INFO - [123/166] Fetching SBOM for rvagg/isstream (versions: 0.1.2)
+2025-12-04 12:31:55 - DEBUG - https://api.github.com:443 "GET /repos/rvagg/isstream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:55 - INFO - [124/166] Fetching SBOM for jashkenas/coffeescript (versions: 1.3.3)
+2025-12-04 12:31:56 - DEBUG - https://api.github.com:443 "GET /repos/jashkenas/coffeescript/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:56 - INFO - [125/166] Fetching SBOM for mathiasbynens/punycode.js (versions: 1.4.1)
+2025-12-04 12:31:58 - DEBUG - https://api.github.com:443 "GET /repos/mathiasbynens/punycode.js/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:58 - INFO - [126/166] Fetching SBOM for fb55/css-select (versions: 1.0.0)
+2025-12-04 12:31:58 - DEBUG - https://api.github.com:443 "GET /repos/fb55/css-select/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:31:58 - INFO - [127/166] Fetching SBOM for moxystudio/node-cross-spawn (versions: 3.0.1)
+2025-12-04 12:32:00 - DEBUG - https://api.github.com:443 "GET /repos/moxystudio/node-cross-spawn/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:00 - INFO - [128/166] Fetching SBOM for hegemonic/requizzle (versions: 0.2.1)
+2025-12-04 12:32:01 - DEBUG - https://api.github.com:443 "GET /repos/hegemonic/requizzle/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:02 - INFO - [129/166] Fetching SBOM for vercel/ms (versions: 2.0.0)
+2025-12-04 12:32:02 - DEBUG - https://api.github.com:443 "GET /repos/vercel/ms/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:02 - INFO - [130/166] Fetching SBOM for gruntjs/grunt (versions: 0.4.5)
+2025-12-04 12:32:03 - DEBUG - https://api.github.com:443 "GET /repos/gruntjs/grunt/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:04 - INFO - [131/166] Fetching SBOM for cowboy/node-exit (versions: 0.1.2)
+2025-12-04 12:32:04 - DEBUG - https://api.github.com:443 "GET /repos/cowboy/node-exit/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:04 - INFO - [132/166] Fetching SBOM for sindresorhus/strip-json-comments (versions: 2.0.1)
+2025-12-04 12:32:05 - DEBUG - https://api.github.com:443 "GET /repos/sindresorhus/strip-json-comments/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:05 - INFO - [133/166] Fetching SBOM for isaacs/core-util-is (versions: 1.0.2)
+2025-12-04 12:32:05 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/core-util-is/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:05 - INFO - [134/166] Fetching SBOM for jshttp/mime-types (versions: 2.0.14, 2.1.17)
+2025-12-04 12:32:06 - DEBUG - https://api.github.com:443 "GET /repos/jshttp/mime-types/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:06 - INFO - [135/166] Fetching SBOM for jshttp/mime-db (versions: 1.12.0, 1.30.0)
+2025-12-04 12:32:07 - DEBUG - https://api.github.com:443 "GET /repos/jshttp/mime-db/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:07 - INFO - [136/166] Fetching SBOM for salesforce/tough-cookie (versions: 2.3.3)
+2025-12-04 12:32:08 - DEBUG - https://api.github.com:443 "GET /repos/salesforce/tough-cookie/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:08 - INFO - [137/166] Fetching SBOM for documentcloud/underscore-contrib (versions: 0.3.0)
+2025-12-04 12:32:08 - DEBUG - https://api.github.com:443 "GET /repos/documentcloud/underscore-contrib/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:08 - INFO - [138/166] Fetching SBOM for gruntjs/grunt-known-options (versions: 1.1.0)
+2025-12-04 12:32:09 - DEBUG - https://api.github.com:443 "GET /repos/gruntjs/grunt-known-options/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:09 - INFO - [139/166] Fetching SBOM for mhart/aws4 (versions: 1.6.0)
+2025-12-04 12:32:09 - DEBUG - https://api.github.com:443 "GET /repos/mhart/aws4/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:09 - INFO - [140/166] Fetching SBOM for fent/node-m3u8stream (versions: 0.2.1)
+2025-12-04 12:32:10 - DEBUG - https://api.github.com:443 "GET /repos/fent/node-m3u8stream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:11 - INFO - [141/166] Fetching SBOM for petkaantonov/bluebird (versions: 2.11.0, 3.5.1)
+2025-12-04 12:32:12 - DEBUG - https://api.github.com:443 "GET /repos/petkaantonov/bluebird/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:12 - INFO - [142/166] Fetching SBOM for mhart/stringstream (versions: 0.0.5)
+2025-12-04 12:32:13 - DEBUG - https://api.github.com:443 "GET /repos/mhart/stringstream/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:13 - INFO - [143/166] Fetching SBOM for fb55/nth-check (versions: 1.0.1)
+2025-12-04 12:32:13 - DEBUG - https://api.github.com:443 "GET /repos/fb55/nth-check/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:13 - INFO - [144/166] Fetching SBOM for npm/npmlog (versions: 1.2.1)
+2025-12-04 12:32:14 - DEBUG - https://api.github.com:443 "GET /repos/npm/npmlog/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:14 - INFO - [145/166] Fetching SBOM for babel/babylon (versions: 7.0.0-beta.19)
+2025-12-04 12:32:14 - DEBUG - https://api.github.com:443 "GET /repos/babel/babylon/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:14 - INFO - [146/166] Fetching SBOM for fb55/css-what (versions: 1.0.0)
+2025-12-04 12:32:15 - DEBUG - https://api.github.com:443 "GET /repos/fb55/css-what/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:15 - INFO - [147/166] Fetching SBOM for fluent-ffmpeg/node-fluent-ffmpeg (versions: 2.1.2)
+2025-12-04 12:32:16 - DEBUG - https://api.github.com:443 "GET /repos/fluent-ffmpeg/node-fluent-ffmpeg/dependency-graph/sbom HTTP/1.1" 404 None
+2025-12-04 12:32:16 - WARNING -   Failed (permanent): Dependency graph not enabled
+2025-12-04 12:32:16 - INFO - [148/166] Fetching SBOM for felixge/node-stack-trace (versions: 0.0.10)
+2025-12-04 12:32:17 - DEBUG - https://api.github.com:443 "GET /repos/felixge/node-stack-trace/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:17 - INFO - [149/166] Fetching SBOM for paulomcnally/youtube-node (versions: 1.3.2)
+2025-12-04 12:32:18 - DEBUG - https://api.github.com:443 "GET /repos/paulomcnally/youtube-node/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:18 - INFO - [150/166] Fetching SBOM for pksunkara/inflect (versions: 0.3.6)
+2025-12-04 12:32:19 - DEBUG - https://api.github.com:443 "GET /repos/pksunkara/inflect/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:20 - INFO - [151/166] Fetching SBOM for trentm/node-dashdash (versions: 1.14.1)
+2025-12-04 12:32:20 - DEBUG - https://api.github.com:443 "GET /repos/trentm/node-dashdash/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:21 - INFO - [152/166] Fetching SBOM for tj/co (versions: 4.6.0)
+2025-12-04 12:32:21 - DEBUG - https://api.github.com:443 "GET /repos/tj/co/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:21 - INFO - [153/166] Fetching SBOM for hegemonic/catharsis (versions: 0.8.9)
+2025-12-04 12:32:22 - DEBUG - https://api.github.com:443 "GET /repos/hegemonic/catharsis/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:22 - INFO - [154/166] Fetching SBOM for kriszyp/json-schema (versions: 0.2.3)
+2025-12-04 12:32:22 - DEBUG - https://api.github.com:443 "GET /repos/kriszyp/json-schema/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:22 - INFO - [155/166] Fetching SBOM for iarna/has-unicode (versions: 2.0.1)
+2025-12-04 12:32:23 - DEBUG - https://api.github.com:443 "GET /repos/iarna/has-unicode/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:23 - INFO - [156/166] Fetching SBOM for nodeca/argparse (versions: 0.1.16)
+2025-12-04 12:32:23 - DEBUG - https://api.github.com:443 "GET /repos/nodeca/argparse/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:23 - INFO - [157/166] Fetching SBOM for npm/read (versions: 1.0.7)
+2025-12-04 12:32:24 - DEBUG - https://api.github.com:443 "GET /repos/npm/read/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:24 - INFO - [158/166] Fetching SBOM for jprichardson/node-klaw (versions: 2.0.0)
+2025-12-04 12:32:25 - DEBUG - https://api.github.com:443 "GET /repos/jprichardson/node-klaw/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:25 - INFO - [159/166] Fetching SBOM for uuidjs/uuid (versions: 3.2.1)
+2025-12-04 12:32:26 - DEBUG - https://api.github.com:443 "GET /repos/uuidjs/uuid/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:26 - INFO - [160/166] Fetching SBOM for minimistjs/minimist (versions: 0.0.8)
+2025-12-04 12:32:26 - DEBUG - https://api.github.com:443 "GET /repos/minimistjs/minimist/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:27 - INFO - [161/166] Fetching SBOM for gruntjs/grunt-legacy-util (versions: 0.2.0)
+2025-12-04 12:32:28 - DEBUG - https://api.github.com:443 "GET /repos/gruntjs/grunt-legacy-util/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:28 - INFO - [162/166] Fetching SBOM for justmoon/node-extend (versions: 3.0.1)
+2025-12-04 12:32:28 - DEBUG - https://api.github.com:443 "GET /repos/justmoon/node-extend/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:28 - INFO - [163/166] Fetching SBOM for isaacs/pseudomap (versions: 1.0.2)
+2025-12-04 12:32:31 - DEBUG - https://api.github.com:443 "GET /repos/isaacs/pseudomap/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:31 - INFO - [164/166] Fetching SBOM for epoberezkin/fast-json-stable-stringify (versions: 2.0.0)
+2025-12-04 12:32:31 - DEBUG - https://api.github.com:443 "GET /repos/epoberezkin/fast-json-stable-stringify/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:31 - INFO - [165/166] Fetching SBOM for michaelkourlas/node-js2xmlparser (versions: 3.0.0)
+2025-12-04 12:32:32 - DEBUG - https://api.github.com:443 "GET /repos/michaelkourlas/node-js2xmlparser/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:32 - INFO - [166/166] Fetching SBOM for ljharb/concat-map (versions: 0.0.1)
+2025-12-04 12:32:33 - DEBUG - https://api.github.com:443 "GET /repos/ljharb/concat-map/dependency-graph/sbom HTTP/1.1" 200 None
+2025-12-04 12:32:33 - INFO - 
+Saved version mapping: version_mapping.json
+2025-12-04 12:32:33 - INFO - Generated execution report: tedg-dev_beatBot_execution_report.md
+2025-12-04 12:32:33 - INFO - 
+======================================================================
+2025-12-04 12:32:33 - INFO - SUMMARY
+2025-12-04 12:32:33 - INFO - ======================================================================
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - Packages in root SBOM: 230
+2025-12-04 12:32:33 - INFO - Mapped to GitHub repos: 222
+2025-12-04 12:32:33 - INFO - Unique repositories: 166
+2025-12-04 12:32:33 - INFO - Duplicate versions skipped: 56
+2025-12-04 12:32:33 - INFO - Packages without GitHub repos: 8
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - SBOMs downloaded successfully: 164
+2025-12-04 12:32:33 - INFO - SBOMs failed (permanent): 2
+2025-12-04 12:32:33 - INFO - SBOMs failed (transient): 0
+2025-12-04 12:32:33 - INFO - SBOMs failed (total): 2
+2025-12-04 12:32:33 - INFO - Elapsed time: 3m 48s
+2025-12-04 12:32:33 - INFO - Output directory: /Users/tedg/workspace/fetch_sbom/comparison_outputs_v1/sbom_api_export_2025-12-04_12.28.44/tedg-dev_beatBot
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - NOTE: GitHub's SBOM API only provides SBOMs for the current state
+2025-12-04 12:32:33 - INFO -       of repositories (default branch), not for specific versions.
+2025-12-04 12:32:33 - INFO -       See version_mapping.json for details on version deduplication.
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - ======================================================================
+2025-12-04 12:32:33 - INFO - Failed SBOM Downloads
+2025-12-04 12:32:33 - INFO - ======================================================================
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - 🔴 PERMANENT FAILURES (2):
+2025-12-04 12:32:33 - INFO -    (These will consistently fail until fixed)
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO -   ❌ broofa/node-uuid
+2025-12-04 12:32:33 - INFO -      Package: node-uuid (npm)
+2025-12-04 12:32:33 - INFO -      Versions: 1.4.8
+2025-12-04 12:32:33 - INFO -      Error: Dependency graph not enabled
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO -   ❌ fluent-ffmpeg/node-fluent-ffmpeg
+2025-12-04 12:32:33 - INFO -      Package: fluent-ffmpeg (npm)
+2025-12-04 12:32:33 - INFO -      Versions: 2.1.2
+2025-12-04 12:32:33 - INFO -      Error: Dependency graph not enabled
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - ======================================================================
+2025-12-04 12:32:33 - INFO - Packages Without GitHub Repositories
+2025-12-04 12:32:33 - INFO - ======================================================================
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO -   @ffmpeg-installer/linux-ia32 (npm) @ 4.0.3
+2025-12-04 12:32:33 - INFO -   boolbase (npm) @ 1.0.0
+2025-12-04 12:32:33 - INFO -   eyes (npm) @ 0.1.8
+2025-12-04 12:32:33 - INFO -   @ffmpeg-installer/linux-x64 (npm) @ 4.0.3
+2025-12-04 12:32:33 - INFO -   @ffmpeg-installer/win32-ia32 (npm) @ 4.0.3
+2025-12-04 12:32:33 - INFO -   @ffmpeg-installer/win32-x64 (npm) @ 4.0.2
+2025-12-04 12:32:33 - INFO -   @ffmpeg-installer/darwin-x64 (npm) @ 4.0.4
+2025-12-04 12:32:33 - INFO -   com.github.tedg-dev/beatBot (github) @ master
+2025-12-04 12:32:33 - INFO - 
+2025-12-04 12:32:33 - INFO - ✅ Done!
