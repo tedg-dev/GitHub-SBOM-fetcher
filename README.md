@@ -114,11 +114,12 @@ sboms_api/
   sbom_api_export_2025-11-24_14.04.05/
     tedg-dev_beatBot/
       tedg-dev_beatBot_root.json          # Root repository SBOM (SPDX 2.3)
+      tedg-dev_beatBot_execution_report.rtf # Formatted execution report (RTF)
+      version_mapping.json                 # Maps versions to SBOM files
       dependencies/                        # Dependency SBOMs (166 unique repos)
         lodash_lodash_current.json         # Current state of lodash/lodash
         async_async_current.json           # Current state of caolan/async
         ...
-      version_mapping.json                 # Maps versions to SBOM files
 ```
 
 ### Understanding Version Deduplication
@@ -273,6 +274,7 @@ python github_sbom_api_fetcher.py --gh-user tedg-dev --gh-repo beatBot --key-fil
 - ✅ Root repository SBOM (SPDX 2.3 format)
 - ✅ All dependency SBOMs (deduplicated, typically 150-200 repos)
 - ✅ Version mapping file (`version_mapping.json`)
+- ✅ **Formatted execution report (RTF)** - detailed results with statistics
 - ✅ Complete dependency tree from GitHub's SBOM API
 - ✅ Authoritative package-to-repo mappings from npm/PyPI registries
 - ✅ Works for private repositories
