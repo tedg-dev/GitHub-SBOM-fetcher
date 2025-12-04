@@ -1,0 +1,840 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.inspect-js/node-deep-equal",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/c0f8d2e8-b672-4ee4-ae91-90b1c0576340",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:44:17Z"
+    },
+    "packages": [
+      {
+        "name": "object-is",
+        "SPDXID": "SPDXRef-npm-object-is-1.1.5-a0d658",
+        "versionInfo": "^1.1.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/object-is@%5E1.1.5"
+          }
+        ]
+      },
+      {
+        "name": "object.assign",
+        "SPDXID": "SPDXRef-npm-object.assign-4.1.5-ba357c",
+        "versionInfo": "^4.1.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/object.assign@%5E4.1.5"
+          }
+        ]
+      },
+      {
+        "name": "call-bind",
+        "SPDXID": "SPDXRef-npm-call-bind-1.0.5-b48f59",
+        "versionInfo": "^1.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/call-bind@%5E1.0.5"
+          }
+        ]
+      },
+      {
+        "name": "es-get-iterator",
+        "SPDXID": "SPDXRef-npm-es-get-iterator-1.1.3-da0b82",
+        "versionInfo": "^1.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/es-get-iterator@%5E1.1.3"
+          }
+        ]
+      },
+      {
+        "name": "regexp.prototype.flags",
+        "SPDXID": "SPDXRef-npm-regexp.prototype.flags-1.5.1-64ae88",
+        "versionInfo": "^1.5.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/regexp.prototype.flags@%5E1.5.1"
+          }
+        ]
+      },
+      {
+        "name": "is-arguments",
+        "SPDXID": "SPDXRef-npm-is-arguments-1.1.1-e401a1",
+        "versionInfo": "^1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-arguments@%5E1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "has-symbols",
+        "SPDXID": "SPDXRef-npm-has-symbols-1.0.3-a2d2d5",
+        "versionInfo": "^1.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-symbols@%5E1.0.3"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-8.8.0-bc5545",
+        "versionInfo": "8.8.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2013-2016 Dulin Marat and other contributors, Copyright OpenJS Foundation and other contributors, <www.openjsf.org>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@8.8.0"
+          }
+        ]
+      },
+      {
+        "name": "which-typed-array",
+        "SPDXID": "SPDXRef-npm-which-typed-array-1.1.13-b6fb0b",
+        "versionInfo": "^1.1.13",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/which-typed-array@%5E1.1.13"
+          }
+        ]
+      },
+      {
+        "name": "aud",
+        "SPDXID": "SPDXRef-npm-aud-2.0.4-e7b5a0",
+        "versionInfo": "^2.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/aud@%5E2.0.4"
+          }
+        ]
+      },
+      {
+        "name": "safe-publish-latest",
+        "SPDXID": "SPDXRef-npm-safe-publish-latest-2.0.0-42b8e6",
+        "versionInfo": "^2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safe-publish-latest@%5E2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "is-regex",
+        "SPDXID": "SPDXRef-npm-is-regex-1.1.4-24d946",
+        "versionInfo": "^1.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-regex@%5E1.1.4"
+          }
+        ]
+      },
+      {
+        "name": "semver",
+        "SPDXID": "SPDXRef-npm-semver-6.3.1-faf60f",
+        "versionInfo": "^6.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/semver@%5E6.3.1"
+          }
+        ]
+      },
+      {
+        "name": "in-publish",
+        "SPDXID": "SPDXRef-npm-in-publish-2.0.1-08d965",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/in-publish@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "object-keys",
+        "SPDXID": "SPDXRef-npm-object-keys-1.1.1-de8581",
+        "versionInfo": "^1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/object-keys@%5E1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "has-proto",
+        "SPDXID": "SPDXRef-npm-has-proto-1.0.1-bbe08b",
+        "versionInfo": "^1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-proto@%5E1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "object.getownpropertydescriptors",
+        "SPDXID": "SPDXRef-npm-object.getownpropertydescriptors-2.1.7-81f277",
+        "versionInfo": "^2.1.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/object.getownpropertydescriptors@%5E2.1.7"
+          }
+        ]
+      },
+      {
+        "name": "is-date-object",
+        "SPDXID": "SPDXRef-npm-is-date-object-1.0.5-e5f579",
+        "versionInfo": "^1.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-date-object@%5E1.0.5"
+          }
+        ]
+      },
+      {
+        "name": "available-typed-arrays",
+        "SPDXID": "SPDXRef-npm-available-typed-arrays-1.0.5-af8e5c",
+        "versionInfo": "^1.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/available-typed-arrays@%5E1.0.5"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-10.3.2-8c944c",
+        "versionInfo": "^10.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E10.3.2"
+          }
+        ]
+      },
+      {
+        "name": "auto-changelog",
+        "SPDXID": "SPDXRef-npm-auto-changelog-2.4.0-79eab2",
+        "versionInfo": "^2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/auto-changelog@%5E2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "which-collection",
+        "SPDXID": "SPDXRef-npm-which-collection-1.0.1-bd5808",
+        "versionInfo": "^1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/which-collection@%5E1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "is-shared-array-buffer",
+        "SPDXID": "SPDXRef-npm-is-shared-array-buffer-1.0.2-de8867",
+        "versionInfo": "^1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-shared-array-buffer@%5E1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "side-channel",
+        "SPDXID": "SPDXRef-npm-side-channel-1.0.4-408c63",
+        "versionInfo": "^1.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/side-channel@%5E1.0.4"
+          }
+        ]
+      },
+      {
+        "name": "get-intrinsic",
+        "SPDXID": "SPDXRef-npm-get-intrinsic-1.2.2-822d13",
+        "versionInfo": "^1.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/get-intrinsic@%5E1.2.2"
+          }
+        ]
+      },
+      {
+        "name": "isarray",
+        "SPDXID": "SPDXRef-npm-isarray-2.0.5-13932c",
+        "versionInfo": "^2.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/isarray@%5E2.0.5"
+          }
+        ]
+      },
+      {
+        "name": "@ljharb/eslint-config",
+        "SPDXID": "SPDXRef-npm-ljharb-eslint-config-21.1.0-94cfb9",
+        "versionInfo": "^21.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40ljharb/eslint-config@%5E21.1.0"
+          }
+        ]
+      },
+      {
+        "name": "which-boxed-primitive",
+        "SPDXID": "SPDXRef-npm-which-boxed-primitive-1.0.2-e28799",
+        "versionInfo": "^1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/which-boxed-primitive@%5E1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.7.4-3b127c",
+        "versionInfo": "^5.7.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.7.4"
+          }
+        ]
+      },
+      {
+        "name": "array-buffer-byte-length",
+        "SPDXID": "SPDXRef-npm-array-buffer-byte-length-1.0.0-6eac51",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/array-buffer-byte-length@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "for-each",
+        "SPDXID": "SPDXRef-npm-for-each-0.3.3-515acb",
+        "versionInfo": "^0.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/for-each@%5E0.3.3"
+          }
+        ]
+      },
+      {
+        "name": "has-typed-arrays",
+        "SPDXID": "SPDXRef-npm-has-typed-arrays-1.0.1-bf107a",
+        "versionInfo": "^1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-typed-arrays@%5E1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "npmignore",
+        "SPDXID": "SPDXRef-npm-npmignore-0.3.1-e1eed3",
+        "versionInfo": "^0.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/npmignore@%5E0.3.1"
+          }
+        ]
+      },
+      {
+        "name": "is-array-buffer",
+        "SPDXID": "SPDXRef-npm-is-array-buffer-3.0.2-71fbc0",
+        "versionInfo": "^3.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-array-buffer@%5E3.0.2"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "versionInfo": "2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@2"
+          }
+        ]
+      },
+      {
+        "name": "codecov/codecov-action",
+        "SPDXID": "SPDXRef-githubactions-codecov-codecov-action-2-75c946",
+        "versionInfo": "2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/codecov/codecov-action@2"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/node/install",
+        "SPDXID": "SPDXRef-githubactions-ljharbactionsnode-install-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/node/install@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/node/matrix",
+        "SPDXID": "SPDXRef-githubactions-ljharbactionsnode-matrix-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/node/matrix@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/node.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/node.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/pretest.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/pretest.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/rebase.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-rebase.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/rebase.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/require-allow-edits",
+        "SPDXID": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/require-allow-edits@main"
+          }
+        ]
+      },
+      {
+        "name": "com.github.inspect-js/node-deep-equal",
+        "SPDXID": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/inspect-js/node-deep-equal",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/inspect-js/node-deep-equal@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-object-is-1.1.5-a0d658",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-object.assign-4.1.5-ba357c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-call-bind-1.0.5-b48f59",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-es-get-iterator-1.1.3-da0b82",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-regexp.prototype.flags-1.5.1-64ae88",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-is-arguments-1.1.1-e401a1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-has-symbols-1.0.3-a2d2d5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-8.8.0-bc5545",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-which-typed-array-1.1.13-b6fb0b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-aud-2.0.4-e7b5a0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-safe-publish-latest-2.0.0-42b8e6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-is-regex-1.1.4-24d946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-semver-6.3.1-faf60f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-in-publish-2.0.1-08d965",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-object-keys-1.1.1-de8581",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-has-proto-1.0.1-bbe08b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-object.getownpropertydescriptors-2.1.7-81f277",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-is-date-object-1.0.5-e5f579",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-available-typed-arrays-1.0.5-af8e5c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-10.3.2-8c944c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-auto-changelog-2.4.0-79eab2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-which-collection-1.0.1-bd5808",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-is-shared-array-buffer-1.0.2-de8867",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-side-channel-1.0.4-408c63",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-get-intrinsic-1.2.2-822d13",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-isarray-2.0.5-13932c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-ljharb-eslint-config-21.1.0-94cfb9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-which-boxed-primitive-1.0.2-e28799",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.7.4-3b127c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-array-buffer-byte-length-1.0.0-6eac51",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-for-each-0.3.3-515acb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-has-typed-arrays-1.0.1-bf107a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-npmignore-0.3.1-e1eed3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-npm-is-array-buffer-3.0.2-71fbc0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-codecov-codecov-action-2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactionsnode-install-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactionsnode-matrix-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-rebase.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-inspect-js-node-deep-equal-main-bdabb4",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

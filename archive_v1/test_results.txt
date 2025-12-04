@@ -1,0 +1,17 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.7, pytest-8.3.3, pluggy-1.6.0 -- /Users/tedg/workspace/fetch_sbom/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/tedg/workspace/fetch_sbom
+configfile: pytest.ini
+plugins: cov-6.0.0
+collecting ... collected 90 items
+
+tests/test_github_sbom_api_fetcher.py::TestPackageDependency::test_package_dependency_creation PASSED [  1%]
+tests/test_github_sbom_api_fetcher.py::TestPackageDependency::test_package_dependency_with_error PASSED [  2%]
+tests/test_github_sbom_api_fetcher.py::TestFetcherStats::test_stats_initialization PASSED [  3%]
+tests/test_github_sbom_api_fetcher.py::TestFetcherStats::test_stats_sboms_failed_property PASSED [  4%]
+tests/test_github_sbom_api_fetcher.py::TestFetcherStats::test_stats_elapsed_time PASSED [  5%]
+tests/test_github_sbom_api_fetcher.py::TestDownloadDependencySBOM::test_successful_download PASSED [  6%]
+tests/test_github_sbom_api_fetcher.py::TestDownloadDependencySBOM::test_permanent_failure_404 PASSED [  7%]
+tests/test_github_sbom_api_fetcher.py::TestDownloadDependencySBOM::test_permanent_failure_403 PASSED [  8%]
+tests/test_github_sbom_api_fetcher.py::TestDownloadDependencySBOM::test_transient_failure_429 

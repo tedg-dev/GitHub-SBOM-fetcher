@@ -1,0 +1,76 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tedg-cisco/python-app",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/3cce3ff1-07eb-4e12-989b-566e8d785c94",
+    "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251114150449-41a4ce8a9a95+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-14T22:53:52Z"
+    },
+    "packages": [
+      {
+        "name": "flask",
+        "SPDXID": "SPDXRef-pypi-flask-75c946",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/flask"
+          }
+        ]
+      },
+      {
+        "name": "redis",
+        "SPDXID": "SPDXRef-pypi-redis-75c946",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/redis"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tedg-cisco/python-app",
+        "SPDXID": "SPDXRef-github-tedg-cisco-python-app-master-6193e6",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tedg-cisco/python-app",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tedg-cisco/python-app@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-python-app-master-6193e6",
+        "relatedSpdxElement": "SPDXRef-pypi-flask-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-python-app-master-6193e6",
+        "relatedSpdxElement": "SPDXRef-pypi-redis-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tedg-cisco-python-app-master-6193e6",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.request/tunnel-agent",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/9ecf326c-28de-4c77-8c82-56dd99a21039",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:42:05Z"
+    },
+    "packages": [
+      {
+        "name": "safe-buffer",
+        "SPDXID": "SPDXRef-npm-safe-buffer-5.0.1-675a11",
+        "versionInfo": "^5.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safe-buffer@%5E5.0.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.request/tunnel-agent",
+        "SPDXID": "SPDXRef-github-request-tunnel-agent-master-f9546d",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/request/tunnel-agent",
+        "filesAnalyzed": false,
+        "licenseDeclared": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/request/tunnel-agent@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-request-tunnel-agent-master-f9546d",
+        "relatedSpdxElement": "SPDXRef-npm-safe-buffer-5.0.1-675a11",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-request-tunnel-agent-master-f9546d",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

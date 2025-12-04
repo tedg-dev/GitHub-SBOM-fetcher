@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.babel/babylon",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/36252966-e860-40f6-8788-a938ee5ff795",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:02Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.babel/babylon",
+        "SPDXID": "SPDXRef-github-babel-babylon-master-c4424d",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/babel/babylon",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/babel/babylon@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-babel-babylon-master-c4424d",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

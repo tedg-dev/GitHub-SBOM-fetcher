@@ -1,0 +1,308 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.nodejs/nan",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/338feca8-8ede-411d-ba73-347a7c5a6e86",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:19Z"
+    },
+    "packages": [
+      {
+        "name": "nan",
+        "SPDXID": "SPDXRef-npm-nan--ac3d34",
+        "versionInfo": "*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nan@%2A"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-5.0.10-8b35fb",
+        "versionInfo": "~5.0.10",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@~5.0.10"
+          }
+        ]
+      },
+      {
+        "name": "commander",
+        "SPDXID": "SPDXRef-npm-commander-2.8.1-15b333",
+        "versionInfo": "~2.8.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/commander@~2.8.1"
+          }
+        ]
+      },
+      {
+        "name": "readable-stream",
+        "SPDXID": "SPDXRef-npm-readable-stream-2.1.4-a1d305",
+        "versionInfo": "^2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/readable-stream@%5E2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "node-gyp",
+        "SPDXID": "SPDXRef-npm-node-gyp-v10.3.1-1e0f63",
+        "versionInfo": "~v10.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/node-gyp@~v10.3.1"
+          }
+        ]
+      },
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-0.7.1-0883aa",
+        "versionInfo": "~0.7.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@~0.7.1"
+          }
+        ]
+      },
+      {
+        "name": "xtend",
+        "SPDXID": "SPDXRef-npm-xtend-4.0.0-c0f84e",
+        "versionInfo": "~4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/xtend@~4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "bindings",
+        "SPDXID": "SPDXRef-npm-bindings-1.2.1-17b7f5",
+        "versionInfo": "~1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/bindings@~1.2.1"
+          }
+        ]
+      },
+      {
+        "name": "commander",
+        "SPDXID": "SPDXRef-npm-commander-2.8.1-c16203",
+        "versionInfo": "^2.8.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/commander@%5E2.8.1"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-5.0.14-179f8b",
+        "versionInfo": "^5.0.14",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@%5E5.0.14"
+          }
+        ]
+      },
+      {
+        "name": "request",
+        "SPDXID": "SPDXRef-npm-request-2.81.0-680cbe",
+        "versionInfo": "2.81.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "Copyright 2010-2012 Mikeal Rogers",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/request@2.81.0"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "pre-commit/action",
+        "SPDXID": "SPDXRef-githubactions-pre-commit-action-3.0.1-75c946",
+        "versionInfo": "3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/pre-commit/action@3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.nodejs/nan",
+        "SPDXID": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/nodejs/nan",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/nodejs/nan@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-nan--ac3d34",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-glob-5.0.10-8b35fb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-commander-2.8.1-15b333",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-readable-stream-2.1.4-a1d305",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-node-gyp-v10.3.1-1e0f63",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-tap-0.7.1-0883aa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-xtend-4.0.0-c0f84e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-bindings-1.2.1-17b7f5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-commander-2.8.1-c16203",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-glob-5.0.14-179f8b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-npm-request-2.81.0-680cbe",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-githubactions-pre-commit-action-3.0.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-nodejs-nan-main-c82bbd",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

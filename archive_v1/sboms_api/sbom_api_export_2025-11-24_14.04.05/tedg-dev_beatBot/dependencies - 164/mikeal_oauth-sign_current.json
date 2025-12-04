@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.request/oauth-sign",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/5db6e67b-e1b1-425a-a48c-84bbea38ddbc",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:09Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.request/oauth-sign",
+        "SPDXID": "SPDXRef-github-request-oauth-sign-master-b477bd",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/request/oauth-sign",
+        "filesAnalyzed": false,
+        "licenseDeclared": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/request/oauth-sign@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-request-oauth-sign-master-b477bd",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

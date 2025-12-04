@@ -1,0 +1,210 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.epoberezkin/fast-json-stable-stringify",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/87b64624-dc0c-4922-a496-4ad769a4401e",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:30Z"
+    },
+    "packages": [
+      {
+        "name": "json-stable-stringify",
+        "SPDXID": "SPDXRef-npm-json-stable-stringify-latest-6f3be0",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/json-stable-stringify@latest"
+          }
+        ]
+      },
+      {
+        "name": "pre-commit",
+        "SPDXID": "SPDXRef-npm-pre-commit-1.2.2-8cd0e9",
+        "versionInfo": "^1.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/pre-commit@%5E1.2.2"
+          }
+        ]
+      },
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-2.1.4-20a0ab",
+        "versionInfo": "^2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@%5E2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-6.7.0-b8efd2",
+        "versionInfo": "^6.7.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E6.7.0"
+          }
+        ]
+      },
+      {
+        "name": "fast-stable-stringify",
+        "SPDXID": "SPDXRef-npm-fast-stable-stringify-latest-09d294",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fast-stable-stringify@latest"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-4.11.0-6d0ee8",
+        "versionInfo": "^4.11.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E4.11.0"
+          }
+        ]
+      },
+      {
+        "name": "coveralls",
+        "SPDXID": "SPDXRef-npm-coveralls-3.0.0-835994",
+        "versionInfo": "^3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/coveralls@%5E3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "faster-stable-stringify",
+        "SPDXID": "SPDXRef-npm-faster-stable-stringify-latest-dda009",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/faster-stable-stringify@latest"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-14.1.0-0831aa",
+        "versionInfo": "^14.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E14.1.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.epoberezkin/fast-json-stable-stringify",
+        "SPDXID": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/epoberezkin/fast-json-stable-stringify",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/epoberezkin/fast-json-stable-stringify@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-json-stable-stringify-latest-6f3be0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-pre-commit-1.2.2-8cd0e9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-2.1.4-20a0ab",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-6.7.0-b8efd2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-fast-stable-stringify-latest-09d294",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-tape-4.11.0-6d0ee8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-coveralls-3.0.0-835994",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-faster-stable-stringify-latest-dda009",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-14.1.0-0831aa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-epoberezkin-fast-json-stable-stringify-master-72dbbc",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

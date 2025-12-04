@@ -1,0 +1,287 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.gulpjs/findup-sync",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/24fd6075-caab-4193-a2f2-3267381c5147",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:54Z"
+    },
+    "packages": [
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-7.21.0-e1b495",
+        "versionInfo": "^7.21.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E7.21.0"
+          }
+        ]
+      },
+      {
+        "name": "resolve-dir",
+        "SPDXID": "SPDXRef-npm-resolve-dir-1.0.1-cab212",
+        "versionInfo": "^1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/resolve-dir@%5E1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "resolve",
+        "SPDXID": "SPDXRef-npm-resolve-1.20.0-6bc21f",
+        "versionInfo": "^1.20.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/resolve@%5E1.20.0"
+          }
+        ]
+      },
+      {
+        "name": "is-glob",
+        "SPDXID": "SPDXRef-npm-is-glob-4.0.3-1891ae",
+        "versionInfo": "^4.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-glob@%5E4.0.3"
+          }
+        ]
+      },
+      {
+        "name": "homedir-polyfill",
+        "SPDXID": "SPDXRef-npm-homedir-polyfill-1.0.3-3e21a7",
+        "versionInfo": "^1.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/homedir-polyfill@%5E1.0.3"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-6.1.4-14206f",
+        "versionInfo": "^6.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E6.1.4"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.1.0-e4e8d8",
+        "versionInfo": "^15.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.1.0"
+          }
+        ]
+      },
+      {
+        "name": "detect-file",
+        "SPDXID": "SPDXRef-npm-detect-file-1.0.0-8839e0",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/detect-file@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-config-gulp",
+        "SPDXID": "SPDXRef-npm-eslint-config-gulp-5.0.1-218a94",
+        "versionInfo": "^5.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-config-gulp@%5E5.0.1"
+          }
+        ]
+      },
+      {
+        "name": "eslint-plugin-node",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-node-11.1.0-8c4a6e",
+        "versionInfo": "^11.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-node@%5E11.1.0"
+          }
+        ]
+      },
+      {
+        "name": "expect",
+        "SPDXID": "SPDXRef-npm-expect-27.3.1-26f3b3",
+        "versionInfo": "^27.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/expect@%5E27.3.1"
+          }
+        ]
+      },
+      {
+        "name": "normalize-path",
+        "SPDXID": "SPDXRef-npm-normalize-path-3.0.0-457860",
+        "versionInfo": "^3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/normalize-path@%5E3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "micromatch",
+        "SPDXID": "SPDXRef-npm-micromatch-4.0.4-a74586",
+        "versionInfo": "^4.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/micromatch@%5E4.0.4"
+          }
+        ]
+      },
+      {
+        "name": "com.github.gulpjs/findup-sync",
+        "SPDXID": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/gulpjs/findup-sync",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/gulpjs/findup-sync@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-7.21.0-e1b495",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-resolve-dir-1.0.1-cab212",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-resolve-1.20.0-6bc21f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-is-glob-4.0.3-1891ae",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-homedir-polyfill-1.0.3-3e21a7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-6.1.4-14206f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.1.0-e4e8d8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-detect-file-1.0.0-8839e0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-config-gulp-5.0.1-218a94",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-node-11.1.0-8c4a6e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-expect-27.3.1-26f3b3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-normalize-path-3.0.0-457860",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relatedSpdxElement": "SPDXRef-npm-micromatch-4.0.4-a74586",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-gulpjs-findup-sync-master-890da0",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

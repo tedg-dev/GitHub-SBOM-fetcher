@@ -1,0 +1,1533 @@
+{
+  "kribblo/node-ffmpeg-installer": {
+    "sbom_file": "kribblo_node-ffmpeg-installer_current.json",
+    "package_name": "@ffmpeg-installer/ffmpeg",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.13"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jquery/esprima": {
+    "sbom_file": "jquery_esprima_current.json",
+    "package_name": "esprima",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.4"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/sax-js": {
+    "sbom_file": "isaacs_sax-js_current.json",
+    "package_name": "sax",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.4"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hapijs/cryptiles": {
+    "sbom_file": "hapijs_cryptiles_current.json",
+    "package_name": "cryptiles",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.5",
+      "3.1.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "marak/colors.js": {
+    "sbom_file": "marak_colors.js_current.json",
+    "package_name": "colors",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.6.2",
+      "1.0.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "iarna/has-unicode": {
+    "sbom_file": "iarna_has-unicode_current.json",
+    "package_name": "has-unicode",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "debug-js/debug": {
+    "sbom_file": "debug-js_debug_current.json",
+    "package_name": "debug",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.6.9"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tootallnate/ansi.js": {
+    "sbom_file": "tootallnate_ansi.js_current.json",
+    "package_name": "ansi",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jprichardson/node-klaw": {
+    "sbom_file": "jprichardson_node-klaw_current.json",
+    "package_name": "klaw",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gruntjs/grunt": {
+    "sbom_file": "gruntjs_grunt_current.json",
+    "package_name": "grunt",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.4.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "uuidjs/uuid": {
+    "sbom_file": "uuidjs_uuid_current.json",
+    "package_name": "uuid",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "juliangruber/isarray": {
+    "sbom_file": "juliangruber_isarray_current.json",
+    "package_name": "isarray",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.1",
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mhart/aws4": {
+    "sbom_file": "mhart_aws4_current.json",
+    "package_name": "aws4",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.6.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/json-stringify-safe": {
+    "sbom_file": "isaacs_json-stringify-safe_current.json",
+    "package_name": "json-stringify-safe",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "5.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jashkenas/underscore": {
+    "sbom_file": "jashkenas_underscore_current.json",
+    "package_name": "underscore",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.6.0",
+      "1.7.0",
+      "1.8.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "petkaantonov/bluebird": {
+    "sbom_file": "petkaantonov_bluebird_current.json",
+    "package_name": "bluebird",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.11.0",
+      "3.5.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fent/node-miniget": {
+    "sbom_file": "fent_node-miniget_current.json",
+    "package_name": "miniget",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.1.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "flatiron/prompt": {
+    "sbom_file": "flatiron_prompt_current.json",
+    "package_name": "prompt",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.14"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "epoberezkin/fast-deep-equal": {
+    "sbom_file": "epoberezkin_fast-deep-equal_current.json",
+    "package_name": "fast-deep-equal",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "rvagg/isstream": {
+    "sbom_file": "rvagg_isstream_current.json",
+    "package_name": "isstream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "joyent/node-sshpk": {
+    "sbom_file": "joyent_node-sshpk_current.json",
+    "package_name": "sshpk",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.13.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "winstonjs/winston": {
+    "sbom_file": "winstonjs_winston_current.json",
+    "package_name": "winston",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.8.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/once": {
+    "sbom_file": "isaacs_once_current.json",
+    "package_name": "once",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.4.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jmorrell/get-youtube-id": {
+    "sbom_file": "jmorrell_get-youtube-id_current.json",
+    "package_name": "get-youtube-id",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "nodejs/readable-stream": {
+    "sbom_file": "nodejs_readable-stream_current.json",
+    "package_name": "readable-stream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.34",
+      "1.1.14",
+      "2.3.4"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "schmavery/facebook-chat-api": {
+    "sbom_file": "schmavery_facebook-chat-api_current.json",
+    "package_name": "facebook-chat-api",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mathiasbynens/punycode.js": {
+    "sbom_file": "mathiasbynens_punycode.js_current.json",
+    "package_name": "punycode",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.4.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hapijs/boom": {
+    "sbom_file": "hapijs_boom_current.json",
+    "package_name": "boom",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.10.1",
+      "4.3.1",
+      "5.2.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "lodash/lodash": {
+    "sbom_file": "lodash_lodash_current.json",
+    "package_name": "lodash",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.9.2",
+      "2.4.2",
+      "3.10.1",
+      "4.17.5",
+      "4.5.1",
+      "4.6.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/node-graceful-fs": {
+    "sbom_file": "isaacs_node-graceful-fs_current.json",
+    "package_name": "graceful-fs",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.3",
+      "4.1.11"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hapijs/hoek": {
+    "sbom_file": "hapijs_hoek_current.json",
+    "package_name": "hoek",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.16.3",
+      "4.2.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "caolan/async": {
+    "sbom_file": "caolan_async_current.json",
+    "package_name": "async",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.22",
+      "0.2.10",
+      "0.9.2",
+      "2.6.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hughsk/is-typedarray": {
+    "sbom_file": "hughsk_is-typedarray_current.json",
+    "package_name": "is-typedarray",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gruntjs/grunt-legacy-log-utils": {
+    "sbom_file": "gruntjs_grunt-legacy-log-utils_current.json",
+    "package_name": "grunt-legacy-log-utils",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mikeal/oauth-sign": {
+    "sbom_file": "mikeal_oauth-sign_current.json",
+    "package_name": "oauth-sign",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.6.0",
+      "0.8.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "ljharb/concat-map": {
+    "sbom_file": "ljharb_concat-map_current.json",
+    "package_name": "concat-map",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "131/node-vlc-player": {
+    "sbom_file": "131_node-vlc-player_current.json",
+    "package_name": "vlc-player",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.12.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/nopt": {
+    "sbom_file": "npm_nopt_current.json",
+    "package_name": "nopt",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.10",
+      "3.0.6"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hegemonic/catharsis": {
+    "sbom_file": "hegemonic_catharsis_current.json",
+    "package_name": "catharsis",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.8.9"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "braveg1rl/performance-now": {
+    "sbom_file": "braveg1rl_performance-now_current.json",
+    "package_name": "performance-now",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.1.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "flatiron/utile": {
+    "sbom_file": "flatiron_utile_current.json",
+    "package_name": "utile",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "cowboy/javascript-hooker": {
+    "sbom_file": "cowboy_javascript-hooker_current.json",
+    "package_name": "hooker",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tootallnate/node-speaker": {
+    "sbom_file": "tootallnate_node-speaker_current.json",
+    "package_name": "speaker",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "felixge/node-combined-stream": {
+    "sbom_file": "felixge_node-combined-stream_current.json",
+    "package_name": "combined-stream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.7",
+      "1.0.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/css-what": {
+    "sbom_file": "fb55_css-what_current.json",
+    "package_name": "css-what",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "documentcloud/underscore-contrib": {
+    "sbom_file": "documentcloud_underscore-contrib_current.json",
+    "package_name": "underscore-contrib",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "felixge/node-delayed-stream": {
+    "sbom_file": "felixge_node-delayed-stream_current.json",
+    "package_name": "delayed-stream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.5",
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mikeal/tunnel-agent": {
+    "sbom_file": "mikeal_tunnel-agent_current.json",
+    "package_name": "tunnel-agent",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.4.3",
+      "0.6.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "typicaljoe/taffydb": {
+    "sbom_file": "typicaljoe_taffydb_current.json",
+    "package_name": "taffydb",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.6.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "epeli/underscore.string": {
+    "sbom_file": "epeli_underscore.string_current.json",
+    "package_name": "underscore.string",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.2.1",
+      "2.3.3",
+      "2.4.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mikeal/aws-sign": {
+    "sbom_file": "mikeal_aws-sign_current.json",
+    "package_name": "aws-sign2",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.5.0",
+      "0.7.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "rmustacc/node-ctype": {
+    "sbom_file": "rmustacc_node-ctype_current.json",
+    "package_name": "ctype",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.5.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/node-mkdirp": {
+    "sbom_file": "isaacs_node-mkdirp_current.json",
+    "package_name": "mkdirp",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.5.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "ljharb/qs": {
+    "sbom_file": "ljharb_qs_current.json",
+    "package_name": "qs",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.3.3",
+      "6.5.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tootallnate/node-bindings": {
+    "sbom_file": "tootallnate_node-bindings_current.json",
+    "package_name": "bindings",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "motdotla/dotenv": {
+    "sbom_file": "motdotla_dotenv_current.json",
+    "package_name": "dotenv",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jshttp/mime-types": {
+    "sbom_file": "jshttp_mime-types_current.json",
+    "package_name": "mime-types",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.14",
+      "2.1.17"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/rimraf": {
+    "sbom_file": "isaacs_rimraf_current.json",
+    "package_name": "rimraf",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.2.8",
+      "2.6.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/inherits": {
+    "sbom_file": "isaacs_inherits_current.json",
+    "package_name": "inherits",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2",
+      "2.0.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/htmlparser2": {
+    "sbom_file": "fb55_htmlparser2_current.json",
+    "package_name": "htmlparser2",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.8.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jshttp/mime-db": {
+    "sbom_file": "jshttp_mime-db_current.json",
+    "package_name": "mime-db",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.12.0",
+      "1.30.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/domhandler": {
+    "sbom_file": "fb55_domhandler_current.json",
+    "package_name": "domhandler",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/css-select": {
+    "sbom_file": "fb55_css-select_current.json",
+    "package_name": "css-select",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "nodejs/string_decoder": {
+    "sbom_file": "nodejs_string_decoder_current.json",
+    "package_name": "string_decoder",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.10.31",
+      "1.0.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/nth-check": {
+    "sbom_file": "fb55_nth-check_current.json",
+    "package_name": "nth-check",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "nodejs/nan": {
+    "sbom_file": "nodejs_nan_current.json",
+    "package_name": "nan",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.8.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gulpjs/findup-sync": {
+    "sbom_file": "gulpjs_findup-sync_current.json",
+    "package_name": "findup-sync",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.3",
+      "0.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fent/node-ytdl-core": {
+    "sbom_file": "fent_node-ytdl-core_current.json",
+    "package_name": "ytdl-core",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.20.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "pksunkara/inflect": {
+    "sbom_file": "pksunkara_inflect_current.json",
+    "package_name": "i",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.6"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/node-glob": {
+    "sbom_file": "isaacs_node-glob_current.json",
+    "package_name": "glob",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.1.21",
+      "3.2.11",
+      "5.0.15",
+      "7.1.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/read": {
+    "sbom_file": "npm_read_current.json",
+    "package_name": "read",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.7"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "quartzjer/ecc-jsbn": {
+    "sbom_file": "quartzjer_ecc-jsbn_current.json",
+    "package_name": "ecc-jsbn",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "michaelkourlas/node-xmlcreate": {
+    "sbom_file": "michaelkourlas_node-xmlcreate_current.json",
+    "package_name": "xmlcreate",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "joyent/node-bcrypt-pbkdf": {
+    "sbom_file": "joyent_node-bcrypt-pbkdf_current.json",
+    "package_name": "bcrypt-pbkdf",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tritondatacenter/node-http-signature": {
+    "sbom_file": "tritondatacenter_node-http-signature_current.json",
+    "package_name": "http-signature",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.10.1",
+      "1.2.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/minimatch": {
+    "sbom_file": "isaacs_minimatch_current.json",
+    "package_name": "minimatch",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.14",
+      "0.3.0",
+      "3.0.4"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "cheeriojs/cheerio": {
+    "sbom_file": "cheeriojs_cheerio_current.json",
+    "package_name": "cheerio",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.19.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "markedjs/marked": {
+    "sbom_file": "markedjs_marked_current.json",
+    "package_name": "marked",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.12"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/sigmund": {
+    "sbom_file": "isaacs_sigmund_current.json",
+    "package_name": "sigmund",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "ajv-validator/ajv": {
+    "sbom_file": "ajv-validator_ajv_current.json",
+    "package_name": "ajv",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "5.5.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jsdoc/jsdoc": {
+    "sbom_file": "jsdoc_jsdoc_current.json",
+    "package_name": "jsdoc",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.5.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/node-which": {
+    "sbom_file": "npm_node-which_current.json",
+    "package_name": "which",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.9",
+      "1.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hegemonic/requizzle": {
+    "sbom_file": "hegemonic_requizzle_current.json",
+    "package_name": "requizzle",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "cowboy/node-getobject": {
+    "sbom_file": "cowboy_node-getobject_current.json",
+    "package_name": "getobject",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "form-data/form-data": {
+    "sbom_file": "form-data_form-data_current.json",
+    "package_name": "form-data",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.0",
+      "2.3.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "alexindigo/asynckit": {
+    "sbom_file": "alexindigo_asynckit_current.json",
+    "package_name": "asynckit",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.4.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "arekinath/node-getpass": {
+    "sbom_file": "arekinath_node-getpass_current.json",
+    "package_name": "getpass",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.7"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fent/node-m3u8stream": {
+    "sbom_file": "fent_node-m3u8stream_current.json",
+    "package_name": "m3u8stream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/domutils": {
+    "sbom_file": "fb55_domutils_current.json",
+    "package_name": "domutils",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.4.3",
+      "1.5.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "davepacheco/node-extsprintf": {
+    "sbom_file": "davepacheco_node-extsprintf_current.json",
+    "package_name": "extsprintf",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "browserify/resolve": {
+    "sbom_file": "browserify_resolve_current.json",
+    "package_name": "resolve",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.1.7"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/wrappy": {
+    "sbom_file": "npm_wrappy_current.json",
+    "package_name": "wrappy",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "visionmedia/node-delegates": {
+    "sbom_file": "visionmedia_node-delegates_current.json",
+    "package_name": "delegates",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "felixge/node-dateformat": {
+    "sbom_file": "felixge_node-dateformat_current.json",
+    "package_name": "dateformat",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2-1.2.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "sindresorhus/strip-json-comments": {
+    "sbom_file": "sindresorhus_strip-json-comments_current.json",
+    "package_name": "strip-json-comments",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/pseudomap": {
+    "sbom_file": "isaacs_pseudomap_current.json",
+    "package_name": "pseudomap",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/isexe": {
+    "sbom_file": "isaacs_isexe_current.json",
+    "package_name": "isexe",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "jashkenas/coffeescript": {
+    "sbom_file": "jashkenas_coffeescript_current.json",
+    "package_name": "coffee-script",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.3.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "minimistjs/minimist": {
+    "sbom_file": "minimistjs_minimist_current.json",
+    "package_name": "minimist",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.8"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "michaelkourlas/node-js2xmlparser": {
+    "sbom_file": "michaelkourlas_node-js2xmlparser_current.json",
+    "package_name": "js2xmlparser",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "request/request": {
+    "sbom_file": "request_request_current.json",
+    "package_name": "request",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.53.0",
+      "2.83.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "moxystudio/node-cross-spawn": {
+    "sbom_file": "moxystudio_node-cross-spawn_current.json",
+    "package_name": "cross-spawn",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "cowboy/node-exit": {
+    "sbom_file": "cowboy_node-exit_current.json",
+    "package_name": "exit",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/fs.realpath": {
+    "sbom_file": "isaacs_fs.realpath_current.json",
+    "package_name": "fs.realpath",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mikeal/caseless": {
+    "sbom_file": "mikeal_caseless_current.json",
+    "package_name": "caseless",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.12.0",
+      "0.9.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "krampstudio/grunt-jsdoc": {
+    "sbom_file": "krampstudio_grunt-jsdoc_current.json",
+    "package_name": "grunt-jsdoc",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "ahmadnassri/har-schema": {
+    "sbom_file": "ahmadnassri_har-schema_current.json",
+    "package_name": "har-schema",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "babel/babylon": {
+    "sbom_file": "babel_babylon_current.json",
+    "package_name": "babylon",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "7.0.0-beta.19"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "justmoon/node-extend": {
+    "sbom_file": "justmoon_node-extend_current.json",
+    "package_name": "extend",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "3.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "joyent/node-verror": {
+    "sbom_file": "joyent_node-verror_current.json",
+    "package_name": "verror",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.10.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "juliangruber/balanced-match": {
+    "sbom_file": "juliangruber_balanced-match_current.json",
+    "package_name": "balanced-match",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/entities": {
+    "sbom_file": "fb55_entities_current.json",
+    "package_name": "entities",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.0",
+      "1.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/yallist": {
+    "sbom_file": "isaacs_yallist_current.json",
+    "package_name": "yallist",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.1.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "joyent/node-asn1": {
+    "sbom_file": "joyent_node-asn1_current.json",
+    "package_name": "asn1",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.11",
+      "0.2.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mcavage/node-assert-plus": {
+    "sbom_file": "mcavage_node-assert-plus_current.json",
+    "package_name": "assert-plus",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.5",
+      "1.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mozilla/hawk": {
+    "sbom_file": "mozilla_hawk_current.json",
+    "package_name": "hawk",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.3.1",
+      "6.0.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "calvinmetcalf/process-nextick-args": {
+    "sbom_file": "calvinmetcalf_process-nextick-args_current.json",
+    "package_name": "process-nextick-args",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "sindresorhus/escape-string-regexp": {
+    "sbom_file": "sindresorhus_escape-string-regexp_current.json",
+    "package_name": "escape-string-regexp",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/node-lru-cache": {
+    "sbom_file": "isaacs_node-lru-cache_current.json",
+    "package_name": "lru-cache",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.7.3",
+      "4.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/inflight": {
+    "sbom_file": "npm_inflight_current.json",
+    "package_name": "inflight",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.6"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "feross/safe-buffer": {
+    "sbom_file": "feross_safe-buffer_current.json",
+    "package_name": "safe-buffer",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "5.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "nodeca/argparse": {
+    "sbom_file": "nodeca_argparse_current.json",
+    "package_name": "argparse",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.16"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tootallnate/util-deprecate": {
+    "sbom_file": "tootallnate_util-deprecate_current.json",
+    "package_name": "util-deprecate",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "rvagg/bl": {
+    "sbom_file": "rvagg_bl_current.json",
+    "package_name": "bl",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.9.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gruntjs/grunt-known-options": {
+    "sbom_file": "gruntjs_grunt-known-options_current.json",
+    "package_name": "grunt-known-options",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.1.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hueniverse/sntp": {
+    "sbom_file": "hueniverse_sntp_current.json",
+    "package_name": "sntp",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.9",
+      "2.1.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "fb55/domelementtype": {
+    "sbom_file": "fb55_domelementtype_current.json",
+    "package_name": "domelementtype",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.1.3",
+      "1.3.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "flatiron/revalidator": {
+    "sbom_file": "flatiron_revalidator_current.json",
+    "package_name": "revalidator",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.8"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tj/co": {
+    "sbom_file": "tj_co_current.json",
+    "package_name": "co",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "4.6.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "juliangruber/brace-expansion": {
+    "sbom_file": "juliangruber_brace-expansion_current.json",
+    "package_name": "brace-expansion",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.1.11"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "inspect-js/node-deep-equal": {
+    "sbom_file": "inspect-js_node-deep-equal_current.json",
+    "package_name": "deep-equal",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gruntjs/grunt-cli": {
+    "sbom_file": "gruntjs_grunt-cli_current.json",
+    "package_name": "grunt-cli",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mdevils/html-entities": {
+    "sbom_file": "mdevils_html-entities_current.json",
+    "package_name": "html-entities",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "ahmadnassri/node-har-validator": {
+    "sbom_file": "ahmadnassri_node-har-validator_current.json",
+    "package_name": "har-validator",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "5.0.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "hij1nx/eventemitter2": {
+    "sbom_file": "hij1nx_eventemitter2_current.json",
+    "package_name": "eventemitter2",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.4.14"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "felixge/node-stack-trace": {
+    "sbom_file": "felixge_node-stack-trace_current.json",
+    "package_name": "stack-trace",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.10"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "vercel/ms": {
+    "sbom_file": "vercel_ms_current.json",
+    "package_name": "ms",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/npmlog": {
+    "sbom_file": "npm_npmlog_current.json",
+    "package_name": "npmlog",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "avianflu/ncp": {
+    "sbom_file": "avianflu_ncp_current.json",
+    "package_name": "ncp",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.4.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "trentm/node-dashdash": {
+    "sbom_file": "trentm_node-dashdash_current.json",
+    "package_name": "dashdash",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.14.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "indexzero/node-pkginfo": {
+    "sbom_file": "indexzero_node-pkginfo_current.json",
+    "package_name": "pkginfo",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.1",
+      "0.4.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "joyent/node-jsprim": {
+    "sbom_file": "joyent_node-jsprim_current.json",
+    "package_name": "jsprim",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.4.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "nodeca/js-yaml": {
+    "sbom_file": "nodeca_js-yaml_current.json",
+    "package_name": "js-yaml",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "sindresorhus/path-is-absolute": {
+    "sbom_file": "sindresorhus_path-is-absolute_current.json",
+    "package_name": "path-is-absolute",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "epoberezkin/json-schema-traverse": {
+    "sbom_file": "epoberezkin_json-schema-traverse_current.json",
+    "package_name": "json-schema-traverse",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.3.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "epoberezkin/fast-json-stable-stringify": {
+    "sbom_file": "epoberezkin_fast-json-stable-stringify_current.json",
+    "package_name": "fast-json-stable-stringify",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.0.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "dscape/cycle": {
+    "sbom_file": "dscape_cycle_current.json",
+    "package_name": "cycle",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "andyperlitch/jsbn": {
+    "sbom_file": "andyperlitch_jsbn_current.json",
+    "package_name": "jsbn",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "dchest/tweetnacl-js": {
+    "sbom_file": "dchest_tweetnacl-js_current.json",
+    "package_name": "tweetnacl",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.14.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/are-we-there-yet": {
+    "sbom_file": "npm_are-we-there-yet_current.json",
+    "package_name": "are-we-there-yet",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.6"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mikeal/forever-agent": {
+    "sbom_file": "mikeal_forever-agent_current.json",
+    "package_name": "forever-agent",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.5.2",
+      "0.6.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "isaacs/core-util-is": {
+    "sbom_file": "isaacs_core-util-is_current.json",
+    "package_name": "core-util-is",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.0.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/gauge": {
+    "sbom_file": "npm_gauge_current.json",
+    "package_name": "gauge",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.7"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/abbrev-js": {
+    "sbom_file": "npm_abbrev-js_current.json",
+    "package_name": "abbrev",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.1.1"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gruntjs/grunt-legacy-log": {
+    "sbom_file": "gruntjs_grunt-legacy-log_current.json",
+    "package_name": "grunt-legacy-log",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "npm/mute-stream": {
+    "sbom_file": "npm_mute-stream_current.json",
+    "package_name": "mute-stream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.7"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "cheeriojs/dom-serializer": {
+    "sbom_file": "cheeriojs_dom-serializer_current.json",
+    "package_name": "dom-serializer",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.1.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "paulomcnally/youtube-node": {
+    "sbom_file": "paulomcnally_youtube-node_current.json",
+    "package_name": "youtube-node",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.3.2"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "mhart/stringstream": {
+    "sbom_file": "mhart_stringstream_current.json",
+    "package_name": "stringstream",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.0.5"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "salesforce/tough-cookie": {
+    "sbom_file": "salesforce_tough-cookie_current.json",
+    "package_name": "tough-cookie",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "2.3.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "pillarjs/iconv-lite": {
+    "sbom_file": "pillarjs_iconv-lite_current.json",
+    "package_name": "iconv-lite",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.11"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "kriszyp/json-schema": {
+    "sbom_file": "kriszyp_json-schema_current.json",
+    "package_name": "json-schema",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.3"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "tootallnate/node-lame": {
+    "sbom_file": "tootallnate_node-lame_current.json",
+    "package_name": "lame",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "1.2.4"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  },
+  "gruntjs/grunt-legacy-util": {
+    "sbom_file": "gruntjs_grunt-legacy-util_current.json",
+    "package_name": "grunt-legacy-util",
+    "ecosystem": "npm",
+    "versions_in_dependency_tree": [
+      "0.2.0"
+    ],
+    "note": "SBOM represents current repository state (default branch), not historical versions"
+  }
+}

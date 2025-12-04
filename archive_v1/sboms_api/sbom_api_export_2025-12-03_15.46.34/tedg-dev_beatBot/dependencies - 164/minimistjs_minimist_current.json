@@ -1,0 +1,308 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.minimistjs/minimist",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/a692ccb4-1b64-4eb2-9ba5-9eaf66a9eb4e",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:49:46Z"
+    },
+    "packages": [
+      {
+        "name": "@ljharb/eslint-config",
+        "SPDXID": "SPDXRef-npm-ljharb-eslint-config-21.1.1-82f105",
+        "versionInfo": "^21.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40ljharb/eslint-config@%5E21.1.1"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-8.8.0-b00031",
+        "versionInfo": "8.8.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2013-2016 Dulin Marat and other contributors, Copyright OpenJS Foundation and other contributors, <www.openjsf.org>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@8.8.0"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.9.0-78e60a",
+        "versionInfo": "^5.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.9.0"
+          }
+        ]
+      },
+      {
+        "name": "encoding",
+        "SPDXID": "SPDXRef-npm-encoding-0.1.13-83014c",
+        "versionInfo": "^0.1.13",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/encoding@%5E0.1.13"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-10.3.2-42a817",
+        "versionInfo": "^10.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E10.3.2"
+          }
+        ]
+      },
+      {
+        "name": "auto-changelog",
+        "SPDXID": "SPDXRef-npm-auto-changelog-2.5.0-d1473a",
+        "versionInfo": "^2.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/auto-changelog@%5E2.5.0"
+          }
+        ]
+      },
+      {
+        "name": "safe-publish-latest",
+        "SPDXID": "SPDXRef-npm-safe-publish-latest-2.0.0-197385",
+        "versionInfo": "^2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safe-publish-latest@%5E2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "npmignore",
+        "SPDXID": "SPDXRef-npm-npmignore-0.3.1-c0c35d",
+        "versionInfo": "^0.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/npmignore@%5E0.3.1"
+          }
+        ]
+      },
+      {
+        "name": "in-publish",
+        "SPDXID": "SPDXRef-npm-in-publish-2.0.1-227dbf",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/in-publish@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/node.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/node.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/pretest.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/pretest.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "versionInfo": "2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@2"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/rebase",
+        "SPDXID": "SPDXRef-githubactions-ljharb-rebase-master-75c946",
+        "versionInfo": "master",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/rebase@master"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/require-allow-edits",
+        "SPDXID": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/require-allow-edits@main"
+          }
+        ]
+      },
+      {
+        "name": "com.github.minimistjs/minimist",
+        "SPDXID": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/minimistjs/minimist",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/minimistjs/minimist@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-ljharb-eslint-config-21.1.1-82f105",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-8.8.0-b00031",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.9.0-78e60a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-encoding-0.1.13-83014c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-10.3.2-42a817",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-auto-changelog-2.5.0-d1473a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-safe-publish-latest-2.0.0-197385",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-npmignore-0.3.1-c0c35d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-npm-in-publish-2.0.1-227dbf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharb-rebase-master-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-minimistjs-minimist-main-385bd6",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

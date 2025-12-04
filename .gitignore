@@ -16,3 +16,5 @@ keys.json
 
 # OS
 .DS_Store
+key.json
+venv/

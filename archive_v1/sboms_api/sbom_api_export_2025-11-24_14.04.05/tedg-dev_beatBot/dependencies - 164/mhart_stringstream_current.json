@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.mhart/StringStream",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/2fa27e03-316e-4a6d-a491-87876e960854",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:39Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.mhart/StringStream",
+        "SPDXID": "SPDXRef-github-mhart-StringStream-master-7c666f",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/mhart/StringStream",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/mhart/StringStream@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-mhart-StringStream-master-7c666f",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

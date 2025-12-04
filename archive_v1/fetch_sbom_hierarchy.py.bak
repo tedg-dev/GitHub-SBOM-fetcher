@@ -1,0 +1,823 @@
+"""
+GitHub SBOM Fetcher
+
+A utility for fetching and analyzing SBOMs from GitHub repositories.
+"""
+
+import argparse
+import json
+import logging
+import os
+import sys
+import time
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional, Tuple
+
+import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)],
+)
+logger = logging.getLogger(__name__)
+
+# Constants
+GITHUB_API = "https://api.github.com"
+API_VERSION = "2022-11-28"
+DEFAULT_TIMEOUT = 60  # seconds
+MAX_RETRIES = 3
+BACKOFF_FACTOR = 1
+
+
+@dataclass
+class GitHubDependency:
+    """Class to represent a dependency (GitHub repo or npm package)."""
+    owner: str
+    repo: str
+    version: str = "latest"
+    source: str = "unknown"
+    package_type: str = "github"  # 'github' or 'npm'
+
+    def __str__(self) -> str:
+        return (f"{self.owner}/{self.repo} "
+                f"(version: {self.version or 'N/A'}, source: {self.source})")
+
+    def __repr__(self) -> str:
+        return (f"GitHubDependency(owner='{self.owner}', "
+                f"repo='{self.repo}', version='{self.version or ''}', "
+                f"source='{self.source}')")
+
+
+class GitHubAPIError(Exception):
+    """Custom exception for GitHub API errors."""
+
+    def __init__(self, message: str, status_code: Optional[int] = None, 
+                 response_text: Optional[str] = None):
+        self.status_code = status_code
+        self.response_text = response_text
+        super().__init__(message)
+
+
+class RateLimitExceededError(GitHubAPIError):
+    """Raised when GitHub API rate limit is exceeded."""
+    pass
+
+
+class GitHubSBOMFetcher:
+    """A class to fetch and process SBOMs from GitHub repositories."""
+
+    def __init__(self, github_token: str):
+        """Initialize the GitHub SBOM fetcher.
+        
+        Args:
+            github_token: GitHub personal access token with 'repo' scope
+        """
+        self.github_token = github_token
+        self.session = self._create_session(github_token)
+        self.owner = ""
+        self.repo = ""
+        self.repo_sha = ""
+
+    def _create_session(self, github_token: str) -> requests.Session:
+        """Create and configure a requests session with retry logic."""
+        session = requests.Session()
+        retry_strategy = Retry(
+            total=MAX_RETRIES,
+            backoff_factor=BACKOFF_FACTOR,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["GET", "POST"]
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        session.mount("https://", adapter)
+        session.mount("http://", adapter)
+        return session
+
+    def _get_headers(self) -> Dict[str, str]:
+        """Get headers for GitHub API requests."""
+        return {
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": API_VERSION,
+            "Authorization": f"Bearer {self.github_token}",
+        }
+
+    def _handle_rate_limit(self, response: requests.Response) -> None:
+        """Handle GitHub API rate limiting."""
+        if response.status_code == 403 and "X-RateLimit-Remaining" in response.headers:
+            remaining = response.headers.get("X-RateLimit-Remaining")
+            reset = response.headers.get("X-RateLimit-Reset")
+            
+            if remaining == "0" and reset:
+                try:
+                    reset_ts = int(reset)
+                    sleep_time = max(1, reset_ts - int(time.time()) + 1)
+                    logger.warning(f"Rate limit hit. Sleeping for {sleep_time} seconds...")
+                    time.sleep(sleep_time)
+                    return
+                except (ValueError, TypeError) as e:
+                    logger.error(f"Error handling rate limit: {e}")
+            
+            raise RateLimitExceededError("GitHub API rate limit exceeded")
+
+    def _make_request(
+        self, 
+        method: str, 
+        url: str, 
+        **kwargs
+    ) -> requests.Response:
+        """Make an HTTP request with error handling and retries."""
+        headers = kwargs.pop('headers', {})
+        headers.update({
+            'Authorization': f'token {self.github_token}',
+            'Accept': 'application/vnd.github+json',
+            'X-GitHub-Api-Version': API_VERSION
+        })
+
+        try:
+            response = self.session.request(
+                method, 
+                url, 
+                headers=headers,
+                timeout=DEFAULT_TIMEOUT, 
+                **kwargs
+            )
+            response.raise_for_status()
+            return response
+
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 403 and 'rate limit' in str(e).lower():
+                raise RateLimitExceededError(
+                    "GitHub API rate limit exceeded",
+                    status_code=403,
+                    response_text=e.response.text
+                ) from e
+            raise GitHubAPIError(
+                f"GitHub API request failed: {e}",
+                status_code=getattr(e.response, 'status_code', None),
+                response_text=getattr(e.response, 'text', '')
+            ) from e
+
+        except requests.exceptions.RequestException as e:
+            raise GitHubAPIError(f"Request failed: {e}") from e
+
+    def get_all_repositories(self) -> List[Tuple[str, str]]:
+        """Get all repositories for the authenticated user."""
+        url = f"{GITHUB_API}/user/repos"
+        params = {
+            "per_page": 100,  # Maximum allowed by GitHub API
+            "sort": "updated",
+            "direction": "desc",
+            "type": "all"  # Include all repository types (public, private, forks, etc.)
+        }
+        repositories = []
+        page = 1
+        
+        logger.info("Fetching list of repositories...")
+        
+        try:
+            while True:
+                params["page"] = page
+                response = self._make_request("GET", url, params=params)
+                repos = response.json()
+                
+                if not repos:
+                    break
+                    
+                for repo in repos:
+                    # Skip forks and archived repositories
+                    if not repo.get("fork") and not repo.get("archived"):
+                        repositories.append((repo["owner"]["login"], repo["name"]))
+                
+                # Check if there are more pages
+                if 'next' not in response.links:
+                    break
+                    
+                page += 1
+                
+            logger.info(f"Found {len(repositories)} repositories to process")
+            return repositories
+            
+        except (KeyError, json.JSONDecodeError) as e:
+            raise GitHubAPIError("Failed to parse repository data") from e
+
+    def get_sbom(self, owner: str, repo: str) -> Optional[Dict[str, Any]]:
+        """Fetch SBOM data for a repository."""
+        # Set instance variables for use in other methods
+        self.owner = owner
+        self.repo = repo
+        logger.info("Fetching SBOM for %s/%s", owner, repo)
+        url = f"{GITHUB_API}/repos/{owner}/{repo}/dependency-graph/sbom"
+        
+        try:
+            logger.debug(f"Fetching SBOM from: {url}")
+            response = self._make_request("GET", url)
+            data = response.json()
+            
+            if not isinstance(data, dict):
+                logger.error(f"Unexpected SBOM data format: {type(data)}")
+                return None
+                
+            logger.info("Successfully fetched SBOM for %s/%s", owner, repo)
+            return data
+            
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None:
+                logger.error(f"HTTP Error {e.response.status_code} fetching SBOM for {owner}/{repo}: {e.response.text}")
+                if e.response.status_code == 404:
+                    logger.warning(f"No SBOM found for {owner}/{repo}")
+                elif e.response.status_code == 403:
+                    logger.error("Permission denied. Make sure your token has the 'read:packages' and 'repo' scopes.")
+            else:
+                logger.error("Failed to fetch SBOM for %s/%s: %s", owner, repo, str(e))
+            raise
+            
+        except (json.JSONDecodeError, ValueError) as e:
+            logger.error(f"Failed to parse SBOM data for {owner}/{repo}: {str(e)}")
+            raise GitHubAPIError(f"Invalid SBOM data received: {str(e)}") from e
+
+    def get_dependency_graph(self, owner: str, repo: str) -> List[Dict[str, Any]]:
+        """Fetch the dependency graph for a repository from GitHub API."""
+        url = f"{GITHUB_API}/repos/{owner}/{repo}/dependency-graph/sbom"
+        try:
+            logger.debug(f"Fetching dependency graph from: {url}")
+            response = self._make_request("GET", url)
+            data = response.json()
+            logger.debug(f"Dependency graph response keys: {list(data.keys())}")
+            sbom_data = data.get("sbom", {})
+            logger.debug(f"SBOM keys: {list(sbom_data.keys())}")
+            
+            # Save raw data to file for analysis
+            output_dir = os.path.join("debug_output")
+            os.makedirs(output_dir, exist_ok=True)
+            raw_file = os.path.join(output_dir, f"{owner}_{repo}_raw_dependencies.json")
+            with open(raw_file, 'w') as f:
+                json.dump(data, f, indent=2)
+            logger.info(f"Saved raw dependency graph data to {raw_file}")
+            
+            packages = sbom_data.get("packages", [])
+            logger.info(f"Found {len(packages)} packages in dependency graph")
+            
+            # Also save packages to a separate file
+            packages_file = os.path.join(output_dir, f"{owner}_{repo}_packages.json")
+            with open(packages_file, 'w') as f:
+                json.dump(packages, f, indent=2)
+            logger.info(f"Saved packages data to {packages_file}")
+            
+            return packages
+        except GitHubAPIError as e:
+            logger.warning("Failed to fetch dependency graph: %s", e)
+            return []
+
+    def _process_purl(self, purl: str, version: str, 
+                     dependencies: List[GitHubDependency], 
+                     default_name: str = "") -> None:
+        """Process a package URL and add to dependencies if valid."""
+        try:
+            if "pkg:github.com/" in purl:
+                # Handle GitHub packages
+                parts = purl.split("pkg:github.com/")[-1].split("/")
+                if len(parts) >= 2:
+                    owner = parts[0]
+                    repo_info = parts[1].split("@")
+                    repo = repo_info[0]
+                    
+                    # Use version from purl if available, otherwise use the provided version
+                    if len(repo_info) > 1:
+                        version = "@".join(repo_info[1:])
+                    
+                    if owner and repo and owner != "dependabot":
+                        dependencies.append(GitHubDependency(
+                            owner=owner,
+                            repo=repo,
+                            version=version or "latest",
+                            source="github_dependency_graph",
+                            package_type="github"
+                        ))
+            elif "pkg:npm/" in purl:
+                # Handle npm packages
+                pkg_name = purl.split("pkg:npm/")[-1].split("@")[0]
+                if pkg_name:
+                    dependencies.append(GitHubDependency(
+                        owner="npm",  # Special owner for npm packages
+                        repo=pkg_name,
+                        version=version or "latest",
+                        source="npm_dependency_graph",
+                        package_type="npm"
+                    ))
+        except Exception as e:
+            logger.debug("Failed to process package URL %s: %s", purl, e)
+
+    def _extract_github_repo_from_package(self, pkg: Dict[str, Any]) -> Optional[Tuple[str, str, str]]:
+        """Extract GitHub repository information from a package."""
+        if not isinstance(pkg, dict):
+            return None
+            
+        name = pkg.get("name", "")
+        version = pkg.get("versionInfo", "latest")
+        
+        # Skip the main package
+        if name == f"com.github.{self.owner}/{self.repo}":
+            return None
+        
+        # First, check for repository URL in the package metadata
+        if "externalRefs" in pkg and pkg["externalRefs"]:
+            for ref in pkg["externalRefs"]:
+                if not isinstance(ref, dict):
+                    continue
+                    
+                ref_type = ref.get("referenceType", "")
+                ref_loc = ref.get("referenceLocator", "")
+                
+                # Check for repository URL in the reference
+                if ref_type == "vcs" and "github.com" in ref_loc:
+                    # Handle different GitHub URL formats
+                    if "github.com/" in ref_loc:
+                        # Format: https://github.com/owner/repo or https://github.com/owner/repo.git
+                        parts = ref_loc.split("github.com/")[-1].split("/")
+                        if len(parts) >= 2:
+                            owner = parts[0]
+                            repo = parts[1].rstrip(".git").split("@")[0]
+                            if owner and repo:  # Return any valid GitHub repo
+                                return owner, repo, version
+                
+                # Check for package URL (purl)
+                elif ref_type == "purl" and "pkg:github.com/" in ref_loc:
+                    # Format: pkg:github.com/owner/repo@version
+                    parts = ref_loc.split("pkg:github.com/")[-1].split("/")
+                    if len(parts) >= 2:
+                        owner = parts[0]
+                        repo = parts[1].split("@")[0]
+                        if owner and repo:  # Return any valid GitHub repo
+                            return owner, repo, version
+                
+                # Check for repository information in other reference types
+                elif ref_type == "website" and "github.com" in ref_loc:
+                    # Handle website URLs that point to GitHub
+                    if "github.com/" in ref_loc and "/tree/" in ref_loc:
+                        # Format: https://github.com/owner/repo/tree/version
+            if not isinstance(pkg, dict):
+                continue
+
+            # Skip the main package
+            pkg_name = pkg.get("name", "")
+            if pkg_name == f"com.github.{self.owner}/{self.repo}":
+                continue
+
+            # Extract version
+            version = pkg.get("versionInfo", "")
+
+            # Check for npm packages in external references
+            for ref in pkg.get("externalRefs", []):
+                if not isinstance(ref, dict):
+                    continue
+
+                # Check for package URLs in purl format
+                if ref.get("referenceType") == "purl":
+                    purl = ref.get("referenceLocator", "")
+
+                    # Handle npm packages
+                    if "pkg:npm/" in purl:
+                        # Extract package name and version from purl
+                        # Format: pkg:npm/package-name@version
+                        parts = purl.split("pkg:npm/")[-1].split("@")
+                        if len(parts) >= 1:
+                            npm_name = parts[0]
+                            npm_version = parts[1] if len(parts) > 1 else version
+                            npm_packages.append((npm_name, npm_version))
+
+        logger.info("Found %d npm packages to map to GitHub repositories", len(npm_packages))
+        
+        # Now map each npm package to its GitHub repository
+        for npm_name, npm_version in npm_packages:
+            try:
+                github_repo = self._get_github_repo_from_npm(npm_name, npm_version)
+                if github_repo:
+                    owner, repo = github_repo
+            if not isinstance(pkg, dict):
+                continue
+                
+            # Try to extract repository info from the package
+            repo_info = self._extract_github_repo_from_package(pkg)
+            
+            if repo_info:
+                owner, repo, version = repo_info
+                
+                # Skip the main repository
+                if (owner.lower() == self.owner.lower() and 
+                        repo.lower() == self.repo.lower()):
+                    continue
+                
+                # Check if we already have this dependency (case-insensitive)
+                if not any(
+                    d.owner.lower() == owner.lower() and 
+                    d.repo.lower() == repo.lower() 
+                    for d in dependencies
+                ):
+                    logger.info(
+                        "Adding GitHub repository dependency: %s/%s@%s", 
+                        owner, repo, version
+                    )
+                    dependencies.append(GitHubDependency(
+                        owner=owner,
+                        repo=repo,
+                        version=version,
+                        source="github_dependency_graph",
+                        package_type="github"
+                    ))
+                else:
+                    logger.debug("Skipping duplicate: %s/%s", owner, repo)
+        
+        # Log the dependencies found
+        logger.info("Found %d GitHub repository dependencies", len(dependencies))
+        for i, dep in enumerate(dependencies[:20]):  # Log first 20 deps
+            logger.info("  %d. %s/%s@%s", i+1, dep.owner, dep.repo, dep.version)
+        if len(dependencies) > 20:
+            logger.info("  ... and %d more", len(dependencies) - 20)
+            
+        return dependencies
+
+    def extract_dependencies(self, sbom_data: Dict[str, Any]) -> List[GitHubDependency]:
+        """Extract first-level dependencies from SBOM data and GitHub dependency graph."""
+        dependencies = []
+        
+        logger.info("Extracting dependencies from SBOM data. Top-level keys: %s", 
+                   list(sbom_data.keys()))
+        
+        # First, get first-level dependencies from GitHub's dependency graph
+        if isinstance(sbom_data, dict) and "sbom" in sbom_data:
+            sbom = sbom_data["sbom"]
+            logger.debug("SBOM keys: %s", list(sbom.keys()))
+            
+            # Get repository information from the SBOM
+            self.repo_sha = ""
+            if "creationInfo" in sbom and "created" in sbom["creationInfo"]:
+                doc_ns = sbom.get("documentNamespace", "")
+                if "/" in doc_ns:
+                    self.repo_sha = doc_ns.split("/")[-1].split("-")[-1]
+            
+            # Process packages in SBOM
+            if "packages" in sbom:
+                dependencies.extend(self._process_sbom_packages(sbom["packages"]))
+            
+            # Process relationships in SBOM
+            if "relationships" in sbom:
+                dependencies.extend(self._process_sbom_relationships(sbom))
+        
+        # Always try to get them from GitHub's dependency graph, even if SBOM had some
+        if self.owner and self.repo:
+            logger.info("Fetching dependencies from GitHub's dependency graph...")
+            try:
+                packages = self.get_dependency_graph(self.owner, self.repo)
+                if packages:
+                    sbom_deps = len(dependencies)
+                    dependencies.extend(self._process_dependency_graph(packages))
+                    logger.info(f"Added {len(dependencies) - sbom_deps} dependencies from GitHub's dependency graph")
+                else:
+                    logger.warning("No packages found in GitHub's dependency graph")
+            except Exception as e:
+                logger.error(f"Error fetching dependency graph: {str(e)}", exc_info=True)
+        else:
+            logger.warning("Owner and repo not set, cannot fetch dependency graph")
+        
+        # Remove duplicates while preserving order
+        unique_deps = {}
+        for dep in dependencies:
+            key = (dep.owner, dep.repo, dep.version)
+            if key not in unique_deps:
+                unique_deps[key] = dep
+        
+        return list(unique_deps.values())
+
+    def save_sbom(self, owner: str, repo: str, sbom_data: Dict[str, Any], 
+                 output_dir: str, version: str = "") -> str:
+        """Save SBOM data to a file.
+        
+        Args:
+            owner: Repository owner
+            repo: Repository name
+            sbom_data: SBOM data to save
+            output_dir: Directory to save the SBOM file in
+            version: Optional version information to include in the filename
+            
+        Returns:
+            str: Path to the saved SBOM file
+        """
+        try:
+            os.makedirs(output_dir, exist_ok=True)
+            
+            # Create a safe filename
+            safe_owner = "".join(c if c.isalnum() else "_" for c in owner)
+            safe_repo = "".join(c if c.isalnum() else "_" for c in repo)
+            
+            # Include version in filename if available
+            filename_parts = [safe_owner, safe_repo]
+            if version:
+                safe_version = "".join(c if c.isalnum() else "_" for c in version)
+                filename_parts.append(safe_version)
+            
+            filename = "_".join(filename_parts) + ".json"
+            filepath = os.path.join(output_dir, filename)
+            
+            # Write to a temporary file first, then do an atomic rename
+            temp_path = f"{filepath}.tmp"
+            try:
+                with open(temp_path, 'w', encoding='utf-8') as f:
+                    json.dump(sbom_data, f, indent=2, sort_keys=True)
+                
+                # Atomic rename
+                os.replace(temp_path, filepath)
+                return filepath
+                
+            finally:
+                # Clean up temp file if it still exists
+                if os.path.exists(temp_path):
+                    try:
+                        os.remove(temp_path)
+                    except OSError:
+                        pass
+            
+        except (OSError, json.JSONEncodeError) as e:
+            logger.error(
+                "Failed to save SBOM for %s/%s: %s", 
+                owner, repo, str(e)
+            )
+            raise GitHubAPIError(f"Failed to save SBOM: {str(e)}") from e
+
+
+def load_github_accounts(config_path: str) -> List[Tuple[Optional[str], str]]:
+    """Load GitHub accounts from configuration file."""
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        raise ValueError(f"Invalid configuration file: {e}") from e
+    
+    accounts = []
+    
+    if isinstance(data, dict) and "accounts" in data and isinstance(data["accounts"], list):
+        for entry in data["accounts"]:
+            if not isinstance(entry, dict):
+                continue
+                
+            username = entry.get("username") or entry.get("login")
+            token = entry.get("token") or entry.get("password")
+            
+            if not token:
+                raise ValueError("Each account must include a 'token' or 'password'")
+                
+            accounts.append((username, str(token)))
+    else:
+        username = data.get("username") or data.get("login")
+        token = data.get("token") or data.get("password")
+        
+        if not token:
+            raise ValueError("Configuration must include a 'token' or 'password'")
+            
+        accounts.append((username, str(token)))
+    
+    return accounts
+
+
+def main() -> int:
+    """Main function to fetch and process SBOMs from GitHub repositories.
+    
+    This script will:
+    1. Load the first GitHub account from keys.json
+    2. Get the first repository for that account
+    3. Download its SBOM
+    4. Download SBOMs for all its direct dependencies
+    5. Save everything in a timestamped directory
+    """
+    parser = argparse.ArgumentParser(description="Fetch and process SBOMs from GitHub repositories.")
+    parser.add_argument("--key-file", type=str, default="keys.json",
+                      help="Path to JSON file containing GitHub credentials (default: keys.json)")
+    parser.add_argument("--output-dir", type=str, default="sboms",
+                      help="Base directory to save SBOM files (default: sboms)")
+    parser.add_argument("--debug", action="store_true",
+                      help="Enable debug logging")
+    
+    args = parser.parse_args()
+    
+    # Configure logging
+    log_level = logging.DEBUG if args.debug else logging.INFO
+    logging.basicConfig(
+        level=log_level,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        handlers=[logging.StreamHandler(sys.stdout)]
+    )
+    
+    try:
+        # Load GitHub credentials
+        try:
+            with open(args.key_file, 'r') as f:
+                credentials = json.load(f)
+            
+            # Handle both formats: single token or accounts array
+            token = None
+            if 'github_token' in credentials:
+                token = credentials['github_token']
+            elif 'accounts' in credentials and isinstance(credentials['accounts'], list):
+                # Use the first account with a valid token
+                for account in credentials['accounts']:
+                    if 'token' in account and account['token'] and account['token'] != '<PASTE_TOKEN_HERE>':
+                        token = account['token']
+                        break
+            
+            if not token:
+                logger.error("No valid GitHub token found in credentials file")
+                return 1
+        except Exception as e:
+            logger.error("Failed to load credentials: %s", e)
+            return 1
+            
+        # Create output directory
+        os.makedirs(args.output_dir, exist_ok=True)
+        
+        # Initialize GitHub client
+        fetcher = GitHubSBOMFetcher(token)
+        
+        # Track processed repositories to avoid cycles
+        processed_repos = set()
+        success_count = 0
+        error_count = 0
+        
+        def process_repository(repo_owner: str, repo_name: str, parent_versions: Dict[str, str] = None) -> bool:
+            """Recursively process a repository and its dependencies."""
+            nonlocal success_count, error_count
+            repo_key = f"{repo_owner}/{repo_name}"
+            
+            if repo_key in processed_repos:
+                logger.debug("Already processed %s, skipping", repo_key)
+                return True
+                
+            processed_repos.add(repo_key)
+            logger.info("Processing repository: %s", repo_key)
+            
+            # Create repository-specific directory
+            output_dir = os.path.join(args.output_dir, f"{repo_owner}-{repo_name}")
+            deps_dir = os.path.join(output_dir, "dependencies")
+            repo_dir = os.path.join(deps_dir, f"{repo_owner}-{repo_name}")
+            os.makedirs(repo_dir, exist_ok=True)
+            
+            # Fetch the SBOM for this repository
+            try:
+                sbom_data = fetcher.get_sbom(repo_owner, repo_name)
+                if not sbom_data:
+                    logger.warning("No SBOM data for %s", repo_key)
+                    error_count += 1
+                    return False
+                
+                # Save the SBOM with version information if available
+                version = ""
+                if parent_versions and repo_name in parent_versions:
+                    version = parent_versions[repo_name]
+                
+                sbom_path = fetcher.save_sbom(
+                    repo_owner,
+                    repo_name,
+                    sbom_data,
+                    repo_dir,
+                    version=version
+                )
+                logger.info("  ✅ Saved SBOM: %s", os.path.relpath(sbom_path, os.getcwd()))
+                
+                # Extract dependencies from this SBOM
+                dependencies = fetcher.extract_dependencies(sbom_data)
+                logger.info("  🔍 Found %d dependencies", len(dependencies))
+                
+                # Process each dependency
+                for dep in dependencies:
+                    # Skip non-GitHub dependencies
+                    if dep.owner == "pypi":
+                        logger.debug("    ⏩ Skipping PyPI package: %s", dep.repo)
+                        continue
+                        
+                    # Track versions for this dependency
+                    dep_versions = {dep.repo: dep.version} if dep.version else {}
+                    
+                    # Recursively process the dependency
+                    process_repository(dep.owner, dep.repo, dep_versions)
+                
+                success_count += 1
+                return True
+                
+            except GitHubAPIError as e:
+                logger.warning("  ❌ Failed to process %s: %s", repo_key, e)
+                error_count += 1
+                return False
+        
+        # Create timestamped output directory
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
+        base_output_dir = os.path.join(args.output_dir, f"sbom_export_{timestamp}")
+        os.makedirs(base_output_dir, exist_ok=True)
+        logger.info("Created output directory: %s", base_output_dir)
+        
+        # Process the beatBot repository
+        try:
+            owner = "tedg-dev"
+            repo = "beatBot"
+            logger.info(f"Processing specified repository: {owner}/{repo}")
+            logger.info("\n=== Processing repository: %s/%s ===", owner, repo)
+            
+            # Create repository directory
+            repo_output_dir = os.path.join(base_output_dir, f"{owner}_{repo}")
+            os.makedirs(repo_output_dir, exist_ok=True)
+            
+            # Create dependencies directory
+            deps_dir = os.path.join(repo_output_dir, "dependencies")
+            os.makedirs(deps_dir, exist_ok=True)
+            
+            # Process the main repository
+            sbom_data = fetcher.get_sbom(owner, repo)
+            if not sbom_data:
+                logger.error("No SBOM data found for %s/%s", owner, repo)
+                return 1
+                
+            # Save main SBOM
+            main_sbom_path = fetcher.save_sbom(
+                owner, 
+                repo, 
+                sbom_data, 
+                repo_output_dir,
+                version=""
+            )
+            logger.info("✅ Main SBOM saved: %s", os.path.relpath(main_sbom_path, os.getcwd()))
+            
+            # Extract and process dependencies
+            dependencies = fetcher.extract_dependencies(sbom_data)
+            logger.info("\nFound %d dependencies to process", len(dependencies))
+            
+            # Process each dependency
+            for i, dep in enumerate(dependencies, 1):
+                logger.info("\n[%d/%d] Processing dependency: %s/%s", 
+                          i, len(dependencies), dep.owner, dep.repo)
+                
+                # Skip non-GitHub dependencies
+                if dep.owner == "pypi":
+                    logger.info("  ⏩ Skipping PyPI package: %s", dep.repo)
+                    continue
+                
+                try:
+                    # Create dependency directory
+                    dep_dir = os.path.join(deps_dir, f"{dep.owner}_{dep.repo}")
+                    os.makedirs(dep_dir, exist_ok=True)
+                    
+                    # Get and save dependency SBOM
+                    dep_sbom = fetcher.get_sbom(dep.owner, dep.repo)
+                    if dep_sbom:
+                        dep_sbom_path = fetcher.save_sbom(
+                            dep.owner,
+                            dep.repo,
+                            dep_sbom,
+                            dep_dir,
+                            version=dep.version or ""
+                        )
+                        logger.info("  ✅ Saved dependency SBOM: %s", 
+                                  os.path.relpath(dep_sbom_path, os.getcwd()))
+                        success_count += 1
+                    else:
+                        logger.warning("  ⚠️  No SBOM data for %s/%s", 
+                                     dep.owner, dep.repo)
+                        error_count += 1
+                        
+                except GitHubAPIError as e:
+                    logger.error("  ❌ Failed to process %s/%s: %s", 
+                                dep.owner, dep.repo, e)
+                    error_count += 1
+            
+            logger.info("\n=== Processing Complete ===")
+            logger.info("Main repository: %s/%s", owner, repo)
+            logger.info("Dependencies processed successfully: %d", success_count)
+            if error_count > 0:
+                logger.warning("Dependencies with errors: %d", error_count)
+            
+            logger.info("\nOutput directory: %s", os.path.abspath(base_output_dir))
+            
+            if success_count > 0 or error_count == 0:
+                return 0
+            return 1
+            
+        except (IndexError, GitHubAPIError) as e:
+            logger.error("Failed to process repository: %s", e, exc_info=True)
+            return 1
+        
+        logger.info("\n=== Processing Complete ===")
+        logger.info("Repositories processed successfully: %d", success_count)
+        if error_count > 0:
+            logger.warning("Repositories with errors: %d", error_count)
+        
+        if success_count > 0 or error_count == 0:
+            return 0
+        else:
+            return 1
+            
+    except Exception as e:
+        logger.error("Unexpected error: %s", e, exc_info=True)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

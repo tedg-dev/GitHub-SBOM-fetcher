@@ -1,0 +1,135 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.cowboy/node-exit",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/65413743-c115-4f4e-9629-2d5ab7267e66",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:19Z"
+    },
+    "packages": [
+      {
+        "name": "grunt-contrib-watch",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-watch-0.5.3-720d79",
+        "versionInfo": "~0.5.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-watch@~0.5.3"
+          }
+        ]
+      },
+      {
+        "name": "grunt",
+        "SPDXID": "SPDXRef-npm-grunt-0.4.1-109904",
+        "versionInfo": "~0.4.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt@~0.4.1"
+          }
+        ]
+      },
+      {
+        "name": "which",
+        "SPDXID": "SPDXRef-npm-which-1.0.5-48d35b",
+        "versionInfo": "~1.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/which@~1.0.5"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-jshint",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-jshint-0.6.4-d2e3c9",
+        "versionInfo": "~0.6.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-jshint@~0.6.4"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-nodeunit",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-nodeunit-0.2.0-607396",
+        "versionInfo": "~0.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-nodeunit@~0.2.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.cowboy/node-exit",
+        "SPDXID": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/cowboy/node-exit",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/cowboy/node-exit@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-watch-0.5.3-720d79",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-0.4.1-109904",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "relatedSpdxElement": "SPDXRef-npm-which-1.0.5-48d35b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-jshint-0.6.4-d2e3c9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-nodeunit-0.2.0-607396",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-cowboy-node-exit-master-9c95e0",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

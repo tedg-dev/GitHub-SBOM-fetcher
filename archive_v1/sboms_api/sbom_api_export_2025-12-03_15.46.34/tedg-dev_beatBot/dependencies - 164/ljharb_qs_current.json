@@ -1,0 +1,746 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.ljharb/qs",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/4e70f5a0-7bc1-438a-bb23-375272579c7b",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:25Z"
+    },
+    "packages": [
+      {
+        "name": "has-bigints",
+        "SPDXID": "SPDXRef-npm-has-bigints-1.1.0-9d9e25",
+        "versionInfo": "^1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-bigints@%5E1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "for-each",
+        "SPDXID": "SPDXRef-npm-for-each-0.3.5-589584",
+        "versionInfo": "^0.3.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/for-each@%5E0.3.5"
+          }
+        ]
+      },
+      {
+        "name": "has-override-mistake",
+        "SPDXID": "SPDXRef-npm-has-override-mistake-1.0.1-a6275d",
+        "versionInfo": "^1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-override-mistake@%5E1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-10.3.2-ffdfbf",
+        "versionInfo": "^10.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E10.3.2"
+          }
+        ]
+      },
+      {
+        "name": "qs-iconv",
+        "SPDXID": "SPDXRef-npm-qs-iconv-1.0.4-583322",
+        "versionInfo": "^1.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/qs-iconv@%5E1.0.4"
+          }
+        ]
+      },
+      {
+        "name": "module-deps",
+        "SPDXID": "SPDXRef-npm-module-deps-6.2.3-7fdad9",
+        "versionInfo": "^6.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/module-deps@%5E6.2.3"
+          }
+        ]
+      },
+      {
+        "name": "has-proto",
+        "SPDXID": "SPDXRef-npm-has-proto-1.2.0-c77408",
+        "versionInfo": "^1.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-proto@%5E1.2.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-9.39.1-7e2c9b",
+        "versionInfo": "^9.39.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E9.39.1"
+          }
+        ]
+      },
+      {
+        "name": "jackspeak",
+        "SPDXID": "SPDXRef-npm-jackspeak-2.1.1-da878b",
+        "versionInfo": "2.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jackspeak@2.1.1"
+          }
+        ]
+      },
+      {
+        "name": "@browserify/envify",
+        "SPDXID": "SPDXRef-npm-browserify-envify-6.0.0-3799c1",
+        "versionInfo": "^6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40browserify/envify@%5E6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "mock-property",
+        "SPDXID": "SPDXRef-npm-mock-property-1.1.0-5f8cc3",
+        "versionInfo": "^1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mock-property@%5E1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.9.0-ef02c0",
+        "versionInfo": "^5.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.9.0"
+          }
+        ]
+      },
+      {
+        "name": "side-channel",
+        "SPDXID": "SPDXRef-npm-side-channel-1.1.0-041e1a",
+        "versionInfo": "^1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/side-channel@%5E1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "in-publish",
+        "SPDXID": "SPDXRef-npm-in-publish-2.0.1-ded686",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/in-publish@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "browserify",
+        "SPDXID": "SPDXRef-npm-browserify-16.5.2-6085c5",
+        "versionInfo": "^16.5.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/browserify@%5E16.5.2"
+          }
+        ]
+      },
+      {
+        "name": "has-property-descriptors",
+        "SPDXID": "SPDXRef-npm-has-property-descriptors-1.0.2-4ae997",
+        "versionInfo": "^1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-property-descriptors@%5E1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-10.3.7-df8e7d",
+        "versionInfo": "10.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2009-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@10.3.7"
+          }
+        ]
+      },
+      {
+        "name": "has-symbols",
+        "SPDXID": "SPDXRef-npm-has-symbols-1.1.0-301318",
+        "versionInfo": "^1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-symbols@%5E1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "object-inspect",
+        "SPDXID": "SPDXRef-npm-object-inspect-1.13.4-ce14fb",
+        "versionInfo": "^1.13.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/object-inspect@%5E1.13.4"
+          }
+        ]
+      },
+      {
+        "name": "jiti",
+        "SPDXID": "SPDXRef-npm-jiti-0.0.0-ca1669",
+        "versionInfo": "^0.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jiti@%5E0.0.0"
+          }
+        ]
+      },
+      {
+        "name": "safer-buffer",
+        "SPDXID": "SPDXRef-npm-safer-buffer-2.1.2-4ecf7d",
+        "versionInfo": "^2.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safer-buffer@%5E2.1.2"
+          }
+        ]
+      },
+      {
+        "name": "evalmd",
+        "SPDXID": "SPDXRef-npm-evalmd-0.0.19-4bdfe9",
+        "versionInfo": "^0.0.19",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/evalmd@%5E0.0.19"
+          }
+        ]
+      },
+      {
+        "name": "es-value-fixtures",
+        "SPDXID": "SPDXRef-npm-es-value-fixtures-1.7.1-8a9d3d",
+        "versionInfo": "^1.7.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/es-value-fixtures@%5E1.7.1"
+          }
+        ]
+      },
+      {
+        "name": "mkdirp",
+        "SPDXID": "SPDXRef-npm-mkdirp-0.5.5-874b45",
+        "versionInfo": "^0.5.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mkdirp@%5E0.5.5"
+          }
+        ]
+      },
+      {
+        "name": "unassertify",
+        "SPDXID": "SPDXRef-npm-unassertify-3.0.1-86e0cd",
+        "versionInfo": "^3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/unassertify@%5E3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "npmignore",
+        "SPDXID": "SPDXRef-npm-npmignore-0.3.2-ad981c",
+        "versionInfo": "^0.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/npmignore@%5E0.3.2"
+          }
+        ]
+      },
+      {
+        "name": "eclint",
+        "SPDXID": "SPDXRef-npm-eclint-2.8.1-7792b0",
+        "versionInfo": "^2.8.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eclint@%5E2.8.1"
+          }
+        ]
+      },
+      {
+        "name": "iconv-lite",
+        "SPDXID": "SPDXRef-npm-iconv-lite-0.5.1-381919",
+        "versionInfo": "^0.5.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/iconv-lite@%5E0.5.1"
+          }
+        ]
+      },
+      {
+        "name": "@ljharb/eslint-config",
+        "SPDXID": "SPDXRef-npm-ljharb-eslint-config-22.0.2-cd5cfd",
+        "versionInfo": "^22.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40ljharb/eslint-config@%5E22.0.2"
+          }
+        ]
+      },
+      {
+        "name": "safe-publish-latest",
+        "SPDXID": "SPDXRef-npm-safe-publish-latest-2.0.0-4dcbeb",
+        "versionInfo": "^2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safe-publish-latest@%5E2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "bundle-collapser",
+        "SPDXID": "SPDXRef-npm-bundle-collapser-1.4.0-5a2699",
+        "versionInfo": "^1.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/bundle-collapser@%5E1.4.0"
+          }
+        ]
+      },
+      {
+        "name": "common-shakeify",
+        "SPDXID": "SPDXRef-npm-common-shakeify-1.0.0-036b65",
+        "versionInfo": "~1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/common-shakeify@~1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@browserify/uglifyify",
+        "SPDXID": "SPDXRef-npm-browserify-uglifyify-6.0.0-cf18d7",
+        "versionInfo": "^6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40browserify/uglifyify@%5E6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/node.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/node.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/pretest.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/pretest.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/rebase.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-rebase.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/rebase.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/require-allow-edits",
+        "SPDXID": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/require-allow-edits@main"
+          }
+        ]
+      },
+      {
+        "name": "com.github.ljharb/qs",
+        "SPDXID": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/ljharb/qs",
+        "filesAnalyzed": false,
+        "licenseDeclared": "BSD-3-Clause",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/ljharb/qs@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-has-bigints-1.1.0-9d9e25",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-for-each-0.3.5-589584",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-has-override-mistake-1.0.1-a6275d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-10.3.2-ffdfbf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-qs-iconv-1.0.4-583322",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-module-deps-6.2.3-7fdad9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-has-proto-1.2.0-c77408",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-9.39.1-7e2c9b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-jackspeak-2.1.1-da878b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-browserify-envify-6.0.0-3799c1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-mock-property-1.1.0-5f8cc3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.9.0-ef02c0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-side-channel-1.1.0-041e1a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-in-publish-2.0.1-ded686",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-browserify-16.5.2-6085c5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-has-property-descriptors-1.0.2-4ae997",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-glob-10.3.7-df8e7d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-has-symbols-1.1.0-301318",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-object-inspect-1.13.4-ce14fb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-jiti-0.0.0-ca1669",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-safer-buffer-2.1.2-4ecf7d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-evalmd-0.0.19-4bdfe9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-es-value-fixtures-1.7.1-8a9d3d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-mkdirp-0.5.5-874b45",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-unassertify-3.0.1-86e0cd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-npmignore-0.3.2-ad981c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-eclint-2.8.1-7792b0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-iconv-lite-0.5.1-381919",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-ljharb-eslint-config-22.0.2-cd5cfd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-safe-publish-latest-2.0.0-4dcbeb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-bundle-collapser-1.4.0-5a2699",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-common-shakeify-1.0.0-036b65",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-npm-browserify-uglifyify-6.0.0-cf18d7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-rebase.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-ljharb-qs-main-6f1d48",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

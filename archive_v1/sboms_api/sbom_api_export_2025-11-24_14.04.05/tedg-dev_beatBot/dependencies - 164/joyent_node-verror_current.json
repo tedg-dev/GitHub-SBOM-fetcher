@@ -1,0 +1,99 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-verror",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/31722429-ebb6-4c6a-890c-cbf707c9113b",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:04Z"
+    },
+    "packages": [
+      {
+        "name": "core-util-is",
+        "SPDXID": "SPDXRef-npm-core-util-is-1.0.2-c21d76",
+        "versionInfo": "1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright Joyent, Inc. and other Node contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/core-util-is@1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "extsprintf",
+        "SPDXID": "SPDXRef-npm-extsprintf-1.2.0-dbe1fc",
+        "versionInfo": "^1.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/extsprintf@%5E1.2.0"
+          }
+        ]
+      },
+      {
+        "name": "assert-plus",
+        "SPDXID": "SPDXRef-npm-assert-plus-1.0.0-3cc60d",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/assert-plus@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TritonDataCenter/node-verror",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-verror-master-221ae9",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-verror",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-verror@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-verror-master-221ae9",
+        "relatedSpdxElement": "SPDXRef-npm-core-util-is-1.0.2-c21d76",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-verror-master-221ae9",
+        "relatedSpdxElement": "SPDXRef-npm-extsprintf-1.2.0-dbe1fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-verror-master-221ae9",
+        "relatedSpdxElement": "SPDXRef-npm-assert-plus-1.0.0-3cc60d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-verror-master-221ae9",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

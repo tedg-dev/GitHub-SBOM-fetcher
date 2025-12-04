@@ -1,0 +1,249 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.gruntjs/grunt-legacy-log",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/6b62cc5a-7191-45cc-8c18-0cd2218c0cfc",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:50:02Z"
+    },
+    "packages": [
+      {
+        "name": "grunt-cli",
+        "SPDXID": "SPDXRef-npm-grunt-cli-1.3.2-14043c",
+        "versionInfo": "^1.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-cli@%5E1.3.2"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-jshint",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-jshint-2.1.0-fb5b77",
+        "versionInfo": "^2.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-jshint@%5E2.1.0"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-watch",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-watch-1.1.0-3d4ab6",
+        "versionInfo": "^1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-watch@%5E1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "grunt-legacy-log-utils",
+        "SPDXID": "SPDXRef-npm-grunt-legacy-log-utils-2.1.0-0c5aec",
+        "versionInfo": "~2.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-legacy-log-utils@~2.1.0"
+          }
+        ]
+      },
+      {
+        "name": "colors",
+        "SPDXID": "SPDXRef-npm-colors-1.1.2-8f709a",
+        "versionInfo": "~1.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/colors@~1.1.2"
+          }
+        ]
+      },
+      {
+        "name": "lodash",
+        "SPDXID": "SPDXRef-npm-lodash-4.17.19-a70fab",
+        "versionInfo": "~4.17.19",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/lodash@~4.17.19"
+          }
+        ]
+      },
+      {
+        "name": "grunt",
+        "SPDXID": "SPDXRef-npm-grunt-1.2.1-997631",
+        "versionInfo": "^1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt@%5E1.2.1"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-nodeunit",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-nodeunit-2.1.0-55eee3",
+        "versionInfo": "^2.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-nodeunit@%5E2.1.0"
+          }
+        ]
+      },
+      {
+        "name": "hooker",
+        "SPDXID": "SPDXRef-npm-hooker-0.2.3-96b3f3",
+        "versionInfo": "~0.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/hooker@~0.2.3"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "versionInfo": "2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@2"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-1-75c946",
+        "versionInfo": "1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.gruntjs/grunt-legacy-log",
+        "SPDXID": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/gruntjs/grunt-legacy-log",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/gruntjs/grunt-legacy-log@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-cli-1.3.2-14043c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-jshint-2.1.0-fb5b77",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-watch-1.1.0-3d4ab6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-legacy-log-utils-2.1.0-0c5aec",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-colors-1.1.2-8f709a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-lodash-4.17.19-a70fab",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-1.2.1-997631",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-nodeunit-2.1.0-55eee3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-npm-hooker-0.2.3-96b3f3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-gruntjs-grunt-legacy-log-main-b11c0e",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

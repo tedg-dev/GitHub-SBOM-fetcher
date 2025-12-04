@@ -1,0 +1,192 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.EventEmitter2/EventEmitter2",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/eab88872-7e64-43a9-a846-760e99045fc1",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:38Z"
+    },
+    "packages": [
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-2.1.4-d96f0c",
+        "versionInfo": "^2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@%5E2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "bluebird",
+        "SPDXID": "SPDXRef-npm-bluebird-3.7.2-98bf39",
+        "versionInfo": "^3.7.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/bluebird@%5E3.7.2"
+          }
+        ]
+      },
+      {
+        "name": "coveralls",
+        "SPDXID": "SPDXRef-npm-coveralls-3.0.11-76be96",
+        "versionInfo": "^3.0.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/coveralls@%5E3.0.11"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-7.1.1-c689ab",
+        "versionInfo": "^7.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E7.1.1"
+          }
+        ]
+      },
+      {
+        "name": "nodeunit",
+        "SPDXID": "SPDXRef-npm-nodeunit--63d4c0",
+        "versionInfo": "*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nodeunit@%2A"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.0.0-d6bdfa",
+        "versionInfo": "^15.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.0.0"
+          }
+        ]
+      },
+      {
+        "name": "eventemitter3",
+        "SPDXID": "SPDXRef-npm-eventemitter3-latest-a7373b",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eventemitter3@latest"
+          }
+        ]
+      },
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-2.1.x-1eac58",
+        "versionInfo": "2.1.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@2.1.x"
+          }
+        ]
+      },
+      {
+        "name": "com.github.EventEmitter2/EventEmitter2",
+        "SPDXID": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/EventEmitter2/EventEmitter2",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/EventEmitter2/EventEmitter2@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-2.1.4-d96f0c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-bluebird-3.7.2-98bf39",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-coveralls-3.0.11-76be96",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-7.1.1-c689ab",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-nodeunit--63d4c0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.0.0-d6bdfa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-eventemitter3-latest-a7373b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-2.1.x-1eac58",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-EventEmitter2-EventEmitter2-master-b53dbd",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

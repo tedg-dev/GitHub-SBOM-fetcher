@@ -1,0 +1,4613 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.fb55/css-select",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/c18d1316-3ed4-4ad3-ae15-e2cb2d06be57",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:42:59Z"
+    },
+    "packages": [
+      {
+        "name": "@rollup/rollup-linux-loongarch64-gnu",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-loongarch64-gnu-4.44.1-6b350e",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-loongarch64-gnu@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "htmlparser2",
+        "SPDXID": "SPDXRef-npm-htmlparser2-2.6.0-4d76c7",
+        "versionInfo": "2.6.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2010, 2011, Chris Winberry <chris@winberry.net>, Copyright 2011 craigslist, inc., Copyright 2011 craigslist, inc. webmaster@craigslist.org webmaster@craigslist.org",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/htmlparser2@2.6.0"
+          }
+        ]
+      },
+      {
+        "name": "rollup",
+        "SPDXID": "SPDXRef-npm-rollup-4.44.1-e14f93",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "0BSD AND ISC AND MIT",
+        "copyrightText": "Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker, Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2015 Rich Harris, Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016, Contributors, Copyright (c) 2017 these people (https://github.com/rollup/rollup/graphs/contributors), Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com), Copyright (c) 2019 RollupJS Plugin Contributors (https://github.com/rollup/plugins/graphs/contributors), Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com), Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Microsoft Corporation, Copyright (c) Paul Miller (https://paulmillr.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2018 Rich Harris",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rollup@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "foreground-child",
+        "SPDXID": "SPDXRef-npm-foreground-child-3.3.1-4358b6",
+        "versionInfo": "3.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2015-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/foreground-child@3.3.1"
+          }
+        ]
+      },
+      {
+        "name": "@types/estree",
+        "SPDXID": "SPDXRef-npm-types-estree-1.0.8-65536b",
+        "versionInfo": "1.0.8",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Microsoft Corporation",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/estree@1.0.8"
+          }
+        ]
+      },
+      {
+        "name": "picomatch",
+        "SPDXID": "SPDXRef-npm-picomatch-4.0.3-d0c6f7",
+        "versionInfo": "4.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2017-present, Jon Schlinkert (https://github.com/jonschlinkert)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/picomatch@4.0.3"
+          }
+        ]
+      },
+      {
+        "name": "minimatch",
+        "SPDXID": "SPDXRef-npm-minimatch-10.1.1-aa7370",
+        "versionInfo": "10.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/minimatch@10.1.1"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-11.1.0-c60237",
+        "versionInfo": "11.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@11.1.0"
+          }
+        ]
+      },
+      {
+        "name": "minimatch",
+        "SPDXID": "SPDXRef-npm-minimatch-9.0.5-bd3535",
+        "versionInfo": "9.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2011-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/minimatch@9.0.5"
+          }
+        ]
+      },
+      {
+        "name": "make-dir",
+        "SPDXID": "SPDXRef-npm-make-dir-4.0.0-34184d",
+        "versionInfo": "4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/make-dir@4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "htmlparser2",
+        "SPDXID": "SPDXRef-npm-htmlparser2-10.0.0-22850b",
+        "versionInfo": "10.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2010, 2011, Chris Winberry <chris@winberry.net>, Copyright 2015 the authors, Copyright 2015 the authors webmaster@thisisafakedoma.in",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/htmlparser2@10.0.0"
+          }
+        ]
+      },
+      {
+        "name": "semver",
+        "SPDXID": "SPDXRef-npm-semver-7.7.2-d687cc",
+        "versionInfo": "7.7.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) Isaac Z. Schlueter and Contributors, Copyright Isaac Z. Schlueter",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/semver@7.7.2"
+          }
+        ]
+      },
+      {
+        "name": "sync-content",
+        "SPDXID": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "versionInfo": "2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/sync-content@2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "strip-ansi",
+        "SPDXID": "SPDXRef-npm-strip-ansi-7.1.0-a10ef4",
+        "versionInfo": "7.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/strip-ansi@7.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/mocker",
+        "SPDXID": "SPDXRef-npm-vitest-mocker-3.2.4-e71bce",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team, Copyright (c) Facebook, Inc. and its affiliates, Copyright (c) Meta Platforms, Inc. and affiliates, Copyright 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/mocker@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "ansi-regex",
+        "SPDXID": "SPDXRef-npm-ansi-regex-5.0.1-3b290d",
+        "versionInfo": "5.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ansi-regex@5.0.1"
+          }
+        ]
+      },
+      {
+        "name": "domelementtype",
+        "SPDXID": "SPDXRef-npm-domelementtype-1.3.1-682fff",
+        "versionInfo": "1.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/domelementtype@1.3.1"
+          }
+        ]
+      },
+      {
+        "name": "domutils",
+        "SPDXID": "SPDXRef-npm-domutils-1.0.1-370e97",
+        "versionInfo": "1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/domutils@1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "vite-node",
+        "SPDXID": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) 2021 Anthony Fu (https://github.com/antfu), Copyright (c) 2021-Present Vitest Team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vite-node@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "string-width",
+        "SPDXID": "SPDXRef-npm-string-width-5.1.2-a94540",
+        "versionInfo": "5.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/string-width@5.1.2"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/freebsd-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-freebsd-arm64-0.25.5-77e599",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/freebsd-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "fdir",
+        "SPDXID": "SPDXRef-npm-fdir-6.5.0-f49bf2",
+        "versionInfo": "6.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2024 Abdullah Atta, Copyright 2023 Abdullah Atta",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fdir@6.5.0"
+          }
+        ]
+      },
+      {
+        "name": "@types/node",
+        "SPDXID": "SPDXRef-npm-types-node-24.10.1-c2009e",
+        "versionInfo": "24.10.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Microsoft Corporation, Copyright Node.js contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/node@24.10.1"
+          }
+        ]
+      },
+      {
+        "name": "@istanbuljs/schema",
+        "SPDXID": "SPDXRef-npm-istanbuljs-schema-0.1.3-d0d3df",
+        "versionInfo": "0.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2019 CFWare, LLC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40istanbuljs/schema@0.1.3"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/freebsd-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-freebsd-x64-0.25.5-722744",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/freebsd-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-s390x-gnu",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-s390x-gnu-4.44.1-1c5272",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-s390x-gnu@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-win32-ia32-msvc",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-win32-ia32-msvc-4.44.1-428b7d",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-win32-ia32-msvc@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "tinyrainbow",
+        "SPDXID": "SPDXRef-npm-tinyrainbow-2.0.0-461026",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2022 Tinylibs",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tinyrainbow@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/spy",
+        "SPDXID": "SPDXRef-npm-vitest-spy-3.2.4-a96031",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/spy@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "@types/chai",
+        "SPDXID": "SPDXRef-npm-types-chai-5.2.2-06f778",
+        "versionInfo": "5.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Microsoft Corporation",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/chai@5.2.2"
+          }
+        ]
+      },
+      {
+        "name": "magic-string",
+        "SPDXID": "SPDXRef-npm-magic-string-0.30.17-4dae5a",
+        "versionInfo": "0.30.17",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2018 Rich Harris",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/magic-string@0.30.17"
+          }
+        ]
+      },
+      {
+        "name": "path-key",
+        "SPDXID": "SPDXRef-npm-path-key-3.1.1-710e0c",
+        "versionInfo": "3.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/path-key@3.1.1"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/snapshot",
+        "SPDXID": "SPDXRef-npm-vitest-snapshot-3.2.4-b46e7e",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team, Copyright (c) Facebook, Inc. and its affiliates, Copyright 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/snapshot@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/runner",
+        "SPDXID": "SPDXRef-npm-vitest-runner-3.2.4-d162fd",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/runner@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "check-error",
+        "SPDXID": "SPDXRef-npm-check-error-2.1.1-c054bd",
+        "versionInfo": "2.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/check-error@2.1.1"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/pretty-format",
+        "SPDXID": "SPDXRef-npm-vitest-pretty-format-3.2.4-076c5b",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team, Copyright (c) Facebook, Inc. and its affiliates, Copyright (c) Meta Platforms, Inc. and affiliates",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/pretty-format@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "ansi-styles",
+        "SPDXID": "SPDXRef-npm-ansi-styles-4.3.0-1333b8",
+        "versionInfo": "4.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ansi-styles@4.3.0"
+          }
+        ]
+      },
+      {
+        "name": "dom-serializer",
+        "SPDXID": "SPDXRef-npm-dom-serializer-2.0.0-d696a2",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014 The cheeriojs contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/dom-serializer@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "boolbase",
+        "SPDXID": "SPDXRef-npm-boolbase-1.0.0-63d81e",
+        "versionInfo": "1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/boolbase@1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-riscv64-gnu",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-riscv64-gnu-4.44.1-d05929",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-riscv64-gnu@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@pkgjs/parseargs",
+        "SPDXID": "SPDXRef-npm-pkgjs-parseargs-0.11.0-70382f",
+        "versionInfo": "0.11.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0 AND MIT",
+        "copyrightText": "Copyright Node.js contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40pkgjs/parseargs@0.11.0"
+          }
+        ]
+      },
+      {
+        "name": "mkdirp",
+        "SPDXID": "SPDXRef-npm-mkdirp-3.0.1-1863ec",
+        "versionInfo": "3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011-2023 James Halliday (mail@substack.net) and Isaac Z. Schlueter (i@izs.me)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mkdirp@3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-loong64",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-loong64-0.25.5-5a4150",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-loong64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "chalk",
+        "SPDXID": "SPDXRef-npm-chalk-5.6.2-1a28a2",
+        "versionInfo": "5.6.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/chalk@5.6.2"
+          }
+        ]
+      },
+      {
+        "name": "cross-spawn",
+        "SPDXID": "SPDXRef-npm-cross-spawn-7.0.6-d22125",
+        "versionInfo": "7.0.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2018 Made With MOXY Lda",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/cross-spawn@7.0.6"
+          }
+        ]
+      },
+      {
+        "name": "domutils",
+        "SPDXID": "SPDXRef-npm-domutils-3.2.2-33e8bf",
+        "versionInfo": "3.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/domutils@3.2.2"
+          }
+        ]
+      },
+      {
+        "name": "brace-expansion",
+        "SPDXID": "SPDXRef-npm-brace-expansion-2.0.2-ad4134",
+        "versionInfo": "2.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/brace-expansion@2.0.2"
+          }
+        ]
+      },
+      {
+        "name": "@babel/parser",
+        "SPDXID": "SPDXRef-npm-babel-parser-7.27.7-986150",
+        "versionInfo": "7.27.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2012-2014 by various contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40babel/parser@7.27.7"
+          }
+        ]
+      },
+      {
+        "name": "package-json-from-dist",
+        "SPDXID": "SPDXRef-npm-package-json-from-dist-1.0.1-2a6902",
+        "versionInfo": "1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/package-json-from-dist@1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "deep-eql",
+        "SPDXID": "SPDXRef-npm-deep-eql-5.0.2-43fde5",
+        "versionInfo": "5.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com>, Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/deep-eql@5.0.2"
+          }
+        ]
+      },
+      {
+        "name": "@types/deep-eql",
+        "SPDXID": "SPDXRef-npm-types-deep-eql-4.0.2-347865",
+        "versionInfo": "4.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Microsoft Corporation",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/deep-eql@4.0.2"
+          }
+        ]
+      },
+      {
+        "name": "@isaacs/brace-expansion",
+        "SPDXID": "SPDXRef-npm-isaacs-brace-expansion-5.0.0-a5fbc8",
+        "versionInfo": "5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright Isaac Z. Schlueter <i@izs.me>, Copyright Julian Gruber <julian@juliangruber.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40isaacs/brace-expansion@5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "domhandler",
+        "SPDXID": "SPDXRef-npm-domhandler-2.0.3-e0c7d0",
+        "versionInfo": "2.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/domhandler@2.0.3"
+          }
+        ]
+      },
+      {
+        "name": "domelementtype",
+        "SPDXID": "SPDXRef-npm-domelementtype-2.3.0-b96c7c",
+        "versionInfo": "2.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/domelementtype@2.3.0"
+          }
+        ]
+      },
+      {
+        "name": "nth-check",
+        "SPDXID": "SPDXRef-npm-nth-check-2.1.1-646b25",
+        "versionInfo": "2.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nth-check@2.1.1"
+          }
+        ]
+      },
+      {
+        "name": "ansi-styles",
+        "SPDXID": "SPDXRef-npm-ansi-styles-6.2.1-6791af",
+        "versionInfo": "6.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ansi-styles@6.2.1"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-arm-musleabihf",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-arm-musleabihf-4.44.1-79625f",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-arm-musleabihf@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@bcoe/v8-coverage",
+        "SPDXID": "SPDXRef-npm-bcoe-v8-coverage-1.0.2-ea2b24",
+        "versionInfo": "1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC AND MIT",
+        "copyrightText": "Copyright (c) 2015-2017 Charles Samborski, Copyright (c) 2017, Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40bcoe/v8-coverage@1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "emoji-regex",
+        "SPDXID": "SPDXRef-npm-emoji-regex-9.2.2-591c4e",
+        "versionInfo": "9.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/emoji-regex@9.2.2"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "versionInfo": "10.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2009-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@10.5.0"
+          }
+        ]
+      },
+      {
+        "name": "istanbul-lib-report",
+        "SPDXID": "SPDXRef-npm-istanbul-lib-report-3.0.1-084e69",
+        "versionInfo": "3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-3-Clause",
+        "copyrightText": "Copyright 2012-2015 Yahoo! Inc., Copyright 2012-2015, Yahoo Inc., Copyright 2012-2015, Yahoo Inc. Copyrights",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/istanbul-lib-report@3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "html-escaper",
+        "SPDXID": "SPDXRef-npm-html-escaper-2.0.2-9282fd",
+        "versionInfo": "2.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2017-present by Andrea Giammarchi",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/html-escaper@2.0.2"
+          }
+        ]
+      },
+      {
+        "name": "jackspeak",
+        "SPDXID": "SPDXRef-npm-jackspeak-3.4.3-42e93b",
+        "versionInfo": "3.4.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jackspeak@3.4.3"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/android-arm",
+        "SPDXID": "SPDXRef-npm-esbuild-android-arm-0.25.5-ae9055",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2018 The Go Authors, Copyright 2021 The Go Authors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/android-arm@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "ast-v8-to-istanbul",
+        "SPDXID": "SPDXRef-npm-ast-v8-to-istanbul-0.3.3-55bf9f",
+        "versionInfo": "0.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ast-v8-to-istanbul@0.3.3"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/utils",
+        "SPDXID": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team, Copyright (c) Meta Platforms, Inc. and affiliates, Copyright 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell, Copyright 2018 The diff-match-patch",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/utils@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/openbsd-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-openbsd-arm64-0.25.5-1d2ed9",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/openbsd-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-freebsd-arm64",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-freebsd-arm64-4.44.1-7c5023",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-freebsd-arm64@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "shebang-regex",
+        "SPDXID": "SPDXRef-npm-shebang-regex-3.0.0-72d020",
+        "versionInfo": "3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) Sindre Sorhus (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/shebang-regex@3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-riscv64-musl",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-riscv64-musl-4.44.1-8ee356",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-riscv64-musl@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "resolve-import",
+        "SPDXID": "SPDXRef-npm-resolve-import-2.0.0-b5f0cd",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/resolve-import@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/netbsd-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-netbsd-arm64-0.25.5-4228f3",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/netbsd-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@jridgewell/trace-mapping",
+        "SPDXID": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "versionInfo": "0.3.25",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2022 Justin Ridgewell <justin@ridgewell.name>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40jridgewell/trace-mapping@0.3.25"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-darwin-x64",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-darwin-x64-4.44.1-1b0764",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-darwin-x64@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/sunos-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-sunos-x64-0.25.5-0286c4",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/sunos-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-x64-gnu",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-x64-gnu-4.44.1-49764a",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-x64-gnu@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "entities",
+        "SPDXID": "SPDXRef-npm-entities-4.5.0-466d47",
+        "versionInfo": "4.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/entities@4.5.0"
+          }
+        ]
+      },
+      {
+        "name": "estree-walker",
+        "SPDXID": "SPDXRef-npm-estree-walker-3.0.3-f737cc",
+        "versionInfo": "3.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2015-20 these people (https://github.com/Rich-Harris/estree-walker/graphs/contributors)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/estree-walker@3.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/win32-ia32",
+        "SPDXID": "SPDXRef-npm-esbuild-win32-ia32-0.25.5-02d1fc",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/win32-ia32@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-riscv64",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-riscv64-0.25.5-0b4e29",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-riscv64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@babel/helper-validator-identifier",
+        "SPDXID": "SPDXRef-npm-babel-helper-validator-identifier-7.27.1-1624cd",
+        "versionInfo": "7.27.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014-present Sebastian McKenzie and other contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40babel/helper-validator-identifier@7.27.1"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-arm-gnueabihf",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-arm-gnueabihf-4.44.1-7425e1",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-arm-gnueabihf@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "siginfo",
+        "SPDXID": "SPDXRef-npm-siginfo-2.0.0-716d39",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2017, Emil Bay <github@tixz.dk>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/siginfo@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "strip-literal",
+        "SPDXID": "SPDXRef-npm-strip-literal-3.0.0-1b9e41",
+        "versionInfo": "3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) 2022 Anthony Fu (https://github.com/antfu), Copyright (c) 2022 Anthony Fu <https://github.com/antfu>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/strip-literal@3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "domhandler",
+        "SPDXID": "SPDXRef-npm-domhandler-5.0.3-785e78",
+        "versionInfo": "5.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/domhandler@5.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/android-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-android-x64-0.25.5-bc3a78",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2018 The Go Authors, Copyright 2021 The Go Authors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/android-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "debug",
+        "SPDXID": "SPDXRef-npm-debug-4.4.1-580f38",
+        "versionInfo": "4.4.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>, Copyright (c) 2018-2021 Josh Junon",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/debug@4.4.1"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-win32-arm64-msvc",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-win32-arm64-msvc-4.44.1-331d8a",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-win32-arm64-msvc@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "stackback",
+        "SPDXID": "SPDXRef-npm-stackback-0.0.2-e6552a",
+        "versionInfo": "0.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2012 the V8 project, Copyright 2012 the V8 project authors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/stackback@0.0.2"
+          }
+        ]
+      },
+      {
+        "name": "tinyglobby",
+        "SPDXID": "SPDXRef-npm-tinyglobby-0.2.15-d87dea",
+        "versionInfo": "0.2.15",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2024 Madeline Gurriaran",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tinyglobby@0.2.15"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-linux-x64",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-linux-x64-2.3.7-c8490c",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-linux-x64@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "color-convert",
+        "SPDXID": "SPDXRef-npm-color-convert-2.0.1-f2b0bf",
+        "versionInfo": "2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>, Copyright (c) 2011-2016, Heather Arthur and Josh Junon",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/color-convert@2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/aix-ppc64",
+        "SPDXID": "SPDXRef-npm-esbuild-aix-ppc64-0.25.5-6a514a",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/aix-ppc64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-arm",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-arm-0.25.5-89eaf9",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-arm@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "lru-cache",
+        "SPDXID": "SPDXRef-npm-lru-cache-11.1.0-2c0468",
+        "versionInfo": "11.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2010-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/lru-cache@11.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-darwin-x64",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-darwin-x64-2.3.7-ce0c7e",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-darwin-x64@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "isexe",
+        "SPDXID": "SPDXRef-npm-isexe-2.0.0-8e4215",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/isexe@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "is-fullwidth-code-point",
+        "SPDXID": "SPDXRef-npm-is-fullwidth-code-point-3.0.0-9e7e62",
+        "versionInfo": "3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) Sindre Sorhus (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/is-fullwidth-code-point@3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-win32-x64-msvc",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-win32-x64-msvc-4.44.1-f7db19",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-win32-x64-msvc@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-mips64el",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-mips64el-0.25.5-58381d",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-mips64el@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "tshy",
+        "SPDXID": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "versionInfo": "3.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tshy@3.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-linux-arm64-musl",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-linux-arm64-musl-2.3.7-fda076",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-linux-arm64-musl@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "emoji-regex",
+        "SPDXID": "SPDXRef-npm-emoji-regex-8.0.0-747bfd",
+        "versionInfo": "8.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/emoji-regex@8.0.0"
+          }
+        ]
+      },
+      {
+        "name": "ansi-regex",
+        "SPDXID": "SPDXRef-npm-ansi-regex-6.1.0-25a414",
+        "versionInfo": "6.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ansi-regex@6.1.0"
+          }
+        ]
+      },
+      {
+        "name": "lru-cache",
+        "SPDXID": "SPDXRef-npm-lru-cache-10.4.3-2ee848",
+        "versionInfo": "10.4.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2010-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/lru-cache@10.4.3"
+          }
+        ]
+      },
+      {
+        "name": "tinypool",
+        "SPDXID": "SPDXRef-npm-tinypool-1.1.1-531674",
+        "versionInfo": "1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2020 James M Snell and the Piscina contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tinypool@1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "istanbul-reports",
+        "SPDXID": "SPDXRef-npm-istanbul-reports-3.1.7-5b3d66",
+        "versionInfo": "3.1.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-3-Clause",
+        "copyrightText": "(c) Sindre Sorhus, Copyright (c) Facebook, Inc. and its affiliates, Copyright 2012-2015 Yahoo! Inc., Copyright 2012-2015, Yahoo Inc., Copyright 2012-2015, Yahoo Inc. Copyrights",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/istanbul-reports@3.1.7"
+          }
+        ]
+      },
+      {
+        "name": "chokidar",
+        "SPDXID": "SPDXRef-npm-chokidar-4.0.3-263a44",
+        "versionInfo": "4.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) 2012 Paul Miller (paulmillr.com), (c) Paul Miller <https://paulmillr.com>, Copyright (c) 2012 Paul Miller (https://paulmillr.com), Elan Shanker",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/chokidar@4.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/win32-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-win32-arm64-0.25.5-91c604",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/win32-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-darwin-arm64",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-darwin-arm64-4.44.1-ce554b",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-darwin-arm64@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/coverage-v8",
+        "SPDXID": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2021-Present Vitest Team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/coverage-v8@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "test-exclude",
+        "SPDXID": "SPDXRef-npm-test-exclude-7.0.1-7fa77a",
+        "versionInfo": "7.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2016, Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/test-exclude@7.0.1"
+          }
+        ]
+      },
+      {
+        "name": "postcss",
+        "SPDXID": "SPDXRef-npm-postcss-8.5.6-9d377a",
+        "versionInfo": "8.5.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/postcss@8.5.6"
+          }
+        ]
+      },
+      {
+        "name": "cheerio-soupselect",
+        "SPDXID": "SPDXRef-npm-cheerio-soupselect-0.1.1-f58672",
+        "versionInfo": "0.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/cheerio-soupselect@0.1.1"
+          }
+        ]
+      },
+      {
+        "name": "path-scurry",
+        "SPDXID": "SPDXRef-npm-path-scurry-2.0.0-b01ec3",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/path-scurry@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-powerpc64le-gnu",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-powerpc64le-gnu-4.44.1-4aed0e",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-powerpc64le-gnu@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "picocolors",
+        "SPDXID": "SPDXRef-npm-picocolors-1.1.1-48d625",
+        "versionInfo": "1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/picocolors@1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "std-env",
+        "SPDXID": "SPDXRef-npm-std-env-3.9.0-ca7e34",
+        "versionInfo": "3.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/std-env@3.9.0"
+          }
+        ]
+      },
+      {
+        "name": "polite-json",
+        "SPDXID": "SPDXRef-npm-polite-json-5.0.0-bd134e",
+        "versionInfo": "5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2017 Kat Marchan, Copyright 2023 Isaac Z. Schlueter, Copyright npm, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/polite-json@5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@babel/helper-string-parser",
+        "SPDXID": "SPDXRef-npm-babel-helper-string-parser-7.27.1-cc8722",
+        "versionInfo": "7.27.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014-present Sebastian McKenzie and other contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40babel/helper-string-parser@7.27.1"
+          }
+        ]
+      },
+      {
+        "name": "signal-exit",
+        "SPDXID": "SPDXRef-npm-signal-exit-4.1.0-421926",
+        "versionInfo": "4.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/signal-exit@4.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-x64-musl",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-x64-musl-4.44.1-d9408d",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-x64-musl@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-s390x",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-s390x-0.25.5-94ae25",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-s390x@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "loupe",
+        "SPDXID": "SPDXRef-npm-loupe-3.1.4-4d039c",
+        "versionInfo": "3.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011-2013 Jake Luer jake@alogicalparadox.com, Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/loupe@3.1.4"
+          }
+        ]
+      },
+      {
+        "name": "readdirp",
+        "SPDXID": "SPDXRef-npm-readdirp-4.1.2-d2585b",
+        "versionInfo": "4.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/readdirp@4.1.2"
+          }
+        ]
+      },
+      {
+        "name": "strip-ansi",
+        "SPDXID": "SPDXRef-npm-strip-ansi-6.0.1-6718b9",
+        "versionInfo": "6.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/strip-ansi@6.0.1"
+          }
+        ]
+      },
+      {
+        "name": "wrap-ansi",
+        "SPDXID": "SPDXRef-npm-wrap-ansi-8.1.0-c571fd",
+        "versionInfo": "8.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/wrap-ansi@8.1.0"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-5.9.3-01307e",
+        "versionInfo": "5.9.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "(c) by W3C, Copyright (c) 1991-2017 Unicode, Inc., Copyright (c) 2018 The Khronos Group Inc., Copyright (c) 2018 WHATWG, Copyright (c) Microsoft Corporation, Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang) Disclaimers",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@5.9.3"
+          }
+        ]
+      },
+      {
+        "name": "shebang-command",
+        "SPDXID": "SPDXRef-npm-shebang-command-2.0.0-009de3",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Kevin Martensson <kevinmartensson@gmail.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/shebang-command@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "color-name",
+        "SPDXID": "SPDXRef-npm-color-name-1.1.4-43d5f7",
+        "versionInfo": "1.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2015 Dmitry Ivanov",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/color-name@1.1.4"
+          }
+        ]
+      },
+      {
+        "name": "assertion-error",
+        "SPDXID": "SPDXRef-npm-assertion-error-2.0.1-73d862",
+        "versionInfo": "2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Jake Luer jake@qualiancy.com (http://qualiancy.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/assertion-error@2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-ppc64",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-ppc64-0.25.5-02101c",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-ppc64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-android-arm-eabi",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-android-arm-eabi-4.44.1-f12880",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-android-arm-eabi@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/android-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-android-arm64-0.25.5-2d6d72",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/android-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "which",
+        "SPDXID": "SPDXRef-npm-which-2.0.2-098b35",
+        "versionInfo": "2.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/which@2.0.2"
+          }
+        ]
+      },
+      {
+        "name": "@isaacs/cliui",
+        "SPDXID": "SPDXRef-npm-isaacs-cliui-8.0.2-b4a820",
+        "versionInfo": "8.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2015, Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40isaacs/cliui@8.0.2"
+          }
+        ]
+      },
+      {
+        "name": "why-is-node-running",
+        "SPDXID": "SPDXRef-npm-why-is-node-running-2.3.0-4c3c14",
+        "versionInfo": "2.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2016 Mathias Buus",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/why-is-node-running@2.3.0"
+          }
+        ]
+      },
+      {
+        "name": "tinyspy",
+        "SPDXID": "SPDXRef-npm-tinyspy-4.0.3-bd675e",
+        "versionInfo": "4.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2022 Tinylibs",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tinyspy@4.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/biome",
+        "SPDXID": "SPDXRef-npm-biomejs-biome-2.3.7-aea6c8",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/biome@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-darwin-arm64",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-darwin-arm64-2.3.7-82f2b5",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-darwin-arm64@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "string-width",
+        "SPDXID": "SPDXRef-npm-string-width-4.2.3-ca6a1b",
+        "versionInfo": "4.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/string-width@4.2.3"
+          }
+        ]
+      },
+      {
+        "name": "pathe",
+        "SPDXID": "SPDXRef-npm-pathe-2.0.3-b5e66c",
+        "versionInfo": "2.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2023-present Fabio Spampinato, Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright Joyent, Inc. and other Node contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/pathe@2.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@jridgewell/set-array",
+        "SPDXID": "SPDXRef-npm-jridgewell-set-array-1.2.1-80bf26",
+        "versionInfo": "1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2022 Justin Ridgewell <jridgewell@google.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40jridgewell/set-array@1.2.1"
+          }
+        ]
+      },
+      {
+        "name": "esbuild",
+        "SPDXID": "SPDXRef-npm-esbuild-0.25.5-55c29a",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2020 Evan Wallace",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/esbuild@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "rimraf",
+        "SPDXID": "SPDXRef-npm-rimraf-6.0.1-f61646",
+        "versionInfo": "6.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2011-2023 Isaac Z. Schlueter and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rimraf@6.0.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-ia32",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-ia32-0.25.5-457f4d",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-ia32@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-win32-arm64",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-win32-arm64-2.3.7-c03c8c",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-win32-arm64@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-linux-arm64",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-linux-arm64-2.3.7-b69581",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-linux-arm64@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "path-scurry",
+        "SPDXID": "SPDXRef-npm-path-scurry-1.11.1-e78305",
+        "versionInfo": "1.11.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/path-scurry@1.11.1"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-linux-x64-musl",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-linux-x64-musl-2.3.7-791d3b",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-linux-x64-musl@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "source-map-js",
+        "SPDXID": "SPDXRef-npm-source-map-js-1.2.1-d82423",
+        "versionInfo": "1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-3-Clause",
+        "copyrightText": "Copyright (c) 2009-2011, Mozilla Foundation and contributors, Copyright 2009-2011 Mozilla Foundation and contributors, Copyright 2011 Mozilla Foundation and contributors, Copyright 2011 The Closure Compiler Authors, Copyright 2014 Mozilla Foundation and contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/source-map-js@1.2.1"
+          }
+        ]
+      },
+      {
+        "name": "supports-color",
+        "SPDXID": "SPDXRef-npm-supports-color-7.2.0-ef194d",
+        "versionInfo": "7.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/supports-color@7.2.0"
+          }
+        ]
+      },
+      {
+        "name": "wrap-ansi",
+        "SPDXID": "SPDXRef-npm-wrap-ansi-7.0.0-403a42",
+        "versionInfo": "7.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/wrap-ansi@7.0.0"
+          }
+        ]
+      },
+      {
+        "name": "ms",
+        "SPDXID": "SPDXRef-npm-ms-2.1.3-0f68b2",
+        "versionInfo": "2.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2020 Vercel, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ms@2.1.3"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-freebsd-x64",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-freebsd-x64-4.44.1-adbda9",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-freebsd-x64@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "vite",
+        "SPDXID": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "versionInfo": "7.1.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause AND CC0-1.0 AND ISC AND MIT",
+        "copyrightText": "Copyright (c) 2010 Sencha Inc., Copyright (c) 2010-2025 William Stein, Charlie Robbins, Jarrett Cruger & the Contributors, Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>, Copyright (c) 2011 LearnBoost, Copyright (c) 2011-2014 TJ Holowaychuk, Copyright (c) 2012-2013 TJ Holowaychuk, Copyright (c) 2012-2019 Paul Miller (https://paulmillr.com), Elan Shanker, Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com), Copyright (c) 2013 Arnout Kazemier and contributors, Copyright (c) 2013 James Halliday (mail@substack.net), Copyright (c) 2013 Jonathan Ong <me@jongleberry.com>, Copyright (c) 2013 Troy Goode <troygoode@gmail.com>, Copyright (c) 2013-2017 Jared Hanson, Copyright (c) 2013-2019 Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin), Copyright (c) 2014 Douglas Christopher Wilson <doug@somethingdoug.com>, Copyright (c) 2014 Jonathan Ong <me@jongleberry.com>, Copyright (c) 2014 Jonathan Ong me@jongleberry.com, Copyright (c) 2014 Maxime Thirouin, Jason Campbell & Kevin Martensson, Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>, Copyright (c) 2014-2016 Douglas Christopher Wilson, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017 Douglas Christopher Wilson, Copyright (c) 2014-2017 Douglas Christopher Wilson <doug@somethingdoug.com>, Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Simon Lydell, Copyright (c) 2015 Alexey Litvinov, Copyright (c) 2015 Andreas Lubbe, Copyright (c) 2015 Douglas Christopher Wilson, Copyright (c) 2015 Douglas Christopher Wilson <doug@somethingdoug.com>, Copyright (c) 2015 Tiancheng Timothy Gu, Copyright (c) 2015-20 these people (https://github.com/Rich-Harris/estree-walker/graphs/contributors), Copyright (c) 2015-present, Facebook, Inc., Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2015, Glen Maddern, Copyright (c) 2015, Scott Motte, Copyright (c) 2016 Douglas Christopher Wilson, Copyright (c) 2016 Douglas Christopher Wilson <doug@somethingdoug.com>, Copyright (c) 2016 Luigi Pinca and contributors, Copyright (c) 2016, Scott Motte, Copyright (c) 2017-present, Yuxi, Copyright (c) 2018 Made With MOXY Lda, Copyright (c) 2018-2021 Josh Junon, Copyright (c) 2018-2022 Guy Bedford, Copyright (c) 2019 Elan Shanker, Paul Miller (https://paulmillr.com), Copyright (c) 2019 Rich Harris, Copyright (c) 2019 RollupJS Plugin Contributors (https://github.com/rollup/plugins/graphs/contributors), Copyright (c) 2019 Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Paul Miller (https://paulmillr.com), Copyright (c) 2019-present, VoidZero Inc. and Vite contributors, Copyright (c) 2020 Vercel, Inc., Copyright (c) 2020-present, Yuxi, Copyright (c) 2021-2024 Oleksii Raspopov, Kostiantyn Denysov, Anton Verinov, Copyright (c) 2021-present dominikg and contributors (https://github.com/dominikg/tsconfck/graphs/contributors), Copyright (c) 2022 Anthony Fu <https://github.com/antfu>, Copyright (c) 2022 Anton Kastritskiy, Copyright (c) 2023-present, sapphi-red, Copyright (c) 2024-present VoidZero Inc. & Contributors, Copyright (c) 2025 sapphi-red, Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info), Copyright (c) Bogdan Chadkin <trysound@yandex.ru>, Copyright (c) EGOIST, Copyright (c) Felix Bohm, Copyright (c) Isaac Z. Schlueter and Contributors, Copyright (c) Kevin Martensson <kevinmartensson@gmail.com>, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (https://lukeed.com), Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Paul Miller (https://paulmillr.com), Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com), Copyright 2013 Thorsten Lorenz, Copyright 2014-present Olivier Lalonde <olalonde@gmail.com> , James Talmage <james@talmage.io> , Ruben Verborgh, Copyright 2015 Glen Maddern, Copyright 2015 Mark Dalgleish <mark.john.dalgleish@gmail.com>, Copyright 2015-present Alexander Madyankin <alexander@madyankin.name>, Copyright 2018 Glen Maddern, Copyright 2018 Rich Harris, Copyright 2019 Justin Ridgewell <jridgewell@google.com>, Copyright 2024 Justin Ridgewell <justin@ridgewell.name>, Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors, copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>, Copyright jQuery Foundation and other contributors <https://jquery.org/>, Copyright JS Foundation and other contributors, Copyright Mathias Bynens <https://mathiasbynens.be/>, Copyright Michael Ciniawsky <michael.ciniawsky@gmail.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vite@7.1.11"
+          }
+        ]
+      },
+      {
+        "name": "@biomejs/cli-win32-x64",
+        "SPDXID": "SPDXRef-npm-biomejs-cli-win32-x64-2.3.7-fe1bb0",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40biomejs/cli-win32-x64@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "fsevents",
+        "SPDXID": "SPDXRef-npm-fsevents-2.3.3-b80ae9",
+        "versionInfo": "2.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) 2020 by Philipp Dunkel, Ben Noordhuis, Elan Shankar, Paul Miller, Copyright (c) 2010-2020 by Philipp Dunkel, Ben Noordhuis, Elan Shankar, Paul Miller",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fsevents@2.3.3"
+          }
+        ]
+      },
+      {
+        "name": "js-tokens",
+        "SPDXID": "SPDXRef-npm-js-tokens-9.0.1-d6bf71",
+        "versionInfo": "9.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Simon Lydell, Copyright 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/js-tokens@9.0.1"
+          }
+        ]
+      },
+      {
+        "name": "tinybench",
+        "SPDXID": "SPDXRef-npm-tinybench-2.9.0-a62d15",
+        "versionInfo": "2.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2022 Tinylibs",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tinybench@2.9.0"
+          }
+        ]
+      },
+      {
+        "name": "vitest",
+        "SPDXID": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-3-Clause AND ISC AND MIT",
+        "copyrightText": "(c) 2020-present Andrea Giammarchi, Copyright (c) 2010-2014, Christian Johansen, christian@cjohansen.no, Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>, Copyright (c) 2012-2020 by various contributors, Copyright (c) 2013 Arnout Kazemier and contributors, Copyright (c) 2013 jake luer <jake@alogicalparadox.com>, Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com> (http://alogicalparadox.com), Copyright (c) 2014 Bob Lauer, Copyright (c) 2014 Permission, Copyright (c) 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Simon Lydell, Copyright (c) 2016 Luigi Pinca and contributors, Copyright (c) 2018 Terkel Gjervig Nielsen, Copyright (c) 2018-2020, Andrea Giammarchi, Copyright (c) 2018, Sinon.JS, Copyright (c) 2020-PRESENT Anthony Fu <https://github.com/antfu>, Copyright (c) 2021 Anthony Fu <https://github.com/antfu>, Copyright (c) 2021-Present Vitest Team, Copyright (c) 2022 Anthony Fu <https://github.com/antfu>, Copyright (c) 2023 Robert Kieffer, Copyright (c) 2025-PRESENT Anthony Fu <https://github.com/antfu> and Kevin Deng <https://github.com/sxzz>, Copyright (c) EGOIST, Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com), Copyright (c) Pooya Parsa <pooya@pi0.io>, Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vitest@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "es-module-lexer",
+        "SPDXID": "SPDXRef-npm-es-module-lexer-1.7.0-04a283",
+        "versionInfo": "1.7.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2012-2020 by various contributors, Copyright (c) 2018-2022 Guy Bedford",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/es-module-lexer@1.7.0"
+          }
+        ]
+      },
+      {
+        "name": "pathval",
+        "SPDXID": "SPDXRef-npm-pathval-2.0.1-9a6b46",
+        "versionInfo": "2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011-2013 Jake Luer jake@alogicalparadox.com, Copyright (c) 2012-2014 Jake Luer <jake@alogicalparadox.com> https://github.com/logicalparadox/filtr",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/pathval@2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "@jridgewell/sourcemap-codec",
+        "SPDXID": "SPDXRef-npm-jridgewell-sourcemap-codec-1.5.0-5a1678",
+        "versionInfo": "1.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2015 Rich Harris",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40jridgewell/sourcemap-codec@1.5.0"
+          }
+        ]
+      },
+      {
+        "name": "jackspeak",
+        "SPDXID": "SPDXRef-npm-jackspeak-4.1.1-e04608",
+        "versionInfo": "4.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BlueOak-1.0.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jackspeak@4.1.1"
+          }
+        ]
+      },
+      {
+        "name": "@jridgewell/resolve-uri",
+        "SPDXID": "SPDXRef-npm-jridgewell-resolve-uri-3.1.1-246693",
+        "versionInfo": "3.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2019 Justin Ridgewell <jridgewell@google.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40jridgewell/resolve-uri@3.1.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/win32-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-win32-x64-0.25.5-63e36c",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/win32-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/darwin-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-darwin-x64-0.25.5-0afbdc",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/darwin-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "eastasianwidth",
+        "SPDXID": "SPDXRef-npm-eastasianwidth-0.2.0-b5e94c",
+        "versionInfo": "0.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eastasianwidth@0.2.0"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-arm64-0.25.5-64f899",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "istanbul-lib-coverage",
+        "SPDXID": "SPDXRef-npm-istanbul-lib-coverage-3.2.2-1c1490",
+        "versionInfo": "3.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-3-Clause",
+        "copyrightText": "Copyright 2012-2015 Yahoo! Inc., Copyright 2012-2015, Yahoo Inc., Copyright 2012-2015, Yahoo Inc. Copyrights",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/istanbul-lib-coverage@3.2.2"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/openbsd-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-openbsd-x64-0.25.5-1e41c2",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/openbsd-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "entities",
+        "SPDXID": "SPDXRef-npm-entities-6.0.1-7ffb4f",
+        "versionInfo": "6.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/entities@6.0.1"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-android-arm64",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-android-arm64-4.44.1-4b12a6",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-android-arm64@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "@jridgewell/gen-mapping",
+        "SPDXID": "SPDXRef-npm-jridgewell-gen-mapping-0.3.8-803b85",
+        "versionInfo": "0.3.8",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2022 Justin Ridgewell <jridgewell@google.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40jridgewell/gen-mapping@0.3.8"
+          }
+        ]
+      },
+      {
+        "name": "css-what",
+        "SPDXID": "SPDXRef-npm-css-what-7.0.0-7e5737",
+        "versionInfo": "7.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-2-Clause",
+        "copyrightText": "Copyright (c) Felix Bohm",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/css-what@7.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/netbsd-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-netbsd-x64-0.25.5-7ea4b5",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/netbsd-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "@babel/types",
+        "SPDXID": "SPDXRef-npm-babel-types-7.27.7-367e58",
+        "versionInfo": "7.27.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014-present Sebastian McKenzie and other contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40babel/types@7.27.7"
+          }
+        ]
+      },
+      {
+        "name": "nanoid",
+        "SPDXID": "SPDXRef-npm-nanoid-3.3.11-1dbe78",
+        "versionInfo": "3.3.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nanoid@3.3.11"
+          }
+        ]
+      },
+      {
+        "name": "@ampproject/remapping",
+        "SPDXID": "SPDXRef-npm-ampproject-remapping-2.3.0-3f8976",
+        "versionInfo": "2.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40ampproject/remapping@2.3.0"
+          }
+        ]
+      },
+      {
+        "name": "has-flag",
+        "SPDXID": "SPDXRef-npm-has-flag-4.0.0-2b598d",
+        "versionInfo": "4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) Sindre Sorhus (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/has-flag@4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@types/boolbase",
+        "SPDXID": "SPDXRef-npm-types-boolbase-1.0.3-c77c63",
+        "versionInfo": "1.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/boolbase@1.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/linux-x64",
+        "SPDXID": "SPDXRef-npm-esbuild-linux-x64-0.25.5-c0b6a8",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/linux-x64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "walk-up-path",
+        "SPDXID": "SPDXRef-npm-walk-up-path-4.0.0-877dcd",
+        "versionInfo": "4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2020-2023 Isaac Z. Schlueter",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/walk-up-path@4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "undici-types",
+        "SPDXID": "SPDXRef-npm-undici-types-7.16.0-6aa74e",
+        "versionInfo": "7.16.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Matteo Collina and Undici contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/undici-types@7.16.0"
+          }
+        ]
+      },
+      {
+        "name": "tinyexec",
+        "SPDXID": "SPDXRef-npm-tinyexec-0.3.2-4b9e72",
+        "versionInfo": "0.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2024 Tinylibs",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tinyexec@0.3.2"
+          }
+        ]
+      },
+      {
+        "name": "expect-type",
+        "SPDXID": "SPDXRef-npm-expect-type-1.2.1-7f7101",
+        "versionInfo": "1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "Copyright 2024 Misha Kaletsky",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/expect-type@1.2.1"
+          }
+        ]
+      },
+      {
+        "name": "@esbuild/darwin-arm64",
+        "SPDXID": "SPDXRef-npm-esbuild-darwin-arm64-0.25.5-b5078f",
+        "versionInfo": "0.25.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40esbuild/darwin-arm64@0.25.5"
+          }
+        ]
+      },
+      {
+        "name": "istanbul-lib-source-maps",
+        "SPDXID": "SPDXRef-npm-istanbul-lib-source-maps-5.0.6-92fe72",
+        "versionInfo": "5.0.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "BSD-3-Clause",
+        "copyrightText": "Copyright 2012-2015, Yahoo Inc., Copyright 2012-2015, Yahoo Inc. Copyrights, Copyright 2015 Yahoo! Inc., Copyright 2015, Yahoo Inc., Copyright 2015, Yahoo Inc. Copyrights",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/istanbul-lib-source-maps@5.0.6"
+          }
+        ]
+      },
+      {
+        "name": "balanced-match",
+        "SPDXID": "SPDXRef-npm-balanced-match-1.0.2-ae7fb0",
+        "versionInfo": "1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/balanced-match@1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "@isaacs/balanced-match",
+        "SPDXID": "SPDXRef-npm-isaacs-balanced-match-4.0.1-118dc5",
+        "versionInfo": "4.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright Isaac Z. Schlueter <i@izs.me>, Copyright Julian Gruber <julian@juliangruber.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40isaacs/balanced-match@4.0.1"
+          }
+        ]
+      },
+      {
+        "name": "chai",
+        "SPDXID": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "versionInfo": "5.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011 Jake Luer <jake@alogicalparadox.com>, Copyright (c) 2011-2014 Jake Luer <jake@alogicalparadox.com>, Copyright (c) 2011-2016 Jake Luer <jake@alogicalparadox.com>, Copyright (c) 2012-2014 Jake Luer <jake@alogicalparadox.com>, Copyright (c) 2012-2015 Sakthipriyan Vairamani <thechargingvolcano@gmail.com>, Copyright (c) 2013 Jake Luer <jake@alogicalparadox.com>, Copyright (c) 2017 Chai.js Assertion",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/chai@5.2.0"
+          }
+        ]
+      },
+      {
+        "name": "cac",
+        "SPDXID": "SPDXRef-npm-cac-6.7.14-69b201",
+        "versionInfo": "6.7.14",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) EGOIST (https://github.com/egoist), Copyright (c) EGOIST",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/cac@6.7.14"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-arm64-gnu",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-arm64-gnu-4.44.1-a748d6",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-arm64-gnu@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "magicast",
+        "SPDXID": "SPDXRef-npm-magicast-0.3.5-6bcba8",
+        "versionInfo": "0.3.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Pooya Parsa <pooya@pi0.io> and Anthony Fu <https://github.com/antfu>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/magicast@0.3.5"
+          }
+        ]
+      },
+      {
+        "name": "minipass",
+        "SPDXID": "SPDXRef-npm-minipass-7.1.2-6fe8fc",
+        "versionInfo": "7.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2017-2023 npm, Inc., Isaac Z. Schlueter, and Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/minipass@7.1.2"
+          }
+        ]
+      },
+      {
+        "name": "picomatch",
+        "SPDXID": "SPDXRef-npm-picomatch-4.0.2-23090a",
+        "versionInfo": "4.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2017-present, Jon Schlinkert (https://github.com/jonschlinkert)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/picomatch@4.0.2"
+          }
+        ]
+      },
+      {
+        "name": "@vitest/expect",
+        "SPDXID": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "versionInfo": "3.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2008-2016 Pivotal Labs, Copyright (c) 2021-Present Vitest Team, Copyright (c) Facebook, Inc. and its affiliates",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40vitest/expect@3.2.4"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/rollup-linux-arm64-musl",
+        "SPDXID": "SPDXRef-npm-rollup-rollup-linux-arm64-musl-4.44.1-9c315b",
+        "versionInfo": "4.44.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/rollup-linux-arm64-musl@4.44.1"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+        "versionInfo": "5.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/analyze",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/init",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/init@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "dependabot/fetch-metadata",
+        "SPDXID": "SPDXRef-githubactions-dependabot-fetch-metadata-2.4.0-75c946",
+        "versionInfo": "2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/dependabot/fetch-metadata@2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-6..-75c946",
+        "versionInfo": "6.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@6.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "coverallsapp/github-action",
+        "SPDXID": "SPDXRef-githubactions-coverallsapp-github-action-2.3.7-75c946",
+        "versionInfo": "2.3.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/coverallsapp/github-action@2.3.7"
+          }
+        ]
+      },
+      {
+        "name": "com.github.fb55/css-select",
+        "SPDXID": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/fb55/css-select",
+        "filesAnalyzed": false,
+        "licenseDeclared": "BSD-2-Clause",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/fb55/css-select@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-2.6.0-4d76c7",
+        "relatedSpdxElement": "SPDXRef-npm-domhandler-2.0.3-e0c7d0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-2.6.0-4d76c7",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-1.3.1-682fff",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-2.6.0-4d76c7",
+        "relatedSpdxElement": "SPDXRef-npm-domutils-1.0.1-370e97",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-rollup-4.44.1-e14f93",
+        "relatedSpdxElement": "SPDXRef-npm-types-estree-1.0.8-65536b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-foreground-child-3.3.1-4358b6",
+        "relatedSpdxElement": "SPDXRef-npm-cross-spawn-7.0.6-d22125",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-foreground-child-3.3.1-4358b6",
+        "relatedSpdxElement": "SPDXRef-npm-signal-exit-4.1.0-421926",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-minimatch-10.1.1-aa7370",
+        "relatedSpdxElement": "SPDXRef-npm-isaacs-brace-expansion-5.0.0-a5fbc8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relatedSpdxElement": "SPDXRef-npm-path-scurry-2.0.0-b01ec3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relatedSpdxElement": "SPDXRef-npm-foreground-child-3.3.1-4358b6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relatedSpdxElement": "SPDXRef-npm-package-json-from-dist-1.0.1-2a6902",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relatedSpdxElement": "SPDXRef-npm-minipass-7.1.2-6fe8fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relatedSpdxElement": "SPDXRef-npm-jackspeak-4.1.1-e04608",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relatedSpdxElement": "SPDXRef-npm-minimatch-10.1.1-aa7370",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-minimatch-9.0.5-bd3535",
+        "relatedSpdxElement": "SPDXRef-npm-brace-expansion-2.0.2-ad4134",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-make-dir-4.0.0-34184d",
+        "relatedSpdxElement": "SPDXRef-npm-semver-7.7.2-d687cc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-10.0.0-22850b",
+        "relatedSpdxElement": "SPDXRef-npm-domhandler-5.0.3-785e78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-10.0.0-22850b",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-2.3.0-b96c7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-10.0.0-22850b",
+        "relatedSpdxElement": "SPDXRef-npm-domutils-3.2.2-33e8bf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-htmlparser2-10.0.0-22850b",
+        "relatedSpdxElement": "SPDXRef-npm-entities-6.0.1-7ffb4f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "relatedSpdxElement": "SPDXRef-npm-path-scurry-2.0.0-b01ec3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "relatedSpdxElement": "SPDXRef-npm-mkdirp-3.0.1-1863ec",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "relatedSpdxElement": "SPDXRef-npm-rimraf-6.0.1-f61646",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "relatedSpdxElement": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "relatedSpdxElement": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-strip-ansi-7.1.0-a10ef4",
+        "relatedSpdxElement": "SPDXRef-npm-ansi-regex-6.1.0-25a414",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-mocker-3.2.4-e71bce",
+        "relatedSpdxElement": "SPDXRef-npm-estree-walker-3.0.3-f737cc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-mocker-3.2.4-e71bce",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-spy-3.2.4-a96031",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-mocker-3.2.4-e71bce",
+        "relatedSpdxElement": "SPDXRef-npm-magic-string-0.30.17-4dae5a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-domutils-1.0.1-370e97",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-1.3.1-682fff",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "relatedSpdxElement": "SPDXRef-npm-pathe-2.0.3-b5e66c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "relatedSpdxElement": "SPDXRef-npm-es-module-lexer-1.7.0-04a283",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "relatedSpdxElement": "SPDXRef-npm-cac-6.7.14-69b201",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "relatedSpdxElement": "SPDXRef-npm-debug-4.4.1-580f38",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "relatedSpdxElement": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-string-width-5.1.2-a94540",
+        "relatedSpdxElement": "SPDXRef-npm-strip-ansi-7.1.0-a10ef4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-string-width-5.1.2-a94540",
+        "relatedSpdxElement": "SPDXRef-npm-eastasianwidth-0.2.0-b5e94c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-string-width-5.1.2-a94540",
+        "relatedSpdxElement": "SPDXRef-npm-emoji-regex-9.2.2-591c4e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-types-node-24.10.1-c2009e",
+        "relatedSpdxElement": "SPDXRef-npm-undici-types-7.16.0-6aa74e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-spy-3.2.4-a96031",
+        "relatedSpdxElement": "SPDXRef-npm-tinyspy-4.0.3-bd675e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-types-chai-5.2.2-06f778",
+        "relatedSpdxElement": "SPDXRef-npm-types-deep-eql-4.0.2-347865",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-magic-string-0.30.17-4dae5a",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-sourcemap-codec-1.5.0-5a1678",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-snapshot-3.2.4-b46e7e",
+        "relatedSpdxElement": "SPDXRef-npm-pathe-2.0.3-b5e66c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-snapshot-3.2.4-b46e7e",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-pretty-format-3.2.4-076c5b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-snapshot-3.2.4-b46e7e",
+        "relatedSpdxElement": "SPDXRef-npm-magic-string-0.30.17-4dae5a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-runner-3.2.4-d162fd",
+        "relatedSpdxElement": "SPDXRef-npm-pathe-2.0.3-b5e66c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-runner-3.2.4-d162fd",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-runner-3.2.4-d162fd",
+        "relatedSpdxElement": "SPDXRef-npm-strip-literal-3.0.0-1b9e41",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-pretty-format-3.2.4-076c5b",
+        "relatedSpdxElement": "SPDXRef-npm-tinyrainbow-2.0.0-461026",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-ansi-styles-4.3.0-1333b8",
+        "relatedSpdxElement": "SPDXRef-npm-color-convert-2.0.1-f2b0bf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-dom-serializer-2.0.0-d696a2",
+        "relatedSpdxElement": "SPDXRef-npm-domhandler-5.0.3-785e78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-dom-serializer-2.0.0-d696a2",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-2.3.0-b96c7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-dom-serializer-2.0.0-d696a2",
+        "relatedSpdxElement": "SPDXRef-npm-entities-4.5.0-466d47",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-cross-spawn-7.0.6-d22125",
+        "relatedSpdxElement": "SPDXRef-npm-shebang-command-2.0.0-009de3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-cross-spawn-7.0.6-d22125",
+        "relatedSpdxElement": "SPDXRef-npm-path-key-3.1.1-710e0c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-cross-spawn-7.0.6-d22125",
+        "relatedSpdxElement": "SPDXRef-npm-which-2.0.2-098b35",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-domutils-3.2.2-33e8bf",
+        "relatedSpdxElement": "SPDXRef-npm-domhandler-5.0.3-785e78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-domutils-3.2.2-33e8bf",
+        "relatedSpdxElement": "SPDXRef-npm-dom-serializer-2.0.0-d696a2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-domutils-3.2.2-33e8bf",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-2.3.0-b96c7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-brace-expansion-2.0.2-ad4134",
+        "relatedSpdxElement": "SPDXRef-npm-balanced-match-1.0.2-ae7fb0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-babel-parser-7.27.7-986150",
+        "relatedSpdxElement": "SPDXRef-npm-babel-types-7.27.7-367e58",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-isaacs-brace-expansion-5.0.0-a5fbc8",
+        "relatedSpdxElement": "SPDXRef-npm-isaacs-balanced-match-4.0.1-118dc5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-domhandler-2.0.3-e0c7d0",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-1.3.1-682fff",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-nth-check-2.1.1-646b25",
+        "relatedSpdxElement": "SPDXRef-npm-boolbase-1.0.0-63d81e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relatedSpdxElement": "SPDXRef-npm-minimatch-9.0.5-bd3535",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relatedSpdxElement": "SPDXRef-npm-jackspeak-3.4.3-42e93b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relatedSpdxElement": "SPDXRef-npm-foreground-child-3.3.1-4358b6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relatedSpdxElement": "SPDXRef-npm-package-json-from-dist-1.0.1-2a6902",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relatedSpdxElement": "SPDXRef-npm-minipass-7.1.2-6fe8fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relatedSpdxElement": "SPDXRef-npm-path-scurry-1.11.1-e78305",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-lib-report-3.0.1-084e69",
+        "relatedSpdxElement": "SPDXRef-npm-make-dir-4.0.0-34184d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-lib-report-3.0.1-084e69",
+        "relatedSpdxElement": "SPDXRef-npm-supports-color-7.2.0-ef194d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-lib-report-3.0.1-084e69",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-lib-coverage-3.2.2-1c1490",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jackspeak-3.4.3-42e93b",
+        "relatedSpdxElement": "SPDXRef-npm-isaacs-cliui-8.0.2-b4a820",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-ast-v8-to-istanbul-0.3.3-55bf9f",
+        "relatedSpdxElement": "SPDXRef-npm-estree-walker-3.0.3-f737cc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-ast-v8-to-istanbul-0.3.3-55bf9f",
+        "relatedSpdxElement": "SPDXRef-npm-js-tokens-9.0.1-d6bf71",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-ast-v8-to-istanbul-0.3.3-55bf9f",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "relatedSpdxElement": "SPDXRef-npm-tinyrainbow-2.0.0-461026",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "relatedSpdxElement": "SPDXRef-npm-loupe-3.1.4-4d039c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-pretty-format-3.2.4-076c5b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-resolve-import-2.0.0-b5f0cd",
+        "relatedSpdxElement": "SPDXRef-npm-walk-up-path-4.0.0-877dcd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-resolve-import-2.0.0-b5f0cd",
+        "relatedSpdxElement": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-resolve-uri-3.1.1-246693",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-sourcemap-codec-1.5.0-5a1678",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-estree-walker-3.0.3-f737cc",
+        "relatedSpdxElement": "SPDXRef-npm-types-estree-1.0.8-65536b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-strip-literal-3.0.0-1b9e41",
+        "relatedSpdxElement": "SPDXRef-npm-js-tokens-9.0.1-d6bf71",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-domhandler-5.0.3-785e78",
+        "relatedSpdxElement": "SPDXRef-npm-domelementtype-2.3.0-b96c7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-debug-4.4.1-580f38",
+        "relatedSpdxElement": "SPDXRef-npm-ms-2.1.3-0f68b2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tinyglobby-0.2.15-d87dea",
+        "relatedSpdxElement": "SPDXRef-npm-picomatch-4.0.3-d0c6f7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tinyglobby-0.2.15-d87dea",
+        "relatedSpdxElement": "SPDXRef-npm-fdir-6.5.0-f49bf2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-color-convert-2.0.1-f2b0bf",
+        "relatedSpdxElement": "SPDXRef-npm-color-name-1.1.4-43d5f7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-sync-content-2.0.1-b08439",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-resolve-import-2.0.0-b5f0cd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-walk-up-path-4.0.0-877dcd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-foreground-child-3.3.1-4358b6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-mkdirp-3.0.1-1863ec",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-polite-json-5.0.0-bd134e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-rimraf-6.0.1-f61646",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-5.9.3-01307e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-chalk-5.6.2-1a28a2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-chokidar-4.0.3-263a44",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relatedSpdxElement": "SPDXRef-npm-minimatch-10.1.1-aa7370",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-reports-3.1.7-5b3d66",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-lib-report-3.0.1-084e69",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-reports-3.1.7-5b3d66",
+        "relatedSpdxElement": "SPDXRef-npm-html-escaper-2.0.2-9282fd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-chokidar-4.0.3-263a44",
+        "relatedSpdxElement": "SPDXRef-npm-readdirp-4.1.2-d2585b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-lib-report-3.0.1-084e69",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-test-exclude-7.0.1-7fa77a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-tinyrainbow-2.0.0-461026",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-ast-v8-to-istanbul-0.3.3-55bf9f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-lib-source-maps-5.0.6-92fe72",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-ampproject-remapping-2.3.0-3f8976",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-debug-4.4.1-580f38",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-std-env-3.9.0-ca7e34",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-reports-3.1.7-5b3d66",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-lib-coverage-3.2.2-1c1490",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-bcoe-v8-coverage-1.0.2-ea2b24",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-magic-string-0.30.17-4dae5a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relatedSpdxElement": "SPDXRef-npm-magicast-0.3.5-6bcba8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-test-exclude-7.0.1-7fa77a",
+        "relatedSpdxElement": "SPDXRef-npm-minimatch-9.0.5-bd3535",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-test-exclude-7.0.1-7fa77a",
+        "relatedSpdxElement": "SPDXRef-npm-istanbuljs-schema-0.1.3-d0d3df",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-test-exclude-7.0.1-7fa77a",
+        "relatedSpdxElement": "SPDXRef-npm-glob-10.5.0-7bfa85",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-postcss-8.5.6-9d377a",
+        "relatedSpdxElement": "SPDXRef-npm-source-map-js-1.2.1-d82423",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-postcss-8.5.6-9d377a",
+        "relatedSpdxElement": "SPDXRef-npm-picocolors-1.1.1-48d625",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-postcss-8.5.6-9d377a",
+        "relatedSpdxElement": "SPDXRef-npm-nanoid-3.3.11-1dbe78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-cheerio-soupselect-0.1.1-f58672",
+        "relatedSpdxElement": "SPDXRef-npm-htmlparser2-2.6.0-4d76c7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-path-scurry-2.0.0-b01ec3",
+        "relatedSpdxElement": "SPDXRef-npm-minipass-7.1.2-6fe8fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-path-scurry-2.0.0-b01ec3",
+        "relatedSpdxElement": "SPDXRef-npm-lru-cache-11.1.0-2c0468",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-strip-ansi-6.0.1-6718b9",
+        "relatedSpdxElement": "SPDXRef-npm-ansi-regex-5.0.1-3b290d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-wrap-ansi-8.1.0-c571fd",
+        "relatedSpdxElement": "SPDXRef-npm-strip-ansi-7.1.0-a10ef4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-wrap-ansi-8.1.0-c571fd",
+        "relatedSpdxElement": "SPDXRef-npm-ansi-styles-6.2.1-6791af",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-wrap-ansi-8.1.0-c571fd",
+        "relatedSpdxElement": "SPDXRef-npm-string-width-5.1.2-a94540",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-shebang-command-2.0.0-009de3",
+        "relatedSpdxElement": "SPDXRef-npm-shebang-regex-3.0.0-72d020",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-which-2.0.2-098b35",
+        "relatedSpdxElement": "SPDXRef-npm-isexe-2.0.0-8e4215",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-isaacs-cliui-8.0.2-b4a820",
+        "relatedSpdxElement": "SPDXRef-npm-wrap-ansi-8.1.0-c571fd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-isaacs-cliui-8.0.2-b4a820",
+        "relatedSpdxElement": "SPDXRef-npm-strip-ansi-7.1.0-a10ef4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-isaacs-cliui-8.0.2-b4a820",
+        "relatedSpdxElement": "SPDXRef-npm-string-width-5.1.2-a94540",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-why-is-node-running-2.3.0-4c3c14",
+        "relatedSpdxElement": "SPDXRef-npm-siginfo-2.0.0-716d39",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-why-is-node-running-2.3.0-4c3c14",
+        "relatedSpdxElement": "SPDXRef-npm-stackback-0.0.2-e6552a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-string-width-4.2.3-ca6a1b",
+        "relatedSpdxElement": "SPDXRef-npm-strip-ansi-6.0.1-6718b9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-string-width-4.2.3-ca6a1b",
+        "relatedSpdxElement": "SPDXRef-npm-is-fullwidth-code-point-3.0.0-9e7e62",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-string-width-4.2.3-ca6a1b",
+        "relatedSpdxElement": "SPDXRef-npm-emoji-regex-8.0.0-747bfd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-rimraf-6.0.1-f61646",
+        "relatedSpdxElement": "SPDXRef-npm-package-json-from-dist-1.0.1-2a6902",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-rimraf-6.0.1-f61646",
+        "relatedSpdxElement": "SPDXRef-npm-glob-11.1.0-c60237",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-path-scurry-1.11.1-e78305",
+        "relatedSpdxElement": "SPDXRef-npm-minipass-7.1.2-6fe8fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-path-scurry-1.11.1-e78305",
+        "relatedSpdxElement": "SPDXRef-npm-lru-cache-10.4.3-2ee848",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-supports-color-7.2.0-ef194d",
+        "relatedSpdxElement": "SPDXRef-npm-has-flag-4.0.0-2b598d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-wrap-ansi-7.0.0-403a42",
+        "relatedSpdxElement": "SPDXRef-npm-ansi-styles-4.3.0-1333b8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-wrap-ansi-7.0.0-403a42",
+        "relatedSpdxElement": "SPDXRef-npm-strip-ansi-6.0.1-6718b9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-wrap-ansi-7.0.0-403a42",
+        "relatedSpdxElement": "SPDXRef-npm-string-width-4.2.3-ca6a1b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relatedSpdxElement": "SPDXRef-npm-postcss-8.5.6-9d377a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-4.44.1-e14f93",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-0.25.5-55c29a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relatedSpdxElement": "SPDXRef-npm-picomatch-4.0.3-d0c6f7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relatedSpdxElement": "SPDXRef-npm-fdir-6.5.0-f49bf2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relatedSpdxElement": "SPDXRef-npm-tinyglobby-0.2.15-d87dea",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-snapshot-3.2.4-b46e7e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-picomatch-4.0.2-23090a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-tinybench-2.9.0-a62d15",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-pathe-2.0.3-b5e66c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-tinyexec-0.3.2-4b9e72",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-expect-type-1.2.1-7f7101",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-tinyrainbow-2.0.0-461026",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-runner-3.2.4-d162fd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-mocker-3.2.4-e71bce",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-why-is-node-running-2.3.0-4c3c14",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-tinypool-1.1.1-531674",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vite-node-3.2.4-bec98e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-debug-4.4.1-580f38",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-spy-3.2.4-a96031",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-types-chai-5.2.2-06f778",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-std-env-3.9.0-ca7e34",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-pretty-format-3.2.4-076c5b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-magic-string-0.30.17-4dae5a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-tinyglobby-0.2.15-d87dea",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relatedSpdxElement": "SPDXRef-npm-vite-7.1.11-1125f8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jackspeak-4.1.1-e04608",
+        "relatedSpdxElement": "SPDXRef-npm-isaacs-cliui-8.0.2-b4a820",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jridgewell-gen-mapping-0.3.8-803b85",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-set-array-1.2.1-80bf26",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jridgewell-gen-mapping-0.3.8-803b85",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-jridgewell-gen-mapping-0.3.8-803b85",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-sourcemap-codec-1.5.0-5a1678",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-babel-types-7.27.7-367e58",
+        "relatedSpdxElement": "SPDXRef-npm-babel-helper-validator-identifier-7.27.1-1624cd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-babel-types-7.27.7-367e58",
+        "relatedSpdxElement": "SPDXRef-npm-babel-helper-string-parser-7.27.1-cc8722",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-ampproject-remapping-2.3.0-3f8976",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-ampproject-remapping-2.3.0-3f8976",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-gen-mapping-0.3.8-803b85",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-lib-source-maps-5.0.6-92fe72",
+        "relatedSpdxElement": "SPDXRef-npm-jridgewell-trace-mapping-0.3.25-c2da81",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-lib-source-maps-5.0.6-92fe72",
+        "relatedSpdxElement": "SPDXRef-npm-debug-4.4.1-580f38",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-istanbul-lib-source-maps-5.0.6-92fe72",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-lib-coverage-3.2.2-1c1490",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relatedSpdxElement": "SPDXRef-npm-assertion-error-2.0.1-73d862",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relatedSpdxElement": "SPDXRef-npm-pathval-2.0.1-9a6b46",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relatedSpdxElement": "SPDXRef-npm-deep-eql-5.0.2-43fde5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relatedSpdxElement": "SPDXRef-npm-loupe-3.1.4-4d039c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relatedSpdxElement": "SPDXRef-npm-check-error-2.1.1-c054bd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-magicast-0.3.5-6bcba8",
+        "relatedSpdxElement": "SPDXRef-npm-babel-parser-7.27.7-986150",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-magicast-0.3.5-6bcba8",
+        "relatedSpdxElement": "SPDXRef-npm-source-map-js-1.2.1-d82423",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-magicast-0.3.5-6bcba8",
+        "relatedSpdxElement": "SPDXRef-npm-babel-types-7.27.7-367e58",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "relatedSpdxElement": "SPDXRef-npm-tinyrainbow-2.0.0-461026",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "relatedSpdxElement": "SPDXRef-npm-chai-5.2.0-8c67cb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-utils-3.2.4-8daa03",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-spy-3.2.4-a96031",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-npm-vitest-expect-3.2.4-d11f7c",
+        "relatedSpdxElement": "SPDXRef-npm-types-chai-5.2.2-06f778",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-htmlparser2-10.0.0-22850b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-types-node-24.10.1-c2009e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-boolbase-1.0.0-63d81e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-domutils-3.2.2-33e8bf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-nth-check-2.1.1-646b25",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-domhandler-5.0.3-785e78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-tshy-3.1.0-7874bf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-coverage-v8-3.2.4-ed8134",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-cheerio-soupselect-0.1.1-f58672",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-5.9.3-01307e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-biome-2.3.7-aea6c8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-vitest-3.2.4-61bb65",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-css-what-7.0.0-7e5737",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-types-boolbase-1.0.3-c77c63",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-riscv64-0.25.5-0b4e29",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-darwin-arm64-0.25.5-b5078f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-darwin-x64-4.44.1-1b0764",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-powerpc64le-gnu-4.44.1-4aed0e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-win32-x64-msvc-4.44.1-f7db19",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-arm64-gnu-4.44.1-a748d6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-pkgjs-parseargs-0.11.0-70382f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-win32-arm64-msvc-4.44.1-331d8a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-win32-arm64-0.25.5-91c604",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-loongarch64-gnu-4.44.1-6b350e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-linux-arm64-2.3.7-b69581",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-riscv64-gnu-4.44.1-d05929",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-darwin-arm64-2.3.7-82f2b5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-win32-arm64-2.3.7-c03c8c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-arm64-musl-4.44.1-9c315b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-arm-musleabihf-4.44.1-79625f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-arm-0.25.5-89eaf9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-freebsd-arm64-0.25.5-77e599",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-win32-ia32-msvc-4.44.1-428b7d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-android-x64-0.25.5-bc3a78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-freebsd-x64-4.44.1-adbda9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-s390x-0.25.5-94ae25",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-android-arm64-0.25.5-2d6d72",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-linux-x64-musl-2.3.7-791d3b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-openbsd-x64-0.25.5-1e41c2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-win32-ia32-0.25.5-02d1fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-android-arm-eabi-4.44.1-f12880",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-arm-gnueabihf-4.44.1-7425e1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-aix-ppc64-0.25.5-6a514a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-netbsd-arm64-0.25.5-4228f3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-freebsd-x64-0.25.5-722744",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-openbsd-arm64-0.25.5-1d2ed9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-ppc64-0.25.5-02101c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-wrap-ansi-7.0.0-403a42",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-arm64-0.25.5-64f899",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-darwin-x64-2.3.7-ce0c7e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-darwin-x64-0.25.5-0afbdc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-netbsd-x64-0.25.5-7ea4b5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-android-arm-0.25.5-ae9055",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-mips64el-0.25.5-58381d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-win32-x64-0.25.5-63e36c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-s390x-gnu-4.44.1-1c5272",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-freebsd-arm64-4.44.1-7c5023",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-linux-arm64-musl-2.3.7-fda076",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-x64-musl-4.44.1-d9408d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-win32-x64-2.3.7-fe1bb0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-darwin-arm64-4.44.1-ce554b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-android-arm64-4.44.1-4b12a6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-x64-0.25.5-c0b6a8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-loong64-0.25.5-5a4150",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-sunos-x64-0.25.5-0286c4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-esbuild-linux-ia32-0.25.5-457f4d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-fsevents-2.3.3-b80ae9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-biomejs-cli-linux-x64-2.3.7-c8490c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-riscv64-musl-4.44.1-8ee356",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-rollup-linux-x64-gnu-4.44.1-49764a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-githubactions-dependabot-fetch-metadata-2.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-6..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-githubactions-coverallsapp-github-action-2.3.7-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-fb55-css-select-master-0dc833",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

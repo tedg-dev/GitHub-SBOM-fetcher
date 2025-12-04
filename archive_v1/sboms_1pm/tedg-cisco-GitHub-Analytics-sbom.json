@@ -1,0 +1,978 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tedg-cisco/GitHub-Analytics",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/6d1feadb-67c2-4bde-98f2-31185d27f3cf",
+    "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251114150449-41a4ce8a9a95+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-14T22:53:52Z"
+    },
+    "packages": [
+      {
+        "name": "i18n",
+        "SPDXID": "SPDXRef-gem-i18n-0.6.9-75c946",
+        "versionInfo": "0.6.9",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2003-2009 Masao Mutoh, Copyright (c) 2005-2009 Masao Mutoh, Copyright (c) 2008 The Ruby I18n team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/i18n@0.6.9"
+          }
+        ]
+      },
+      {
+        "name": "tilt",
+        "SPDXID": "SPDXRef-gem-tilt-1.4.1-75c946",
+        "versionInfo": "1.4.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2010 Ryan Tomayko (http://tomayko.com/about), Copyright (c) 2010 Ryan Tomayko <http://tomayko.com/about>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/tilt@1.4.1"
+          }
+        ]
+      },
+      {
+        "name": "diff-lcs",
+        "SPDXID": "SPDXRef-gem-diff-lcs-1.1.3-75c946",
+        "versionInfo": "1.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT OR Artistic-2.0 OR GPL-2.0+",
+        "copyrightText": "(c) 2002-2011 Perl.org, Copyright (c) 1989, 1991 Free Software Foundation, Inc., copyright (c) 1993. Documentation, Copyright (c) 2004 Austin Ziegler, Copyright 2004 Austin Ziegler <diff-lcs@halostatue.ca>, Copyright 2004-2011 Austin Ziegler, Copyright 2004-2011 Austin Ziegler. Adapted, copyrighted by the Free Software Foundation, Ned Konz, copyright (c) 2000&ndash 2002 and the Smalltalk",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/diff-lcs@1.1.3"
+          }
+        ]
+      },
+      {
+        "name": "faraday",
+        "SPDXID": "SPDXRef-gem-faraday-0.9.0-75c946",
+        "versionInfo": "0.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2009-2013 Rick Olson (mailto:technoweenie@gmail.com), Zack Hobson., Copyright (c) 2009-2013 Rick Olson, Zack Hobson",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/faraday@0.9.0"
+          }
+        ]
+      },
+      {
+        "name": "addressable",
+        "SPDXID": "SPDXRef-gem-addressable-2.3.6-75c946",
+        "versionInfo": "2.3.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "Copyright (c) 2006-2013 Bob Aman",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/addressable@2.3.6"
+          }
+        ]
+      },
+      {
+        "name": "tzinfo",
+        "SPDXID": "SPDXRef-gem-tzinfo-1.1.0-75c946",
+        "versionInfo": "1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2005-2013 Philip Ross, Copyright (c) 2006-2013 Philip Ross, Copyright (c) 2008-2013 Philip Ross, Copyright (c) 2012 Philip Ross, Copyright (c) 2012-2013 Philip Ross, Copyright (c) 2013 Philip Ross",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/tzinfo@1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "bson",
+        "SPDXID": "SPDXRef-gem-bson-1.10.0-75c946",
+        "versionInfo": "1.10.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "Copyright (c) 2008-2013 MongoDB, Inc., Copyright (c) 2009-2013 MongoDB, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/bson@1.10.0"
+          }
+        ]
+      },
+      {
+        "name": "chronic_duration",
+        "SPDXID": "SPDXRef-gem-chronicduration-0.10.4-75c946",
+        "versionInfo": "0.10.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Henry Poydar",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/chronic_duration@0.10.4"
+          }
+        ]
+      },
+      {
+        "name": "bson_ext",
+        "SPDXID": "SPDXRef-gem-bsonext-1.10.0-75c946",
+        "versionInfo": "1.10.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "Copyright (c) 2008-2013 MongoDB, Inc., Copyright (c) 2009-2013 MongoDB, Inc., Copyright 2013 MongoDB, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/bson_ext@1.10.0"
+          }
+        ]
+      },
+      {
+        "name": "octokit",
+        "SPDXID": "SPDXRef-gem-octokit-3.0.0-75c946",
+        "versionInfo": "3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2009-2014 Wynn Netherland, Adam Stacoviak, Erik Michaels-Ober",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/octokit@3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "randexp",
+        "SPDXID": "SPDXRef-gem-randexp-0.1.7-75c946",
+        "versionInfo": "0.1.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2008-2009 Ben Burkert",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/randexp@0.1.7"
+          }
+        ]
+      },
+      {
+        "name": "mongo",
+        "SPDXID": "SPDXRef-gem-mongo-1.10.0-75c946",
+        "versionInfo": "1.10.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "Copyright (c) 2008-2013 MongoDB, Inc., Copyright (c) 2009-2013 MongoDB, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/mongo@1.10.0"
+          }
+        ]
+      },
+      {
+        "name": "sawyer",
+        "SPDXID": "SPDXRef-gem-sawyer-0.5.4-75c946",
+        "versionInfo": "0.5.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/sawyer@0.5.4"
+          }
+        ]
+      },
+      {
+        "name": "warden-github",
+        "SPDXID": "SPDXRef-gem-warden-github-1.0.1-75c946",
+        "versionInfo": "1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2010-2013 Corey Donohoe",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/warden-github@1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "rake",
+        "SPDXID": "SPDXRef-gem-rake-10.1.1-75c946",
+        "versionInfo": "10.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2003, 2004 Jim Weirich, Copyright (c) 2003, 2004, 2005, 2006, 2007 Jim Weirich, Copyright (c) 2008 James M. Lawrence, Copyright 2003-2010 by Jim Weirich (jim.weirich@gmail.com), Copyright 2003-2013 by Jim Weirich., Copyright 2003, 2004, 2005 by Jim Weirich (jim@weirichhouse.org)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rake@10.1.1"
+          }
+        ]
+      },
+      {
+        "name": "sinatra",
+        "SPDXID": "SPDXRef-gem-sinatra-1.4.5-75c946",
+        "versionInfo": "1.4.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2007, 2008, 2009 Blake Mizerany, Copyright (c) 2009 Damian Janowski and Michel Martens, Copyright (c) 2010, 2011, 2012, 2013, 2014 Konstantin Haase",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/sinatra@1.4.5"
+          }
+        ]
+      },
+      {
+        "name": "minitest",
+        "SPDXID": "SPDXRef-gem-minitest-5.3.3-75c946",
+        "versionInfo": "5.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Ryan Davis, seattle.rb",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/minitest@5.3.3"
+          }
+        ]
+      },
+      {
+        "name": "rspec-mocks",
+        "SPDXID": "SPDXRef-gem-rspec-mocks-2.4.0-75c946",
+        "versionInfo": "2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2005 The RSpec Development Team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rspec-mocks@2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "rack-test",
+        "SPDXID": "SPDXRef-gem-rack-test-0.5.7-75c946",
+        "versionInfo": "0.5.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2008-2009 Bryan Helmkamp, Engine Yard Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rack-test@0.5.7"
+          }
+        ]
+      },
+      {
+        "name": "rspec-core",
+        "SPDXID": "SPDXRef-gem-rspec-core-2.4.0-75c946",
+        "versionInfo": "2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2005 The RSpec Development Team, Copyright (c) 2007., Copyright (c) 2009 Chad Humphries, David Chelimsky",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rspec-core@2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "rspec-expectations",
+        "SPDXID": "SPDXRef-gem-rspec-expectations-2.4.0-75c946",
+        "versionInfo": "2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2005 The RSpec Development Team",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rspec-expectations@2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "json",
+        "SPDXID": "SPDXRef-gem-json-1.8.1-75c946",
+        "versionInfo": "1.8.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "GPL-1.0-or-later AND GPL-2.0-only AND Ruby",
+        "copyrightText": "(c) 2005-2007 Sam Stephenson, Copyright (c) 1989, 1991 Free Software Foundation, Inc., Copyright 2001-2004 Unicode, Inc., copyrighted by the Free Software Foundation",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/json@1.8.1"
+          }
+        ]
+      },
+      {
+        "name": "sinatra-flash",
+        "SPDXID": "SPDXRef-gem-sinatra-flash-0.3.0-75c946",
+        "versionInfo": "0.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "copyrightText": "copyright 2010 by Stephen Eley., Copyright 2010 Stephen Eley",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/sinatra-flash@0.3.0"
+          }
+        ]
+      },
+      {
+        "name": "rack-protection",
+        "SPDXID": "SPDXRef-gem-rack-protection-1.5.3-75c946",
+        "versionInfo": "1.5.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011 Konstantin Haase",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rack-protection@1.5.3"
+          }
+        ]
+      },
+      {
+        "name": "numerizer",
+        "SPDXID": "SPDXRef-gem-numerizer-0.1.1-75c946",
+        "versionInfo": "0.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2008 Tom Preston-Werner, Copyright (c) 2009 Tom Preston-Werner",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/numerizer@0.1.1"
+          }
+        ]
+      },
+      {
+        "name": "rack",
+        "SPDXID": "SPDXRef-gem-rack-1.5.2-75c946",
+        "versionInfo": "1.5.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2005, the Lawrence Journal-World, Copyright (c) 2007, 2008, 2009, 2010 Christian Neukirchen, Copyright (c) 2007, 2008, 2009, 2010 Christian Neukirchen <http://purl.org/net/chneukirchen>, Copyright (c) 2007, 2008, 2009, 2010, 2011, 2012 Christian Neukirchen, Copyright (c) 2009 Michael Fellinger m.fellinger@gmail.com, Copyright 2011, 2012 Keith Rarick",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rack@1.5.2"
+          }
+        ]
+      },
+      {
+        "name": "thread_safe",
+        "SPDXID": "SPDXRef-gem-threadsafe-0.3.3-75c946",
+        "versionInfo": "0.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/thread_safe@0.3.3"
+          }
+        ]
+      },
+      {
+        "name": "warden",
+        "SPDXID": "SPDXRef-gem-warden-1.2.3-75c946",
+        "versionInfo": "1.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2009 Daniel Neighman",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/warden@1.2.3"
+          }
+        ]
+      },
+      {
+        "name": "activesupport",
+        "SPDXID": "SPDXRef-gem-activesupport-4.1.0-75c946",
+        "versionInfo": "4.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2005-2014 David Heinemeier Hansson",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/activesupport@4.1.0"
+          }
+        ]
+      },
+      {
+        "name": "shotgun",
+        "SPDXID": "SPDXRef-gem-shotgun-0.9-75c946",
+        "versionInfo": "0.9",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2009 Ryan Tomayko",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/shotgun@0.9"
+          }
+        ]
+      },
+      {
+        "name": "multipart-post",
+        "SPDXID": "SPDXRef-gem-multipart-post-2.0.0-75c946",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2007-2012 Nick Sieger., Copyright (c) 2007-2013 Nick Sieger <nick@nicksieger.com>, Copyright (c) 2007-2013 Nick Sieger.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/multipart-post@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "rspec",
+        "SPDXID": "SPDXRef-gem-rspec-2.4.0-75c946",
+        "versionInfo": "2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2009, 2010 David Chelimsky, Chad Humphries",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rspec@2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "chartkick",
+        "SPDXID": "SPDXRef-gem-chartkick-1.2.4-75c946",
+        "versionInfo": "1.2.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Andrew Kane",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/chartkick@1.2.4"
+          }
+        ]
+      },
+      {
+        "name": "chartkick",
+        "SPDXID": "SPDXRef-gem-chartkick-75c946",
+        "versionInfo": ">= 0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/chartkick"
+          }
+        ]
+      },
+      {
+        "name": "mongo",
+        "SPDXID": "SPDXRef-gem-mongo-75c946",
+        "versionInfo": ">= 0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/mongo"
+          }
+        ]
+      },
+      {
+        "name": "shotgun",
+        "SPDXID": "SPDXRef-gem-shotgun-75c946",
+        "versionInfo": ">= 0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/shotgun"
+          }
+        ]
+      },
+      {
+        "name": "sinatra",
+        "SPDXID": "SPDXRef-gem-sinatra-75c946",
+        "versionInfo": "~> 1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/sinatra"
+          }
+        ]
+      },
+      {
+        "name": "rspec",
+        "SPDXID": "SPDXRef-gem-rspec-75c946",
+        "versionInfo": "~> 2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rspec"
+          }
+        ]
+      },
+      {
+        "name": "activesupport",
+        "SPDXID": "SPDXRef-gem-activesupport-75c946",
+        "versionInfo": "~> 4.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/activesupport"
+          }
+        ]
+      },
+      {
+        "name": "warden-github",
+        "SPDXID": "SPDXRef-gem-warden-github-75c946",
+        "versionInfo": "~> 1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/warden-github"
+          }
+        ]
+      },
+      {
+        "name": "rake",
+        "SPDXID": "SPDXRef-gem-rake-75c946",
+        "versionInfo": ">= 0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rake"
+          }
+        ]
+      },
+      {
+        "name": "chronic_duration",
+        "SPDXID": "SPDXRef-gem-chronicduration-75c946",
+        "versionInfo": ">= 0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/chronic_duration"
+          }
+        ]
+      },
+      {
+        "name": "bson_ext",
+        "SPDXID": "SPDXRef-gem-bsonext-75c946",
+        "versionInfo": ">= 0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/bson_ext"
+          }
+        ]
+      },
+      {
+        "name": "randexp",
+        "SPDXID": "SPDXRef-gem-randexp-75c946",
+        "versionInfo": "~> 0.1.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/randexp"
+          }
+        ]
+      },
+      {
+        "name": "rack-test",
+        "SPDXID": "SPDXRef-gem-rack-test-75c946",
+        "versionInfo": "~> 0.5.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/rack-test"
+          }
+        ]
+      },
+      {
+        "name": "sinatra-flash",
+        "SPDXID": "SPDXRef-gem-sinatra-flash-75c946",
+        "versionInfo": "~> 0.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:gem/sinatra-flash"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tedg-cisco/GitHub-Analytics",
+        "SPDXID": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tedg-cisco/GitHub-Analytics",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tedg-cisco/GitHub-Analytics@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-chartkick-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-shotgun-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-activesupport-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-tzinfo-1.1.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-minitest-5.3.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-chartkick-1.2.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rack-test-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-diff-lcs-1.1.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-addressable-2.3.6-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rack-1.5.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rspec-2.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-mongo-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-tilt-1.4.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rspec-mocks-2.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rack-test-0.5.7-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-multipart-post-2.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rspec-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-chronicduration-0.10.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rspec-expectations-2.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-sinatra-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-bsonext-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-sinatra-flash-0.3.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rack-protection-1.5.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-numerizer-0.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-activesupport-4.1.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rake-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-chronicduration-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-sinatra-flash-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-warden-1.2.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-bsonext-1.10.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-octokit-3.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-warden-github-1.0.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-json-1.8.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-threadsafe-0.3.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-warden-github-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-randexp-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-i18n-0.6.9-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-faraday-0.9.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-bson-1.10.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-randexp-0.1.7-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-mongo-1.10.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-sawyer-0.5.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rake-10.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-sinatra-1.4.5-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-rspec-core-2.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relatedSpdxElement": "SPDXRef-gem-shotgun-0.9-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tedg-cisco-GitHub-Analytics-master-30d401",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

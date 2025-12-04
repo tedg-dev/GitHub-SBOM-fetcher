@@ -1,0 +1,79 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tedg-dev/pydora",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/cca51368-08b1-4285-9139-a4ffba79a9ce",
+    "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251114150449-41a4ce8a9a95+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-14T22:53:49Z"
+    },
+    "packages": [
+      {
+        "name": "pycrypto",
+        "SPDXID": "SPDXRef-pypi-pycrypto-75c946",
+        "versionInfo": ">= 2.6.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/pycrypto"
+          }
+        ]
+      },
+      {
+        "name": "requests",
+        "SPDXID": "SPDXRef-pypi-requests-75c946",
+        "versionInfo": ">= 2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/requests"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tedg-dev/pydora",
+        "SPDXID": "SPDXRef-github-tedg-dev-pydora-master-25f0d1",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tedg-dev/pydora",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tedg-dev/pydora@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-pydora-master-25f0d1",
+        "relatedSpdxElement": "SPDXRef-pypi-pycrypto-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-pydora-master-25f0d1",
+        "relatedSpdxElement": "SPDXRef-pypi-requests-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tedg-dev-pydora-master-25f0d1",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

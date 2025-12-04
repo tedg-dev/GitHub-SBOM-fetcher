@@ -1,0 +1,116 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.epoberezkin/json-schema-traverse",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/f2894d33-0958-41e7-a830-fbdcce81a07c",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:49:56Z"
+    },
+    "packages": [
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.0.0-0f74ca",
+        "versionInfo": "^15.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.0.0"
+          }
+        ]
+      },
+      {
+        "name": "pre-commit",
+        "SPDXID": "SPDXRef-npm-pre-commit-1.2.2-9b0228",
+        "versionInfo": "^1.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/pre-commit@%5E1.2.2"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-7.3.1-bc5d90",
+        "versionInfo": "^7.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E7.3.1"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-8.0.1-33ea8c",
+        "versionInfo": "^8.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E8.0.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.epoberezkin/json-schema-traverse",
+        "SPDXID": "SPDXRef-github-epoberezkin-json-schema-traverse-master-e65439",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/epoberezkin/json-schema-traverse",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/epoberezkin/json-schema-traverse@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-json-schema-traverse-master-e65439",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.0.0-0f74ca",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-json-schema-traverse-master-e65439",
+        "relatedSpdxElement": "SPDXRef-npm-pre-commit-1.2.2-9b0228",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-json-schema-traverse-master-e65439",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-7.3.1-bc5d90",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-json-schema-traverse-master-e65439",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-8.0.1-33ea8c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-epoberezkin-json-schema-traverse-master-e65439",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

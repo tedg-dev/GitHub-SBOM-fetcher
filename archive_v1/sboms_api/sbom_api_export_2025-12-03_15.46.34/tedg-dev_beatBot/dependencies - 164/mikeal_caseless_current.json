@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.request/caseless",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/b236208a-2ec3-4fa0-a14f-56a4f8101ae4",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:27Z"
+    },
+    "packages": [
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-2.10.2-fda3c9",
+        "versionInfo": "^2.10.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E2.10.2"
+          }
+        ]
+      },
+      {
+        "name": "com.github.request/caseless",
+        "SPDXID": "SPDXRef-github-request-caseless-master-42585e",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/request/caseless",
+        "filesAnalyzed": false,
+        "licenseDeclared": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/request/caseless@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-request-caseless-master-42585e",
+        "relatedSpdxElement": "SPDXRef-npm-tape-2.10.2-fda3c9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-request-caseless-master-42585e",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

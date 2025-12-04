@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.Schmavery/facebook-chat-api",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/66581db3-c8d4-4db4-b8ed-0fee449c5ad3",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:49:04Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.Schmavery/facebook-chat-api",
+        "SPDXID": "SPDXRef-github-Schmavery-facebook-chat-api-master-c491c8",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/Schmavery/facebook-chat-api",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/Schmavery/facebook-chat-api@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-Schmavery-facebook-chat-api-master-c491c8",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

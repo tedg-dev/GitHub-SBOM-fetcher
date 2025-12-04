@@ -1,0 +1,401 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.epoberezkin/fast-deep-equal",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/7a3b6b43-86af-48b9-9ec1-2f33dd5b4c8a",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:44:42Z"
+    },
+    "packages": [
+      {
+        "name": "coveralls",
+        "SPDXID": "SPDXRef-npm-coveralls-3.1.0-1223d8",
+        "versionInfo": "^3.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/coveralls@%5E3.1.0"
+          }
+        ]
+      },
+      {
+        "name": "dot",
+        "SPDXID": "SPDXRef-npm-dot-1.1.2-6efbaf",
+        "versionInfo": "^1.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/dot@%5E1.1.2"
+          }
+        ]
+      },
+      {
+        "name": "pre-commit",
+        "SPDXID": "SPDXRef-npm-pre-commit-1.2.2-47af4b",
+        "versionInfo": "^1.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/pre-commit@%5E1.2.2"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-3.9.5-413bce",
+        "versionInfo": "^3.9.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@%5E3.9.5"
+          }
+        ]
+      },
+      {
+        "name": "react",
+        "SPDXID": "SPDXRef-npm-react-16.12.0-4e3d1e",
+        "versionInfo": "^16.12.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/react@%5E16.12.0"
+          }
+        ]
+      },
+      {
+        "name": "sinon",
+        "SPDXID": "SPDXRef-npm-sinon-9.0.2-2cfaf7",
+        "versionInfo": "^9.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/sinon@%5E9.0.2"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-7.2.0-da2e57",
+        "versionInfo": "^7.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E7.2.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-7.2.0-e517cb",
+        "versionInfo": "^7.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E7.2.0"
+          }
+        ]
+      },
+      {
+        "name": "react-test-renderer",
+        "SPDXID": "SPDXRef-npm-react-test-renderer-16.12.0-ccb2a3",
+        "versionInfo": "^16.12.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/react-test-renderer@%5E16.12.0"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.1.0-0d50a9",
+        "versionInfo": "^15.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.1.0"
+          }
+        ]
+      },
+      {
+        "name": "nano-equal",
+        "SPDXID": "SPDXRef-npm-nano-equal-latest-4403e2",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nano-equal@latest"
+          }
+        ]
+      },
+      {
+        "name": "deep-equal",
+        "SPDXID": "SPDXRef-npm-deep-equal-latest-a0ac74",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/deep-equal@latest"
+          }
+        ]
+      },
+      {
+        "name": "lodash",
+        "SPDXID": "SPDXRef-npm-lodash-latest-f65521",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/lodash@latest"
+          }
+        ]
+      },
+      {
+        "name": "deep-eql",
+        "SPDXID": "SPDXRef-npm-deep-eql-latest-78a5bc",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/deep-eql@latest"
+          }
+        ]
+      },
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-2.1.4-611d5b",
+        "versionInfo": "^2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@%5E2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "fast-equals",
+        "SPDXID": "SPDXRef-npm-fast-equals-latest-2f18fd",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fast-equals@latest"
+          }
+        ]
+      },
+      {
+        "name": "ramda",
+        "SPDXID": "SPDXRef-npm-ramda-latest-39d085",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ramda@latest"
+          }
+        ]
+      },
+      {
+        "name": "shallow-equal-fuzzy",
+        "SPDXID": "SPDXRef-npm-shallow-equal-fuzzy-latest-278586",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/shallow-equal-fuzzy@latest"
+          }
+        ]
+      },
+      {
+        "name": "underscore",
+        "SPDXID": "SPDXRef-npm-underscore-latest-6923f7",
+        "versionInfo": "latest",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/underscore@latest"
+          }
+        ]
+      },
+      {
+        "name": "com.github.epoberezkin/fast-deep-equal",
+        "SPDXID": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/epoberezkin/fast-deep-equal",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/epoberezkin/fast-deep-equal@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-coveralls-3.1.0-1223d8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-dot-1.1.2-6efbaf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-pre-commit-1.2.2-47af4b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-3.9.5-413bce",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-react-16.12.0-4e3d1e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-sinon-9.0.2-2cfaf7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-7.2.0-da2e57",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-7.2.0-e517cb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-react-test-renderer-16.12.0-ccb2a3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.1.0-0d50a9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-nano-equal-latest-4403e2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-deep-equal-latest-a0ac74",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-lodash-latest-f65521",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-deep-eql-latest-78a5bc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-2.1.4-611d5b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-fast-equals-latest-2f18fd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-ramda-latest-39d085",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-shallow-equal-fuzzy-latest-278586",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relatedSpdxElement": "SPDXRef-npm-underscore-latest-6923f7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-epoberezkin-fast-deep-equal-master-a50ce3",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

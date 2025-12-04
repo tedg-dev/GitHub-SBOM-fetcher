@@ -1,0 +1,102 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tedg-dev/fetch-sbom",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/0b40ec18-c516-4ca8-a90f-8c16cde208b4",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251114150449-41a4ce8a9a95+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-14T22:53:48Z"
+    },
+    "packages": [
+      {
+        "name": "pytest",
+        "SPDXID": "SPDXRef-pypi-pytest-8.3.3-75c946",
+        "versionInfo": "8.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2004 Holger Krekel and others, Copyright (c) 2014, Gregory Boissinot, copyright 2015, holger krekel and pytest-dev team, Copyright Holger Krekel and others, 2004",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/pytest@8.3.3"
+          }
+        ]
+      },
+      {
+        "name": "pytest-cov",
+        "SPDXID": "SPDXRef-pypi-pytest-cov-6.0.0-75c946",
+        "versionInfo": "6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2010 Meme Dough",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/pytest-cov@6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "requests",
+        "SPDXID": "SPDXRef-pypi-requests-2.32.3-75c946",
+        "versionInfo": "2.32.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "copyright (c) 2012 by Kenneth Reitz, copyright (c) 2017 by Kenneth Reitz, Copyright 2019 Kenneth Reitz, Copyright Kenneth Reitz",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pypi/requests@2.32.3"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tedg-dev/fetch-sbom",
+        "SPDXID": "SPDXRef-github-tedg-dev-fetch-sbom-master-03127a",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tedg-dev/fetch-sbom",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tedg-dev/fetch-sbom@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-fetch-sbom-master-03127a",
+        "relatedSpdxElement": "SPDXRef-pypi-pytest-8.3.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-fetch-sbom-master-03127a",
+        "relatedSpdxElement": "SPDXRef-pypi-pytest-cov-6.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-fetch-sbom-master-03127a",
+        "relatedSpdxElement": "SPDXRef-pypi-requests-2.32.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tedg-dev-fetch-sbom-master-03127a",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

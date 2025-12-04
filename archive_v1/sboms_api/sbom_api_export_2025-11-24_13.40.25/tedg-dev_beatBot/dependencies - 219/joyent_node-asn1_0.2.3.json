@@ -1,0 +1,157 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-asn1",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/43d7ffd0-83b4-4f8f-bdc6-0246865eab62",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:42Z"
+    },
+    "packages": [
+      {
+        "name": "eslint-plugin-joyent",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-joyent-1.3.0-cf731b",
+        "versionInfo": "~1.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-joyent@~1.3.0"
+          }
+        ]
+      },
+      {
+        "name": "istanbul",
+        "SPDXID": "SPDXRef-npm-istanbul-0.3.6-2e8dd4",
+        "versionInfo": "^0.3.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/istanbul@%5E0.3.6"
+          }
+        ]
+      },
+      {
+        "name": "faucet",
+        "SPDXID": "SPDXRef-npm-faucet-0.0.1-a4c265",
+        "versionInfo": "0.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/faucet@0.0.1"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-3.5.0-625b90",
+        "versionInfo": "^3.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E3.5.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-2.13.1-8450e0",
+        "versionInfo": "2.13.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2012 Nicholas Fisher, Copyright jQuery Foundation and other contributors, https://jquery.org",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@2.13.1"
+          }
+        ]
+      },
+      {
+        "name": "safer-buffer",
+        "SPDXID": "SPDXRef-npm-safer-buffer-2.1.0-1fcd73",
+        "versionInfo": "~2.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safer-buffer@~2.1.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TritonDataCenter/node-asn1",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-asn1",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-asn1@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-joyent-1.3.0-cf731b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-0.3.6-2e8dd4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relatedSpdxElement": "SPDXRef-npm-faucet-0.0.1-a4c265",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relatedSpdxElement": "SPDXRef-npm-tape-3.5.0-625b90",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-2.13.1-8450e0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relatedSpdxElement": "SPDXRef-npm-safer-buffer-2.1.0-1fcd73",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-asn1-master-f072bc",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

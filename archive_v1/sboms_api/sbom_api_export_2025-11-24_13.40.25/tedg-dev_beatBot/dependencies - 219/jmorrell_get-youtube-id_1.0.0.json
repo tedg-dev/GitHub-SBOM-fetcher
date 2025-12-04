@@ -1,0 +1,58 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.jmorrell/get-youtube-id",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/315835d2-1b2d-4de7-a14f-21a61d341074",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:44:24Z"
+    },
+    "packages": [
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-0.2.2-ec567f",
+        "versionInfo": "~0.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@~0.2.2"
+          }
+        ]
+      },
+      {
+        "name": "com.github.jmorrell/get-youtube-id",
+        "SPDXID": "SPDXRef-github-jmorrell-get-youtube-id-master-963cbb",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/jmorrell/get-youtube-id",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/jmorrell/get-youtube-id@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-jmorrell-get-youtube-id-master-963cbb",
+        "relatedSpdxElement": "SPDXRef-npm-tape-0.2.2-ec567f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-jmorrell-get-youtube-id-master-963cbb",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

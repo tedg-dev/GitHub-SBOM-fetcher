@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.sindresorhus/path-is-absolute",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/9ff57a31-98d9-4ca6-bd58-269ab17c135d",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:29Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.sindresorhus/path-is-absolute",
+        "SPDXID": "SPDXRef-github-sindresorhus-path-is-absolute-main-033c27",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/sindresorhus/path-is-absolute",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/sindresorhus/path-is-absolute@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-sindresorhus-path-is-absolute-main-033c27",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

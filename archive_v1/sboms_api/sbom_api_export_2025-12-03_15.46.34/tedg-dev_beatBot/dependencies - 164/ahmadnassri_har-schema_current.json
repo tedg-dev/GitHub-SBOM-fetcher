@@ -1,0 +1,173 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.ahmadnassri/har-schema",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/a60c902e-64bc-4811-8d97-e0f683427732",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:14Z"
+    },
+    "packages": [
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-12.0.0-82959f",
+        "versionInfo": "^12.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@%5E12.0.0"
+          }
+        ]
+      },
+      {
+        "name": "ajv",
+        "SPDXID": "SPDXRef-npm-ajv-5.0.0-d88851",
+        "versionInfo": "^5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ajv@%5E5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "codeclimate-test-reporter",
+        "SPDXID": "SPDXRef-npm-codeclimate-test-reporter-0.4.0-5df014",
+        "versionInfo": "^0.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/codeclimate-test-reporter@%5E0.4.0"
+          }
+        ]
+      },
+      {
+        "name": "cz-conventional-changelog",
+        "SPDXID": "SPDXRef-npm-cz-conventional-changelog-1.2.0-2ff17b",
+        "versionInfo": "^1.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/cz-conventional-changelog@%5E1.2.0"
+          }
+        ]
+      },
+      {
+        "name": "echint",
+        "SPDXID": "SPDXRef-npm-echint-2.1.0-e0d3ce",
+        "versionInfo": "^2.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/echint@%5E2.1.0"
+          }
+        ]
+      },
+      {
+        "name": "semantic-release",
+        "SPDXID": "SPDXRef-npm-semantic-release-15.0.0-5cc6c8",
+        "versionInfo": "^15.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/semantic-release@%5E15.0.0"
+          }
+        ]
+      },
+      {
+        "name": "snazzy",
+        "SPDXID": "SPDXRef-npm-snazzy-5.0.0-8161d6",
+        "versionInfo": "^5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/snazzy@%5E5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.ahmadnassri/har-schema",
+        "SPDXID": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/ahmadnassri/har-schema",
+        "filesAnalyzed": false,
+        "licenseDeclared": "ISC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/ahmadnassri/har-schema@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-tap-12.0.0-82959f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-ajv-5.0.0-d88851",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-codeclimate-test-reporter-0.4.0-5df014",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-cz-conventional-changelog-1.2.0-2ff17b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-echint-2.1.0-e0d3ce",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-semantic-release-15.0.0-5cc6c8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relatedSpdxElement": "SPDXRef-npm-snazzy-5.0.0-8161d6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-ahmadnassri-har-schema-master-84d0b3",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

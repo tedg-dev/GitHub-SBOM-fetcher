@@ -1,0 +1,39 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-ctype",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/ada6635d-2211-418d-9224-63d4b1bca806",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:20Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.TritonDataCenter/node-ctype",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-ctype-master-ded72f",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-ctype",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-ctype@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-ctype-master-ded72f",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

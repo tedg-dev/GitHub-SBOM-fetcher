@@ -1,0 +1,61 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.indexzero/node-pkginfo",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/c738f66a-d28d-4817-81e8-f9fbd918a7bd",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:16Z"
+    },
+    "packages": [
+      {
+        "name": "vows",
+        "SPDXID": "SPDXRef-npm-vows-0.8.0-420379",
+        "versionInfo": "0.8.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2009, Copyright (c) 2011-2012 TJ Holowaychuk <tj@vision-media.ca>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vows@0.8.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.indexzero/node-pkginfo",
+        "SPDXID": "SPDXRef-github-indexzero-node-pkginfo-master-078879",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/indexzero/node-pkginfo",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/indexzero/node-pkginfo@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-indexzero-node-pkginfo-master-078879",
+        "relatedSpdxElement": "SPDXRef-npm-vows-0.8.0-420379",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-indexzero-node-pkginfo-master-078879",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

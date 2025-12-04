@@ -1,0 +1,58 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-bcrypt-pbkdf",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/3a560867-a5ec-4e3d-815a-f25c61dfb9e0",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:36Z"
+    },
+    "packages": [
+      {
+        "name": "tweetnacl",
+        "SPDXID": "SPDXRef-npm-tweetnacl-0.14.3-d887d0",
+        "versionInfo": "^0.14.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tweetnacl@%5E0.14.3"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TritonDataCenter/node-bcrypt-pbkdf",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-bcrypt-pbkdf-master-23c17e",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-bcrypt-pbkdf",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-bcrypt-pbkdf@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-bcrypt-pbkdf-master-23c17e",
+        "relatedSpdxElement": "SPDXRef-npm-tweetnacl-0.14.3-d887d0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-bcrypt-pbkdf-master-23c17e",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.gruntjs/grunt-cli",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/3c19f30c-aac1-4fef-a92e-7eaa4fb8c012",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:45Z"
+    },
+    "packages": [
+      {
+        "name": "liftup",
+        "SPDXID": "SPDXRef-npm-liftup-3.0.1-fe7212",
+        "versionInfo": "~3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/liftup@~3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "nopt",
+        "SPDXID": "SPDXRef-npm-nopt-5.0.0-952ede",
+        "versionInfo": "~5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nopt@~5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "v8flags",
+        "SPDXID": "SPDXRef-npm-v8flags-4.0.1-1c23c1",
+        "versionInfo": "^4.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/v8flags@%5E4.0.1"
+          }
+        ]
+      },
+      {
+        "name": "grunt",
+        "SPDXID": "SPDXRef-npm-grunt-1.6.1-3ca6b7",
+        "versionInfo": "^1.6.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt@%5E1.6.1"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-jshint",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-jshint-3.2.0-39c875",
+        "versionInfo": "^3.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-jshint@%5E3.2.0"
+          }
+        ]
+      },
+      {
+        "name": "grunt-known-options",
+        "SPDXID": "SPDXRef-npm-grunt-known-options-2.0.0-7a9168",
+        "versionInfo": "~2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-known-options@~2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "interpret",
+        "SPDXID": "SPDXRef-npm-interpret-1.1.0-e135c5",
+        "versionInfo": "~1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/interpret@~1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.gruntjs/grunt-cli",
+        "SPDXID": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/gruntjs/grunt-cli",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/gruntjs/grunt-cli@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-liftup-3.0.1-fe7212",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-nopt-5.0.0-952ede",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-v8flags-4.0.1-1c23c1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-1.6.1-3ca6b7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-jshint-3.2.0-39c875",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-known-options-2.0.0-7a9168",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relatedSpdxElement": "SPDXRef-npm-interpret-1.1.0-e135c5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-gruntjs-grunt-cli-main-64e6c0",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

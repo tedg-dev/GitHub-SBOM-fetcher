@@ -1,0 +1,439 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.npm/read",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/4cbc8284-ba0b-4bb7-a605-a2cad32fb03a",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:34Z"
+    },
+    "packages": [
+      {
+        "name": "tshy",
+        "SPDXID": "SPDXRef-npm-tshy-3.0.2-30eee7",
+        "versionInfo": "^3.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tshy@%5E3.0.2"
+          }
+        ]
+      },
+      {
+        "name": "c8",
+        "SPDXID": "SPDXRef-npm-c8-10.1.2-09e7c4",
+        "versionInfo": "^10.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/c8@%5E10.1.2"
+          }
+        ]
+      },
+      {
+        "name": "@npmcli/template-oss",
+        "SPDXID": "SPDXRef-npm-npmcli-template-oss-4.28.1-89d79f",
+        "versionInfo": "4.28.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40npmcli/template-oss@4.28.1"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-5.2.2-cd06bd",
+        "versionInfo": "^5.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@%5E5.2.2"
+          }
+        ]
+      },
+      {
+        "name": "ts-node",
+        "SPDXID": "SPDXRef-npm-ts-node-10.9.1-9c9350",
+        "versionInfo": "^10.9.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ts-node@%5E10.9.1"
+          }
+        ]
+      },
+      {
+        "name": "@typescript-eslint/parser",
+        "SPDXID": "SPDXRef-npm-typescript-eslint-parser-8.0.1-d0aac4",
+        "versionInfo": "^8.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40typescript-eslint/parser@%5E8.0.1"
+          }
+        ]
+      },
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-16.3.9-c957c8",
+        "versionInfo": "^16.3.9",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@%5E16.3.9"
+          }
+        ]
+      },
+      {
+        "name": "eslint-import-resolver-typescript",
+        "SPDXID": "SPDXRef-npm-eslint-import-resolver-typescript-4.3.2-0e85db",
+        "versionInfo": "^4.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-import-resolver-typescript@%5E4.3.2"
+          }
+        ]
+      },
+      {
+        "name": "mute-stream",
+        "SPDXID": "SPDXRef-npm-mute-stream-3.0.0-752909",
+        "versionInfo": "^3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mute-stream@%5E3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@npmcli/eslint-config",
+        "SPDXID": "SPDXRef-npm-npmcli-eslint-config-6.0.0-8bb9a8",
+        "versionInfo": "^6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40npmcli/eslint-config@%5E6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@types/tap",
+        "SPDXID": "SPDXRef-npm-types-tap-15.0.11-9a529f",
+        "versionInfo": "^15.0.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/tap@%5E15.0.11"
+          }
+        ]
+      },
+      {
+        "name": "@types/mute-stream",
+        "SPDXID": "SPDXRef-npm-types-mute-stream-0.0.4-d008aa",
+        "versionInfo": "^0.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/mute-stream@%5E0.0.4"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "LouisBrunner/checks-action",
+        "SPDXID": "SPDXRef-githubactions-LouisBrunner-checks-action-1.6.0-75c946",
+        "versionInfo": "1.6.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/LouisBrunner/checks-action@1.6.0"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/analyze",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-3..-75c946",
+        "versionInfo": "3.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@3.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/init",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-3..-75c946",
+        "versionInfo": "3.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/init@3.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "dependabot/fetch-metadata",
+        "SPDXID": "SPDXRef-githubactions-dependabot-fetch-metadata-1..-75c946",
+        "versionInfo": "1.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/dependabot/fetch-metadata@1.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/github-script",
+        "SPDXID": "SPDXRef-githubactions-actions-github-script-7..-75c946",
+        "versionInfo": "7.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/github-script@7.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "peter-evans/find-comment",
+        "SPDXID": "SPDXRef-githubactions-peter-evans-find-comment-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/peter-evans/find-comment@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "peter-evans/create-or-update-comment",
+        "SPDXID": "SPDXRef-githubactions-peter-evans-create-or-update-comment-3..-75c946",
+        "versionInfo": "3.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/peter-evans/create-or-update-comment@3.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.npm/read",
+        "SPDXID": "SPDXRef-github-npm-read-main-79383a",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/npm/read",
+        "filesAnalyzed": false,
+        "licenseDeclared": "ISC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/npm/read@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-tshy-3.0.2-30eee7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-c8-10.1.2-09e7c4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-npmcli-template-oss-4.28.1-89d79f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-5.2.2-cd06bd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-ts-node-10.9.1-9c9350",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-parser-8.0.1-d0aac4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-tap-16.3.9-c957c8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-import-resolver-typescript-4.3.2-0e85db",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-mute-stream-3.0.0-752909",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-npmcli-eslint-config-6.0.0-8bb9a8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-types-tap-15.0.11-9a529f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-npm-types-mute-stream-0.0.4-d008aa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-LouisBrunner-checks-action-1.6.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-dependabot-fetch-metadata-1..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-github-script-7..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-peter-evans-find-comment-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-peter-evans-create-or-update-comment-3..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-3..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-npm-read-main-79383a",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-3..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-npm-read-main-79383a",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

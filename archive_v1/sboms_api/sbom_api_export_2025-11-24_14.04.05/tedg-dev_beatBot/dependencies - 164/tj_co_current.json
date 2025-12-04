@@ -1,0 +1,116 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tj/co",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/75e78c5a-b058-49ad-99ee-500017cc6b5b",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:18Z"
+    },
+    "packages": [
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-2.0.0-be6d01",
+        "versionInfo": "^2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "mz",
+        "SPDXID": "SPDXRef-npm-mz-1.0.2-d6c75d",
+        "versionInfo": "^1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mz@%5E1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "browserify",
+        "SPDXID": "SPDXRef-npm-browserify-10.0.0-d61120",
+        "versionInfo": "^10.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/browserify@%5E10.0.0"
+          }
+        ]
+      },
+      {
+        "name": "istanbul-harmony",
+        "SPDXID": "SPDXRef-npm-istanbul-harmony-0-2b8e53",
+        "versionInfo": "0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/istanbul-harmony@0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tj/co",
+        "SPDXID": "SPDXRef-github-tj-co-master-145b7d",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tj/co",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tj/co@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tj-co-master-145b7d",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-2.0.0-be6d01",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tj-co-master-145b7d",
+        "relatedSpdxElement": "SPDXRef-npm-mz-1.0.2-d6c75d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tj-co-master-145b7d",
+        "relatedSpdxElement": "SPDXRef-npm-browserify-10.0.0-d61120",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tj-co-master-145b7d",
+        "relatedSpdxElement": "SPDXRef-npm-istanbul-harmony-0-2b8e53",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tj-co-master-145b7d",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

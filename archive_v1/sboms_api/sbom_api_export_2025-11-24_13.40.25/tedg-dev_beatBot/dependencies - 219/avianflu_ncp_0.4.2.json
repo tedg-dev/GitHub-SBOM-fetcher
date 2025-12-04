@@ -1,0 +1,97 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.AvianFlu/ncp",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/10cb5ec8-697b-4d47-b0fb-cd2c8a3bd871",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:32Z"
+    },
+    "packages": [
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-1.15.x-58745b",
+        "versionInfo": "1.15.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@1.15.x"
+          }
+        ]
+      },
+      {
+        "name": "rimraf",
+        "SPDXID": "SPDXRef-npm-rimraf-1.0.x-3dfc4b",
+        "versionInfo": "1.0.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rimraf@1.0.x"
+          }
+        ]
+      },
+      {
+        "name": "read-dir-files",
+        "SPDXID": "SPDXRef-npm-read-dir-files-0.0.x-5fcf91",
+        "versionInfo": "0.0.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/read-dir-files@0.0.x"
+          }
+        ]
+      },
+      {
+        "name": "com.github.AvianFlu/ncp",
+        "SPDXID": "SPDXRef-github-AvianFlu-ncp-master-c16d48",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/AvianFlu/ncp",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/AvianFlu/ncp@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-AvianFlu-ncp-master-c16d48",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-1.15.x-58745b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-AvianFlu-ncp-master-c16d48",
+        "relatedSpdxElement": "SPDXRef-npm-rimraf-1.0.x-3dfc4b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-AvianFlu-ncp-master-c16d48",
+        "relatedSpdxElement": "SPDXRef-npm-read-dir-files-0.0.x-5fcf91",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-AvianFlu-ncp-master-c16d48",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

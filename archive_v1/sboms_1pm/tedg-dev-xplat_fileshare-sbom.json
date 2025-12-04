@@ -1,0 +1,2284 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tedg-dev/xplat_fileshare",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/ffe85aab-b8c4-4cc5-9fd8-4fc12bc3f4ef",
+    "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251114150449-41a4ce8a9a95+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-14T22:53:50Z"
+    },
+    "packages": [
+      {
+        "name": "serde_json",
+        "SPDXID": "SPDXRef-cargo-serdejson-75c946",
+        "versionInfo": ">= 1.0.0,< 2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/serde_json"
+          }
+        ]
+      },
+      {
+        "name": "thiserror",
+        "SPDXID": "SPDXRef-cargo-thiserror-75c946",
+        "versionInfo": ">= 1.0.0,< 2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/thiserror"
+          }
+        ]
+      },
+      {
+        "name": "anyhow",
+        "SPDXID": "SPDXRef-cargo-anyhow-75c946",
+        "versionInfo": ">= 1.0.0,< 2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/anyhow"
+          }
+        ]
+      },
+      {
+        "name": "chrono",
+        "SPDXID": "SPDXRef-cargo-chrono-75c946",
+        "versionInfo": ">= 0.4.0,< 0.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/chrono"
+          }
+        ]
+      },
+      {
+        "name": "serde",
+        "SPDXID": "SPDXRef-cargo-serde-75c946",
+        "versionInfo": ">= 1.0.0,< 2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/serde"
+          }
+        ]
+      },
+      {
+        "name": "sqlx",
+        "SPDXID": "SPDXRef-cargo-sqlx-75c946",
+        "versionInfo": ">= 0.7.0,< 0.8.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/sqlx"
+          }
+        ]
+      },
+      {
+        "name": "tokio",
+        "SPDXID": "SPDXRef-cargo-tokio-75c946",
+        "versionInfo": ">= 1.0.0,< 2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/tokio"
+          }
+        ]
+      },
+      {
+        "name": "flutter_rust_bridge",
+        "SPDXID": "SPDXRef-cargo-flutterrustbridge-2.11.1-75c946",
+        "versionInfo": "2.11.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/flutter_rust_bridge@2.11.1"
+          }
+        ]
+      },
+      {
+        "name": "tracing",
+        "SPDXID": "SPDXRef-cargo-tracing-75c946",
+        "versionInfo": ">= 0.1.0,< 0.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/tracing"
+          }
+        ]
+      },
+      {
+        "name": "dtolnay/rust-toolchain",
+        "SPDXID": "SPDXRef-githubactions-dtolnay-rust-toolchain-stable-75c946",
+        "versionInfo": "stable",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/dtolnay/rust-toolchain@stable"
+          }
+        ]
+      },
+      {
+        "name": "actions/upload-artifact",
+        "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "cupertino_icons",
+        "SPDXID": "SPDXRef-pub-cupertinoicons-1.0.8-75c946",
+        "versionInfo": "1.0.8",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/cupertino_icons@1.0.8"
+          }
+        ]
+      },
+      {
+        "name": "term_glyph",
+        "SPDXID": "SPDXRef-pub-termglyph-1.2.2-75c946",
+        "versionInfo": "1.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/term_glyph@1.2.2"
+          }
+        ]
+      },
+      {
+        "name": "graphs",
+        "SPDXID": "SPDXRef-pub-graphs-2.3.2-75c946",
+        "versionInfo": "2.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/graphs@2.3.2"
+          }
+        ]
+      },
+      {
+        "name": "state_notifier",
+        "SPDXID": "SPDXRef-pub-statenotifier-1.0.0-75c946",
+        "versionInfo": "1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/state_notifier@1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "plugin_platform_interface",
+        "SPDXID": "SPDXRef-pub-pluginplatforminterface-2.1.8-75c946",
+        "versionInfo": "2.1.8",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/plugin_platform_interface@2.1.8"
+          }
+        ]
+      },
+      {
+        "name": "logging",
+        "SPDXID": "SPDXRef-pub-logging-1.3.0-75c946",
+        "versionInfo": "1.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/logging@1.3.0"
+          }
+        ]
+      },
+      {
+        "name": "build_runner_core",
+        "SPDXID": "SPDXRef-pub-buildrunnercore-9.3.1-75c946",
+        "versionInfo": "9.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build_runner_core@9.3.1"
+          }
+        ]
+      },
+      {
+        "name": "build_resolvers",
+        "SPDXID": "SPDXRef-pub-buildresolvers-3.0.3-75c946",
+        "versionInfo": "3.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build_resolvers@3.0.3"
+          }
+        ]
+      },
+      {
+        "name": "clock",
+        "SPDXID": "SPDXRef-pub-clock-1.1.2-75c946",
+        "versionInfo": "1.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/clock@1.1.2"
+          }
+        ]
+      },
+      {
+        "name": "shelf",
+        "SPDXID": "SPDXRef-pub-shelf-1.4.2-75c946",
+        "versionInfo": "1.4.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/shelf@1.4.2"
+          }
+        ]
+      },
+      {
+        "name": "source_map_stack_trace",
+        "SPDXID": "SPDXRef-pub-sourcemapstacktrace-2.1.2-75c946",
+        "versionInfo": "2.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/source_map_stack_trace@2.1.2"
+          }
+        ]
+      },
+      {
+        "name": "file",
+        "SPDXID": "SPDXRef-pub-file-7.0.1-75c946",
+        "versionInfo": "7.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file@7.0.1"
+          }
+        ]
+      },
+      {
+        "name": "convert",
+        "SPDXID": "SPDXRef-pub-convert-3.1.2-75c946",
+        "versionInfo": "3.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/convert@3.1.2"
+          }
+        ]
+      },
+      {
+        "name": "collection",
+        "SPDXID": "SPDXRef-pub-collection-1.19.1-75c946",
+        "versionInfo": "1.19.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/collection@1.19.1"
+          }
+        ]
+      },
+      {
+        "name": "http_multi_server",
+        "SPDXID": "SPDXRef-pub-httpmultiserver-3.2.2-75c946",
+        "versionInfo": "3.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/http_multi_server@3.2.2"
+          }
+        ]
+      },
+      {
+        "name": "args",
+        "SPDXID": "SPDXRef-pub-args-2.7.0-75c946",
+        "versionInfo": "2.7.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/args@2.7.0"
+          }
+        ]
+      },
+      {
+        "name": "webkit_inspection_protocol",
+        "SPDXID": "SPDXRef-pub-webkitinspectionprotocol-1.2.1-75c946",
+        "versionInfo": "1.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/webkit_inspection_protocol@1.2.1"
+          }
+        ]
+      },
+      {
+        "name": "test_core",
+        "SPDXID": "SPDXRef-pub-testcore-0.6.11-75c946",
+        "versionInfo": "0.6.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/test_core@0.6.11"
+          }
+        ]
+      },
+      {
+        "name": "vm_service",
+        "SPDXID": "SPDXRef-pub-vmservice-15.0.2-75c946",
+        "versionInfo": "15.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/vm_service@15.0.2"
+          }
+        ]
+      },
+      {
+        "name": "code_builder",
+        "SPDXID": "SPDXRef-pub-codebuilder-4.11.0-75c946",
+        "versionInfo": "4.11.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/code_builder@4.11.0"
+          }
+        ]
+      },
+      {
+        "name": "flutter_riverpod",
+        "SPDXID": "SPDXRef-pub-flutterriverpod-3.0.3-75c946",
+        "versionInfo": "3.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/flutter_riverpod@3.0.3"
+          }
+        ]
+      },
+      {
+        "name": "cli_config",
+        "SPDXID": "SPDXRef-pub-cliconfig-0.2.0-75c946",
+        "versionInfo": "0.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/cli_config@0.2.0"
+          }
+        ]
+      },
+      {
+        "name": "flutter_lints",
+        "SPDXID": "SPDXRef-pub-flutterlints-6.0.0-75c946",
+        "versionInfo": "6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/flutter_lints@6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "path",
+        "SPDXID": "SPDXRef-pub-path-1.9.1-75c946",
+        "versionInfo": "1.9.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/path@1.9.1"
+          }
+        ]
+      },
+      {
+        "name": "yaml",
+        "SPDXID": "SPDXRef-pub-yaml-3.1.3-75c946",
+        "versionInfo": "3.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/yaml@3.1.3"
+          }
+        ]
+      },
+      {
+        "name": "stream_channel",
+        "SPDXID": "SPDXRef-pub-streamchannel-2.1.4-75c946",
+        "versionInfo": "2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/stream_channel@2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-pub-glob-2.1.3-75c946",
+        "versionInfo": "2.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/glob@2.1.3"
+          }
+        ]
+      },
+      {
+        "name": "shelf_web_socket",
+        "SPDXID": "SPDXRef-pub-shelfwebsocket-3.0.0-75c946",
+        "versionInfo": "3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/shelf_web_socket@3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "build",
+        "SPDXID": "SPDXRef-pub-build-3.1.0-75c946",
+        "versionInfo": "3.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build@3.1.0"
+          }
+        ]
+      },
+      {
+        "name": "build_cli_annotations",
+        "SPDXID": "SPDXRef-pub-buildcliannotations-2.1.1-75c946",
+        "versionInfo": "2.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build_cli_annotations@2.1.1"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_android",
+        "SPDXID": "SPDXRef-pub-fileselectorandroid-0.5.21-75c946",
+        "versionInfo": "0.5.2+1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_android@0.5.2%2B1"
+          }
+        ]
+      },
+      {
+        "name": "shelf_packages_handler",
+        "SPDXID": "SPDXRef-pub-shelfpackageshandler-3.0.2-75c946",
+        "versionInfo": "3.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/shelf_packages_handler@3.0.2"
+          }
+        ]
+      },
+      {
+        "name": "pool",
+        "SPDXID": "SPDXRef-pub-pool-1.5.2-75c946",
+        "versionInfo": "1.5.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/pool@1.5.2"
+          }
+        ]
+      },
+      {
+        "name": "shelf_static",
+        "SPDXID": "SPDXRef-pub-shelfstatic-1.1.3-75c946",
+        "versionInfo": "1.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/shelf_static@1.1.3"
+          }
+        ]
+      },
+      {
+        "name": "async",
+        "SPDXID": "SPDXRef-pub-async-2.13.0-75c946",
+        "versionInfo": "2.13.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/async@2.13.0"
+          }
+        ]
+      },
+      {
+        "name": "web_socket_channel",
+        "SPDXID": "SPDXRef-pub-websocketchannel-3.0.3-75c946",
+        "versionInfo": "3.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/web_socket_channel@3.0.3"
+          }
+        ]
+      },
+      {
+        "name": "vector_math",
+        "SPDXID": "SPDXRef-pub-vectormath-2.2.0-75c946",
+        "versionInfo": "2.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/vector_math@2.2.0"
+          }
+        ]
+      },
+      {
+        "name": "_fe_analyzer_shared",
+        "SPDXID": "SPDXRef-pub-feanalyzershared-85.0.0-75c946",
+        "versionInfo": "85.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/_fe_analyzer_shared@85.0.0"
+          }
+        ]
+      },
+      {
+        "name": "go_router",
+        "SPDXID": "SPDXRef-pub-gorouter-16.3.0-75c946",
+        "versionInfo": "16.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/go_router@16.3.0"
+          }
+        ]
+      },
+      {
+        "name": "node_preamble",
+        "SPDXID": "SPDXRef-pub-nodepreamble-2.0.2-75c946",
+        "versionInfo": "2.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/node_preamble@2.0.2"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_web",
+        "SPDXID": "SPDXRef-pub-fileselectorweb-0.9.42-75c946",
+        "versionInfo": "0.9.4+2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_web@0.9.4%2B2"
+          }
+        ]
+      },
+      {
+        "name": "pub_semver",
+        "SPDXID": "SPDXRef-pub-pubsemver-2.2.0-75c946",
+        "versionInfo": "2.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/pub_semver@2.2.0"
+          }
+        ]
+      },
+      {
+        "name": "analyzer",
+        "SPDXID": "SPDXRef-pub-analyzer-7.7.1-75c946",
+        "versionInfo": "7.7.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/analyzer@7.7.1"
+          }
+        ]
+      },
+      {
+        "name": "typed_data",
+        "SPDXID": "SPDXRef-pub-typeddata-1.4.0-75c946",
+        "versionInfo": "1.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/typed_data@1.4.0"
+          }
+        ]
+      },
+      {
+        "name": "test_api",
+        "SPDXID": "SPDXRef-pub-testapi-0.7.6-75c946",
+        "versionInfo": "0.7.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/test_api@0.7.6"
+          }
+        ]
+      },
+      {
+        "name": "material_color_utilities",
+        "SPDXID": "SPDXRef-pub-materialcolorutilities-0.11.1-75c946",
+        "versionInfo": "0.11.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/material_color_utilities@0.11.1"
+          }
+        ]
+      },
+      {
+        "name": "matcher",
+        "SPDXID": "SPDXRef-pub-matcher-0.12.17-75c946",
+        "versionInfo": "0.12.17",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/matcher@0.12.17"
+          }
+        ]
+      },
+      {
+        "name": "source_maps",
+        "SPDXID": "SPDXRef-pub-sourcemaps-0.10.13-75c946",
+        "versionInfo": "0.10.13",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/source_maps@0.10.13"
+          }
+        ]
+      },
+      {
+        "name": "characters",
+        "SPDXID": "SPDXRef-pub-characters-1.4.0-75c946",
+        "versionInfo": "1.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/characters@1.4.0"
+          }
+        ]
+      },
+      {
+        "name": "fake_async",
+        "SPDXID": "SPDXRef-pub-fakeasync-1.3.3-75c946",
+        "versionInfo": "1.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/fake_async@1.3.3"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_windows",
+        "SPDXID": "SPDXRef-pub-fileselectorwindows-0.9.34-75c946",
+        "versionInfo": "0.9.3+4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_windows@0.9.3%2B4"
+          }
+        ]
+      },
+      {
+        "name": "json_annotation",
+        "SPDXID": "SPDXRef-pub-jsonannotation-4.9.0-75c946",
+        "versionInfo": "4.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/json_annotation@4.9.0"
+          }
+        ]
+      },
+      {
+        "name": "frontend_server_client",
+        "SPDXID": "SPDXRef-pub-frontendserverclient-4.0.0-75c946",
+        "versionInfo": "4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/frontend_server_client@4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "mime",
+        "SPDXID": "SPDXRef-pub-mime-2.0.0-75c946",
+        "versionInfo": "2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/mime@2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "built_collection",
+        "SPDXID": "SPDXRef-pub-builtcollection-5.1.1-75c946",
+        "versionInfo": "5.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/built_collection@5.1.1"
+          }
+        ]
+      },
+      {
+        "name": "freezed_annotation",
+        "SPDXID": "SPDXRef-pub-freezedannotation-3.1.0-75c946",
+        "versionInfo": "3.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/freezed_annotation@3.1.0"
+          }
+        ]
+      },
+      {
+        "name": "coverage",
+        "SPDXID": "SPDXRef-pub-coverage-1.15.0-75c946",
+        "versionInfo": "1.15.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/coverage@1.15.0"
+          }
+        ]
+      },
+      {
+        "name": "source_gen",
+        "SPDXID": "SPDXRef-pub-sourcegen-4.0.0-75c946",
+        "versionInfo": "4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/source_gen@4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "riverpod",
+        "SPDXID": "SPDXRef-pub-riverpod-3.0.3-75c946",
+        "versionInfo": "3.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/riverpod@3.0.3"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_macos",
+        "SPDXID": "SPDXRef-pub-fileselectormacos-0.9.45-75c946",
+        "versionInfo": "0.9.4+5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_macos@0.9.4%2B5"
+          }
+        ]
+      },
+      {
+        "name": "js",
+        "SPDXID": "SPDXRef-pub-js-0.7.2-75c946",
+        "versionInfo": "0.7.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/js@0.7.2"
+          }
+        ]
+      },
+      {
+        "name": "lints",
+        "SPDXID": "SPDXRef-pub-lints-6.0.0-75c946",
+        "versionInfo": "6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/lints@6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "test",
+        "SPDXID": "SPDXRef-pub-test-1.26.2-75c946",
+        "versionInfo": "1.26.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/test@1.26.2"
+          }
+        ]
+      },
+      {
+        "name": "build_runner",
+        "SPDXID": "SPDXRef-pub-buildrunner-2.7.1-75c946",
+        "versionInfo": "2.7.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build_runner@2.7.1"
+          }
+        ]
+      },
+      {
+        "name": "file_selector",
+        "SPDXID": "SPDXRef-pub-fileselector-1.0.4-75c946",
+        "versionInfo": "1.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector@1.0.4"
+          }
+        ]
+      },
+      {
+        "name": "meta",
+        "SPDXID": "SPDXRef-pub-meta-1.16.0-75c946",
+        "versionInfo": "1.16.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/meta@1.16.0"
+          }
+        ]
+      },
+      {
+        "name": "io",
+        "SPDXID": "SPDXRef-pub-io-1.0.5-75c946",
+        "versionInfo": "1.0.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/io@1.0.5"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_ios",
+        "SPDXID": "SPDXRef-pub-fileselectorios-0.5.33-75c946",
+        "versionInfo": "0.5.3+3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_ios@0.5.3%2B3"
+          }
+        ]
+      },
+      {
+        "name": "build_daemon",
+        "SPDXID": "SPDXRef-pub-builddaemon-4.1.0-75c946",
+        "versionInfo": "4.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build_daemon@4.1.0"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_platform_interface",
+        "SPDXID": "SPDXRef-pub-fileselectorplatforminterface-2.6.2-75c946",
+        "versionInfo": "2.6.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_platform_interface@2.6.2"
+          }
+        ]
+      },
+      {
+        "name": "web",
+        "SPDXID": "SPDXRef-pub-web-1.1.1-75c946",
+        "versionInfo": "1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/web@1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "package_config",
+        "SPDXID": "SPDXRef-pub-packageconfig-2.2.0-75c946",
+        "versionInfo": "2.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/package_config@2.2.0"
+          }
+        ]
+      },
+      {
+        "name": "leak_tracker_testing",
+        "SPDXID": "SPDXRef-pub-leaktrackertesting-3.0.2-75c946",
+        "versionInfo": "3.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/leak_tracker_testing@3.0.2"
+          }
+        ]
+      },
+      {
+        "name": "web_socket",
+        "SPDXID": "SPDXRef-pub-websocket-1.0.1-75c946",
+        "versionInfo": "1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/web_socket@1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "checked_yaml",
+        "SPDXID": "SPDXRef-pub-checkedyaml-2.0.4-75c946",
+        "versionInfo": "2.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/checked_yaml@2.0.4"
+          }
+        ]
+      },
+      {
+        "name": "cross_file",
+        "SPDXID": "SPDXRef-pub-crossfile-0.3.5-75c946",
+        "versionInfo": "0.3.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/cross_file@0.3.5"
+          }
+        ]
+      },
+      {
+        "name": "file_selector_linux",
+        "SPDXID": "SPDXRef-pub-fileselectorlinux-0.9.32-75c946",
+        "versionInfo": "0.9.3+2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/file_selector_linux@0.9.3%2B2"
+          }
+        ]
+      },
+      {
+        "name": "string_scanner",
+        "SPDXID": "SPDXRef-pub-stringscanner-1.4.1-75c946",
+        "versionInfo": "1.4.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/string_scanner@1.4.1"
+          }
+        ]
+      },
+      {
+        "name": "http_parser",
+        "SPDXID": "SPDXRef-pub-httpparser-4.1.2-75c946",
+        "versionInfo": "4.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/http_parser@4.1.2"
+          }
+        ]
+      },
+      {
+        "name": "pubspec_parse",
+        "SPDXID": "SPDXRef-pub-pubspecparse-1.5.0-75c946",
+        "versionInfo": "1.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/pubspec_parse@1.5.0"
+          }
+        ]
+      },
+      {
+        "name": "build_config",
+        "SPDXID": "SPDXRef-pub-buildconfig-1.2.0-75c946",
+        "versionInfo": "1.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/build_config@1.2.0"
+          }
+        ]
+      },
+      {
+        "name": "leak_tracker",
+        "SPDXID": "SPDXRef-pub-leaktracker-11.0.2-75c946",
+        "versionInfo": "11.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/leak_tracker@11.0.2"
+          }
+        ]
+      },
+      {
+        "name": "stream_transform",
+        "SPDXID": "SPDXRef-pub-streamtransform-2.1.1-75c946",
+        "versionInfo": "2.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/stream_transform@2.1.1"
+          }
+        ]
+      },
+      {
+        "name": "stack_trace",
+        "SPDXID": "SPDXRef-pub-stacktrace-1.12.1-75c946",
+        "versionInfo": "1.12.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/stack_trace@1.12.1"
+          }
+        ]
+      },
+      {
+        "name": "timing",
+        "SPDXID": "SPDXRef-pub-timing-1.0.2-75c946",
+        "versionInfo": "1.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/timing@1.0.2"
+          }
+        ]
+      },
+      {
+        "name": "flutter_rust_bridge",
+        "SPDXID": "SPDXRef-pub-flutterrustbridge-2.11.1-75c946",
+        "versionInfo": "2.11.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/flutter_rust_bridge@2.11.1"
+          }
+        ]
+      },
+      {
+        "name": "dart_style",
+        "SPDXID": "SPDXRef-pub-dartstyle-3.1.1-75c946",
+        "versionInfo": "3.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/dart_style@3.1.1"
+          }
+        ]
+      },
+      {
+        "name": "http",
+        "SPDXID": "SPDXRef-pub-http-1.5.0-75c946",
+        "versionInfo": "1.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/http@1.5.0"
+          }
+        ]
+      },
+      {
+        "name": "built_value",
+        "SPDXID": "SPDXRef-pub-builtvalue-8.12.0-75c946",
+        "versionInfo": "8.12.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/built_value@8.12.0"
+          }
+        ]
+      },
+      {
+        "name": "freezed",
+        "SPDXID": "SPDXRef-pub-freezed-3.2.3-75c946",
+        "versionInfo": "3.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/freezed@3.2.3"
+          }
+        ]
+      },
+      {
+        "name": "boolean_selector",
+        "SPDXID": "SPDXRef-pub-booleanselector-2.1.2-75c946",
+        "versionInfo": "2.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/boolean_selector@2.1.2"
+          }
+        ]
+      },
+      {
+        "name": "crypto",
+        "SPDXID": "SPDXRef-pub-crypto-3.0.6-75c946",
+        "versionInfo": "3.0.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/crypto@3.0.6"
+          }
+        ]
+      },
+      {
+        "name": "fixnum",
+        "SPDXID": "SPDXRef-pub-fixnum-1.1.1-75c946",
+        "versionInfo": "1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/fixnum@1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "source_span",
+        "SPDXID": "SPDXRef-pub-sourcespan-1.10.1-75c946",
+        "versionInfo": "1.10.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/source_span@1.10.1"
+          }
+        ]
+      },
+      {
+        "name": "leak_tracker_flutter_testing",
+        "SPDXID": "SPDXRef-pub-leaktrackerfluttertesting-3.0.10-75c946",
+        "versionInfo": "3.0.10",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/leak_tracker_flutter_testing@3.0.10"
+          }
+        ]
+      },
+      {
+        "name": "watcher",
+        "SPDXID": "SPDXRef-pub-watcher-1.1.4-75c946",
+        "versionInfo": "1.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:pub/watcher@1.1.4"
+          }
+        ]
+      },
+      {
+        "name": "rand",
+        "SPDXID": "SPDXRef-cargo-rand-75c946",
+        "versionInfo": ">= 0.8.0,< 0.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/rand"
+          }
+        ]
+      },
+      {
+        "name": "zeroize",
+        "SPDXID": "SPDXRef-cargo-zeroize-75c946",
+        "versionInfo": ">= 1.0.0,< 2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/zeroize"
+          }
+        ]
+      },
+      {
+        "name": "sha2",
+        "SPDXID": "SPDXRef-cargo-sha2-75c946",
+        "versionInfo": ">= 0.10.0,< 0.11.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/sha2"
+          }
+        ]
+      },
+      {
+        "name": "chacha20poly1305",
+        "SPDXID": "SPDXRef-cargo-chacha20poly1305-75c946",
+        "versionInfo": ">= 0.10.0,< 0.11.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/chacha20poly1305"
+          }
+        ]
+      },
+      {
+        "name": "rand_core",
+        "SPDXID": "SPDXRef-cargo-randcore-75c946",
+        "versionInfo": ">= 0.6.0,< 0.7.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/rand_core"
+          }
+        ]
+      },
+      {
+        "name": "x25519-dalek",
+        "SPDXID": "SPDXRef-cargo-x25519-dalek-75c946",
+        "versionInfo": ">= 2.0.0,< 3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/x25519-dalek"
+          }
+        ]
+      },
+      {
+        "name": "argon2",
+        "SPDXID": "SPDXRef-cargo-argon2-75c946",
+        "versionInfo": ">= 0.5.0,< 0.6.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:cargo/argon2"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "subosito/flutter-action",
+        "SPDXID": "SPDXRef-githubactions-subosito-flutter-action-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/subosito/flutter-action@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "softprops/action-gh-release",
+        "SPDXID": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/softprops/action-gh-release@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "Swatinem/rust-cache",
+        "SPDXID": "SPDXRef-githubactions-Swatinem-rust-cache-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/Swatinem/rust-cache@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tedg-dev/xplat_fileshare",
+        "SPDXID": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/tedg-dev/xplat_fileshare",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tedg-dev/xplat_fileshare@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-sqlx-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-streamchannel-2.1.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-websocketchannel-3.0.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-githubactions-subosito-flutter-action-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-tracing-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-githubactions-dtolnay-rust-toolchain-stable-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-nodepreamble-2.0.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-matcher-0.12.17-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-statenotifier-1.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-pubsemver-2.2.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-testapi-0.7.6-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-builtcollection-5.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-web-1.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-packageconfig-2.2.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fixnum-1.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-mime-2.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-freezedannotation-3.1.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-githubactions-Swatinem-rust-cache-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-cupertinoicons-1.0.8-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-path-1.9.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-sourcemaps-0.10.13-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-io-1.0.5-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-leaktracker-11.0.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-sourcespan-1.10.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-zeroize-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-x25519-dalek-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-termglyph-1.2.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-websocket-1.0.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-dartstyle-3.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-anyhow-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-vectormath-2.2.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-test-1.26.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-tokio-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectorwindows-0.9.34-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-logging-1.3.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-vmservice-15.0.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-flutterriverpod-3.0.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-coverage-1.15.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-sourcemapstacktrace-2.1.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-httpmultiserver-3.2.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-codebuilder-4.11.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-flutterlints-6.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-typeddata-1.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-sourcegen-4.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-shelfwebsocket-3.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-lints-6.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-freezed-3.2.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselector-1.0.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-convert-3.1.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-shelfstatic-1.1.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectorweb-0.9.42-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectormacos-0.9.45-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectorlinux-0.9.32-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-stringscanner-1.4.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-builtvalue-8.12.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-randcore-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-shelfpackageshandler-3.0.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-graphs-2.3.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-clock-1.1.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-build-3.1.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectorandroid-0.5.21-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-riverpod-3.0.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-chrono-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-pluginplatforminterface-2.1.8-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-characters-1.4.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-file-7.0.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-async-2.13.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-checkedyaml-2.0.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-http-1.5.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-shelf-1.4.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-feanalyzershared-85.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-gorouter-16.3.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-leaktrackertesting-3.0.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-pool-1.5.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-watcher-1.1.4-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-serdejson-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-flutterrustbridge-2.11.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-collection-1.19.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-yaml-3.1.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-buildconfig-1.2.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-timing-1.0.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-frontendserverclient-4.0.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-meta-1.16.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-webkitinspectionprotocol-1.2.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-pubspecparse-1.5.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-crypto-3.0.6-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-streamtransform-2.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-booleanselector-2.1.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-leaktrackerfluttertesting-3.0.10-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-materialcolorutilities-0.11.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-crossfile-0.3.5-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-analyzer-7.7.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-jsonannotation-4.9.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-js-0.7.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-argon2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-testcore-0.6.11-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-buildrunner-2.7.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-httpparser-4.1.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-buildresolvers-3.0.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-args-2.7.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fakeasync-1.3.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-stacktrace-1.12.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-rand-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-sha2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-thiserror-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-serde-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectorplatforminterface-2.6.2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-flutterrustbridge-2.11.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-cargo-chacha20poly1305-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-fileselectorios-0.5.33-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-buildrunnercore-9.3.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-cliconfig-0.2.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-glob-2.1.3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-buildcliannotations-2.1.1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-pub-builddaemon-4.1.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relatedSpdxElement": "SPDXRef-githubactions-softprops-action-gh-release-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tedg-dev-xplatfileshare-main-37628c",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.ljharb/concat-map",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/34719207-03dd-45aa-b504-6914e4bd4908",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:09Z"
+    },
+    "packages": [
+      {
+        "name": "npmignore",
+        "SPDXID": "SPDXRef-npm-npmignore-0.3.0-8a0531",
+        "versionInfo": "^0.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/npmignore@%5E0.3.0"
+          }
+        ]
+      },
+      {
+        "name": "safe-publish-latest",
+        "SPDXID": "SPDXRef-npm-safe-publish-latest-2.0.0-1fce83",
+        "versionInfo": "^2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safe-publish-latest@%5E2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.6.1-26e8a0",
+        "versionInfo": "^5.6.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.6.1"
+          }
+        ]
+      },
+      {
+        "name": "@ljharb/eslint-config",
+        "SPDXID": "SPDXRef-npm-ljharb-eslint-config-21.0.0-bddeff",
+        "versionInfo": "^21.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40ljharb/eslint-config@%5E21.0.0"
+          }
+        ]
+      },
+      {
+        "name": "aud",
+        "SPDXID": "SPDXRef-npm-aud-2.0.1-51a609",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/aud@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "auto-changelog",
+        "SPDXID": "SPDXRef-npm-auto-changelog-2.4.0-303c87",
+        "versionInfo": "^2.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/auto-changelog@%5E2.4.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-8.8.0-fd5b41",
+        "versionInfo": "8.8.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2013-2016 Dulin Marat and other contributors, Copyright OpenJS Foundation and other contributors, <www.openjsf.org>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@8.8.0"
+          }
+        ]
+      },
+      {
+        "name": "in-publish",
+        "SPDXID": "SPDXRef-npm-in-publish-2.0.1-0636f0",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/in-publish@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/pretest.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/pretest.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/rebase",
+        "SPDXID": "SPDXRef-githubactions-ljharb-rebase-master-75c946",
+        "versionInfo": "master",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/rebase@master"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+        "versionInfo": "3.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@3.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/require-allow-edits",
+        "SPDXID": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/require-allow-edits@main"
+          }
+        ]
+      },
+      {
+        "name": "ljharb/actions/.github/workflows/node.yml",
+        "SPDXID": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "versionInfo": "main",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ljharb/actions/.github/workflows/node.yml@main"
+          }
+        ]
+      },
+      {
+        "name": "com.github.ljharb/concat-map",
+        "SPDXID": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/ljharb/concat-map",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/ljharb/concat-map@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-npmignore-0.3.0-8a0531",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-safe-publish-latest-2.0.0-1fce83",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.6.1-26e8a0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-ljharb-eslint-config-21.0.0-bddeff",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-aud-2.0.1-51a609",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-auto-changelog-2.4.0-303c87",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-8.8.0-fd5b41",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-npm-in-publish-2.0.1-0636f0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-pretest.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharb-rebase-master-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharb-require-allow-edits-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relatedSpdxElement": "SPDXRef-githubactions-ljharbactions.githubworkflows-node.yml-main-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-ljharb-concat-map-main-bc863b",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

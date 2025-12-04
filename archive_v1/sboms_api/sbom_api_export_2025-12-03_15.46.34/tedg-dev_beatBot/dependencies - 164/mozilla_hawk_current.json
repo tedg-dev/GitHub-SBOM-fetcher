@@ -1,0 +1,229 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.mozilla/hawk",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/3e5a051d-a052-453b-98b3-62baf83c77b8",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:35Z"
+    },
+    "packages": [
+      {
+        "name": "@hapi/cryptiles",
+        "SPDXID": "SPDXRef-npm-hapi-cryptiles-5.x.x-fd991e",
+        "versionInfo": "5.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/cryptiles@5.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/hoek",
+        "SPDXID": "SPDXRef-npm-hapi-hoek-9.x.x-438b22",
+        "versionInfo": "9.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/hoek@9.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/code",
+        "SPDXID": "SPDXRef-npm-hapi-code-8.x.x-da27be",
+        "versionInfo": "8.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/code@8.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/lab",
+        "SPDXID": "SPDXRef-npm-hapi-lab-22.x.x-f28362",
+        "versionInfo": "22.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/lab@22.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/b64",
+        "SPDXID": "SPDXRef-npm-hapi-b64-5.x.x-8b80f0",
+        "versionInfo": "5.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/b64@5.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/boom",
+        "SPDXID": "SPDXRef-npm-hapi-boom-9.x.x-69b9cf",
+        "versionInfo": "9.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/boom@9.x.x"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/init",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/init@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/analyze",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/autobuild",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-autobuild-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/autobuild@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.mozilla/hawk",
+        "SPDXID": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/mozilla/hawk",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/mozilla/hawk@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-cryptiles-5.x.x-fd991e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-hoek-9.x.x-438b22",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-code-8.x.x-da27be",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-lab-22.x.x-f28362",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-b64-5.x.x-8b80f0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-boom-9.x.x-69b9cf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-autobuild-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-mozilla-hawk-main-d4dc7d",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

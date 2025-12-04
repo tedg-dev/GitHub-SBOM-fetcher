@@ -1,0 +1,135 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.jprichardson/node-klaw",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/739d3ff4-b59d-4dd0-8891-6c3a556714c8",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:05:48Z"
+    },
+    "packages": [
+      {
+        "name": "standard",
+        "SPDXID": "SPDXRef-npm-standard-16.0.3-6e8f68",
+        "versionInfo": "^16.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/standard@%5E16.0.3"
+          }
+        ]
+      },
+      {
+        "name": "tap-spec",
+        "SPDXID": "SPDXRef-npm-tap-spec-5.0.0-7e59dd",
+        "versionInfo": "^5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap-spec@%5E5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.3.1-2149fc",
+        "versionInfo": "^5.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.3.1"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-3-75c946",
+        "versionInfo": "3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@3"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-3-75c946",
+        "versionInfo": "3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@3"
+          }
+        ]
+      },
+      {
+        "name": "com.github.jprichardson/node-klaw",
+        "SPDXID": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/jprichardson/node-klaw",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/jprichardson/node-klaw@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "relatedSpdxElement": "SPDXRef-npm-standard-16.0.3-6e8f68",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "relatedSpdxElement": "SPDXRef-npm-tap-spec-5.0.0-7e59dd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.3.1-2149fc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-3-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-jprichardson-node-klaw-master-f084c2",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.hapijs/cryptiles",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/86909371-fdf1-4830-bded-42bd03e024f8",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:56Z"
+    },
+    "packages": [
+      {
+        "name": "@hapi/code",
+        "SPDXID": "SPDXRef-npm-hapi-code-9.0.3-395e6f",
+        "versionInfo": "^9.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/code@%5E9.0.3"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/eslint-plugin",
+        "SPDXID": "SPDXRef-npm-hapi-eslint-plugin-6.0.0-540011",
+        "versionInfo": "^6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/eslint-plugin@%5E6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/lab",
+        "SPDXID": "SPDXRef-npm-hapi-lab-25.1.2-6e4da6",
+        "versionInfo": "^25.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/lab@%5E25.1.2"
+          }
+        ]
+      },
+      {
+        "name": "@types/node",
+        "SPDXID": "SPDXRef-npm-types-node-17.0.31-3b6188",
+        "versionInfo": "^17.0.31",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/node@%5E17.0.31"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-4.6.4-feb58a",
+        "versionInfo": "~4.6.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@~4.6.4"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/boom",
+        "SPDXID": "SPDXRef-npm-hapi-boom-10.0.1-c716f3",
+        "versionInfo": "^10.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/boom@%5E10.0.1"
+          }
+        ]
+      },
+      {
+        "name": "hapijs/.github/.github/workflows/ci-module.yml",
+        "SPDXID": "SPDXRef-githubactions-hapijs.github.githubworkflows-ci-module.yml-master-75c946",
+        "versionInfo": "master",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/hapijs/.github/.github/workflows/ci-module.yml@master"
+          }
+        ]
+      },
+      {
+        "name": "com.github.hapijs/cryptiles",
+        "SPDXID": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/hapijs/cryptiles",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/hapijs/cryptiles@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-code-9.0.3-395e6f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-eslint-plugin-6.0.0-540011",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-lab-25.1.2-6e4da6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-npm-types-node-17.0.31-3b6188",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-4.6.4-feb58a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-boom-10.0.1-c716f3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relatedSpdxElement": "SPDXRef-githubactions-hapijs.github.githubworkflows-ci-module.yml-master-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-hapijs-cryptiles-master-525da7",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

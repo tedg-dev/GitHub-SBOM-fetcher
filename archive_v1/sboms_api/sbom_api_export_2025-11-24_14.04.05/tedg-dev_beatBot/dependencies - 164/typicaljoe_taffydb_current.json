@@ -1,0 +1,135 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.typicaljoe/taffydb",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/94654ebc-6085-454b-9024-ab0fc8edaeec",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:18Z"
+    },
+    "packages": [
+      {
+        "name": "nodeunit",
+        "SPDXID": "SPDXRef-npm-nodeunit-0.9.1-433934",
+        "versionInfo": "^0.9.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nodeunit@%5E0.9.1"
+          }
+        ]
+      },
+      {
+        "name": "nodeunit-b",
+        "SPDXID": "SPDXRef-npm-nodeunit-b-4.0.0-4d6489",
+        "versionInfo": "^4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nodeunit-b@%5E4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "node-inspector",
+        "SPDXID": "SPDXRef-npm-node-inspector-0.12.5-a5f466",
+        "versionInfo": "^0.12.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/node-inspector@%5E0.12.5"
+          }
+        ]
+      },
+      {
+        "name": "uglifyjs",
+        "SPDXID": "SPDXRef-npm-uglifyjs-2.4.10-60939a",
+        "versionInfo": "^2.4.10",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/uglifyjs@%5E2.4.10"
+          }
+        ]
+      },
+      {
+        "name": "jslint",
+        "SPDXID": "SPDXRef-npm-jslint-0.9.3-5e5482",
+        "versionInfo": "^0.9.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jslint@%5E0.9.3"
+          }
+        ]
+      },
+      {
+        "name": "com.github.typicaljoe/taffydb",
+        "SPDXID": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/typicaljoe/taffydb",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/typicaljoe/taffydb@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "relatedSpdxElement": "SPDXRef-npm-nodeunit-0.9.1-433934",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "relatedSpdxElement": "SPDXRef-npm-nodeunit-b-4.0.0-4d6489",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "relatedSpdxElement": "SPDXRef-npm-node-inspector-0.12.5-a5f466",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "relatedSpdxElement": "SPDXRef-npm-uglifyjs-2.4.10-60939a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "relatedSpdxElement": "SPDXRef-npm-jslint-0.9.3-5e5482",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-typicaljoe-taffydb-master-e147d1",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

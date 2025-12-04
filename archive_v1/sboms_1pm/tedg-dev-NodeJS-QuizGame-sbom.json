@@ -1,0 +1,112 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tedg-dev/NodeJS-QuizGame",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/1b3e2efa-6265-4f74-8442-5fe091e781d0",
+    "comment": "Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph#dependencies-included.",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251114150449-41a4ce8a9a95+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-14T22:53:49Z"
+    },
+    "packages": [
+      {
+        "name": "jade",
+        "SPDXID": "SPDXRef-npm-jade-e0ef4e",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jade"
+          }
+        ]
+      },
+      {
+        "name": "mongodb",
+        "SPDXID": "SPDXRef-npm-mongodb-2c5ac3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mongodb"
+          }
+        ]
+      },
+      {
+        "name": "mongoose",
+        "SPDXID": "SPDXRef-npm-mongoose-a1fdcc",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mongoose"
+          }
+        ]
+      },
+      {
+        "name": "express",
+        "SPDXID": "SPDXRef-npm-express-30918d",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/express"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tedg-dev/NodeJS-QuizGame",
+        "SPDXID": "SPDXRef-github-tedg-dev-NodeJS-QuizGame-master-ca54d2",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tedg-dev/NodeJS-QuizGame",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tedg-dev/NodeJS-QuizGame@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-NodeJS-QuizGame-master-ca54d2",
+        "relatedSpdxElement": "SPDXRef-npm-jade-e0ef4e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-NodeJS-QuizGame-master-ca54d2",
+        "relatedSpdxElement": "SPDXRef-npm-mongodb-2c5ac3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-NodeJS-QuizGame-master-ca54d2",
+        "relatedSpdxElement": "SPDXRef-npm-mongoose-a1fdcc",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tedg-dev-NodeJS-QuizGame-master-ca54d2",
+        "relatedSpdxElement": "SPDXRef-npm-express-30918d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tedg-dev-NodeJS-QuizGame-master-ca54d2",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

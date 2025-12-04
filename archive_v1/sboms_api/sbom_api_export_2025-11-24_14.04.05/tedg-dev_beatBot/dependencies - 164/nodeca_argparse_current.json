@@ -1,0 +1,134 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.nodeca/argparse",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/1017a107-2618-4208-8feb-1b8476a31e39",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:13Z"
+    },
+    "packages": [
+      {
+        "name": "@babel/plugin-syntax-class-properties",
+        "SPDXID": "SPDXRef-npm-babel-plugin-syntax-class-properties-7.10.4-73ff31",
+        "versionInfo": "^7.10.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40babel/plugin-syntax-class-properties@%5E7.10.4"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-7.5.0-36e8a3",
+        "versionInfo": "^7.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E7.5.0"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-8.0.1-cb1a10",
+        "versionInfo": "^8.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E8.0.1"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.1.0-6675f7",
+        "versionInfo": "^15.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@babel/eslint-parser",
+        "SPDXID": "SPDXRef-npm-babel-eslint-parser-7.11.0-8acf9a",
+        "versionInfo": "^7.11.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40babel/eslint-parser@%5E7.11.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.nodeca/argparse",
+        "SPDXID": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/nodeca/argparse",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/nodeca/argparse@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "relatedSpdxElement": "SPDXRef-npm-babel-plugin-syntax-class-properties-7.10.4-73ff31",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-7.5.0-36e8a3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-8.0.1-cb1a10",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.1.0-6675f7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "relatedSpdxElement": "SPDXRef-npm-babel-eslint-parser-7.11.0-8acf9a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-nodeca-argparse-master-8fee56",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

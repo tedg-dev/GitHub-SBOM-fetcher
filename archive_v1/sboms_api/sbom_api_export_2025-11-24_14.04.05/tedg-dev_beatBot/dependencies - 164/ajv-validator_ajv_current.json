@@ -1,0 +1,975 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.ajv-validator/ajv",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/1e8e6bdc-1280-4835-a942-af074d8ec719",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:42Z"
+    },
+    "packages": [
+      {
+        "name": "fast-uri",
+        "SPDXID": "SPDXRef-npm-fast-uri-3.0.1-ba7597",
+        "versionInfo": "^3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fast-uri@%5E3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "uri-js",
+        "SPDXID": "SPDXRef-npm-uri-js-4.4.1-e56e03",
+        "versionInfo": "^4.4.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/uri-js@%5E4.4.1"
+          }
+        ]
+      },
+      {
+        "name": "dayjs-plugin-utc",
+        "SPDXID": "SPDXRef-npm-dayjs-plugin-utc-0.1.2-6876b1",
+        "versionInfo": "^0.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/dayjs-plugin-utc@%5E0.1.2"
+          }
+        ]
+      },
+      {
+        "name": "if-node-version",
+        "SPDXID": "SPDXRef-npm-if-node-version-1.1.1-c3f1e7",
+        "versionInfo": "^1.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/if-node-version@%5E1.1.1"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-10.3.0-1a63ef",
+        "versionInfo": "^10.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E10.3.0"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-10.3.10-4d94ac",
+        "versionInfo": "^10.3.10",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@%5E10.3.10"
+          }
+        ]
+      },
+      {
+        "name": "karma-chrome-launcher",
+        "SPDXID": "SPDXRef-npm-karma-chrome-launcher-3.2.0-0b87b4",
+        "versionInfo": "^3.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma-chrome-launcher@%5E3.2.0"
+          }
+        ]
+      },
+      {
+        "name": "cross-env",
+        "SPDXID": "SPDXRef-npm-cross-env-7.0.3-0f71a8",
+        "versionInfo": "^7.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/cross-env@%5E7.0.3"
+          }
+        ]
+      },
+      {
+        "name": "rollup-plugin-terser",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-terser-7.0.2-a0e1a0",
+        "versionInfo": "^7.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rollup-plugin-terser@%5E7.0.2"
+          }
+        ]
+      },
+      {
+        "name": "husky",
+        "SPDXID": "SPDXRef-npm-husky-9.0.11-180411",
+        "versionInfo": "^9.0.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/husky@%5E9.0.11"
+          }
+        ]
+      },
+      {
+        "name": "@types/chai",
+        "SPDXID": "SPDXRef-npm-types-chai-4.3.11-091e7c",
+        "versionInfo": "^4.3.11",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/chai@%5E4.3.11"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/plugin-json",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-json-6.1.0-d938e6",
+        "versionInfo": "^6.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/plugin-json@%5E6.1.0"
+          }
+        ]
+      },
+      {
+        "name": "node-fetch",
+        "SPDXID": "SPDXRef-npm-node-fetch-3.3.2-7a6c40",
+        "versionInfo": "^3.3.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/node-fetch@%5E3.3.2"
+          }
+        ]
+      },
+      {
+        "name": "@typescript-eslint/eslint-plugin",
+        "SPDXID": "SPDXRef-npm-typescript-eslint-eslint-plugin-7.3.1-6c1a2f",
+        "versionInfo": "^7.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40typescript-eslint/eslint-plugin@%5E7.3.1"
+          }
+        ]
+      },
+      {
+        "name": "@types/mocha",
+        "SPDXID": "SPDXRef-npm-types-mocha-10.0.6-99a001",
+        "versionInfo": "^10.0.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/mocha@%5E10.0.6"
+          }
+        ]
+      },
+      {
+        "name": "js-beautify",
+        "SPDXID": "SPDXRef-npm-js-beautify-1.15.1-bfd627",
+        "versionInfo": "^1.15.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/js-beautify@%5E1.15.1"
+          }
+        ]
+      },
+      {
+        "name": "module-from-string",
+        "SPDXID": "SPDXRef-npm-module-from-string-3.3.0-eccdcd",
+        "versionInfo": "^3.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/module-from-string@%5E3.3.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-8.57.0-2055ef",
+        "versionInfo": "^8.57.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E8.57.0"
+          }
+        ]
+      },
+      {
+        "name": "json-schema-test",
+        "SPDXID": "SPDXRef-npm-json-schema-test-2.0.0-4f60b1",
+        "versionInfo": "^2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/json-schema-test@%5E2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "chai",
+        "SPDXID": "SPDXRef-npm-chai-4.4.1-0a9dc6",
+        "versionInfo": "^4.4.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/chai@%5E4.4.1"
+          }
+        ]
+      },
+      {
+        "name": "browserify",
+        "SPDXID": "SPDXRef-npm-browserify-17.0.0-00d524",
+        "versionInfo": "^17.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/browserify@%5E17.0.0"
+          }
+        ]
+      },
+      {
+        "name": "re2",
+        "SPDXID": "SPDXRef-npm-re2-1.20.9-949052",
+        "versionInfo": "^1.20.9",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/re2@%5E1.20.9"
+          }
+        ]
+      },
+      {
+        "name": "@typescript-eslint/parser",
+        "SPDXID": "SPDXRef-npm-typescript-eslint-parser-7.3.1-88e63e",
+        "versionInfo": "^7.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40typescript-eslint/parser@%5E7.3.1"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-5.3.3-6b2b97",
+        "versionInfo": "5.3.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "Apache-2.0",
+        "copyrightText": "(c) by W3C, Copyright (c) 1991-2017 Unicode, Inc., Copyright (c) 2018 The Khronos Group Inc., Copyright (c) 2018 WHATWG, Copyright (c) Microsoft Corporation, Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang) Disclaimers, Copyright (c) YEAR W3C(r) (MIT, ERCIM, Keio, Beihang). Disclaimers",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@5.3.3"
+          }
+        ]
+      },
+      {
+        "name": "ts-node",
+        "SPDXID": "SPDXRef-npm-ts-node-10.9.2-6b0254",
+        "versionInfo": "^10.9.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ts-node@%5E10.9.2"
+          }
+        ]
+      },
+      {
+        "name": "karma-mocha",
+        "SPDXID": "SPDXRef-npm-karma-mocha-2.0.1-6ec576",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma-mocha@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "jimp",
+        "SPDXID": "SPDXRef-npm-jimp-0.22.10-1e9883",
+        "versionInfo": "^0.22.10",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jimp@%5E0.22.10"
+          }
+        ]
+      },
+      {
+        "name": "prettier",
+        "SPDXID": "SPDXRef-npm-prettier-3.0.3-418b4e",
+        "versionInfo": "3.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "(c) Z0 (c), Copyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>, Copyright (c) 2011-2015 by Vitaly Puzrin, Copyright (c) 2011-2015 Paul Vorbach <paul@vorba.ch>, Copyright (c) 2011-2016 Heather Arthur <fayearthur@gmail.com>, Copyright (c) 2012 by Jun Woong, Copyright (c) 2012 EditorConfig Team, Copyright (c) 2012-2014 by various contributors, Copyright (c) 2012-2014 Raynos, Copyright (c) 2012-2017 by Ingvar Stepanyan, Copyright (c) 2012-2018 Aseem Kishore, and others, Copyright (c) 2012-2022 by various contributors, Copyright (c) 2013 Andrey Sitnik <andrey@sitnik.ru>, Copyright (c) 2013 Dominic Tarr, Copyright (c) 2013 James Halliday, Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>, Copyright (c) 2013 Kael Zhang <i@kael.me> , contributors http://kael.me, Copyright (c) 2013 Liucw, Copyright (c) 2013 Mikola Lysenko, Copyright (c) 2014 Alex Bell, Copyright (c) 2014 Stefan Thomas, Copyright (c) 2014 Yehuda Katz and contributors, Copyright (c) 2014-2016, Jon Schlinkert, Copyright (c) 2014-2017, Jon Schlinkert, Copyright (c) 2014-2018, Jon Schlinkert, Copyright (c) 2014-2020 Teambition, Copyright (c) 2014-present Sebastian McKenzie and other contributors, Copyright (c) 2014-present, Jon Schlinkert, Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell, Copyright (c) 2015 Brian Donovan, Copyright (c) 2015 David Clark, Copyright (c) 2015 Dmitry Ivanov, Copyright (c) 2015 Elijah Insua, Copyright (c) 2015 JD Ballard, Copyright (c) 2015 Matteo Collina, Copyright (c) 2015 Tilde, Inc., Copyright (c) 2015 Titus Wormer, Copyright (c) 2015 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2015-2020, Matteo Collina <matteo.collina@gmail.com>, Copyright (c) 2015-present, Jon Schlinkert, Copyright (c) 2015, 2019 Elan Shanker, Copyright (c) 2016 Denys Kniazevych <webschik@gmail.com>, Copyright (c) 2016 Joshua Holbrook, Copyright (c) 2016 Pat Sissons <patricksissons@gmail.com>, Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2016-2023 Thomas Watson Steen, Copyright (c) 2016, Mark Wubben, Copyright (c) 2016, Rebecca Turner <me@re-becca.org>, Copyright (c) 2017 Andrew Powell <andrew@shellscape.org>, Copyright (c) 2017 Evgeny Poberezkin, Copyright (c) 2017 Martin Munoz and contributors, Copyright (c) 2017 Permission, Copyright (c) 2017 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2017-present, Jon Schlinkert, Copyright (c) 2018-2020, Andrea Giammarchi, Copyright (c) 2019 and later, KFlash and others, Copyright (c) 2019 typescript-eslint and other contributors, Copyright (c) 2020 Titus Wormer <tituswormer@gmail.com>, Copyright (c) 2021 Alexey Raspopov, Kostiantyn Denysov, Anton Verinov, Copyright (c) 2021 Titus Wormer, Copyright (c) 2022 Sindre Sorhus, Copyright (c) Andrew Powell <andrew@shellscape.org>, Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info), Copyright (c) Denis Malinochkin, Copyright (c) Feross Aboukhadijeh, Copyright (c) GraphQL Contributors, Copyright (c) Ika <ikatyang@gmail.com> (https://github.com/ikatyang), Copyright (c) Isaac Z. Schlueter, Copyright (c) Isaac Z. Schlueter and Contributors, Copyright (c) James Long and contributors, Copyright (c) James Talmage <james@talmage.io> (https://github.com/jamestalmage), Copyright (c) Meta Platforms, Inc. and affiliates, Copyright (c) Open JS Foundation, Copyright (c) Petka Antonov Benjamin Gruenbaum, Copyright (c) Roy Riojas & Jared Wray, Copyright (c) Roy Riojas and Jared Wray, Copyright (c) Sam Verschueren <sam.verschueren@gmail.com>, Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com), Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com), Copyright 2013 Andrey Sitnik <andrey@sitnik.ru>, Copyright 2013 Thorsten Lorenz, Copyright 2017 Andrey Sitnik <andrey@sitnik.ru>, Copyright 2017 Kat Marchan, Copyright 2018 Eemeli Aro <eemeli@gmail.com>, Copyright Joyent, Inc. and other Node contributors, Copyright JS Foundation and other contributors, https://js.foundation, Copyright Mathias Bynens <https://mathiasbynens.be/>, Copyright npm, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/prettier@3.0.3"
+          }
+        ]
+      },
+      {
+        "name": "dayjs",
+        "SPDXID": "SPDXRef-npm-dayjs-1.11.10-492eca",
+        "versionInfo": "^1.11.10",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/dayjs@%5E1.11.10"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.1.0-7418af",
+        "versionInfo": "^15.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.1.0"
+          }
+        ]
+      },
+      {
+        "name": "rollup",
+        "SPDXID": "SPDXRef-npm-rollup-2.79.1-0aab8e",
+        "versionInfo": "^2.79.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rollup@%5E2.79.1"
+          }
+        ]
+      },
+      {
+        "name": "@ajv-validator/config",
+        "SPDXID": "SPDXRef-npm-ajv-validator-config-0.5.0-aa8862",
+        "versionInfo": "^0.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40ajv-validator/config@%5E0.5.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-config-prettier",
+        "SPDXID": "SPDXRef-npm-eslint-config-prettier-9.1.0-c1a22b",
+        "versionInfo": "^9.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-config-prettier@%5E9.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/plugin-typescript",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-typescript-11.1.6-993ac6",
+        "versionInfo": "^11.1.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/plugin-typescript@%5E11.1.6"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/plugin-commonjs",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-25.0.7-08927b",
+        "versionInfo": "^25.0.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E25.0.7"
+          }
+        ]
+      },
+      {
+        "name": "@types/node",
+        "SPDXID": "SPDXRef-npm-types-node-20.11.30-420c68",
+        "versionInfo": "^20.11.30",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/node@%5E20.11.30"
+          }
+        ]
+      },
+      {
+        "name": "ajv-formats",
+        "SPDXID": "SPDXRef-npm-ajv-formats-3.0.1-4cbaa1",
+        "versionInfo": "^3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ajv-formats@%5E3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "json-schema-traverse",
+        "SPDXID": "SPDXRef-npm-json-schema-traverse-1.0.0-ddb3a1",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/json-schema-traverse@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/plugin-node-resolve",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-944dc5",
+        "versionInfo": "^15.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E15.2.3"
+          }
+        ]
+      },
+      {
+        "name": "tsify",
+        "SPDXID": "SPDXRef-npm-tsify-5.0.4-e93946",
+        "versionInfo": "^5.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tsify@%5E5.0.4"
+          }
+        ]
+      },
+      {
+        "name": "karma",
+        "SPDXID": "SPDXRef-npm-karma-6.4.2-264dfa",
+        "versionInfo": "^6.4.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma@%5E6.4.2"
+          }
+        ]
+      },
+      {
+        "name": "require-from-string",
+        "SPDXID": "SPDXRef-npm-require-from-string-2.0.2-175d69",
+        "versionInfo": "^2.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/require-from-string@%5E2.0.2"
+          }
+        ]
+      },
+      {
+        "name": "fast-deep-equal",
+        "SPDXID": "SPDXRef-npm-fast-deep-equal-3.1.3-126754",
+        "versionInfo": "^3.1.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fast-deep-equal@%5E3.1.3"
+          }
+        ]
+      },
+      {
+        "name": "@types/require-from-string",
+        "SPDXID": "SPDXRef-npm-types-require-from-string-1.2.3-67e35a",
+        "versionInfo": "^1.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/require-from-string@%5E1.2.3"
+          }
+        ]
+      },
+      {
+        "name": "lint-staged",
+        "SPDXID": "SPDXRef-npm-lint-staged-15.2.2-14a384",
+        "versionInfo": "^15.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/lint-staged@%5E15.2.2"
+          }
+        ]
+      },
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-2.1.4-945be1",
+        "versionInfo": "^2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@%5E2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "coverallsapp/github-action",
+        "SPDXID": "SPDXRef-githubactions-coverallsapp-github-action-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/coverallsapp/github-action@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.ajv-validator/ajv",
+        "SPDXID": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/ajv-validator/ajv",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/ajv-validator/ajv@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-fast-uri-3.0.1-ba7597",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-uri-js-4.4.1-e56e03",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-dayjs-plugin-utc-0.1.2-6876b1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-if-node-version-1.1.1-c3f1e7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-10.3.0-1a63ef",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-glob-10.3.10-4d94ac",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-karma-chrome-launcher-3.2.0-0b87b4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-cross-env-7.0.3-0f71a8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-terser-7.0.2-a0e1a0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-husky-9.0.11-180411",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-types-chai-4.3.11-091e7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-json-6.1.0-d938e6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-node-fetch-3.3.2-7a6c40",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-eslint-plugin-7.3.1-6c1a2f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-types-mocha-10.0.6-99a001",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-js-beautify-1.15.1-bfd627",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-module-from-string-3.3.0-eccdcd",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-8.57.0-2055ef",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-json-schema-test-2.0.0-4f60b1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-chai-4.4.1-0a9dc6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-browserify-17.0.0-00d524",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-re2-1.20.9-949052",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-eslint-parser-7.3.1-88e63e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-5.3.3-6b2b97",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-ts-node-10.9.2-6b0254",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-karma-mocha-2.0.1-6ec576",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-jimp-0.22.10-1e9883",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-prettier-3.0.3-418b4e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-dayjs-1.11.10-492eca",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.1.0-7418af",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-2.79.1-0aab8e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-ajv-validator-config-0.5.0-aa8862",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-config-prettier-9.1.0-c1a22b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-typescript-11.1.6-993ac6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-25.0.7-08927b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-types-node-20.11.30-420c68",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-ajv-formats-3.0.1-4cbaa1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-json-schema-traverse-1.0.0-ddb3a1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-15.2.3-944dc5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-tsify-5.0.4-e93946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-karma-6.4.2-264dfa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-require-from-string-2.0.2-175d69",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-fast-deep-equal-3.1.3-126754",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-types-require-from-string-1.2.3-67e35a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-lint-staged-15.2.2-14a384",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-2.1.4-945be1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relatedSpdxElement": "SPDXRef-githubactions-coverallsapp-github-action-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-ajv-validator-ajv-master-a1e6f4",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

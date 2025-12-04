@@ -1,0 +1,287 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-sshpk",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/0d1e5ca4-5303-4e86-b581-2fe3dcc8dadf",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:48:20Z"
+    },
+    "packages": [
+      {
+        "name": "sinon",
+        "SPDXID": "SPDXRef-npm-sinon-1.17.2-7ae7c1",
+        "versionInfo": "^1.17.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/sinon@%5E1.17.2"
+          }
+        ]
+      },
+      {
+        "name": "tweetnacl",
+        "SPDXID": "SPDXRef-npm-tweetnacl-0.14.0-f8af6f",
+        "versionInfo": "~0.14.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tweetnacl@~0.14.0"
+          }
+        ]
+      },
+      {
+        "name": "assert-plus",
+        "SPDXID": "SPDXRef-npm-assert-plus-1.0.0-408555",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/assert-plus@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-1.0.0-5edf08",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "temp",
+        "SPDXID": "SPDXRef-npm-temp-0.8.2-995b8a",
+        "versionInfo": "^0.8.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/temp@%5E0.8.2"
+          }
+        ]
+      },
+      {
+        "name": "getpass",
+        "SPDXID": "SPDXRef-npm-getpass-0.1.1-1de01f",
+        "versionInfo": "^0.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/getpass@%5E0.1.1"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-3.5.0-b7227f",
+        "versionInfo": "^3.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E3.5.0"
+          }
+        ]
+      },
+      {
+        "name": "jsbn",
+        "SPDXID": "SPDXRef-npm-jsbn-0.1.0-b7dc0a",
+        "versionInfo": "~0.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jsbn@~0.1.0"
+          }
+        ]
+      },
+      {
+        "name": "dashdash",
+        "SPDXID": "SPDXRef-npm-dashdash-1.12.0-f15e81",
+        "versionInfo": "^1.12.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/dashdash@%5E1.12.0"
+          }
+        ]
+      },
+      {
+        "name": "safer-buffer",
+        "SPDXID": "SPDXRef-npm-safer-buffer-2.0.2-e0aee2",
+        "versionInfo": "^2.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safer-buffer@%5E2.0.2"
+          }
+        ]
+      },
+      {
+        "name": "asn1",
+        "SPDXID": "SPDXRef-npm-asn1-0.2.3-4f1b69",
+        "versionInfo": "~0.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/asn1@~0.2.3"
+          }
+        ]
+      },
+      {
+        "name": "bcrypt-pbkdf",
+        "SPDXID": "SPDXRef-npm-bcrypt-pbkdf-1.0.0-4469ec",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/bcrypt-pbkdf@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "ecc-jsbn",
+        "SPDXID": "SPDXRef-npm-ecc-jsbn-0.1.1-808671",
+        "versionInfo": "~0.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ecc-jsbn@~0.1.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TritonDataCenter/node-sshpk",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-sshpk",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-sshpk@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-sinon-1.17.2-7ae7c1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-tweetnacl-0.14.0-f8af6f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-assert-plus-1.0.0-408555",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-1.0.0-5edf08",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-temp-0.8.2-995b8a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-getpass-0.1.1-1de01f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-tape-3.5.0-b7227f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-jsbn-0.1.0-b7dc0a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-dashdash-1.12.0-f15e81",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-safer-buffer-2.0.2-e0aee2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-asn1-0.2.3-4f1b69",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-bcrypt-pbkdf-1.0.0-4469ec",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relatedSpdxElement": "SPDXRef-npm-ecc-jsbn-0.1.1-808671",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-sshpk-master-a2434c",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

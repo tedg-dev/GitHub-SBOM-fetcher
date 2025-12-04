@@ -1,0 +1,153 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TooTallNate/node-speaker",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/88ba365e-1ffc-45d2-90f7-3c959f02948a",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:59Z"
+    },
+    "packages": [
+      {
+        "name": "bindings",
+        "SPDXID": "SPDXRef-npm-bindings-1.3.0-a5fa3e",
+        "versionInfo": "^1.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/bindings@%5E1.3.0"
+          }
+        ]
+      },
+      {
+        "name": "buffer-alloc",
+        "SPDXID": "SPDXRef-npm-buffer-alloc-1.1.0-333d3c",
+        "versionInfo": "^1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/buffer-alloc@%5E1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "debug",
+        "SPDXID": "SPDXRef-npm-debug-4.0.0-907b6f",
+        "versionInfo": "^4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/debug@%5E4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@types/node",
+        "SPDXID": "SPDXRef-npm-types-node-12.12.14-88a579",
+        "versionInfo": "^12.12.14",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/node@%5E12.12.14"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-6.2.2-a81e1d",
+        "versionInfo": "^6.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E6.2.2"
+          }
+        ]
+      },
+      {
+        "name": "standard",
+        "SPDXID": "SPDXRef-npm-standard-14.3.1-b78771",
+        "versionInfo": "^14.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/standard@%5E14.3.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TooTallNate/node-speaker",
+        "SPDXID": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TooTallNate/node-speaker",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TooTallNate/node-speaker@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relatedSpdxElement": "SPDXRef-npm-bindings-1.3.0-a5fa3e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relatedSpdxElement": "SPDXRef-npm-buffer-alloc-1.1.0-333d3c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relatedSpdxElement": "SPDXRef-npm-debug-4.0.0-907b6f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relatedSpdxElement": "SPDXRef-npm-types-node-12.12.14-88a579",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-6.2.2-a81e1d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relatedSpdxElement": "SPDXRef-npm-standard-14.3.1-b78771",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TooTallNate-node-speaker-master-78e8f8",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

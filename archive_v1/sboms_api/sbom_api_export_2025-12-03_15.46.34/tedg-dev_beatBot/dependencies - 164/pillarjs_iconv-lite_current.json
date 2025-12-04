@@ -1,0 +1,705 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.pillarjs/iconv-lite",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/9af74448-36c4-4d0b-92a1-70da691ecba4",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:49:16Z"
+    },
+    "packages": [
+      {
+        "name": "@arethetypeswrong/cli",
+        "SPDXID": "SPDXRef-npm-arethetypeswrong-cli-0.17.4-6d763e",
+        "versionInfo": "^0.17.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40arethetypeswrong/cli@%5E0.17.4"
+          }
+        ]
+      },
+      {
+        "name": "semver",
+        "SPDXID": "SPDXRef-npm-semver-6.3.0-257785",
+        "versionInfo": "^6.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/semver@%5E6.3.0"
+          }
+        ]
+      },
+      {
+        "name": "unorm",
+        "SPDXID": "SPDXRef-npm-unorm-1.6.0-51b7f5",
+        "versionInfo": "^1.6.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/unorm@%5E1.6.0"
+          }
+        ]
+      },
+      {
+        "name": "bench-node",
+        "SPDXID": "SPDXRef-npm-bench-node-0.10.0-473010",
+        "versionInfo": "^0.10.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/bench-node@%5E0.10.0"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-5.9.2-9d8bc2",
+        "versionInfo": "~5.9.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@~5.9.2"
+          }
+        ]
+      },
+      {
+        "name": "@types/node",
+        "SPDXID": "SPDXRef-npm-types-node-24.0.12-4fd1eb",
+        "versionInfo": "^24.0.12",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/node@%5E24.0.12"
+          }
+        ]
+      },
+      {
+        "name": "async",
+        "SPDXID": "SPDXRef-npm-async-3.2.0-870b4d",
+        "versionInfo": "^3.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/async@%5E3.2.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-9.0.0-1057bf",
+        "versionInfo": "^9.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E9.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@stylistic/eslint-plugin",
+        "SPDXID": "SPDXRef-npm-stylistic-eslint-plugin-5.1.0-a52b3c",
+        "versionInfo": "^5.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40stylistic/eslint-plugin@%5E5.1.0"
+          }
+        ]
+      },
+      {
+        "name": "expect-type",
+        "SPDXID": "SPDXRef-npm-expect-type-1.2.0-79348d",
+        "versionInfo": "^1.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/expect-type@%5E1.2.0"
+          }
+        ]
+      },
+      {
+        "name": "errto",
+        "SPDXID": "SPDXRef-npm-errto-0.2.1-1f1149",
+        "versionInfo": "^0.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/errto@%5E0.2.1"
+          }
+        ]
+      },
+      {
+        "name": "iconv",
+        "SPDXID": "SPDXRef-npm-iconv-2.3.5-3d9526",
+        "versionInfo": "^2.3.5",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/iconv@%5E2.3.5"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-14.1.1-d973c4",
+        "versionInfo": "^14.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E14.1.1"
+          }
+        ]
+      },
+      {
+        "name": "@stylistic/eslint-plugin-js",
+        "SPDXID": "SPDXRef-npm-stylistic-eslint-plugin-js-4.1.0-4c57b4",
+        "versionInfo": "^4.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40stylistic/eslint-plugin-js@%5E4.1.0"
+          }
+        ]
+      },
+      {
+        "name": "neostandard",
+        "SPDXID": "SPDXRef-npm-neostandard-0.12.0-7a04ed",
+        "versionInfo": "^0.12.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/neostandard@%5E0.12.0"
+          }
+        ]
+      },
+      {
+        "name": "request",
+        "SPDXID": "SPDXRef-npm-request-2.88.2-2b608a",
+        "versionInfo": "^2.88.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/request@%5E2.88.2"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-6.2.2-e52930",
+        "versionInfo": "^6.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E6.2.2"
+          }
+        ]
+      },
+      {
+        "name": "safer-buffer",
+        "SPDXID": "SPDXRef-npm-safer-buffer-2.1.23.0.0-0c069b",
+        "versionInfo": ">= 2.1.2 < 3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/safer-buffer@%3E%3D%202.1.2%20%3C%203.0.0"
+          }
+        ]
+      },
+      {
+        "name": "karma-chrome-launcher",
+        "SPDXID": "SPDXRef-npm-karma-chrome-launcher-3.1.0-ad2e51",
+        "versionInfo": "^3.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma-chrome-launcher@%5E3.1.0"
+          }
+        ]
+      },
+      {
+        "name": "karma-mocha",
+        "SPDXID": "SPDXRef-npm-karma-mocha-2.0.1-0d57a7",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma-mocha@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "karma-webpack",
+        "SPDXID": "SPDXRef-npm-karma-webpack-4.0.2-309c02",
+        "versionInfo": "^4.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma-webpack@%5E4.0.2"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-7.2.0-2eeee9",
+        "versionInfo": "^7.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E7.2.0"
+          }
+        ]
+      },
+      {
+        "name": "puppeteer",
+        "SPDXID": "SPDXRef-npm-puppeteer-4.0.0-76d2fe",
+        "versionInfo": "^4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/puppeteer@%5E4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "webpack",
+        "SPDXID": "SPDXRef-npm-webpack-4.43.0-a43623",
+        "versionInfo": "^4.43.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/webpack@%5E4.43.0"
+          }
+        ]
+      },
+      {
+        "name": "karma",
+        "SPDXID": "SPDXRef-npm-karma-5.0.9-7a1d6b",
+        "versionInfo": "^5.0.9",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/karma@%5E5.0.9"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-6..-75c946",
+        "versionInfo": "6.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@6.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/download-artifact",
+        "SPDXID": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+        "versionInfo": "6.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/download-artifact@6.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/upload-artifact",
+        "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/upload-artifact@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "coverallsapp/github-action",
+        "SPDXID": "SPDXRef-githubactions-coverallsapp-github-action-2..-75c946",
+        "versionInfo": "2.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/coverallsapp/github-action@2.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+        "versionInfo": "5.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493-75c946",
+        "versionInfo": "ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/init",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-0499de31b99561a6d14a36a5f662c2a54f91beee-75c946",
+        "versionInfo": "0499de31b99561a6d14a36a5f662c2a54f91beee",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/init@0499de31b99561a6d14a36a5f662c2a54f91beee"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/analyze",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-0499de31b99561a6d14a36a5f662c2a54f91beee-75c946",
+        "versionInfo": "0499de31b99561a6d14a36a5f662c2a54f91beee",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@0499de31b99561a6d14a36a5f662c2a54f91beee"
+          }
+        ]
+      },
+      {
+        "name": "com.github.pillarjs/iconv-lite",
+        "SPDXID": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/pillarjs/iconv-lite",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/pillarjs/iconv-lite@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-arethetypeswrong-cli-0.17.4-6d763e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-semver-6.3.0-257785",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-unorm-1.6.0-51b7f5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-bench-node-0.10.0-473010",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-5.9.2-9d8bc2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-types-node-24.0.12-4fd1eb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-async-3.2.0-870b4d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-9.0.0-1057bf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-stylistic-eslint-plugin-5.1.0-a52b3c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-expect-type-1.2.0-79348d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-errto-0.2.1-1f1149",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-iconv-2.3.5-3d9526",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-14.1.1-d973c4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-stylistic-eslint-plugin-js-4.1.0-4c57b4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-neostandard-0.12.0-7a04ed",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-request-2.88.2-2b608a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-6.2.2-e52930",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-safer-buffer-2.1.23.0.0-0c069b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-karma-chrome-launcher-3.1.0-ad2e51",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-karma-mocha-2.0.1-0d57a7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-karma-webpack-4.0.2-309c02",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-7.2.0-2eeee9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-puppeteer-4.0.0-76d2fe",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-webpack-4.43.0-a43623",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-npm-karma-5.0.9-7a1d6b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-download-artifact-6..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-ff7abcd0c3c05ccf6adc123a8cd1fd4fb30fb493-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-6..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-coverallsapp-github-action-2..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-0499de31b99561a6d14a36a5f662c2a54f91beee-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-0499de31b99561a6d14a36a5f662c2a54f91beee-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-pillarjs-iconv-lite-master-16ba1f",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

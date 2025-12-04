@@ -1,0 +1,78 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.felixge/node-combined-stream",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/d0ed2457-59f6-4aa7-b261-f4e3c599bf68",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T01:49:31Z"
+    },
+    "packages": [
+      {
+        "name": "far",
+        "SPDXID": "SPDXRef-npm-far-0.0.7-514695",
+        "versionInfo": "~0.0.7",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/far@~0.0.7"
+          }
+        ]
+      },
+      {
+        "name": "delayed-stream",
+        "SPDXID": "SPDXRef-npm-delayed-stream-1.0.0-33f75b",
+        "versionInfo": "~1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/delayed-stream@~1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.felixge/node-combined-stream",
+        "SPDXID": "SPDXRef-github-felixge-node-combined-stream-master-4d5958",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/felixge/node-combined-stream",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/felixge/node-combined-stream@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-felixge-node-combined-stream-master-4d5958",
+        "relatedSpdxElement": "SPDXRef-npm-far-0.0.7-514695",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-felixge-node-combined-stream-master-4d5958",
+        "relatedSpdxElement": "SPDXRef-npm-delayed-stream-1.0.0-33f75b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-felixge-node-combined-stream-master-4d5958",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

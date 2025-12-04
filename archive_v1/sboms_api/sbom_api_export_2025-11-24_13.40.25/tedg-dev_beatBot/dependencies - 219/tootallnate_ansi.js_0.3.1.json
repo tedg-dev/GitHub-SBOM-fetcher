@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TooTallNate/ansi.js",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/d1f8bdf6-3f28-404a-a767-4d600f8a8eca",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:42:47Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.TooTallNate/ansi.js",
+        "SPDXID": "SPDXRef-github-TooTallNate-ansi.js-master-43b831",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TooTallNate/ansi.js",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TooTallNate/ansi.js@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TooTallNate-ansi.js-master-43b831",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

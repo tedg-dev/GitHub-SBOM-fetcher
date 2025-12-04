@@ -1,0 +1,39 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.dscape/cycle",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/1fa76998-79b1-4790-9577-73bba8abbed0",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:31Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.dscape/cycle",
+        "SPDXID": "SPDXRef-github-dscape-cycle-master-9d2e1c",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/dscape/cycle",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/dscape/cycle@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-dscape-cycle-master-9d2e1c",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

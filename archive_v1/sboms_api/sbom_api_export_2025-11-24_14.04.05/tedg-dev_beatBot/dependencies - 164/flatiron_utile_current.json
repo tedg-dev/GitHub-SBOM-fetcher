@@ -1,0 +1,173 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.flatiron/utile",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/c7fefc20-f7dc-4985-99fa-8f8e290412b8",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:06:13Z"
+    },
+    "packages": [
+      {
+        "name": "async",
+        "SPDXID": "SPDXRef-npm-async-0.9.0-22ecfa",
+        "versionInfo": "~0.9.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/async@~0.9.0"
+          }
+        ]
+      },
+      {
+        "name": "vows",
+        "SPDXID": "SPDXRef-npm-vows-0.8.x-89c8b1",
+        "versionInfo": "0.8.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vows@0.8.x"
+          }
+        ]
+      },
+      {
+        "name": "deep-equal",
+        "SPDXID": "SPDXRef-npm-deep-equal-0.2.1-fa6195",
+        "versionInfo": "~0.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/deep-equal@~0.2.1"
+          }
+        ]
+      },
+      {
+        "name": "i",
+        "SPDXID": "SPDXRef-npm-i-0.3.x-5ec50d",
+        "versionInfo": "0.3.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/i@0.3.x"
+          }
+        ]
+      },
+      {
+        "name": "mkdirp",
+        "SPDXID": "SPDXRef-npm-mkdirp-0.x.x-66951c",
+        "versionInfo": "0.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mkdirp@0.x.x"
+          }
+        ]
+      },
+      {
+        "name": "ncp",
+        "SPDXID": "SPDXRef-npm-ncp-1.0.x-1d015c",
+        "versionInfo": "1.0.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ncp@1.0.x"
+          }
+        ]
+      },
+      {
+        "name": "rimraf",
+        "SPDXID": "SPDXRef-npm-rimraf-2.x.x-339e88",
+        "versionInfo": "2.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rimraf@2.x.x"
+          }
+        ]
+      },
+      {
+        "name": "com.github.flatiron/utile",
+        "SPDXID": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/flatiron/utile",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/flatiron/utile@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-async-0.9.0-22ecfa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-vows-0.8.x-89c8b1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-deep-equal-0.2.1-fa6195",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-i-0.3.x-5ec50d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-mkdirp-0.x.x-66951c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-ncp-1.0.x-1d015c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relatedSpdxElement": "SPDXRef-npm-rimraf-2.x.x-339e88",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-flatiron-utile-master-1451bf",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

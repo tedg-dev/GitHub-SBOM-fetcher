@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.isaacs/wrappy",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/dabba401-413f-4923-bb04-32fc5ef13410",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:42:19Z"
+    },
+    "packages": [
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-2.3.1-1e9938",
+        "versionInfo": "^2.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@%5E2.3.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.isaacs/wrappy",
+        "SPDXID": "SPDXRef-github-isaacs-wrappy-main-dfa39a",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/isaacs/wrappy",
+        "filesAnalyzed": false,
+        "licenseDeclared": "ISC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/isaacs/wrappy@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-isaacs-wrappy-main-dfa39a",
+        "relatedSpdxElement": "SPDXRef-npm-tap-2.3.1-1e9938",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-isaacs-wrappy-main-dfa39a",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

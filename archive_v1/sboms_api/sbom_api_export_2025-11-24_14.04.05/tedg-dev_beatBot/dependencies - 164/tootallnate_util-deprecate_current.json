@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TooTallNate/util-deprecate",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/47999833-672d-444d-a5f6-eb77e8abdea5",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:13Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.TooTallNate/util-deprecate",
+        "SPDXID": "SPDXRef-github-TooTallNate-util-deprecate-master-00d362",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TooTallNate/util-deprecate",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TooTallNate/util-deprecate@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TooTallNate-util-deprecate-master-00d362",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

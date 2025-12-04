@@ -1,0 +1,80 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-assert-plus",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/c372c7a2-0edd-4d2c-83c7-90280110ce45",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:42:35Z"
+    },
+    "packages": [
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-4.2.2-21c650",
+        "versionInfo": "4.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@4.2.2"
+          }
+        ]
+      },
+      {
+        "name": "faucet",
+        "SPDXID": "SPDXRef-npm-faucet-0.0.1-b326af",
+        "versionInfo": "0.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/faucet@0.0.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TritonDataCenter/node-assert-plus",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-assert-plus-master-43f8ea",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-assert-plus",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-assert-plus@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-assert-plus-master-43f8ea",
+        "relatedSpdxElement": "SPDXRef-npm-tape-4.2.2-21c650",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-assert-plus-master-43f8ea",
+        "relatedSpdxElement": "SPDXRef-npm-faucet-0.0.1-b326af",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-assert-plus-master-43f8ea",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.gruntjs/grunt-known-options",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/e5b32146-ce56-4e28-8889-fccf267f51e7",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:53Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.gruntjs/grunt-known-options",
+        "SPDXID": "SPDXRef-github-gruntjs-grunt-known-options-main-1946c7",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/gruntjs/grunt-known-options",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/gruntjs/grunt-known-options@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-gruntjs-grunt-known-options-main-1946c7",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

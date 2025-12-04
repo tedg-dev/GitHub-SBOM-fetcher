@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.pksunkara/inflect",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/46440314-0b7b-4ec0-ab70-a033431f8b0d",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:32Z"
+    },
+    "packages": [
+      {
+        "name": "vows",
+        "SPDXID": "SPDXRef-npm-vows-0.8.2-24ef78",
+        "versionInfo": "^0.8.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vows@%5E0.8.2"
+          }
+        ]
+      },
+      {
+        "name": "com.github.pksunkara/inflect",
+        "SPDXID": "SPDXRef-github-pksunkara-inflect-master-4720c2",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/pksunkara/inflect",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/pksunkara/inflect@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-pksunkara-inflect-master-4720c2",
+        "relatedSpdxElement": "SPDXRef-npm-vows-0.8.2-24ef78",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-pksunkara-inflect-master-4720c2",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TritonDataCenter/node-jsprim",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/2b0bc61e-f633-44f3-a06f-2b523cfd3f25",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-25T00:07:28Z"
+    },
+    "packages": [
+      {
+        "name": "json-schema",
+        "SPDXID": "SPDXRef-npm-json-schema-0.4.0-7f0d08",
+        "versionInfo": "0.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "AFL-2.1 AND AFL-3.0 AND BSD-3-Clause",
+        "copyrightText": "Copyright (c) 2003-2004 Lawrence E. Rosen, Copyright (c) 2005-2015, The Dojo Foundation",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/json-schema@0.4.0"
+          }
+        ]
+      },
+      {
+        "name": "verror",
+        "SPDXID": "SPDXRef-npm-verror-1.10.0-714c2a",
+        "versionInfo": "1.10.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2016, Joyent, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/verror@1.10.0"
+          }
+        ]
+      },
+      {
+        "name": "assert-plus",
+        "SPDXID": "SPDXRef-npm-assert-plus-1.0.0-c979ac",
+        "versionInfo": "1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2012 Mark Cavage, Copyright (c) 2012, Mark Cavage, Copyright 2015 Joyent, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/assert-plus@1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "extsprintf",
+        "SPDXID": "SPDXRef-npm-extsprintf-1.3.0-b3554a",
+        "versionInfo": "1.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2012, Joyent, Inc.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/extsprintf@1.3.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TritonDataCenter/node-jsprim",
+        "SPDXID": "SPDXRef-github-TritonDataCenter-node-jsprim-master-4af438",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TritonDataCenter/node-jsprim",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TritonDataCenter/node-jsprim@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-jsprim-master-4af438",
+        "relatedSpdxElement": "SPDXRef-npm-json-schema-0.4.0-7f0d08",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-jsprim-master-4af438",
+        "relatedSpdxElement": "SPDXRef-npm-verror-1.10.0-714c2a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-jsprim-master-4af438",
+        "relatedSpdxElement": "SPDXRef-npm-assert-plus-1.0.0-c979ac",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-TritonDataCenter-node-jsprim-master-4af438",
+        "relatedSpdxElement": "SPDXRef-npm-extsprintf-1.3.0-b3554a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TritonDataCenter-node-jsprim-master-4af438",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

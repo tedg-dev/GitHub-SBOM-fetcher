@@ -1,0 +1,78 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.feross/safe-buffer",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/82c2335a-1313-4195-84dc-f30680bcaac9",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251124195139-0b0afb0105b3+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-11-24T23:43:12Z"
+    },
+    "packages": [
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.0.1-049bd1",
+        "versionInfo": "^5.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.0.1"
+          }
+        ]
+      },
+      {
+        "name": "standard",
+        "SPDXID": "SPDXRef-npm-standard--df484b",
+        "versionInfo": "*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/standard@%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.feross/safe-buffer",
+        "SPDXID": "SPDXRef-github-feross-safe-buffer-master-6a8740",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/feross/safe-buffer",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/feross/safe-buffer@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-feross-safe-buffer-master-6a8740",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.0.1-049bd1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-feross-safe-buffer-master-6a8740",
+        "relatedSpdxElement": "SPDXRef-npm-standard--df484b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-feross-safe-buffer-master-6a8740",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}
