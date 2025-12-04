@@ -37,7 +37,7 @@ class MarkdownReporter:
         Returns:
             Filename of generated report
         """
-        md_filename = f"{owner}_{repo}_execution_report.md"
+        md_filename = f"{repo}_execution_report.md"
         md_path = output_dir / md_filename
 
         # Prepare data

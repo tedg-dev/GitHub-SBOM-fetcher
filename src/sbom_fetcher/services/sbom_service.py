@@ -71,9 +71,7 @@ class SBOMFetcherService:
 
         # Create output directory with timestamp
         timestamp = datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
-        output_base = (
-            Path(self._config.output_dir) / f"sbom_api_export_{timestamp}" / f"{owner}_{repo}"
-        )
+        output_base = Path(self._config.output_dir) / f"sbom_api_export_{timestamp}"
         output_base.mkdir(parents=True, exist_ok=True)
 
         deps_dir = output_base / "dependencies"
@@ -293,8 +291,8 @@ class SBOMFetcherService:
 
 
 def save_root_sbom(sbom_data: Dict[str, Any], output_dir: str, owner: str, repo: str) -> None:
-    """Save the root repository's SBOM (preserves original function)."""
-    filename = f"{owner}_{repo}_root.json"
+    """Save the root repository's SBOM (uses just repo name for clarity)."""
+    filename = f"{repo}_root.json"
     filepath = os.path.join(output_dir, filename)
 
     with open(filepath, "w") as f:
