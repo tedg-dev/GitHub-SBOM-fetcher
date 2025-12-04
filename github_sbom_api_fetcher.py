@@ -484,7 +484,7 @@ def save_root_sbom(sbom_data: Dict[str, Any], output_dir: str, owner: str, repo:
     logger.info("Saved root SBOM: %s", filename)
 
 
-def generate_rtf_report(
+def generate_markdown_report(
     output_dir: str,
     owner: str,
     repo: str,
@@ -492,9 +492,9 @@ def generate_rtf_report(
     packages: List['PackageDependency'],
     version_mapping: Dict[str, Dict[str, Any]]
 ) -> str:
-    """Generate an RTF report with execution details."""
-    rtf_filename = f"{owner}_{repo}_execution_report.rtf"
-    rtf_path = os.path.join(output_dir, rtf_filename)
+    """Generate a Markdown report with execution details."""
+    md_filename = f"{owner}_{repo}_execution_report.md"
+    md_path = os.path.join(output_dir, md_filename)
 
     # Prepare data
     no_github = [p for p in packages if not p.github_owner]
@@ -503,97 +503,63 @@ def generate_rtf_report(
         if len(data.get('versions_in_dependency_tree', [])) > 1
     ]
 
-    # RTF escape function
-    def rtf_escape(text: str) -> str:
-        """Escape special RTF characters."""
-        return (text.replace('\\', '\\\\')
-                .replace('{', '\\{')
-                .replace('}', '\\}'))
-
-    # Build RTF content
-    rtf_content = r"{\rtf1\ansi\deff0\nouicompat"
-    rtf_content += (r"{\fonttbl{\f0\fnil\fcharset0 Courier New;}"
-                    r"{\f1\fnil\fcharset0 Arial;}}")
-    rtf_content += (r"{\colortbl ;\red0\green0\blue255;"
-                    r"\red0\green128\blue0;\red255\green0\blue0;}")
-    rtf_content += "\n\n"
+    # Build Markdown content
+    md_content = []
 
     # Header
-    rtf_content += (r"\f1\fs32\b GitHub SBOM API Fetcher - "
-                    r"Execution Report\b0\fs20\par" + "\n")
-    rtf_content += r"\par" + "\n"
+    md_content.append("# GitHub SBOM API Fetcher - Execution Report\n")
 
     # Metadata
-    rtf_content += (r"\b Repository:\b0 " +
-                    rtf_escape(f"{owner}/{repo}") + r"\par" + "\n")
     exec_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    rtf_content += (r"\b Execution Date:\b0 " +
-                    exec_date + r"\par" + "\n")
-    rtf_content += (r"\b Output Directory:\b0 " +
-                    rtf_escape(output_dir) + r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
+    md_content.append(f"**Repository:** `{owner}/{repo}`  ")
+    md_content.append(f"**Execution Date:** {exec_date}  ")
+    md_content.append(f"**Output Directory:** `{output_dir}`\n")
 
     # Summary Section
-    rtf_content += r"\fs28\b SUMMARY\b0\fs20\par" + "\n"
-    rtf_content += "="*70 + r"\par" + "\n"
-    rtf_content += r"\par" + "\n"
-
-    rtf_content += (r"\b Packages in root SBOM:\b0 " +
-                    str(stats.packages_in_sbom) + r"\par" + "\n")
-    rtf_content += (r"\b Mapped to GitHub repos:\b0 " +
-                    str(stats.github_repos_mapped) + r"\par" + "\n")
-    rtf_content += (r"\b Unique repositories:\b0 " +
-                    str(stats.unique_repos) + r"\par" + "\n")
-    rtf_content += (r"\b Duplicate versions skipped:\b0 " +
-                    str(stats.duplicates_skipped) + r"\par" + "\n")
-    rtf_content += (r"\b Packages without GitHub repos:\b0 " +
-                    str(stats.packages_without_github) + r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
-    rtf_content += (r"\b SBOMs downloaded successfully:\b0 \cf2 " +
-                    str(stats.sboms_downloaded) + r"\cf0\par" + "\n")
-    rtf_content += (r"\b SBOMs failed:\b0 \cf3 " +
-                    str(stats.sboms_failed) + r"\cf0\par" + "\n")
-    rtf_content += (r"\b Elapsed time:\b0 " +
-                    stats.elapsed_time() + r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
+    md_content.append("## Summary\n")
+    md_content.append(f"- **Packages in root SBOM:** {stats.packages_in_sbom}")
+    md_content.append(
+        f"- **Mapped to GitHub repos:** {stats.github_repos_mapped}")
+    md_content.append(f"- **Unique repositories:** {stats.unique_repos}")
+    md_content.append(
+        f"- **Duplicate versions skipped:** {stats.duplicates_skipped}")
+    md_content.append(
+        f"- **Packages without GitHub repos:** "
+        f"{stats.packages_without_github}\n")
+    md_content.append(
+        f"- **SBOMs downloaded successfully:** "
+        f"✅ **{stats.sboms_downloaded}**")
+    md_content.append(
+        f"- **SBOMs failed:** ❌ **{stats.sboms_failed}**")
+    md_content.append(f"- **Elapsed time:** {stats.elapsed_time()}\n")
 
     # Important Note
-    rtf_content += r"\fs24\b\i NOTE\i0\b0\fs20\par" + "\n"
-    rtf_content += ("GitHub's SBOM API only provides SBOMs for the "
-                    "current state of " + r"\par" + "\n")
-    rtf_content += ("repositories (default branch), not for specific "
-                    "versions. " + r"\par" + "\n")
-    rtf_content += ("See version_mapping.json for details on version "
-                    "deduplication." + r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
-    
+    md_content.append("### ⚠️ Important Note\n")
+    md_content.append(
+        "> GitHub's SBOM API only provides SBOMs for the current state "
+        "of repositories (default branch), not for specific versions.")
+    md_content.append(
+        "> See `version_mapping.json` for details on version "
+        "deduplication.\n")
+
     # Packages Without GitHub Repositories
     if no_github:
-        rtf_content += (r"\fs28\b PACKAGES WITHOUT GITHUB REPOSITORIES"
-                        r"\b0\fs20\par" + "\n")
-        rtf_content += "="*70 + r"\par" + "\n"
-        rtf_content += r"\par" + "\n"
-
-        for pkg in no_github[:50]:  # Include up to 50 in report
+        md_content.append("## Packages Without GitHub Repositories\n")
+        for pkg in no_github[:50]:
             pkg_info = f"{pkg.name} ({pkg.ecosystem}) @ {pkg.version}"
-            rtf_content += (r"  \f0 " + rtf_escape(pkg_info) +
-                            r"\f1\par" + "\n")
+            md_content.append(f"- `{pkg_info}`")
 
         if len(no_github) > 50:
-            rtf_content += (r"  ... and " + str(len(no_github) - 50) +
-                            " more" + r"\par" + "\n")
-        rtf_content += r"\par" + "\n"
-    
+            md_content.append(f"\n*... and {len(no_github) - 50} more*\n")
+        else:
+            md_content.append("")
+
     # Repositories with Multiple Versions
     if repos_with_multiple_versions:
-        rtf_content += (r"\fs28\b REPOSITORIES WITH MULTIPLE VERSIONS"
-                        r"\b0\fs20\par" + "\n")
-        rtf_content += "="*70 + r"\par" + "\n"
-        rtf_content += r"\par" + "\n"
-        total_text = (f"Total: {len(repos_with_multiple_versions)} "
-                      "repositories used with multiple versions")
-        rtf_content += total_text + r"\par" + "\n"
-        rtf_content += r"\par" + "\n"
+        md_content.append("## Repositories with Multiple Versions\n")
+        md_content.append(
+            f"**Total:** {len(repos_with_multiple_versions)} "
+            "repositories used with multiple versions\n")
 
         # Sort by number of versions (most to least)
         repos_with_multiple_versions.sort(
@@ -602,32 +568,21 @@ def generate_rtf_report(
 
         for repo_key, data in repos_with_multiple_versions[:30]:
             versions = data.get('versions_in_dependency_tree', [])
-            rtf_content += (r"\b " + rtf_escape(repo_key) +
-                            r"\b0\par" + "\n")
-            rtf_content += (r"  Package: " +
-                            rtf_escape(data.get('package_name', 'N/A')) +
-                            r"\par" + "\n")
-            rtf_content += (r"  Ecosystem: " +
-                            rtf_escape(data.get('ecosystem', 'N/A')) +
-                            r"\par" + "\n")
-            rtf_content += (r"  Versions: " +
-                            rtf_escape(", ".join(versions)) +
-                            r"\par" + "\n")
-            rtf_content += (r"  SBOM file: \f0 " +
-                            rtf_escape(data.get('sbom_file', 'N/A')) +
-                            r"\f1\par" + "\n")
-            rtf_content += r"\par" + "\n"
+            md_content.append(f"### {repo_key}\n")
+            md_content.append(
+                f"- **Package:** {data.get('package_name', 'N/A')}")
+            md_content.append(
+                f"- **Ecosystem:** {data.get('ecosystem', 'N/A')}")
+            md_content.append(f"- **Versions:** {', '.join(versions)}")
+            md_content.append(
+                f"- **SBOM file:** `{data.get('sbom_file', 'N/A')}`\n")
 
         if len(repos_with_multiple_versions) > 30:
             remaining = len(repos_with_multiple_versions) - 30
-            rtf_content += (r"... and " + str(remaining) +
-                            " more repositories" + r"\par" + "\n")
-        rtf_content += r"\par" + "\n"
-    
+            md_content.append(f"*... and {remaining} more repositories*\n")
+
     # Statistics Breakdown
-    rtf_content += (r"\fs28\b STATISTICS BREAKDOWN\b0\fs20\par" + "\n")
-    rtf_content += "="*70 + r"\par" + "\n"
-    rtf_content += r"\par" + "\n"
+    md_content.append("## Statistics Breakdown\n")
 
     # Ecosystem distribution
     ecosystem_counts = {}
@@ -635,64 +590,48 @@ def generate_rtf_report(
         eco = pkg.ecosystem
         ecosystem_counts[eco] = ecosystem_counts.get(eco, 0) + 1
 
-    rtf_content += r"\b Package Ecosystems:\b0\par" + "\n"
+    md_content.append("### Package Ecosystems\n")
     for ecosystem, count in sorted(ecosystem_counts.items(),
                                    key=lambda x: x[1],
                                    reverse=True):
-        rtf_content += (f"  {rtf_escape(ecosystem)}: {count}" +
-                        r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
+        md_content.append(f"- **{ecosystem}:** {count}")
+    md_content.append("")
 
     # Deduplication savings
-    rtf_content += r"\b Deduplication Impact:\b0\par" + "\n"
+    md_content.append("### Deduplication Impact\n")
     total_packages = stats.github_repos_mapped
     unique_repos = stats.unique_repos
     duplicates = stats.duplicates_skipped
     if unique_repos > 0:
         dedup_pct = ((duplicates / total_packages * 100)
                      if total_packages > 0 else 0)
-        rtf_content += (f"  Packages mapped: {total_packages}" +
-                        r"\par" + "\n")
-        rtf_content += (f"  Unique repositories: {unique_repos}" +
-                        r"\par" + "\n")
-        rtf_content += (f"  Duplicates avoided: {duplicates} "
-                        f"({dedup_pct:.1f}%)" + r"\par" + "\n")
-        rtf_content += (f"  Storage savings: ~{dedup_pct:.0f}%" +
-                        r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
-    
+        md_content.append(f"- **Packages mapped:** {total_packages}")
+        md_content.append(f"- **Unique repositories:** {unique_repos}")
+        md_content.append(
+            f"- **Duplicates avoided:** {duplicates} ({dedup_pct:.1f}%)")
+        md_content.append(f"- **Storage savings:** ~{dedup_pct:.0f}%")
+    md_content.append("")
+
     # Files Generated
-    rtf_content += r"\fs28\b FILES GENERATED\b0\fs20\par" + "\n"
-    rtf_content += "="*70 + r"\par" + "\n"
-    rtf_content += r"\par" + "\n"
+    md_content.append("## Files Generated\n")
     root_file = f"{owner}_{repo}_root.json"
-    rtf_content += (r"\f0 " + rtf_escape(root_file) +
-                    r"\f1  - Root repository SBOM" + r"\par" + "\n")
-    rtf_content += (r"\f0 version_mapping.json\f1  - "
-                    "Version-to-SBOM mapping" + r"\par" + "\n")
-    rtf_content += (r"\f0 " + rtf_escape(rtf_filename) +
-                    r"\f1  - This execution report" + r"\par" + "\n")
-    rtf_content += (r"\f0 dependencies/\f1  - Directory with " +
-                    str(stats.sboms_downloaded) +
-                    " dependency SBOMs" + r"\par" + "\n")
-    rtf_content += r"\par" + "\n"
+    md_content.append(f"- `{root_file}` - Root repository SBOM")
+    md_content.append("`version_mapping.json` - Version-to-SBOM mapping")
+    md_content.append(f"- `{md_filename}` - This execution report")
+    md_content.append(
+        f"- `dependencies/` - Directory with {stats.sboms_downloaded} "
+        "dependency SBOMs\n")
 
     # Footer
-    rtf_content += r"\par" + "\n"
-    rtf_content += "="*70 + r"\par" + "\n"
-    rtf_content += (r"\fs18\i Generated by GitHub SBOM API Fetcher"
-                    r"\i0\fs20\par" + "\n")
-    rtf_content += (r"\i For more information, see README.md\i0\par" +
-                    "\n")
-
-    # Close RTF
-    rtf_content += "}"
+    md_content.append("---\n")
+    md_content.append("*Generated by GitHub SBOM API Fetcher*  ")
+    md_content.append("*For more information, see README.md*")
 
     # Write to file
-    with open(rtf_path, "w", encoding="utf-8") as f:
-        f.write(rtf_content)
-    
-    return rtf_filename
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(md_content))
+
+    return md_filename
 
 
 def main() -> int:
@@ -864,8 +803,8 @@ Examples:
             json.dump(version_mapping, f, indent=2)
         logger.info("\nSaved version mapping: version_mapping.json")
         
-        # Generate RTF execution report
-        rtf_filename = generate_rtf_report(
+        # Generate Markdown execution report
+        md_filename = generate_markdown_report(
             output_base,
             args.gh_user,
             args.gh_repo,
@@ -873,7 +812,7 @@ Examples:
             packages,
             version_mapping
         )
-        logger.info("Generated execution report: %s", rtf_filename)
+        logger.info("Generated execution report: %s", md_filename)
         
         # Summary
         logger.info("\n" + "="*70)
