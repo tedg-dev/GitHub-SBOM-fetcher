@@ -12,7 +12,7 @@ htmlcov/
 
 # Local data
 sboms/
-key.json
+keys.json
 
 # OS
 .DS_Store

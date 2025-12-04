@@ -1,6 +1,0 @@
-{
-  "accounts": [
-    { "username": "your-user-1", "token": "<PASTE_GITHUB_PAT_HERE>" },
-    { "username": "your-user-2", "token": "<PASTE_GITHUB_PAT_HERE>" }
-  ]
-}

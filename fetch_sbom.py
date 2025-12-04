@@ -140,7 +140,29 @@ def _parse_repo_strings(values: Iterable[str]) -> List[Tuple[str, str]]:
     return out
 
 
+def _resolve_key_path(path: str) -> str:
+    """Resolve keys.json/keys.json path with fallback.
+
+    If the requested file does not exist, try the sibling variant
+    (keys.json vs keys.json) before giving up.
+    """
+    if os.path.exists(path):
+        return path
+    base = os.path.basename(path)
+    alt: Optional[str] = None
+    if base == "keys.json":
+        alt = "keys.json"
+    elif base == "keys.json":
+        alt = "keys.json"
+    if alt:
+        alt_path = os.path.join(os.path.dirname(path) or ".", alt)
+        if os.path.exists(alt_path):
+            return alt_path
+    return path
+
+
 def _load_accounts(path: str) -> List[Tuple[Optional[str], str]]:
+    path = _resolve_key_path(path)
     if not os.path.exists(path):
         raise FileNotFoundError(f"Credentials file not found: {path}")
     with open(path, "r", encoding="utf-8") as f:
@@ -159,7 +181,7 @@ def _load_accounts(path: str) -> List[Tuple[Optional[str], str]]:
         username = data.get("username") or data.get("login")
         token = data.get("token") or data.get("password")
         if not token:
-            raise ValueError("key.json must include 'token' (recommended) or 'password' containing a GitHub Personal Access Token")
+            raise ValueError("keys.json must include 'token' (recommended) or 'password' containing a GitHub Personal Access Token")
         accounts.append((username, str(token)))
     return accounts
 
@@ -174,11 +196,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     p = argparse.ArgumentParser(prog="fetch_sbom", description="Fetch GitHub Dependency Graph SBOMs and save to files.")
     p.add_argument("--include-archived", action="store_true", help="Include archived repositories")
     p.add_argument("--output-dir", default=".", help="Directory to write files (default: current directory)")
-    p.add_argument("--key-file", default="key.json", help="Path to JSON file with either {username, token} or {accounts: [{username, token}, ...]}")
+    p.add_argument("--key-file", default="keys.json", help="Path to JSON file with either {username, token} or {accounts: [{username, token}, ...]}")
     p.add_argument("--account", default=None, help="Optional username/login to restrict to a single account from key file")
     args = p.parse_args(argv)
 
-    # Load one or more accounts from key.json
+    # Load one or more accounts from keys.json
     try:
         accounts = _load_accounts(args.key_file)
     except Exception as e:

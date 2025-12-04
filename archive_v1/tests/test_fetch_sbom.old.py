@@ -2,10 +2,14 @@ import json
 import os
 import time
 from typing import Any, Dict, List, Optional, Tuple
+from unittest.mock import Mock, patch
 
 import pytest
 
-import fetch_sbom as mod
+from github_sbom_fetcher.fetch_sbom_hierarchy import GitHubSBOMFetcher, GitHubDependency
+
+# Alias for easier refactoring
+mod = GitHubSBOMFetcher
 
 
 class FakeResponse:
@@ -40,7 +44,7 @@ def no_sleep(monkeypatch):
 
 
 def write_key(tmp_path, token: str = "tkn", username: Optional[str] = "user") -> str:
-    path = tmp_path / "key.json"
+    path = tmp_path / "keys.json"
     data = {"token": token}
     if username:
         data["username"] = username
@@ -49,7 +53,7 @@ def write_key(tmp_path, token: str = "tkn", username: Optional[str] = "user") ->
 
 
 def write_multi_key(tmp_path, accounts: List[Tuple[str, str]]) -> str:
-    path = tmp_path / "key.json"
+    path = tmp_path / "keys.json"
     data = {"accounts": [{"username": u, "token": t} for u, t in accounts]}
     path.write_text(json.dumps(data), encoding="utf-8")
     return str(path)
@@ -68,7 +72,7 @@ def test_load_credentials_missing_file():
 
 
 def test_load_credentials_missing_token(tmp_path):
-    p = tmp_path / "key.json"
+    p = tmp_path / "keys.json"
     p.write_text(json.dumps({"username": "me"}), encoding="utf-8")
     with pytest.raises(ValueError):
         mod._load_credentials(str(p))

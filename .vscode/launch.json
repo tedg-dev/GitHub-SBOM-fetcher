@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -13,7 +10,7 @@
             "console": "integratedTerminal",
             "args": [
                 "--key-file",
-                "key.json",
+                "keys.json",
                 "--output-dir",
                 "sboms"
             ],
@@ -30,10 +27,10 @@
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "args": [
-                "--key-file",
-                "key.json",
-                "--output-dir",
-                "sboms"
+                "--gh-user", "tedg-dev",
+                "--gh-repo", "beatBot",
+                "--key-file", "keys.json",
+                "--output-dir", "sboms"
             ],
             "env": {
                 "PYTHONUNBUFFERED": "1"

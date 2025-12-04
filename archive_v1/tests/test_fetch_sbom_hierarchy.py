@@ -2,13 +2,14 @@
 
 import json
 import os
+import requests
 import time
 from typing import Any, Dict, List, Optional, Tuple
 from unittest.mock import patch
 
 import pytest
 
-import fetch_sbom_hierarchy as mod
+from github_sbom_fetcher import fetch_sbom_hierarchy as mod
 
 
 class FakeResponse:
@@ -66,7 +67,7 @@ def write_key(tmp_path, token: str = "tkn", username: Optional[str] = "user") ->
     key_data = {"github_token": token}
     if username:
         key_data["username"] = username
-    key_file = tmp_path / "key.json"
+    key_file = tmp_path / "keys.json"
     key_file.write_text(json.dumps(key_data), encoding="utf-8")
     return str(key_file)
 
@@ -80,7 +81,7 @@ def write_multi_key(
             {"username": user, "token": token} for user, token in accounts
         ]
     }
-    key_file = tmp_path / "key.json"
+    key_file = tmp_path / "keys.json"
     key_file.write_text(json.dumps(key_data), encoding="utf-8")
     return str(key_file)
 
@@ -211,16 +212,23 @@ class TestGitHubSBOMFetcher:
     def test_make_request_rate_limit(self, monkeypatch):
         """Test rate limit handling."""
         fetcher = mod.GitHubSBOMFetcher("test-token")
+        
+        # Create a mock response for the session's request method
+        def mock_request(method, url, **kwargs):
+            response = requests.Response()
+            response.status_code = 403
+            # Match the exact case that _make_request checks for
+            response._content = b'{"message": "rate limit exceeded"}'
+            response.headers = {
+                "X-RateLimit-Remaining": "0",
+                "X-RateLimit-Reset": str(int(time.time()) + 60)
+            }
+            return response
 
-        def handler(url, kwargs):
-            return FakeResponse(
-                403,
-                text="API rate limit exceeded",
-                headers={"X-RateLimit-Remaining": "0"},
-            )
-
-        monkeypatch.setattr(fetcher, "_make_request", handler)
-
+        # Mock the session's request method
+        monkeypatch.setattr(fetcher.session, "request", mock_request)
+        
+        # Test that the error is raised
         with pytest.raises(mod.GitHubAPIError, match="Rate limit exceeded"):
             fetcher._make_request("GET", "https://api.github.com/test")
 
@@ -240,10 +248,10 @@ class TestGitHubSBOMFetcher:
         """Test 404 not found error."""
         fetcher = mod.GitHubSBOMFetcher("test-token")
         
-        def handler(url, kwargs):
+        def mock_request(method, url, **kwargs):
             return FakeResponse(404, text="not found")
         
-        monkeypatch.setattr(fetcher, "_make_request", handler)
+        monkeypatch.setattr(fetcher.session, 'request', mock_request)
         
         with pytest.raises(mod.GitHubAPIError, match="Not found"):
             fetcher._make_request("GET", "https://api.github.com/test")
@@ -302,6 +310,103 @@ class TestGitHubSBOMFetcher:
         result = fetcher.get_sbom("owner", "repo")
         assert result is None
 
+    def test_get_sbom_404_dependency_graph(self, monkeypatch, caplog):
+        """Test that 404 for dependency-graph/sbom logs debug, not error."""
+        import logging
+        fetcher = mod.GitHubSBOMFetcher("test-token")
+        
+        def handler(method, url, **kwargs):
+            if "/dependency-graph/sbom" in url:
+                return FakeResponse(404, text="Not found")
+            return FakeResponse(404)
+        
+        monkeypatch.setattr(fetcher, '_make_request', handler)
+        
+        # Capture logs
+        with caplog.at_level(logging.DEBUG):
+            result = fetcher.get_sbom("substack", "minimist")
+        
+        assert result is None
+        # Should log debug message, not error
+        debug_messages = [r.message for r in caplog.records if r.levelno == logging.DEBUG]
+        error_messages = [r.message for r in caplog.records if r.levelno == logging.ERROR]
+        
+        assert any("does not have dependency graph SBOM feature enabled" in msg for msg in debug_messages)
+        assert not any("Failed to fetch SBOM" in msg for msg in error_messages)
+
+    def test_get_sbom_404_other_endpoint(self, monkeypatch, caplog):
+        """Test that 404 for non-dependency-graph endpoints still logs error."""
+        import logging
+        fetcher = mod.GitHubSBOMFetcher("test-token")
+        
+        def handler(method, url, **kwargs):
+            return FakeResponse(404, text="Not found")
+        
+        monkeypatch.setattr(fetcher, '_make_request', handler)
+        
+        # Capture logs
+        with caplog.at_level(logging.DEBUG):
+            result = fetcher.get_sbom("nonexistent", "repo")
+        
+        assert result is None
+        # Should log error message
+        error_messages = [r.message for r in caplog.records if r.levelno == logging.ERROR]
+        assert any("Failed to fetch SBOM" in msg for msg in error_messages)
+
+    
+    def test_npm_fallback_mechanism(self, monkeypatch):
+        """Test that npm fallback mechanism works when old version points to non-existent repo."""
+        import requests
+        from unittest.mock import patch, MagicMock
+        
+        fetcher = mod.GitHubSBOMFetcher("test-token")
+        
+        # Mock npm registry response for old version (points to non-existent repo)
+        old_version_response = MagicMock()
+        old_version_response.status_code = 200
+        old_version_response.json.return_value = {
+            "repository": {
+                "url": "git://github.com/substack/minimist.git"
+            }
+        }
+        
+        # Mock npm registry response for latest version (points to active repo)
+        latest_version_response = MagicMock()
+        latest_version_response.status_code = 200
+        latest_version_response.json.return_value = {
+            "repository": {
+                "url": "git://github.com/minimistjs/minimist.git"
+            }
+        }
+        
+        # Mock GitHub API responses
+        def mock_make_request(method, url, **kwargs):
+            if "/repos/substack/minimist" in url:
+                # Simulate 404 for non-existent repo
+                raise mod.GitHubAPIError("Not found: https://api.github.com/repos/substack/minimist")
+            elif "/repos/minimistjs/minimist" in url:
+                # Simulate successful repo check
+                return FakeResponse(200, {"name": "minimist"})
+            return FakeResponse(404)
+        
+        with patch('requests.get') as mock_get:
+            # Configure mock to return different responses for different URLs
+            def get_side_effect(url, **kwargs):
+                if "minimist/0.0.8" in url:
+                    return old_version_response
+                elif "minimist/latest" in url:
+                    return latest_version_response
+                return MagicMock(status_code=404)
+            
+            mock_get.side_effect = get_side_effect
+            monkeypatch.setattr(fetcher, '_make_request', mock_make_request)
+            
+            # Test the fallback mechanism
+            result = fetcher._get_github_repo_from_npm("minimist", "0.0.8")
+            
+            # Should fallback to minimistjs/minimist
+            assert result == ("minimistjs", "minimist"), f"Expected minimistjs/minimist, got {result}"
+    
     def test_get_all_repositories(self, monkeypatch):
         """Test getting all repositories."""
         fetcher = mod.GitHubSBOMFetcher("test-token")
@@ -567,7 +672,7 @@ class TestMainFunction:
 
     def test_main_no_token(self, tmp_path, capsys):
         """Test main with no token in key file."""
-        key_path = tmp_path / "key.json"
+        key_path = tmp_path / "keys.json"
         key_path.write_text(json.dumps({"username": "user"}))
         
         rc = mod.main(["--key-file", key_path, "--output-dir", str(tmp_path)])
