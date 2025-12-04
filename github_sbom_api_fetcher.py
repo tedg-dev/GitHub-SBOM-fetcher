@@ -624,7 +624,7 @@ def generate_markdown_report(
             key=lambda x: len(x[1].get('versions_in_dependency_tree', [])),
             reverse=True)
 
-        for repo_key, data in repos_with_multiple_versions[:30]:
+        for repo_key, data in repos_with_multiple_versions[:10]:
             versions = data.get('versions_in_dependency_tree', [])
             md_content.append(f"### {repo_key}\n")
             md_content.append(
@@ -635,9 +635,11 @@ def generate_markdown_report(
             md_content.append(
                 f"- **SBOM file:** `{data.get('sbom_file', 'N/A')}`\n")
 
-        if len(repos_with_multiple_versions) > 30:
-            remaining = len(repos_with_multiple_versions) - 30
-            md_content.append(f"*... and {remaining} more repositories*\n")
+        if len(repos_with_multiple_versions) > 10:
+            remaining = len(repos_with_multiple_versions) - 10
+            md_content.append(
+                f"*... and {remaining} more repositories. "
+                "See `version_mapping.json` for complete details.*\n")
 
     # Statistics Breakdown
     md_content.append("## Statistics Breakdown\n")
