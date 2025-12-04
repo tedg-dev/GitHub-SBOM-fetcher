@@ -163,17 +163,6 @@ class MarkdownReporter:
         # Statistics Breakdown
         md_content.append("## Statistics Breakdown\n")
 
-        # Ecosystem distribution
-        ecosystem_counts: Dict[str, int] = {}
-        for pkg in packages:
-            eco = pkg.ecosystem
-            ecosystem_counts[eco] = ecosystem_counts.get(eco, 0) + 1
-
-        md_content.append("### Package Ecosystems\n")
-        for ecosystem, count in sorted(ecosystem_counts.items(), key=lambda x: x[1], reverse=True):
-            md_content.append(f"- **{ecosystem}:** {count}")
-        md_content.append("")
-
         # Deduplication savings
         md_content.append("### Deduplication Impact\n")
         total_packages = stats.github_repos_mapped
