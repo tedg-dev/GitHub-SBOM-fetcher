@@ -53,6 +53,7 @@ class PackageDependency:
     github_repo: Optional[str] = None
     sbom_downloaded: bool = False
     error: Optional[str] = None
+    error_type: Optional[str] = None  # 'permanent' or 'transient'
 
 
 @dataclass
@@ -62,10 +63,16 @@ class FetcherStats:
     github_repos_mapped: int = 0
     unique_repos: int = 0
     sboms_downloaded: int = 0
-    sboms_failed: int = 0
+    sboms_failed_permanent: int = 0
+    sboms_failed_transient: int = 0
     duplicates_skipped: int = 0
     packages_without_github: int = 0
     start_time: float = field(default_factory=time.time)
+    
+    @property
+    def sboms_failed(self) -> int:
+        """Total failures (permanent + transient)."""
+        return self.sboms_failed_permanent + self.sboms_failed_transient
     
     def elapsed_time(self) -> str:
         """Get elapsed time as formatted string."""
@@ -446,9 +453,11 @@ def download_dependency_sbom(
                 
             elif resp.status_code == 404:
                 pkg.error = "Dependency graph not enabled"
+                pkg.error_type = "permanent"
                 return False
             elif resp.status_code == 403:
                 pkg.error = "Access forbidden"
+                pkg.error_type = "permanent"
                 return False
             elif resp.status_code == 429:
                 # Rate limited
@@ -458,9 +467,11 @@ def download_dependency_sbom(
                     time.sleep(wait_time)
                     continue
                 pkg.error = "Rate limited"
+                pkg.error_type = "transient"
                 return False
             else:
                 pkg.error = f"HTTP {resp.status_code}"
+                pkg.error_type = "permanent"
                 return False
                 
         except requests.RequestException as e:
@@ -468,6 +479,7 @@ def download_dependency_sbom(
                 time.sleep(2)
                 continue
             pkg.error = str(e)
+            pkg.error_type = "transient"
             return False
     
     return False
@@ -524,14 +536,20 @@ def generate_markdown_report(
     md_content.append(f"- **Unique repositories:** {stats.unique_repos}")
     md_content.append(
         f"- **Duplicate versions skipped:** {stats.duplicates_skipped}")
-    md_content.append(
-        f"- **Packages without GitHub repos:** "
+    md_content.append(f"- **Packages without GitHub repos:** "
         f"{stats.packages_without_github}\n")
     md_content.append(
         f"- **SBOMs downloaded successfully:** "
         f"✅ **{stats.sboms_downloaded}**")
     md_content.append(
-        f"- **SBOMs failed:** ❌ **{stats.sboms_failed}**")
+        f"- **SBOMs failed (permanent):** "
+        f"🔴 **{stats.sboms_failed_permanent}**")
+    md_content.append(
+        f"- **SBOMs failed (transient):** "
+        f"⚠️ **{stats.sboms_failed_transient}**")
+    md_content.append(
+        f"- **SBOMs failed (total):** "
+        f"❌ **{stats.sboms_failed}**")
     md_content.append(f"- **Elapsed time:** {stats.elapsed_time()}\n")
 
     # Important Note
@@ -543,18 +561,44 @@ def generate_markdown_report(
         "> See `version_mapping.json` for details on version "
         "deduplication.\n")
 
-    # Failed SBOMs
+    # Failed SBOMs - separate permanent and transient
     if failed_sboms:
-        md_content.append("## ❌ Failed SBOM Downloads\n")
+        permanent_failures = [f for f in failed_sboms
+                              if f.get('error_type') == 'permanent']
+        transient_failures = [f for f in failed_sboms
+                              if f.get('error_type') == 'transient']
+        
+        md_content.append("## Failed SBOM Downloads\n")
         md_content.append(
-            f"**Total failures:** {len(failed_sboms)}\n")
-        for failure in failed_sboms:
-            md_content.append(f"### {failure['repo']}\n")
-            md_content.append(f"- **Package:** {failure['package']}")
-            md_content.append(f"- **Ecosystem:** {failure['ecosystem']}")
+            f"**Total failures:** {len(failed_sboms)} "
+            f"({len(permanent_failures)} permanent, "
+            f"{len(transient_failures)} transient)\n")
+        
+        if permanent_failures:
+            md_content.append("### 🔴 Permanent Failures\n")
             md_content.append(
-                f"- **Versions:** {', '.join(failure['versions'])}")
-            md_content.append(f"- **Error:** `{failure['error']}`\n")
+                "*These will consistently fail until the underlying issue "
+                "is fixed (e.g., dependency graph not enabled).*\n")
+            for failure in permanent_failures:
+                md_content.append(f"#### {failure['repo']}\n")
+                md_content.append(f"- **Package:** {failure['package']}")
+                md_content.append(f"- **Ecosystem:** {failure['ecosystem']}")
+                md_content.append(
+                    f"- **Versions:** {', '.join(failure['versions'])}")
+                md_content.append(f"- **Error:** `{failure['error']}`\n")
+        
+        if transient_failures:
+            md_content.append("### ⚠️ Transient Failures\n")
+            md_content.append(
+                "*These may succeed on retry (e.g., timeouts, rate limits, "
+                "network issues).*\n")
+            for failure in transient_failures:
+                md_content.append(f"#### {failure['repo']}\n")
+                md_content.append(f"- **Package:** {failure['package']}")
+                md_content.append(f"- **Ecosystem:** {failure['ecosystem']}")
+                md_content.append(
+                    f"- **Versions:** {', '.join(failure['versions'])}")
+                md_content.append(f"- **Error:** `{failure['error']}`\n")
 
     # Packages Without GitHub Repositories
     if no_github:
@@ -800,16 +844,26 @@ Examples:
                     "note": "SBOM represents current repository state (default branch), not historical versions"
                 }
             else:
-                stats.sboms_failed += 1
                 error_msg = pkg.error or "Unknown error"
+                error_type = pkg.error_type or "unknown"
+                
+                # Track by failure type
+                if error_type == "permanent":
+                    stats.sboms_failed_permanent += 1
+                elif error_type == "transient":
+                    stats.sboms_failed_transient += 1
+                else:
+                    stats.sboms_failed_permanent += 1  # Default to permanent
+                
                 failed_sboms.append({
                     "repo": repo_key,
                     "package": pkg.name,
                     "ecosystem": pkg.ecosystem,
                     "versions": sorted(set(versions)),
-                    "error": error_msg
+                    "error": error_msg,
+                    "error_type": error_type
                 })
-                logger.warning("  Failed: %s", error_msg)
+                logger.warning("  Failed (%s): %s", error_type, error_msg)
             
             # Count skipped duplicates
             if len(pkgs) > 1:
@@ -849,7 +903,9 @@ Examples:
         logger.info("Packages without GitHub repos: %d", stats.packages_without_github)
         logger.info("")
         logger.info("SBOMs downloaded successfully: %d", stats.sboms_downloaded)
-        logger.info("SBOMs failed: %d", stats.sboms_failed)
+        logger.info("SBOMs failed (permanent): %d", stats.sboms_failed_permanent)
+        logger.info("SBOMs failed (transient): %d", stats.sboms_failed_transient)
+        logger.info("SBOMs failed (total): %d", stats.sboms_failed)
         logger.info("Elapsed time: %s", stats.elapsed_time())
         logger.info("Output directory: %s", os.path.abspath(output_base))
         logger.info("")
@@ -865,14 +921,35 @@ Examples:
             logger.info("="*70)
             logger.info("")
             
-            for failure in failed_sboms:
-                logger.info("  ❌ %s", failure['repo'])
-                logger.info("     Package: %s (%s)",
-                            failure['package'], failure['ecosystem'])
-                logger.info("     Versions: %s",
-                            ', '.join(failure['versions']))
-                logger.info("     Error: %s", failure['error'])
+            # Separate permanent and transient failures
+            permanent_failures = [f for f in failed_sboms if f.get('error_type') == 'permanent']
+            transient_failures = [f for f in failed_sboms if f.get('error_type') == 'transient']
+            
+            if permanent_failures:
+                logger.info("🔴 PERMANENT FAILURES (%d):", len(permanent_failures))
+                logger.info("   (These will consistently fail until fixed)")
                 logger.info("")
+                for failure in permanent_failures:
+                    logger.info("  ❌ %s", failure['repo'])
+                    logger.info("     Package: %s (%s)",
+                                failure['package'], failure['ecosystem'])
+                    logger.info("     Versions: %s",
+                                ', '.join(failure['versions']))
+                    logger.info("     Error: %s", failure['error'])
+                    logger.info("")
+            
+            if transient_failures:
+                logger.info("⚠️  TRANSIENT FAILURES (%d):", len(transient_failures))
+                logger.info("   (These may succeed on retry)")
+                logger.info("")
+                for failure in transient_failures:
+                    logger.info("  ⚠️  %s", failure['repo'])
+                    logger.info("     Package: %s (%s)",
+                                failure['package'], failure['ecosystem'])
+                    logger.info("     Versions: %s",
+                                ', '.join(failure['versions']))
+                    logger.info("     Error: %s", failure['error'])
+                    logger.info("")
         
         # Detailed report
         if stats.packages_without_github > 0:
