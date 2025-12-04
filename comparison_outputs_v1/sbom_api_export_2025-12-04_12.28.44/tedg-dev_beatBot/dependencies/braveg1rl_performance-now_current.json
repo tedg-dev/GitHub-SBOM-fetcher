@@ -1,0 +1,39 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.braveg1rl/performance-now",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/5f4df2a0-7c45-42ca-906b-8f4f3ffec3a0",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:31:01Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.braveg1rl/performance-now",
+        "SPDXID": "SPDXRef-github-braveg1rl-performance-now-main-4b9dc2",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/braveg1rl/performance-now",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/braveg1rl/performance-now@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-braveg1rl-performance-now-main-4b9dc2",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

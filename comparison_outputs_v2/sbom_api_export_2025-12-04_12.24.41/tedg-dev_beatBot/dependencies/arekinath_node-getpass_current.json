@@ -1,0 +1,116 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.arekinath/node-getpass",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/ea3da80a-af0a-42f1-8cc6-af81ed493d0b",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:27:01Z"
+    },
+    "packages": [
+      {
+        "name": "assert-plus",
+        "SPDXID": "SPDXRef-npm-assert-plus-1.0.0-88e7f1",
+        "versionInfo": "^1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/assert-plus@%5E1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-4.4.0-e4605a",
+        "versionInfo": "^4.4.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E4.4.0"
+          }
+        ]
+      },
+      {
+        "name": "json",
+        "SPDXID": "SPDXRef-npm-json-9.0.3-5858e7",
+        "versionInfo": "^9.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/json@%5E9.0.3"
+          }
+        ]
+      },
+      {
+        "name": "pty.js",
+        "SPDXID": "SPDXRef-npm-pty.js-0.3.0-8bced3",
+        "versionInfo": "^0.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/pty.js@%5E0.3.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.arekinath/node-getpass",
+        "SPDXID": "SPDXRef-github-arekinath-node-getpass-master-40fbeb",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/arekinath/node-getpass",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/arekinath/node-getpass@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-arekinath-node-getpass-master-40fbeb",
+        "relatedSpdxElement": "SPDXRef-npm-assert-plus-1.0.0-88e7f1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-arekinath-node-getpass-master-40fbeb",
+        "relatedSpdxElement": "SPDXRef-npm-tape-4.4.0-e4605a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-arekinath-node-getpass-master-40fbeb",
+        "relatedSpdxElement": "SPDXRef-npm-json-9.0.3-5858e7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-arekinath-node-getpass-master-40fbeb",
+        "relatedSpdxElement": "SPDXRef-npm-pty.js-0.3.0-8bced3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-arekinath-node-getpass-master-40fbeb",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

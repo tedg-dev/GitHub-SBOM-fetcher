@@ -1,0 +1,78 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.iarna/has-unicode",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/f2c90485-dee0-4276-8634-d5887fe8656f",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:32:23Z"
+    },
+    "packages": [
+      {
+        "name": "require-inject",
+        "SPDXID": "SPDXRef-npm-require-inject-1.3.0-ac7b76",
+        "versionInfo": "^1.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/require-inject@%5E1.3.0"
+          }
+        ]
+      },
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-2.3.1-f02763",
+        "versionInfo": "^2.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@%5E2.3.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.iarna/has-unicode",
+        "SPDXID": "SPDXRef-github-iarna-has-unicode-master-3e1756",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/iarna/has-unicode",
+        "filesAnalyzed": false,
+        "licenseDeclared": "ISC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/iarna/has-unicode@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-iarna-has-unicode-master-3e1756",
+        "relatedSpdxElement": "SPDXRef-npm-require-inject-1.3.0-ac7b76",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-iarna-has-unicode-master-3e1756",
+        "relatedSpdxElement": "SPDXRef-npm-tap-2.3.1-f02763",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-iarna-has-unicode-master-3e1756",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

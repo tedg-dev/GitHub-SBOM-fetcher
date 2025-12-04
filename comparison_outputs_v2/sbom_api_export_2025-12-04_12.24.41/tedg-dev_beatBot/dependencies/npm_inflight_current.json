@@ -1,0 +1,39 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.isaacs/inflight-DEPRECATED-DO-NOT-USE",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/33e8aba7-f4b8-4431-8ce9-a43f4c5a479e",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:27:52Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.isaacs/inflight-DEPRECATED-DO-NOT-USE",
+        "SPDXID": "SPDXRef-github-isaacs-inflight-DEPRECATED-DO-NOT-USE-main-a3ad21",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/isaacs/inflight-DEPRECATED-DO-NOT-USE",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/isaacs/inflight-DEPRECATED-DO-NOT-USE@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-isaacs-inflight-DEPRECATED-DO-NOT-USE-main-a3ad21",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.flatiron/revalidator",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/cca7f4a9-6644-4b95-9382-dbd637f9db17",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:27:20Z"
+    },
+    "packages": [
+      {
+        "name": "vows",
+        "SPDXID": "SPDXRef-npm-vows-0.8.x-937c14",
+        "versionInfo": "0.8.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vows@0.8.x"
+          }
+        ]
+      },
+      {
+        "name": "com.github.flatiron/revalidator",
+        "SPDXID": "SPDXRef-github-flatiron-revalidator-master-816709",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/flatiron/revalidator",
+        "filesAnalyzed": false,
+        "licenseDeclared": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/flatiron/revalidator@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-revalidator-master-816709",
+        "relatedSpdxElement": "SPDXRef-npm-vows-0.8.x-937c14",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-flatiron-revalidator-master-816709",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

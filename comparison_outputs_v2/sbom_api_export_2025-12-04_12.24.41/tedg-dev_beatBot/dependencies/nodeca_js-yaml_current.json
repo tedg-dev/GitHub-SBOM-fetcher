@@ -1,0 +1,363 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.nodeca/js-yaml",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/de4aac0a-0467-490e-a028-dd147c3115bd",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:27:48Z"
+    },
+    "packages": [
+      {
+        "name": "benchmark",
+        "SPDXID": "SPDXRef-npm-benchmark-2.1.4-1dec6c",
+        "versionInfo": "^2.1.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/benchmark@%5E2.1.4"
+          }
+        ]
+      },
+      {
+        "name": "codemirror",
+        "SPDXID": "SPDXRef-npm-codemirror-5.13.4-720124",
+        "versionInfo": "^5.13.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/codemirror@%5E5.13.4"
+          }
+        ]
+      },
+      {
+        "name": "argparse",
+        "SPDXID": "SPDXRef-npm-argparse-2.0.1-154983",
+        "versionInfo": "^2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/argparse@%5E2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.1.0-0a75d7",
+        "versionInfo": "^15.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@%5E15.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/plugin-node-resolve",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-node-resolve-11.0.0-a4429c",
+        "versionInfo": "^11.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/plugin-node-resolve@%5E11.0.0"
+          }
+        ]
+      },
+      {
+        "name": "gh-pages",
+        "SPDXID": "SPDXRef-npm-gh-pages-3.1.0-8ba342",
+        "versionInfo": "^3.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/gh-pages@%5E3.1.0"
+          }
+        ]
+      },
+      {
+        "name": "ansi",
+        "SPDXID": "SPDXRef-npm-ansi-0.3.1-651238",
+        "versionInfo": "^0.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ansi@%5E0.3.1"
+          }
+        ]
+      },
+      {
+        "name": "@rollup/plugin-commonjs",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-commonjs-17.0.0-9c35c3",
+        "versionInfo": "^17.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40rollup/plugin-commonjs@%5E17.0.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-7.0.0-3b979e",
+        "versionInfo": "^7.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E7.0.0"
+          }
+        ]
+      },
+      {
+        "name": "rollup",
+        "SPDXID": "SPDXRef-npm-rollup-2.34.1-a192ff",
+        "versionInfo": "^2.34.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rollup@%5E2.34.1"
+          }
+        ]
+      },
+      {
+        "name": "shelljs",
+        "SPDXID": "SPDXRef-npm-shelljs-0.8.4-03618b",
+        "versionInfo": "^0.8.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/shelljs@%5E0.8.4"
+          }
+        ]
+      },
+      {
+        "name": "fast-check",
+        "SPDXID": "SPDXRef-npm-fast-check-2.8.0-4ce6d9",
+        "versionInfo": "^2.8.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/fast-check@%5E2.8.0"
+          }
+        ]
+      },
+      {
+        "name": "rollup-plugin-terser",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-terser-7.0.2-67da31",
+        "versionInfo": "^7.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rollup-plugin-terser@%5E7.0.2"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-8.2.1-8c49a9",
+        "versionInfo": "^8.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%5E8.2.1"
+          }
+        ]
+      },
+      {
+        "name": "rollup-plugin-node-polyfills",
+        "SPDXID": "SPDXRef-npm-rollup-plugin-node-polyfills-0.2.1-5a40ff",
+        "versionInfo": "^0.2.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/rollup-plugin-node-polyfills@%5E0.2.1"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-1-75c946",
+        "versionInfo": "1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@1"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "versionInfo": "2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@2"
+          }
+        ]
+      },
+      {
+        "name": "com.github.nodeca/js-yaml",
+        "SPDXID": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/nodeca/js-yaml",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/nodeca/js-yaml@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-benchmark-2.1.4-1dec6c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-codemirror-5.13.4-720124",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-argparse-2.0.1-154983",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.1.0-0a75d7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-resolve-11.0.0-a4429c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-gh-pages-3.1.0-8ba342",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-ansi-0.3.1-651238",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-commonjs-17.0.0-9c35c3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-7.0.0-3b979e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-2.34.1-a192ff",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-shelljs-0.8.4-03618b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-fast-check-2.8.0-4ce6d9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-terser-7.0.2-67da31",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-8.2.1-8c49a9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-npm-rollup-plugin-node-polyfills-0.2.1-5a40ff",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-1-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-2-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-nodeca-js-yaml-master-f15bf7",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -62,7 +62,7 @@ class MarkdownReporter:
 
         # Summary Section
         md_content.append("## Summary\n")
-        md_content.append(f"- **Packages in root SBOM:** {stats.packages_in_sbom}")
+        md_content.append(f"- **Root SBOM dependency repositories:** {stats.packages_in_sbom}")
         md_content.append(f"- **Mapped to GitHub repos:** {stats.github_repos_mapped}")
         md_content.append(f"- **Unique repositories:** {stats.unique_repos}")
         md_content.append(f"- **Duplicate versions skipped:** {stats.duplicates_skipped}")

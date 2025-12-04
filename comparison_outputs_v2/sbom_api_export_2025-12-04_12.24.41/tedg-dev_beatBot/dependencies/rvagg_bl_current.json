@@ -1,0 +1,229 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.rvagg/bl",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/ac2679ea-beac-4df2-8a92-772aea6debfa",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:27:35Z"
+    },
+    "packages": [
+      {
+        "name": "@types/readable-stream",
+        "SPDXID": "SPDXRef-npm-types-readable-stream-4.0.0-6f6edf",
+        "versionInfo": "^4.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/readable-stream@%5E4.0.0"
+          }
+        ]
+      },
+      {
+        "name": "buffer",
+        "SPDXID": "SPDXRef-npm-buffer-6.0.3-1d094f",
+        "versionInfo": "^6.0.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/buffer@%5E6.0.3"
+          }
+        ]
+      },
+      {
+        "name": "inherits",
+        "SPDXID": "SPDXRef-npm-inherits-2.0.4-d78551",
+        "versionInfo": "^2.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/inherits@%5E2.0.4"
+          }
+        ]
+      },
+      {
+        "name": "readable-stream",
+        "SPDXID": "SPDXRef-npm-readable-stream-4.2.0-116713",
+        "versionInfo": "^4.2.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/readable-stream@%5E4.2.0"
+          }
+        ]
+      },
+      {
+        "name": "faucet",
+        "SPDXID": "SPDXRef-npm-faucet-0.0.1-7f5791",
+        "versionInfo": "~0.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/faucet@~0.0.1"
+          }
+        ]
+      },
+      {
+        "name": "standard",
+        "SPDXID": "SPDXRef-npm-standard-17.0.0-497585",
+        "versionInfo": "^17.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/standard@%5E17.0.0"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-5.9.2-58cecf",
+        "versionInfo": "~5.9.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@~5.9.2"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-5.2.2-420216",
+        "versionInfo": "^5.2.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E5.2.2"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+        "versionInfo": "6.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@6.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-6.1.0-75c946",
+        "versionInfo": "6.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@6.1.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.rvagg/bl",
+        "SPDXID": "SPDXRef-github-rvagg-bl-master-da812e",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/rvagg/bl",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/rvagg/bl@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-types-readable-stream-4.0.0-6f6edf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-buffer-6.0.3-1d094f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.4-d78551",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-readable-stream-4.2.0-116713",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-faucet-0.0.1-7f5791",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-standard-17.0.0-497585",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-5.9.2-58cecf",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-npm-tape-5.2.2-420216",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-6..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-6.1.0-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-rvagg-bl-master-da812e",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

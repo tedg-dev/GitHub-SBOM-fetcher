@@ -1,0 +1,154 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.sindresorhus/strip-json-comments",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/701dea3f-8e9b-42c1-af77-5e172d525fa1",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:32:05Z"
+    },
+    "packages": [
+      {
+        "name": "tsd",
+        "SPDXID": "SPDXRef-npm-tsd-0.22.0-b9c259",
+        "versionInfo": "^0.22.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tsd@%5E0.22.0"
+          }
+        ]
+      },
+      {
+        "name": "xo",
+        "SPDXID": "SPDXRef-npm-xo-0.54.2-9bf6e6",
+        "versionInfo": "^0.54.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/xo@%5E0.54.2"
+          }
+        ]
+      },
+      {
+        "name": "ava",
+        "SPDXID": "SPDXRef-npm-ava-4.3.1-bbe5b9",
+        "versionInfo": "^4.3.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ava@%5E4.3.1"
+          }
+        ]
+      },
+      {
+        "name": "matcha",
+        "SPDXID": "SPDXRef-npm-matcha-0.7.0-6e1118",
+        "versionInfo": "^0.7.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/matcha@%5E0.7.0"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.sindresorhus/strip-json-comments",
+        "SPDXID": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/sindresorhus/strip-json-comments",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/sindresorhus/strip-json-comments@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relatedSpdxElement": "SPDXRef-npm-tsd-0.22.0-b9c259",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relatedSpdxElement": "SPDXRef-npm-xo-0.54.2-9bf6e6",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relatedSpdxElement": "SPDXRef-npm-ava-4.3.1-bbe5b9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relatedSpdxElement": "SPDXRef-npm-matcha-0.7.0-6e1118",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-sindresorhus-strip-json-comments-main-e7342f",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

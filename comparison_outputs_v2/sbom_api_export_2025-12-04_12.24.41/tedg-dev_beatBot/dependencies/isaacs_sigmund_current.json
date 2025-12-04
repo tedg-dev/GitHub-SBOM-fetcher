@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.isaacs/sigmund",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/10d1daa3-ad41-4c2f-9d14-bf98018b641f",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:28:02Z"
+    },
+    "packages": [
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-0.3.0-045a17",
+        "versionInfo": "~0.3.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@~0.3.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.isaacs/sigmund",
+        "SPDXID": "SPDXRef-github-isaacs-sigmund-master-726056",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/isaacs/sigmund",
+        "filesAnalyzed": false,
+        "licenseDeclared": "ISC",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/isaacs/sigmund@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-isaacs-sigmund-master-726056",
+        "relatedSpdxElement": "SPDXRef-npm-tap-0.3.0-045a17",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-isaacs-sigmund-master-726056",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

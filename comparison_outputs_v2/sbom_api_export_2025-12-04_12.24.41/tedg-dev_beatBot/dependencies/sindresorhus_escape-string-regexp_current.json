@@ -1,0 +1,135 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.sindresorhus/escape-string-regexp",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/045843ea-c8f4-43ae-8a26-9eb59663e90f",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:28:19Z"
+    },
+    "packages": [
+      {
+        "name": "xo",
+        "SPDXID": "SPDXRef-npm-xo-0.38.2-679c62",
+        "versionInfo": "^0.38.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/xo@%5E0.38.2"
+          }
+        ]
+      },
+      {
+        "name": "ava",
+        "SPDXID": "SPDXRef-npm-ava-3.15.0-30fea2",
+        "versionInfo": "^3.15.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/ava@%5E3.15.0"
+          }
+        ]
+      },
+      {
+        "name": "tsd",
+        "SPDXID": "SPDXRef-npm-tsd-0.14.0-10cb7e",
+        "versionInfo": "^0.14.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tsd@%5E0.14.0"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.sindresorhus/escape-string-regexp",
+        "SPDXID": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/sindresorhus/escape-string-regexp",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/sindresorhus/escape-string-regexp@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "relatedSpdxElement": "SPDXRef-npm-xo-0.38.2-679c62",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "relatedSpdxElement": "SPDXRef-npm-ava-3.15.0-30fea2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "relatedSpdxElement": "SPDXRef-npm-tsd-0.14.0-10cb7e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-sindresorhus-escape-string-regexp-main-a580e6",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.request/aws-sign",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/d35a7fa4-34ae-4a75-9846-a822bc55197d",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:26:49Z"
+    },
+    "packages": [
+      {
+        "name": "com.github.request/aws-sign",
+        "SPDXID": "SPDXRef-github-request-aws-sign-master-2bdbd3",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/request/aws-sign",
+        "filesAnalyzed": false,
+        "licenseDeclared": "Apache-2.0",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/request/aws-sign@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-request-aws-sign-master-2bdbd3",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

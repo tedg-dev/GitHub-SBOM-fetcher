@@ -1,0 +1,457 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.gruntjs/grunt",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/9e7bcc6b-1e3a-4a48-ac72-e2450577f667",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:32:03Z"
+    },
+    "packages": [
+      {
+        "name": "dateformat",
+        "SPDXID": "SPDXRef-npm-dateformat-4.6.2-24642f",
+        "versionInfo": "~4.6.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/dateformat@~4.6.2"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-nodeunit",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-nodeunit-5.0.0-02b388",
+        "versionInfo": "~5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-nodeunit@~5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "exit",
+        "SPDXID": "SPDXRef-npm-exit-0.1.2-54a5aa",
+        "versionInfo": "~0.1.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/exit@~0.1.2"
+          }
+        ]
+      },
+      {
+        "name": "eslint-config-grunt",
+        "SPDXID": "SPDXRef-npm-eslint-config-grunt-2.0.1-2e0648",
+        "versionInfo": "~2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-config-grunt@~2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "grunt-legacy-util",
+        "SPDXID": "SPDXRef-npm-grunt-legacy-util-2.0.1-8f8f04",
+        "versionInfo": "~2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-legacy-util@~2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "findup-sync",
+        "SPDXID": "SPDXRef-npm-findup-sync-5.0.0-d85f7c",
+        "versionInfo": "~5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/findup-sync@~5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "grunt-legacy-log",
+        "SPDXID": "SPDXRef-npm-grunt-legacy-log-3.0.0-12c19f",
+        "versionInfo": "~3.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-legacy-log@~3.0.0"
+          }
+        ]
+      },
+      {
+        "name": "minimatch",
+        "SPDXID": "SPDXRef-npm-minimatch-3.0.4-96875b",
+        "versionInfo": "~3.0.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/minimatch@~3.0.4"
+          }
+        ]
+      },
+      {
+        "name": "grunt-eslint",
+        "SPDXID": "SPDXRef-npm-grunt-eslint-24.1.0-eaa2a9",
+        "versionInfo": "~24.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-eslint@~24.1.0"
+          }
+        ]
+      },
+      {
+        "name": "difflet",
+        "SPDXID": "SPDXRef-npm-difflet-1.0.1-acfab9",
+        "versionInfo": "~1.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/difflet@~1.0.1"
+          }
+        ]
+      },
+      {
+        "name": "iconv-lite",
+        "SPDXID": "SPDXRef-npm-iconv-lite-0.6.3-4dd11a",
+        "versionInfo": "~0.6.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/iconv-lite@~0.6.3"
+          }
+        ]
+      },
+      {
+        "name": "js-yaml",
+        "SPDXID": "SPDXRef-npm-js-yaml-3.14.0-f7dbf1",
+        "versionInfo": "~3.14.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/js-yaml@~3.14.0"
+          }
+        ]
+      },
+      {
+        "name": "nopt",
+        "SPDXID": "SPDXRef-npm-nopt-5.0.0-b2bfef",
+        "versionInfo": "^5.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nopt@%5E5.0.0"
+          }
+        ]
+      },
+      {
+        "name": "grunt-contrib-watch",
+        "SPDXID": "SPDXRef-npm-grunt-contrib-watch-1.1.0-59a199",
+        "versionInfo": "~1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-contrib-watch@~1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "grunt-known-options",
+        "SPDXID": "SPDXRef-npm-grunt-known-options-2.0.0-6635b3",
+        "versionInfo": "~2.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-known-options@~2.0.0"
+          }
+        ]
+      },
+      {
+        "name": "eventemitter2",
+        "SPDXID": "SPDXRef-npm-eventemitter2-0.4.13-beb81d",
+        "versionInfo": "~0.4.13",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eventemitter2@~0.4.13"
+          }
+        ]
+      },
+      {
+        "name": "grunt-cli",
+        "SPDXID": "SPDXRef-npm-grunt-cli-1.4.3-d49852",
+        "versionInfo": "^1.4.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/grunt-cli@%5E1.4.3"
+          }
+        ]
+      },
+      {
+        "name": "glob",
+        "SPDXID": "SPDXRef-npm-glob-7.1.6-2da858",
+        "versionInfo": "~7.1.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/glob@~7.1.6"
+          }
+        ]
+      },
+      {
+        "name": "temporary",
+        "SPDXID": "SPDXRef-npm-temporary-1.1.0-382f60",
+        "versionInfo": "~1.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/temporary@~1.1.0"
+          }
+        ]
+      },
+      {
+        "name": "through2",
+        "SPDXID": "SPDXRef-npm-through2-4.0.2-efb8bb",
+        "versionInfo": "~4.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/through2@~4.0.2"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "versionInfo": "4.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@4.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.gruntjs/grunt",
+        "SPDXID": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "versionInfo": "main",
+        "downloadLocation": "git+https://github.com/gruntjs/grunt",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/gruntjs/grunt@main"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-dateformat-4.6.2-24642f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-nodeunit-5.0.0-02b388",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-exit-0.1.2-54a5aa",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-config-grunt-2.0.1-2e0648",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-legacy-util-2.0.1-8f8f04",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-findup-sync-5.0.0-d85f7c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-legacy-log-3.0.0-12c19f",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-minimatch-3.0.4-96875b",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-eslint-24.1.0-eaa2a9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-difflet-1.0.1-acfab9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-iconv-lite-0.6.3-4dd11a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-js-yaml-3.14.0-f7dbf1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-nopt-5.0.0-b2bfef",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-contrib-watch-1.1.0-59a199",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-known-options-2.0.0-6635b3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-eventemitter2-0.4.13-beb81d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-grunt-cli-1.4.3-d49852",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-glob-7.1.6-2da858",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-temporary-1.1.0-382f60",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-npm-through2-4.0.2-efb8bb",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-4..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-gruntjs-grunt-main-573536",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

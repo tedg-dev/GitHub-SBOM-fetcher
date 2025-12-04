@@ -1,0 +1,58 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.hughsk/is-typedarray",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/ffb2c173-995c-418b-8926-23f5c404e53a",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:26:56Z"
+    },
+    "packages": [
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-2.13.1-1af4d8",
+        "versionInfo": "^2.13.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@%5E2.13.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.hughsk/is-typedarray",
+        "SPDXID": "SPDXRef-github-hughsk-is-typedarray-master-9a215c",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/hughsk/is-typedarray",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/hughsk/is-typedarray@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-hughsk-is-typedarray-master-9a215c",
+        "relatedSpdxElement": "SPDXRef-npm-tape-2.13.1-1af4d8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-hughsk-is-typedarray-master-9a215c",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

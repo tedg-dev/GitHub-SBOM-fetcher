@@ -239,7 +239,7 @@ class SBOMFetcherService:
         logger.info("SUMMARY")
         logger.info("=" * 70)
         logger.info("")
-        logger.info("Packages in root SBOM: %d", stats.packages_in_sbom)
+        logger.info("Root SBOM dependency repositories: %d", stats.packages_in_sbom)
         logger.info("Mapped to GitHub repos: %d", stats.github_repos_mapped)
         logger.info("Unique repositories: %d", stats.unique_repos)
         logger.info("Duplicate versions skipped: %d", stats.duplicates_skipped)

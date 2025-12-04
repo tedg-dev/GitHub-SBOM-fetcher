@@ -1,0 +1,59 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.calvinmetcalf/process-nextick-args",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/bfe656cc-806b-4017-ba6b-6e966aab23fd",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:27:43Z"
+    },
+    "packages": [
+      {
+        "name": "tap",
+        "SPDXID": "SPDXRef-npm-tap-0.2.6-6b0b57",
+        "versionInfo": "~0.2.6",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tap@~0.2.6"
+          }
+        ]
+      },
+      {
+        "name": "com.github.calvinmetcalf/process-nextick-args",
+        "SPDXID": "SPDXRef-github-calvinmetcalf-process-nextick-args-master-85c274",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/calvinmetcalf/process-nextick-args",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/calvinmetcalf/process-nextick-args@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-calvinmetcalf-process-nextick-args-master-85c274",
+        "relatedSpdxElement": "SPDXRef-npm-tap-0.2.6-6b0b57",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-calvinmetcalf-process-nextick-args-master-85c274",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

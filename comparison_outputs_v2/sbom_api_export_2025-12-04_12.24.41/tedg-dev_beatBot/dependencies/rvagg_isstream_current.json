@@ -1,0 +1,137 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.rvagg/isstream",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/4bbdb7a6-c7c4-4979-a553-c3b2ddd2a08e",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:26:53Z"
+    },
+    "packages": [
+      {
+        "name": "string_decoder",
+        "SPDXID": "SPDXRef-npm-stringdecoder-0.10.x-8bfb12",
+        "versionInfo": "~0.10.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/string_decoder@~0.10.x"
+          }
+        ]
+      },
+      {
+        "name": "inherits",
+        "SPDXID": "SPDXRef-npm-inherits-2.0.1-11cf3c",
+        "versionInfo": "~2.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/inherits@~2.0.1"
+          }
+        ]
+      },
+      {
+        "name": "tape",
+        "SPDXID": "SPDXRef-npm-tape-2.12.3-8e3764",
+        "versionInfo": "~2.12.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/tape@~2.12.3"
+          }
+        ]
+      },
+      {
+        "name": "core-util-is",
+        "SPDXID": "SPDXRef-npm-core-util-is-1.0.0-941689",
+        "versionInfo": "~1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/core-util-is@~1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "isarray",
+        "SPDXID": "SPDXRef-npm-isarray-0.0.1-a6fa77",
+        "versionInfo": "0.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/isarray@0.0.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.rvagg/isstream",
+        "SPDXID": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/rvagg/isstream",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/rvagg/isstream@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "relatedSpdxElement": "SPDXRef-npm-stringdecoder-0.10.x-8bfb12",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "relatedSpdxElement": "SPDXRef-npm-inherits-2.0.1-11cf3c",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "relatedSpdxElement": "SPDXRef-npm-tape-2.12.3-8e3764",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "relatedSpdxElement": "SPDXRef-npm-core-util-is-1.0.0-941689",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "relatedSpdxElement": "SPDXRef-npm-isarray-0.0.1-a6fa77",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-rvagg-isstream-master-1d04db",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

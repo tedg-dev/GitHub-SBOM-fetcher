@@ -1,0 +1,61 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.aduh95/ecc-jsbn",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/704ba9fb-8d07-43a9-9572-f340b3dc21c7",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:30:24Z"
+    },
+    "packages": [
+      {
+        "name": "jsbn",
+        "SPDXID": "SPDXRef-npm-jsbn-0.1.1-6eb968",
+        "versionInfo": "0.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2003-2005 Tom Wu, Copyright (c) 2005 Tom Wu, Copyright (c) 2005-2009 Tom Wu",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/jsbn@0.1.1"
+          }
+        ]
+      },
+      {
+        "name": "com.github.aduh95/ecc-jsbn",
+        "SPDXID": "SPDXRef-github-aduh95-ecc-jsbn-master-47bdac",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/aduh95/ecc-jsbn",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/aduh95/ecc-jsbn@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-aduh95-ecc-jsbn-master-47bdac",
+        "relatedSpdxElement": "SPDXRef-npm-jsbn-0.1.1-6eb968",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-aduh95-ecc-jsbn-master-47bdac",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

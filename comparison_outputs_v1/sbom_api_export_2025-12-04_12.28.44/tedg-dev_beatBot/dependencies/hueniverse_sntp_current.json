@@ -1,0 +1,153 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.outmoded/sntp",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/3576929c-32f7-4e64-a381-35e64f8d987d",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:30:30Z"
+    },
+    "packages": [
+      {
+        "name": "@hapi/code",
+        "SPDXID": "SPDXRef-npm-hapi-code-8.x.x-8c5fc2",
+        "versionInfo": "8.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/code@8.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/lab",
+        "SPDXID": "SPDXRef-npm-hapi-lab-22.x.x-20b8a8",
+        "versionInfo": "22.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/lab@22.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/boom",
+        "SPDXID": "SPDXRef-npm-hapi-boom-9.x.x-5ec8f3",
+        "versionInfo": "9.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/boom@9.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/bounce",
+        "SPDXID": "SPDXRef-npm-hapi-bounce-2.x.x-3b9132",
+        "versionInfo": "2.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/bounce@2.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/hoek",
+        "SPDXID": "SPDXRef-npm-hapi-hoek-9.x.x-df45b7",
+        "versionInfo": "9.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/hoek@9.x.x"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/teamwork",
+        "SPDXID": "SPDXRef-npm-hapi-teamwork-4.x.x-d307f9",
+        "versionInfo": "4.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/teamwork@4.x.x"
+          }
+        ]
+      },
+      {
+        "name": "com.github.outmoded/sntp",
+        "SPDXID": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/outmoded/sntp",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/outmoded/sntp@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-code-8.x.x-8c5fc2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-lab-22.x.x-20b8a8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-boom-9.x.x-5ec8f3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-bounce-2.x.x-3b9132",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-hoek-9.x.x-df45b7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-teamwork-4.x.x-d307f9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-outmoded-sntp-master-0629c7",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

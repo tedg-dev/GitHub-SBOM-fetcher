@@ -1,0 +1,61 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.TooTallNate/node-bindings",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/4f98ae5a-2a15-4381-82d7-3e23725fd202",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:28:27Z"
+    },
+    "packages": [
+      {
+        "name": "file-uri-to-path",
+        "SPDXID": "SPDXRef-npm-file-uri-to-path-1.0.0-59c0e1",
+        "versionInfo": "1.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/file-uri-to-path@1.0.0"
+          }
+        ]
+      },
+      {
+        "name": "com.github.TooTallNate/node-bindings",
+        "SPDXID": "SPDXRef-github-TooTallNate-node-bindings-master-9b8731",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/TooTallNate/node-bindings",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/TooTallNate/node-bindings@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-TooTallNate-node-bindings-master-9b8731",
+        "relatedSpdxElement": "SPDXRef-npm-file-uri-to-path-1.0.0-59c0e1",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-TooTallNate-node-bindings-master-9b8731",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

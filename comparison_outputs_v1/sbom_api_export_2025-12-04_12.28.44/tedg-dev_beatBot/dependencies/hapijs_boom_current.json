@@ -1,0 +1,172 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.hapijs/boom",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/eb639a6b-b161-45f3-93fa-cb523fe848e0",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:31:04Z"
+    },
+    "packages": [
+      {
+        "name": "@hapi/lab",
+        "SPDXID": "SPDXRef-npm-hapi-lab-25.1.0-e38cf7",
+        "versionInfo": "^25.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/lab@%5E25.1.0"
+          }
+        ]
+      },
+      {
+        "name": "@types/node",
+        "SPDXID": "SPDXRef-npm-types-node-17.0.31-2be942",
+        "versionInfo": "^17.0.31",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40types/node@%5E17.0.31"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/eslint-plugin",
+        "SPDXID": "SPDXRef-npm-hapi-eslint-plugin-6.0.0-f9daa8",
+        "versionInfo": "^6.0.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/eslint-plugin@%5E6.0.0"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/hoek",
+        "SPDXID": "SPDXRef-npm-hapi-hoek-11.0.2-402c0d",
+        "versionInfo": "^11.0.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/hoek@%5E11.0.2"
+          }
+        ]
+      },
+      {
+        "name": "typescript",
+        "SPDXID": "SPDXRef-npm-typescript-4.6.4-3c13c0",
+        "versionInfo": "~4.6.4",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/typescript@~4.6.4"
+          }
+        ]
+      },
+      {
+        "name": "@hapi/code",
+        "SPDXID": "SPDXRef-npm-hapi-code-9.x.x-13fe52",
+        "versionInfo": "9.x.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40hapi/code@9.x.x"
+          }
+        ]
+      },
+      {
+        "name": "hapijs/.github/.github/workflows/ci-module.yml",
+        "SPDXID": "SPDXRef-githubactions-hapijs.github.githubworkflows-ci-module.yml-master-75c946",
+        "versionInfo": "master",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/hapijs/.github/.github/workflows/ci-module.yml@master"
+          }
+        ]
+      },
+      {
+        "name": "com.github.hapijs/boom",
+        "SPDXID": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/hapijs/boom",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/hapijs/boom@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-lab-25.1.0-e38cf7",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-npm-types-node-17.0.31-2be942",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-eslint-plugin-6.0.0-f9daa8",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-hoek-11.0.2-402c0d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-npm-typescript-4.6.4-3c13c0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-npm-hapi-code-9.x.x-13fe52",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relatedSpdxElement": "SPDXRef-githubactions-hapijs.github.githubworkflows-ci-module.yml-master-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-hapijs-boom-master-a3b8e9",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

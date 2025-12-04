@@ -1,0 +1,438 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.jshttp/mime-types",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/5cfd8581-4fe1-4d2c-a00f-eadc8e17af96",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:32:06Z"
+    },
+    "packages": [
+      {
+        "name": "nyc",
+        "SPDXID": "SPDXRef-npm-nyc-15.1.0-44fa51",
+        "versionInfo": "15.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "Copyright (c) 2015, Contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/nyc@15.1.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-plugin-import",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-import-2.32.0-59804a",
+        "versionInfo": "2.32.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2015 Ben Mosher, copyright 2016 Desmond Brand",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-import@2.32.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-plugin-node",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-node-11.1.0-27f4e4",
+        "versionInfo": "11.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2015 Toru Nagashima",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-node@11.1.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-8.33.0-c72427",
+        "versionInfo": "8.33.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright 2013-2016 Dulin Marat and other contributors, Copyright OpenJS Foundation and other contributors, <www.openjsf.org>",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@8.33.0"
+          }
+        ]
+      },
+      {
+        "name": "mime-db",
+        "SPDXID": "SPDXRef-npm-mime-db-1.54.0-82b2ca",
+        "versionInfo": "^1.54.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mime-db@%5E1.54.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-plugin-promise",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-promise-6.6.0-20dd9d",
+        "versionInfo": "6.6.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "ISC",
+        "copyrightText": "(c) 2016 Jamund Ferguson, Copyright (c) 2020, Jamund Ferguson",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-promise@6.6.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-plugin-markdown",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-markdown-3.0.1-c0d19d",
+        "versionInfo": "3.0.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright JS Foundation and other contributors, https://js.foundation",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-markdown@3.0.1"
+          }
+        ]
+      },
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha-10.8.2-1829f0",
+        "versionInfo": "10.8.2",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>, Copyright (c) 2011-2024 OpenJS Foundation and contributors, https://openjsf.org, Copyright 2011-2024 OpenJS Foundation and contributors, Copyright Joyent, Inc. and other Node contributors",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@10.8.2"
+          }
+        ]
+      },
+      {
+        "name": "eslint-plugin-standard",
+        "SPDXID": "SPDXRef-npm-eslint-plugin-standard-4.1.0-ed8a93",
+        "versionInfo": "4.1.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2015 Jamund Ferguson, copyright 2014 Brandyn Bennett., copyright 2014 Michael Ficarra. No, copyright 2014 Vignesh Anand., copyright 2015 Jamund Ferguson.",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-plugin-standard@4.1.0"
+          }
+        ]
+      },
+      {
+        "name": "eslint-config-standard",
+        "SPDXID": "SPDXRef-npm-eslint-config-standard-14.1.1-8665e3",
+        "versionInfo": "14.1.1",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) Feross Aboukhadijeh, Copyright (c) Feross Aboukhadijeh (http://feross.org)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint-config-standard@14.1.1"
+          }
+        ]
+      },
+      {
+        "name": "actions/setup-node",
+        "SPDXID": "SPDXRef-githubactions-actions-setup-node-5..-75c946",
+        "versionInfo": "5.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/setup-node@5.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+        "versionInfo": "5.*.*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@5.%2A.%2A"
+          }
+        ]
+      },
+      {
+        "name": "coverallsapp/github-action",
+        "SPDXID": "SPDXRef-githubactions-coverallsapp-github-action-648a8eb78e6d50909eff900e4ec85cab4524a45b-75c946",
+        "versionInfo": "648a8eb78e6d50909eff900e4ec85cab4524a45b",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/coverallsapp/github-action@648a8eb78e6d50909eff900e4ec85cab4524a45b"
+          }
+        ]
+      },
+      {
+        "name": "actions/checkout",
+        "SPDXID": "SPDXRef-githubactions-actions-checkout-08c6903cd8c0fde910a37f88322edcfb5dd907a8-75c946",
+        "versionInfo": "08c6903cd8c0fde910a37f88322edcfb5dd907a8",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/analyze",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-analyze-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "versionInfo": "3599b3baa15b485a2e49ef411a7a4bb2452e7f93",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/analyze@3599b3baa15b485a2e49ef411a7a4bb2452e7f93"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/init",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-init-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "versionInfo": "3599b3baa15b485a2e49ef411a7a4bb2452e7f93",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/init@3599b3baa15b485a2e49ef411a7a4bb2452e7f93"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/autobuild",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-autobuild-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "versionInfo": "3599b3baa15b485a2e49ef411a7a4bb2452e7f93",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/autobuild@3599b3baa15b485a2e49ef411a7a4bb2452e7f93"
+          }
+        ]
+      },
+      {
+        "name": "actions/upload-artifact",
+        "SPDXID": "SPDXRef-githubactions-actions-upload-artifact-ea165f8d65b6e75b540449e92b4886f43607fa02-75c946",
+        "versionInfo": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02"
+          }
+        ]
+      },
+      {
+        "name": "github/codeql-action/upload-sarif",
+        "SPDXID": "SPDXRef-githubactions-githubcodeql-action-upload-sarif-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "versionInfo": "3599b3baa15b485a2e49ef411a7a4bb2452e7f93",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/github/codeql-action/upload-sarif@3599b3baa15b485a2e49ef411a7a4bb2452e7f93"
+          }
+        ]
+      },
+      {
+        "name": "ossf/scorecard-action",
+        "SPDXID": "SPDXRef-githubactions-ossf-scorecard-action-4eaacf0543bb3f2c246792bd56e8cdeffafb205a-75c946",
+        "versionInfo": "4eaacf0543bb3f2c246792bd56e8cdeffafb205a",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:githubactions/ossf/scorecard-action@4eaacf0543bb3f2c246792bd56e8cdeffafb205a"
+          }
+        ]
+      },
+      {
+        "name": "com.github.jshttp/mime-types",
+        "SPDXID": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/jshttp/mime-types",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/jshttp/mime-types@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-nyc-15.1.0-44fa51",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-import-2.32.0-59804a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-node-11.1.0-27f4e4",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-8.33.0-c72427",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-mime-db-1.54.0-82b2ca",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-promise-6.6.0-20dd9d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-markdown-3.0.1-c0d19d",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-mocha-10.8.2-1829f0",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-plugin-standard-4.1.0-ed8a93",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-config-standard-14.1.1-8665e3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-5..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-checkout-08c6903cd8c0fde910a37f88322edcfb5dd907a8-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-analyze-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-init-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-upload-artifact-ea165f8d65b6e75b540449e92b4886f43607fa02-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-actions-setup-node-5..-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-coverallsapp-github-action-648a8eb78e6d50909eff900e4ec85cab4524a45b-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-autobuild-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-githubcodeql-action-upload-sarif-3599b3baa15b485a2e49ef411a7a4bb2452e7f93-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relatedSpdxElement": "SPDXRef-githubactions-ossf-scorecard-action-4eaacf0543bb3f2c246792bd56e8cdeffafb205a-75c946",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-jshttp-mime-types-master-603caf",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

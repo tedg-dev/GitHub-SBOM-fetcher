@@ -1,0 +1,78 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.tj/node-delegates",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/8a84980a-c2d4-41e4-9f42-3e987ffcb296",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:31:44Z"
+    },
+    "packages": [
+      {
+        "name": "mocha",
+        "SPDXID": "SPDXRef-npm-mocha--cc2207",
+        "versionInfo": "*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/mocha@%2A"
+          }
+        ]
+      },
+      {
+        "name": "should",
+        "SPDXID": "SPDXRef-npm-should--b2e49a",
+        "versionInfo": "*",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/should@%2A"
+          }
+        ]
+      },
+      {
+        "name": "com.github.tj/node-delegates",
+        "SPDXID": "SPDXRef-github-tj-node-delegates-master-7c7527",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/tj/node-delegates",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/tj/node-delegates@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-tj-node-delegates-master-7c7527",
+        "relatedSpdxElement": "SPDXRef-npm-mocha--cc2207",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-tj-node-delegates-master-7c7527",
+        "relatedSpdxElement": "SPDXRef-npm-should--b2e49a",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-tj-node-delegates-master-7c7527",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}

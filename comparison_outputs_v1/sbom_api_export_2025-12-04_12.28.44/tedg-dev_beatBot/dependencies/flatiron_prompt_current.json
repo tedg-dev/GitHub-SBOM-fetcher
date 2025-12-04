@@ -1,0 +1,177 @@
+{
+  "sbom": {
+    "spdxVersion": "SPDX-2.3",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-DOCUMENT",
+    "name": "com.github.flatiron/prompt",
+    "documentNamespace": "https://spdx.org/spdxdocs/protobom/f7714edd-5782-4fcc-8d84-9758b618f7d2",
+    "creationInfo": {
+      "creators": [
+        "Tool: protobom-v0.0.0-20251201163737-0a89483e840c+dirty",
+        "Tool: GitHub.com-Dependency-Graph"
+      ],
+      "created": "2025-12-04T22:31:12Z"
+    },
+    "packages": [
+      {
+        "name": "eslint",
+        "SPDXID": "SPDXRef-npm-eslint-7.32.0-ada2b3",
+        "versionInfo": "^7.32.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/eslint@%5E7.32.0"
+          }
+        ]
+      },
+      {
+        "name": "vows",
+        "SPDXID": "SPDXRef-npm-vows-0.7.0-0fb8e2",
+        "versionInfo": "^0.7.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/vows@%5E0.7.0"
+          }
+        ]
+      },
+      {
+        "name": "@colors/colors",
+        "SPDXID": "SPDXRef-npm-colors-colors-1.5.0-805b17",
+        "versionInfo": "1.5.0",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) DABH (https://github.com/DABH), Copyright (c) Marak Squires, Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/%40colors/colors@1.5.0"
+          }
+        ]
+      },
+      {
+        "name": "async",
+        "SPDXID": "SPDXRef-npm-async-3.2.3-fc5597",
+        "versionInfo": "3.2.3",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "licenseConcluded": "MIT",
+        "copyrightText": "Copyright (c) 2010-2018 Caolan McMahon",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/async@3.2.3"
+          }
+        ]
+      },
+      {
+        "name": "read",
+        "SPDXID": "SPDXRef-npm-read-1.0.x-5517c9",
+        "versionInfo": "1.0.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/read@1.0.x"
+          }
+        ]
+      },
+      {
+        "name": "revalidator",
+        "SPDXID": "SPDXRef-npm-revalidator-0.1.x-50b93e",
+        "versionInfo": "0.1.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/revalidator@0.1.x"
+          }
+        ]
+      },
+      {
+        "name": "winston",
+        "SPDXID": "SPDXRef-npm-winston-2.x-e7a8b5",
+        "versionInfo": "2.x",
+        "downloadLocation": "NOASSERTION",
+        "filesAnalyzed": false,
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:npm/winston@2.x"
+          }
+        ]
+      },
+      {
+        "name": "com.github.flatiron/prompt",
+        "SPDXID": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "versionInfo": "master",
+        "downloadLocation": "git+https://github.com/flatiron/prompt",
+        "filesAnalyzed": false,
+        "licenseDeclared": "MIT",
+        "externalRefs": [
+          {
+            "referenceCategory": "PACKAGE-MANAGER",
+            "referenceType": "purl",
+            "referenceLocator": "pkg:github/flatiron/prompt@master"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-eslint-7.32.0-ada2b3",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-vows-0.7.0-0fb8e2",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-colors-colors-1.5.0-805b17",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-async-3.2.3-fc5597",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-read-1.0.x-5517c9",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-revalidator-0.1.x-50b93e",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relatedSpdxElement": "SPDXRef-npm-winston-2.x-e7a8b5",
+        "relationshipType": "DEPENDS_ON"
+      },
+      {
+        "spdxElementId": "SPDXRef-DOCUMENT",
+        "relatedSpdxElement": "SPDXRef-github-flatiron-prompt-master-bfeb2a",
+        "relationshipType": "DESCRIBES"
+      }
+    ]
+  }
+}
