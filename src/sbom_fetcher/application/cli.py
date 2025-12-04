@@ -32,7 +32,7 @@ Examples:
     parser.add_argument("--gh-user", required=True, help="GitHub repository owner")
     parser.add_argument("--gh-repo", required=True, help="GitHub repository name")
     parser.add_argument("--key-file", default="keys.json", help="Path to keys.json file")
-    parser.add_argument("--output-dir", default="sboms_api", help="Base output directory")
+    parser.add_argument("--output-dir", default="sboms", help="Base output directory")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")
 
     return parser.parse_args()

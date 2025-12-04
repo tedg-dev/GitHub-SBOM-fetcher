@@ -18,7 +18,7 @@ class Config:
     pypi_api_url: str = "https://pypi.org/pypi"
 
     # File paths
-    output_dir: Path = field(default_factory=lambda: Path("sboms_api"))
+    output_dir: Path = field(default_factory=lambda: Path("sboms"))
     key_file: Path = field(default_factory=lambda: Path("keys.json"))
 
     # Behavior
