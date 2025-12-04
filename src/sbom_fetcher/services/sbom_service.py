@@ -71,7 +71,9 @@ class SBOMFetcherService:
 
         # Create output directory with timestamp
         timestamp = datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
-        output_base = Path(self._config.output_dir) / f"sbom_api_export_{timestamp}"
+        output_base = (
+            Path(self._config.output_dir) / f"sbom_api_export_{timestamp}" / f"{owner}_{repo}"
+        )
         output_base.mkdir(parents=True, exist_ok=True)
 
         deps_dir = output_base / "dependencies"
