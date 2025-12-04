@@ -490,7 +490,8 @@ def generate_markdown_report(
     repo: str,
     stats: 'FetcherStats',
     packages: List['PackageDependency'],
-    version_mapping: Dict[str, Dict[str, Any]]
+    version_mapping: Dict[str, Dict[str, Any]],
+    failed_sboms: List[Dict[str, Any]]
 ) -> str:
     """Generate a Markdown report with execution details."""
     md_filename = f"{owner}_{repo}_execution_report.md"
@@ -541,6 +542,19 @@ def generate_markdown_report(
     md_content.append(
         "> See `version_mapping.json` for details on version "
         "deduplication.\n")
+
+    # Failed SBOMs
+    if failed_sboms:
+        md_content.append("## ❌ Failed SBOM Downloads\n")
+        md_content.append(
+            f"**Total failures:** {len(failed_sboms)}\n")
+        for failure in failed_sboms:
+            md_content.append(f"### {failure['repo']}\n")
+            md_content.append(f"- **Package:** {failure['package']}")
+            md_content.append(f"- **Ecosystem:** {failure['ecosystem']}")
+            md_content.append(
+                f"- **Versions:** {', '.join(failure['versions'])}")
+            md_content.append(f"- **Error:** `{failure['error']}`\n")
 
     # Packages Without GitHub Repositories
     if no_github:
@@ -760,6 +774,7 @@ Examples:
         
         # Download one SBOM per repository
         version_mapping = {}  # Track which versions map to each SBOM
+        failed_sboms = []  # Track failed SBOM downloads
         
         for i, (repo_key, pkgs) in enumerate(repo_to_packages.items(), 1):
             # Use first package for download (all versions map to same repo)
@@ -786,8 +801,15 @@ Examples:
                 }
             else:
                 stats.sboms_failed += 1
-                if pkg.error:
-                    logger.debug("  Failed: %s", pkg.error)
+                error_msg = pkg.error or "Unknown error"
+                failed_sboms.append({
+                    "repo": repo_key,
+                    "package": pkg.name,
+                    "ecosystem": pkg.ecosystem,
+                    "versions": sorted(set(versions)),
+                    "error": error_msg
+                })
+                logger.warning("  Failed: %s", error_msg)
             
             # Count skipped duplicates
             if len(pkgs) > 1:
@@ -810,7 +832,8 @@ Examples:
             args.gh_repo,
             stats,
             packages,
-            version_mapping
+            version_mapping,
+            failed_sboms
         )
         logger.info("Generated execution report: %s", md_filename)
         
@@ -834,6 +857,22 @@ Examples:
         logger.info("      of repositories (default branch), not for specific versions.")
         logger.info("      See version_mapping.json for details on version deduplication.")
         logger.info("")
+        
+        # Failed SBOMs report
+        if failed_sboms:
+            logger.info("="*70)
+            logger.info("Failed SBOM Downloads")
+            logger.info("="*70)
+            logger.info("")
+            
+            for failure in failed_sboms:
+                logger.info("  ❌ %s", failure['repo'])
+                logger.info("     Package: %s (%s)",
+                            failure['package'], failure['ecosystem'])
+                logger.info("     Versions: %s",
+                            ', '.join(failure['versions']))
+                logger.info("     Error: %s", failure['error'])
+                logger.info("")
         
         # Detailed report
         if stats.packages_without_github > 0:
