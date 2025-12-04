@@ -469,11 +469,9 @@ class TestMapPackageToGitHub:
             ecosystem="npm"
         )
         
-        mock_session = Mock()
-        
         with patch('github_sbom_api_fetcher.map_npm_package_to_github',
                    return_value=("lodash", "lodash")):
-            result = map_package_to_github(mock_session, pkg)
+            result = map_package_to_github(pkg)
         
         assert result is True
         assert pkg.github_owner == "lodash"
@@ -488,11 +486,9 @@ class TestMapPackageToGitHub:
             ecosystem="pypi"
         )
         
-        mock_session = Mock()
-        
         with patch('github_sbom_api_fetcher.map_pypi_package_to_github',
                    return_value=("psf", "requests")):
-            result = map_package_to_github(mock_session, pkg)
+            result = map_package_to_github(pkg)
         
         assert result is True
         assert pkg.github_owner == "psf"
@@ -507,11 +503,9 @@ class TestMapPackageToGitHub:
             ecosystem="npm"
         )
         
-        mock_session = Mock()
-        
         with patch('github_sbom_api_fetcher.map_npm_package_to_github',
                    return_value=None):
-            result = map_package_to_github(mock_session, pkg)
+            result = map_package_to_github(pkg)
         
         assert result is False
         assert pkg.github_owner is None
@@ -525,9 +519,7 @@ class TestMapPackageToGitHub:
             ecosystem="maven"
         )
         
-        mock_session = Mock()
-        
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         assert result is False
         assert pkg.github_owner is None

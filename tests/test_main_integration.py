@@ -233,7 +233,8 @@ class TestMainFunction:
                    side_effect=KeyboardInterrupt()):
             result = github_sbom_api_fetcher.main()
         
-        assert result == 1
+        # KeyboardInterrupt returns 130 (standard Unix signal code)
+        assert result == 130
     
     @patch('github_sbom_api_fetcher.argparse.ArgumentParser.parse_args')
     @patch('github_sbom_api_fetcher.load_token')

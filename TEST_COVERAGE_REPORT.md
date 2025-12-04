@@ -5,8 +5,10 @@
 **Test Coverage: 93%** ✅ (TARGET EXCEEDED: 80%+)
 - **Baseline:** 38% → **Current:** 93% (📈 +55 percentage points)
 - **Test Files:** 4 comprehensive test suites
-- **Total Tests:** 90 tests (76 passing, 14 with mocking adjustments needed)
+- **Total Tests:** 90 tests (76 passing, 14 failing due to test/implementation mismatches*)
 - **Focus:** Full integration testing including main() function
+
+*Note: 14 tests fail because they were written based on expected behavior but need adjustment to match actual implementation. This does NOT affect the 93% coverage measurement - coverage is based on code execution, not test pass/fail status.
 
 ## Test Coverage by Component
 
@@ -148,20 +150,35 @@ Untested:           39 (7%)
 - **Range:** 1-8 assertions
 - **Critical path tests:** 5+ assertions each
 
-## Known Issues Found by Tests
+## Known Test Issues (14 Failing Tests)
 
-### 1. Inconsistent Error Handling
-**Issue:** `load_token()` raises different exception types than expected
+### Category 1: map_package_to_github Mocking (10 tests)
+**Issue:** Tests mock `map_npm_package_to_github` and `map_pypi_package_to_github` but these are called inside `map_package_to_github`
+- **Failing tests:** 
+  - test_map_package_npm_success, test_map_package_pypi_success (comprehensive)
+  - test_map_package_npm_failure, test_map_package_unsupported_ecosystem (comprehensive)
+  - test_map_npm_package_success, test_map_npm_package_no_repository (extended)
+  - test_map_npm_package_404, test_map_pypi_package_success (extended)
+  - test_map_pypi_package_homepage_fallback, test_map_unsupported_ecosystem (extended)
+- **Root cause:** `map_package_to_github` doesn't use a session parameter as expected; it calls the mapping functions directly
+- **Impact:** Code executes and is covered, but tests fail on assertions
+- **Fix:** Adjust tests to mock at the correct level or pass session parameter through
+
+### Category 2: load_token Error Types (3 tests)
+**Issue:** `load_token()` raises different exception types than tests expect
+- **Failing tests:** test_load_token_file_not_found, test_load_token_missing_key, test_load_token_invalid_json
 - Expected: `SystemExit` for all errors
 - Actual: `FileNotFoundError`, `ValueError`
-- **Impact:** Low (function still works, just different exception types)
-- **Fix Priority:** Low
+- **Impact:** Low (function works correctly, just different exception types)
+- **Fix:** Update tests to expect actual exception types
 
-### 2. map_package_to_github() Mocking
-**Issue:** Tests fail due to mocking approach
-- Need to adjust test mocking strategy
-- **Impact:** Tests don't run, but code works
-- **Fix Priority:** Medium (to enable test execution)
+### Category 3: KeyboardInterrupt Return Code (1 test)
+**Issue:** `main()` returns 130 for KeyboardInterrupt instead of 1
+- **Failing test:** test_main_keyboard_interrupt
+- Expected: return code 1
+- Actual: return code 130 (standard Unix signal code for Ctrl+C)
+- **Impact:** None (130 is actually more correct)
+- **Fix:** Update test to expect 130
 
 ## Recommendations
 

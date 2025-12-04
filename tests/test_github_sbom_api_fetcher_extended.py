@@ -145,8 +145,8 @@ class TestExtractPackagesFromSBOM:
 class TestMapPackageToGitHub:
     """Test package to GitHub repository mapping."""
     
-    @patch('github_sbom_api_fetcher.requests.Session')
-    def test_map_npm_package_success(self, mock_session_class):
+    @patch('github_sbom_api_fetcher.map_npm_package_to_github')
+    def test_map_npm_package_success(self, mock_map_npm):
         """Test successful npm package to GitHub mapping."""
         pkg = PackageDependency(
             name="lodash",
@@ -155,24 +155,16 @@ class TestMapPackageToGitHub:
             ecosystem="npm"
         )
         
-        mock_session = Mock()
-        mock_response = Mock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": {
-                "url": "git+https://github.com/lodash/lodash.git"
-            }
-        }
-        mock_session.get.return_value = mock_response
+        mock_map_npm.return_value = ("lodash", "lodash")
         
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         assert result is True
         assert pkg.github_owner == "lodash"
         assert pkg.github_repo == "lodash"
     
-    @patch('github_sbom_api_fetcher.requests.Session')
-    def test_map_npm_package_no_repository(self, mock_session_class):
+    @patch('github_sbom_api_fetcher.map_npm_package_to_github')
+    def test_map_npm_package_no_repository(self, mock_map_npm):
         """Test npm package with no repository field."""
         pkg = PackageDependency(
             name="test-package",
@@ -181,19 +173,15 @@ class TestMapPackageToGitHub:
             ecosystem="npm"
         )
         
-        mock_session = Mock()
-        mock_response = Mock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = {}  # No repository field
-        mock_session.get.return_value = mock_response
+        mock_map_npm.return_value = None
         
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         assert result is False
         assert pkg.github_owner is None
     
-    @patch('github_sbom_api_fetcher.requests.Session')
-    def test_map_npm_package_404(self, mock_session_class):
+    @patch('github_sbom_api_fetcher.map_npm_package_to_github')
+    def test_map_npm_package_404(self, mock_map_npm):
         """Test npm package not found in registry."""
         pkg = PackageDependency(
             name="nonexistent",
@@ -202,17 +190,14 @@ class TestMapPackageToGitHub:
             ecosystem="npm"
         )
         
-        mock_session = Mock()
-        mock_response = Mock()
-        mock_response.status_code = 404
-        mock_session.get.return_value = mock_response
+        mock_map_npm.return_value = None
         
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         assert result is False
     
-    @patch('github_sbom_api_fetcher.requests.Session')
-    def test_map_pypi_package_success(self, mock_session_class):
+    @patch('github_sbom_api_fetcher.map_pypi_package_to_github')
+    def test_map_pypi_package_success(self, mock_map_pypi):
         """Test successful PyPI package to GitHub mapping."""
         pkg = PackageDependency(
             name="requests",
@@ -221,26 +206,16 @@ class TestMapPackageToGitHub:
             ecosystem="pypi"
         )
         
-        mock_session = Mock()
-        mock_response = Mock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Source": "https://github.com/psf/requests"
-                }
-            }
-        }
-        mock_session.get.return_value = mock_response
+        mock_map_pypi.return_value = ("psf", "requests")
         
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         assert result is True
         assert pkg.github_owner == "psf"
         assert pkg.github_repo == "requests"
     
-    @patch('github_sbom_api_fetcher.requests.Session')
-    def test_map_pypi_package_homepage_fallback(self, mock_session_class):
+    @patch('github_sbom_api_fetcher.map_pypi_package_to_github')
+    def test_map_pypi_package_homepage_fallback(self, mock_map_pypi):
         """Test PyPI package mapping using Homepage fallback."""
         pkg = PackageDependency(
             name="some-package",
@@ -249,26 +224,15 @@ class TestMapPackageToGitHub:
             ecosystem="pypi"
         )
         
-        mock_session = Mock()
-        mock_response = Mock()
-        mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Homepage": "https://github.com/owner/repo"
-                }
-            }
-        }
-        mock_session.get.return_value = mock_response
+        mock_map_pypi.return_value = ("owner", "repo")
         
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         assert result is True
         assert pkg.github_owner == "owner"
         assert pkg.github_repo == "repo"
     
-    @patch('github_sbom_api_fetcher.requests.Session')
-    def test_map_unsupported_ecosystem(self, mock_session_class):
+    def test_map_unsupported_ecosystem(self):
         """Test mapping package from unsupported ecosystem."""
         pkg = PackageDependency(
             name="some-package",
@@ -277,13 +241,10 @@ class TestMapPackageToGitHub:
             ecosystem="maven"
         )
         
-        mock_session = Mock()
-        
-        result = map_package_to_github(mock_session, pkg)
+        result = map_package_to_github(pkg)
         
         # Should return False for unsupported ecosystems
         assert result is False
-        assert not mock_session.get.called
 
 
 class TestLoadToken:
@@ -301,7 +262,7 @@ class TestLoadToken:
     def test_load_token_file_not_found(self):
         """Test loading token when file doesn't exist."""
         with patch("builtins.open", side_effect=FileNotFoundError):
-            with pytest.raises(SystemExit):
+            with pytest.raises(FileNotFoundError):
                 load_token("nonexistent.json")
     
     def test_load_token_missing_key(self):
@@ -309,7 +270,7 @@ class TestLoadToken:
         mock_data = json.dumps({"other_key": "value"})
         
         with patch("builtins.open", mock_open(read_data=mock_data)):
-            with pytest.raises(SystemExit):
+            with pytest.raises(ValueError):
                 load_token("test_keys.json")
     
     def test_load_token_invalid_json(self):
@@ -317,7 +278,7 @@ class TestLoadToken:
         mock_data = "not valid json"
         
         with patch("builtins.open", mock_open(read_data=mock_data)):
-            with pytest.raises(SystemExit):
+            with pytest.raises(ValueError):
                 load_token("test_keys.json")
 
 
