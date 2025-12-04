@@ -29,9 +29,10 @@ class GitHubClient:
         self._http_client = http_client
         self._token = token
         self._config = config
-        self._sbom_api_template = (
-            f"{config.github_api_url}/repos/{{owner}}/{{repo}}/dependency-graph/sbom"
-        )
+        self._api_url = config.github_api_url
+        self._sbom_api_template = f"{self._api_url}/repos/{{owner}}/{{repo}}/dependency-graph/sbom"
+        self._repo_api_template = f"{self._api_url}/repos/{{owner}}/{{repo}}"
+        self._branch_cache = {}  # Cache branch names to avoid repeated API calls
 
     def fetch_root_sbom(self, owner: str, repo: str) -> Optional[Dict[str, Any]]:
         """
@@ -82,6 +83,46 @@ class GitHubClient:
             logger.error("❌ Request error: %s", e)
             return None
 
+    def get_default_branch(self, session: requests.Session, owner: str, repo: str) -> str:
+        """
+        Get the default branch name for a repository.
+
+        Uses caching to avoid repeated API calls for the same repository.
+        Falls back to 'main' if unable to determine.
+
+        Args:
+            session: Authenticated requests session
+            owner: Repository owner
+            repo: Repository name
+
+        Returns:
+            Default branch name (e.g., 'main', 'master', 'develop')
+        """
+        repo_key = f"{owner}/{repo}"
+
+        # Check cache first
+        if repo_key in self._branch_cache:
+            return self._branch_cache[repo_key]
+
+        # Fetch repository information
+        url = self._repo_api_template.format(owner=owner, repo=repo)
+
+        try:
+            resp = session.get(url, timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
+                branch = data.get("default_branch", "main")
+                self._branch_cache[repo_key] = branch
+                logger.debug(f"Default branch for {owner}/{repo}: {branch}")
+                return branch
+        except Exception as e:
+            logger.debug(f"Failed to get default branch for {owner}/{repo}: {e}")
+
+        # Fall back to 'main'
+        default = "main"
+        self._branch_cache[repo_key] = default
+        return default
+
     def download_dependency_sbom(
         self, session: requests.Session, pkg: PackageDependency, output_dir: str
     ) -> bool:
@@ -114,14 +155,16 @@ class GitHubClient:
                 resp = session.get(url, timeout=30)
 
                 if resp.status_code == 200:
-                    # Save SBOM (use _current.json since GitHub API only
-                    # returns current state, not version-specific)
+                    # Get default branch name for this repository
                     import json
                     import os
 
+                    branch = self.get_default_branch(
+                        session, pkg.github_repository.owner, pkg.github_repository.repo
+                    )
                     filename = (
                         f"{pkg.github_repository.owner}_"
-                        f"{pkg.github_repository.repo}_current.json"
+                        f"{pkg.github_repository.repo}_{branch}.json"
                     )
                     filepath = os.path.join(output_dir, filename)
 
