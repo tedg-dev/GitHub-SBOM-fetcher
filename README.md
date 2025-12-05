@@ -19,6 +19,19 @@ Uses GitHub's official SBOM API and package registry APIs for comprehensive, mai
 
 ## Quick Start
 
+**Use the setup script** (recommended):
+```bash
+# Setup environment and dependencies
+./setup_environment.sh
+
+# Setup and run interactively (prompts for owner/repo)
+./setup_environment.sh --run
+
+# Setup and run tests
+./setup_environment.sh --test
+```
+
+**Manual setup**:
 ```bash
 # Install
 python -m venv venv
@@ -436,20 +449,7 @@ Tests use mocked network calls - no real GitHub traffic.
 
 ## Documentation
 
-### Additional Resources
-
-See `docs/` folder for detailed documentation:
-
-- **[LEGACY_README.md](docs/LEGACY_README.md)** - Original README with v1.0 HTML scraper details
-- **[DEBUG_MAPPING_GUIDE.md](docs/DEBUG_MAPPING_GUIDE.md)** - Generic debugging guide for any repository
-- **[DEBUG_RUN_ANALYSIS.md](docs/DEBUG_RUN_ANALYSIS.md)** - Complete analysis of beatBot test run
-- **[FINAL_DIAGNOSTIC_SUMMARY.md](docs/FINAL_DIAGNOSTIC_SUMMARY.md)** - Comprehensive findings and solutions
-- **[FIXES_SUMMARY.md](docs/FIXES_SUMMARY.md)** - All implemented fixes and their impact
-
-### Legacy Information
-
-- **[docs/LEGACY_README.md](docs/LEGACY_README.md)** - v1.0 HTML scraper documentation
-- **[docs/BEATBOT_V1_V2_COMPARISON.md](docs/BEATBOT_V1_V2_COMPARISON.md)** - Performance comparison
+See `docs/` folder for detailed documentation.
 
 ---
 
