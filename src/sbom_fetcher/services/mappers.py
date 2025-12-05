@@ -45,20 +45,34 @@ class NPMPackageMapper(PackageMapper):
             GitHubRepository or None if not found
         """
         try:
-            url = f"{self._config.npm_registry_url}/{package_name}"
+            # URL encode package name (especially important for scoped packages like @org/pkg)
+            from urllib.parse import quote
+            encoded_name = quote(package_name, safe='')
+            url = f"{self._config.npm_registry_url}/{encoded_name}"
             resp = requests.get(url, timeout=10)
 
             if resp.status_code != 200:
                 return None
 
             data = resp.json()
-            repo_info = data.get("repository", {})
+            repo_info = data.get("repository")
+            
+            # Handle null/missing repository field
+            if repo_info is None:
+                return None
 
             # Handle both dict and string formats
             if isinstance(repo_info, dict):
                 repo_url = repo_info.get("url", "")
-            else:
+            elif isinstance(repo_info, str):
                 repo_url = repo_info
+                # Handle shorthand format: "owner/repo"
+                if "/" in repo_url and "://" not in repo_url and "github" not in repo_url.lower():
+                    parts = repo_url.split("/")
+                    if len(parts) == 2:
+                        return GitHubRepository(owner=parts[0], repo=parts[1])
+            else:
+                return None
 
             if not repo_url:
                 return None
