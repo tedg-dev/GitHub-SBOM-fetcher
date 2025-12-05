@@ -192,7 +192,22 @@ class GitHubClient:
                     pkg.error = "Rate limited"
                     pkg.error_type = ErrorType.TRANSIENT
                     return False
+                elif 500 <= resp.status_code < 600:
+                    # 5xx server errors are transient - retry
+                    if attempt < max_retries - 1:
+                        wait_time = 3 * (attempt + 1)
+                        logger.debug(
+                            "Server error %d, waiting %ds before retry...",
+                            resp.status_code,
+                            wait_time
+                        )
+                        time.sleep(wait_time)
+                        continue
+                    pkg.error = f"HTTP {resp.status_code}"
+                    pkg.error_type = ErrorType.TRANSIENT
+                    return False
                 else:
+                    # Other 4xx client errors are permanent
                     pkg.error = f"HTTP {resp.status_code}"
                     pkg.error_type = ErrorType.PERMANENT
                     return False
