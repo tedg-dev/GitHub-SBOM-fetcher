@@ -2,6 +2,8 @@
 
 import argparse
 import logging
+from datetime import datetime
+from pathlib import Path
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -42,14 +44,32 @@ def setup_logging(debug: bool = False) -> None:
     """
     Setup logging configuration.
 
-    Preserves exact logging format from original script.
+    Logs to console and automatically saves to docs/logs/ directory.
 
     Args:
         debug: Enable debug logging
     """
     log_level = logging.DEBUG if debug else logging.INFO
+    
+    # Create logs directory if it doesn't exist
+    log_dir = Path("docs/logs")
+    log_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Generate timestamped log filename
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
+    log_file = log_dir / f"run_{timestamp}.log"
+    
+    # Setup logging to both console and file
     logging.basicConfig(
         level=log_level,
         format="%(asctime)s - %(levelname)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
+        handlers=[
+            logging.StreamHandler(),  # Console output
+            logging.FileHandler(log_file, encoding='utf-8')  # File output
+        ]
     )
+    
+    # Log the file location (only to console, not to log file)
+    console_logger = logging.getLogger(__name__)
+    console_logger.info(f"Log file: {log_file}")

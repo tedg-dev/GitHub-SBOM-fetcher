@@ -102,18 +102,22 @@ This folder contains detailed technical documentation, analysis reports, and leg
 |----------|-------------|
 | **[FINAL_STATUS.md](FINAL_STATUS.md)** | Final status of implementation |
 
-### Historical Run Logs
+### Run Logs
 
 | Location | Description |
 |----------|-------------|
-| **[logs/](logs/)** | Historical validation and test run logs from v1/v2 development |
+| **[logs/](logs/)** | All run logs are automatically saved here with timestamps |
 
-**Log files:**
+**Automatic logging:** Every run generates a timestamped log file: `run_YYYY-MM-DD_HH.MM.SS.log`
+
+**Historical log files:**
 - `v1_run.log` / `v2_run.log` - Original v1 vs v2 comparison runs
 - `beatbot_full_run.log` / `beatbot_final_run.log` - beatBot validation runs
 - `debug_validation_run.log` - Debug mode validation with package mapping diagnostics
 - `validation_run_post_mapper_fix.log` - Validation after mapper fixes
 - `final_validation_run.log` - Final production validation
+
+**Note:** New `run_*.log` files are gitignored but historical logs are preserved.
 
 ---
 
