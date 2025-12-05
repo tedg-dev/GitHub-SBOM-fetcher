@@ -15,9 +15,7 @@ def sample_sbom_data() -> Dict[str, Any]:
         "sbom": {
             "SPDXID": "SPDXRef-DOCUMENT",
             "spdxVersion": "SPDX-2.3",
-            "creationInfo": {
-                "created": "2024-12-04T00:00:00Z"
-            },
+            "creationInfo": {"created": "2024-12-04T00:00:00Z"},
             "name": "test-repo",
             "dataLicense": "CC0-1.0",
             "packages": [
@@ -29,9 +27,9 @@ def sample_sbom_data() -> Dict[str, Any]:
                         {
                             "referenceCategory": "PACKAGE-MANAGER",
                             "referenceType": "purl",
-                            "referenceLocator": "pkg:npm/lodash@4.17.21"
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
                         }
-                    ]
+                    ],
                 },
                 {
                     "SPDXID": "SPDXRef-Package-requests",
@@ -41,11 +39,11 @@ def sample_sbom_data() -> Dict[str, Any]:
                         {
                             "referenceCategory": "PACKAGE-MANAGER",
                             "referenceType": "purl",
-                            "referenceLocator": "pkg:pypi/requests@2.31.0"
+                            "referenceLocator": "pkg:pypi/requests@2.31.0",
                         }
-                    ]
-                }
-            ]
+                    ],
+                },
+            ],
         }
     }
 
@@ -56,21 +54,14 @@ def npm_registry_response_with_repo() -> Dict[str, Any]:
     return {
         "name": "lodash",
         "version": "4.17.21",
-        "repository": {
-            "type": "git",
-            "url": "git+https://github.com/lodash/lodash.git"
-        }
+        "repository": {"type": "git", "url": "git+https://github.com/lodash/lodash.git"},
     }
 
 
 @pytest.fixture
 def npm_registry_response_without_repo() -> Dict[str, Any]:
     """Sample npm registry response without repository field."""
-    return {
-        "name": "some-package",
-        "version": "1.0.0",
-        "repository": None
-    }
+    return {"name": "some-package", "version": "1.0.0", "repository": None}
 
 
 @pytest.fixture
@@ -80,9 +71,7 @@ def pypi_registry_response_with_repo() -> Dict[str, Any]:
         "info": {
             "name": "requests",
             "version": "2.31.0",
-            "project_urls": {
-                "Source": "https://github.com/psf/requests"
-            }
+            "project_urls": {"Source": "https://github.com/psf/requests"},
         }
     }
 
@@ -90,13 +79,7 @@ def pypi_registry_response_with_repo() -> Dict[str, Any]:
 @pytest.fixture
 def pypi_registry_response_without_repo() -> Dict[str, Any]:
     """Sample PyPI registry response without repository."""
-    return {
-        "info": {
-            "name": "some-package",
-            "version": "1.0.0",
-            "project_urls": {}
-        }
-    }
+    return {"info": {"name": "some-package", "version": "1.0.0", "project_urls": {}}}
 
 
 @pytest.fixture
@@ -107,7 +90,7 @@ def github_sbom_response() -> Dict[str, Any]:
             "SPDXID": "SPDXRef-DOCUMENT",
             "spdxVersion": "SPDX-2.3",
             "name": "test-repo",
-            "packages": []
+            "packages": [],
         }
     }
 
@@ -116,10 +99,7 @@ def github_sbom_response() -> Dict[str, Any]:
 def mock_http_client() -> Mock:
     """Mock HTTP client."""
     client = Mock()
-    client.get.return_value = Mock(
-        status_code=200,
-        json=lambda: {"test": "data"}
-    )
+    client.get.return_value = Mock(status_code=200, json=lambda: {"test": "data"})
     return client
 
 
@@ -161,7 +141,7 @@ def sample_package_dependency() -> Dict[str, Any]:
         "name": "lodash",
         "version": "4.17.21",
         "ecosystem": "npm",
-        "purl": "pkg:npm/lodash@4.17.21"
+        "purl": "pkg:npm/lodash@4.17.21",
     }
 
 
@@ -184,5 +164,5 @@ def sample_failed_download() -> Dict[str, Any]:
         "ecosystem": "npm",
         "versions": ["1.0.0"],
         "error": "Dependency graph not enabled",
-        "error_type": "PERMANENT"
+        "error_type": "PERMANENT",
     }

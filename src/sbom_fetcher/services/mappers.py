@@ -47,7 +47,8 @@ class NPMPackageMapper(PackageMapper):
         try:
             # URL encode package name (especially important for scoped packages like @org/pkg)
             from urllib.parse import quote
-            encoded_name = quote(package_name, safe='')
+
+            encoded_name = quote(package_name, safe="")
             url = f"{self._config.npm_registry_url}/{encoded_name}"
             resp = requests.get(url, timeout=10)
 
@@ -57,7 +58,7 @@ class NPMPackageMapper(PackageMapper):
 
             data = resp.json()
             repo_info = data.get("repository")
-            
+
             # Handle null/missing repository field
             if repo_info is None:
                 logger.debug("Package %s has no repository field (null)", package_name)
@@ -89,7 +90,7 @@ class NPMPackageMapper(PackageMapper):
             if "github.com" not in repo_url_lower:
                 logger.debug("Package %s repository is not GitHub: %s", package_name, repo_url)
                 return None
-            
+
             repo_url = repo_url_lower
 
             # Clean up URL
@@ -115,7 +116,9 @@ class NPMPackageMapper(PackageMapper):
                 logger.debug("Successfully mapped %s → %s/%s", package_name, owner, repo)
                 return GitHubRepository(owner=owner, repo=repo)
 
-            logger.debug("Package %s: Could not extract owner/repo from path: %s", package_name, path)
+            logger.debug(
+                "Package %s: Could not extract owner/repo from path: %s", package_name, path
+            )
             return None
 
         except Exception as e:

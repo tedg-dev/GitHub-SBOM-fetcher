@@ -167,30 +167,36 @@ class MarkdownReporter:
                 "`https://registry.npmjs.org/{package-name}`"
             )
             md_content.append(
-                "2. **Extract Repository Field**: Look for the `\"repository\"` field in the package metadata"
+                '2. **Extract Repository Field**: Look for the `"repository"` field in the package metadata'
             )
             md_content.append(
                 "3. **Validate GitHub URL**: If found, verify it's a GitHub URL and extract owner/repo"
             )
-            md_content.append(
-                "4. **Fetch SBOM**: Download the SBOM from GitHub's API\n"
-            )
+            md_content.append("4. **Fetch SBOM**: Download the SBOM from GitHub's API\n")
             md_content.append("### Why Mapping Fails\n")
             md_content.append(
                 "Packages fail to map when the package registry metadata **does not include** "
-                "a repository field or includes `\"repository\": null`. This commonly occurs with:\n"
+                'a repository field or includes `"repository": null`. This commonly occurs with:\n'
             )
-            md_content.append("- **Old/unmaintained packages**: Published before repository fields were standard")
-            md_content.append("- **Platform-specific binaries**: Wrap native binaries, no source code to link")
-            md_content.append("- **Publisher oversight**: Package maintainer didn't include repository metadata")
-            md_content.append("- **Private/internal packages**: Repository intentionally not disclosed\n")
+            md_content.append(
+                "- **Old/unmaintained packages**: Published before repository fields were standard"
+            )
+            md_content.append(
+                "- **Platform-specific binaries**: Wrap native binaries, no source code to link"
+            )
+            md_content.append(
+                "- **Publisher oversight**: Package maintainer didn't include repository metadata"
+            )
+            md_content.append(
+                "- **Private/internal packages**: Repository intentionally not disclosed\n"
+            )
             md_content.append(
                 "**Important**: Some packages listed below may have GitHub repositories, "
                 "but the package registry metadata does not link to them. "
                 "Without this metadata, the tool cannot discover the repository location.\n"
             )
             md_content.append("### Unmapped Packages Detail\n")
-            
+
             for pkg in unmapped_packages:
                 md_content.append(f"#### {pkg.name} (v{pkg.version})\n")
                 md_content.append(f"- **Ecosystem:** {pkg.ecosystem}")
@@ -199,7 +205,7 @@ class MarkdownReporter:
                     f"- **Package Registry Query:** `https://registry.npmjs.org/{pkg.name}`"
                 )
                 md_content.append(
-                    "- **Registry Response:** Package metadata contains `\"repository\": null` "
+                    '- **Registry Response:** Package metadata contains `"repository": null` '
                     "or no repository field"
                 )
                 md_content.append(
@@ -208,7 +214,7 @@ class MarkdownReporter:
                 md_content.append(
                     "- **GitHub SBOM:** ❌ Not available (repository location unknown from registry)\n"
                 )
-            
+
             md_content.append("### Important Note\n")
             md_content.append(
                 "The absence of repository metadata in the package registry **does not necessarily mean** "

@@ -68,9 +68,7 @@ class TestSBOMParser:
 
     def test_extract_packages_from_sbom(self, sample_sbom_data):
         """Test extracting packages from SBOM data."""
-        packages = self.parser.extract_packages(
-            sample_sbom_data, "test-owner", "test-repo"
-        )
+        packages = self.parser.extract_packages(sample_sbom_data, "test-owner", "test-repo")
 
         assert len(packages) == 2
         assert all(isinstance(pkg, PackageDependency) for pkg in packages)
@@ -88,9 +86,9 @@ class TestSBOMParser:
                             {
                                 "referenceCategory": "PACKAGE-MANAGER",
                                 "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21"
+                                "referenceLocator": "pkg:npm/lodash@4.17.21",
                             }
-                        ]
+                        ],
                     }
                 ]
             }
@@ -114,7 +112,7 @@ class TestSBOMParser:
                         "SPDXID": "SPDXRef-Package-nopurl",
                         "name": "nopurl",
                         "versionInfo": "1.0.0",
-                        "externalRefs": []
+                        "externalRefs": [],
                     },
                     {
                         "SPDXID": "SPDXRef-Package-lodash",
@@ -124,10 +122,10 @@ class TestSBOMParser:
                             {
                                 "referenceCategory": "PACKAGE-MANAGER",
                                 "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21"
+                                "referenceLocator": "pkg:npm/lodash@4.17.21",
                             }
-                        ]
-                    }
+                        ],
+                    },
                 ]
             }
         }

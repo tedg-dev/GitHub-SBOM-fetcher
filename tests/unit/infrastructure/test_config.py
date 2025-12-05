@@ -22,11 +22,14 @@ class TestConfig:
 
     def test_config_with_env_vars(self):
         """Test configuration from environment variables."""
-        with patch.dict(os.environ, {
-            "SBOM_FETCHER_GITHUB_API_URL": "https://custom.github.com",
-            "SBOM_FETCHER_TIMEOUT": "60",
-            "SBOM_FETCHER_LOG_LEVEL": "DEBUG"
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "SBOM_FETCHER_GITHUB_API_URL": "https://custom.github.com",
+                "SBOM_FETCHER_TIMEOUT": "60",
+                "SBOM_FETCHER_LOG_LEVEL": "DEBUG",
+            },
+        ):
             config = Config.from_env()
 
             assert config.github_api_url == "https://custom.github.com"
@@ -35,11 +38,7 @@ class TestConfig:
 
     def test_config_with_custom_values(self):
         """Test creating config with custom values."""
-        config = Config(
-            github_api_url="https://test.github.com",
-            timeout=45,
-            log_level="WARNING"
-        )
+        config = Config(github_api_url="https://test.github.com", timeout=45, log_level="WARNING")
 
         assert config.github_api_url == "https://test.github.com"
         assert config.timeout == 45

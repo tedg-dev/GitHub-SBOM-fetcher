@@ -3,7 +3,7 @@
 import json
 import tempfile
 from pathlib import Path
-from unittest.mock import Mock, patch, mock_open
+from unittest.mock import Mock, mock_open, patch
 
 import pytest
 import requests
@@ -177,7 +177,7 @@ class TestGetDefaultBranch:
         mock_session.get.return_value = mock_response
 
         branch1 = client.get_default_branch(mock_session, "owner", "repo")
-        
+
         # Second call (should use cache)
         branch2 = client.get_default_branch(mock_session, "owner", "repo")
 
@@ -229,10 +229,7 @@ class TestDownloadDependencySBOM:
     def test_download_without_github_repo(self, client, mock_session, temp_dir):
         """Test download fails when package has no GitHub repository."""
         pkg = PackageDependency(
-            name="test-pkg",
-            version="1.0.0",
-            ecosystem="npm",
-            purl="pkg:npm/test-pkg@1.0.0"
+            name="test-pkg", version="1.0.0", ecosystem="npm", purl="pkg:npm/test-pkg@1.0.0"
         )
 
         result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
@@ -249,7 +246,7 @@ class TestDownloadDependencySBOM:
             version="4.17.21",
             ecosystem="npm",
             purl="pkg:npm/lodash@4.17.21",
-            github_repository=repo
+            github_repository=repo,
         )
 
         # Mock SBOM download
@@ -282,7 +279,7 @@ class TestDownloadDependencySBOM:
             version="1.0.0",
             ecosystem="npm",
             purl="pkg:npm/test-pkg@1.0.0",
-            github_repository=repo
+            github_repository=repo,
         )
 
         mock_response = Mock()
@@ -304,7 +301,7 @@ class TestDownloadDependencySBOM:
             version="1.0.0",
             ecosystem="npm",
             purl="pkg:npm/test-pkg@1.0.0",
-            github_repository=repo
+            github_repository=repo,
         )
 
         mock_response = Mock()
@@ -325,7 +322,7 @@ class TestDownloadDependencySBOM:
             version="1.0.0",
             ecosystem="npm",
             purl="pkg:npm/test-pkg@1.0.0",
-            github_repository=repo
+            github_repository=repo,
         )
 
         # First call: 500 error
@@ -342,9 +339,7 @@ class TestDownloadDependencySBOM:
         branch_response.status_code = 200
         branch_response.json.return_value = {"default_branch": "main"}
 
-        mock_session.get.side_effect = [
-            error_response, success_response, branch_response
-        ]
+        mock_session.get.side_effect = [error_response, success_response, branch_response]
 
         with patch("time.sleep"):  # Speed up test
             result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
@@ -361,7 +356,7 @@ class TestDownloadDependencySBOM:
             version="1.0.0",
             ecosystem="npm",
             purl="pkg:npm/test-pkg@1.0.0",
-            github_repository=repo
+            github_repository=repo,
         )
 
         mock_response = Mock()
@@ -384,7 +379,7 @@ class TestDownloadDependencySBOM:
             version="1.0.0",
             ecosystem="npm",
             purl="pkg:npm/test-pkg@1.0.0",
-            github_repository=repo
+            github_repository=repo,
         )
 
         # First: rate limited
@@ -401,9 +396,7 @@ class TestDownloadDependencySBOM:
         branch_response.status_code = 200
         branch_response.json.return_value = {"default_branch": "main"}
 
-        mock_session.get.side_effect = [
-            rate_limit_response, success_response, branch_response
-        ]
+        mock_session.get.side_effect = [rate_limit_response, success_response, branch_response]
 
         with patch("time.sleep"):
             result = client.download_dependency_sbom(mock_session, pkg, temp_dir)

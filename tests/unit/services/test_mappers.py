@@ -49,10 +49,7 @@ class TestNPMPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "repository": {
-                "type": "git",
-                "url": "git+https://github.com/lodash/lodash.git"
-            }
+            "repository": {"type": "git", "url": "git+https://github.com/lodash/lodash.git"}
         }
         mock_get.return_value = mock_response
 
@@ -67,9 +64,7 @@ class TestNPMPackageMapper:
         """Test mapping package with string repository field."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "https://github.com/express/express"
-        }
+        mock_response.json.return_value = {"repository": "https://github.com/express/express"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("express")
@@ -83,9 +78,7 @@ class TestNPMPackageMapper:
         """Test mapping package with shorthand format (owner/repo)."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "owner/repo"
-        }
+        mock_response.json.return_value = {"repository": "owner/repo"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-package")
@@ -100,9 +93,7 @@ class TestNPMPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "repository": {
-                "url": "https://github.com/babel/babel.git"
-            }
+            "repository": {"url": "https://github.com/babel/babel.git"}
         }
         mock_get.return_value = mock_response
 
@@ -120,9 +111,7 @@ class TestNPMPackageMapper:
         """Test mapping package with git:// protocol."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "git://github.com/owner/repo.git"
-        }
+        mock_response.json.return_value = {"repository": "git://github.com/owner/repo.git"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -136,9 +125,7 @@ class TestNPMPackageMapper:
         """Test mapping package with SSH protocol."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "ssh://git@github.com/owner/repo.git"
-        }
+        mock_response.json.return_value = {"repository": "ssh://git@github.com/owner/repo.git"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -152,9 +139,7 @@ class TestNPMPackageMapper:
         """Test mapping package with branch reference in URL."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "https://github.com/owner/repo#master"
-        }
+        mock_response.json.return_value = {"repository": "https://github.com/owner/repo#master"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -168,9 +153,7 @@ class TestNPMPackageMapper:
         """Test mapping package with null repository field."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": None
-        }
+        mock_response.json.return_value = {"repository": None}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -182,9 +165,7 @@ class TestNPMPackageMapper:
         """Test mapping package with empty repository URL."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": {"url": ""}
-        }
+        mock_response.json.return_value = {"repository": {"url": ""}}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -196,9 +177,7 @@ class TestNPMPackageMapper:
         """Test mapping package with non-GitHub repository."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "https://gitlab.com/owner/repo"
-        }
+        mock_response.json.return_value = {"repository": "https://gitlab.com/owner/repo"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -242,9 +221,7 @@ class TestNPMPackageMapper:
         """Test mapping package with malformed repository URL."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "repository": "not-a-valid-url"
-        }
+        mock_response.json.return_value = {"repository": "not-a-valid-url"}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -276,11 +253,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Source": "https://github.com/psf/requests"
-                }
-            }
+            "info": {"project_urls": {"Source": "https://github.com/psf/requests"}}
         }
         mock_get.return_value = mock_response
 
@@ -296,11 +269,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Repository": "https://github.com/numpy/numpy"
-                }
-            }
+            "info": {"project_urls": {"Repository": "https://github.com/numpy/numpy"}}
         }
         mock_get.return_value = mock_response
 
@@ -316,11 +285,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Homepage": "https://github.com/django/django"
-                }
-            }
+            "info": {"project_urls": {"Homepage": "https://github.com/django/django"}}
         }
         mock_get.return_value = mock_response
 
@@ -335,11 +300,7 @@ class TestPyPIPackageMapper:
         """Test mapping package with home_page field."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "info": {
-                "home_page": "https://github.com/flask/flask"
-            }
-        }
+        mock_response.json.return_value = {"info": {"home_page": "https://github.com/flask/flask"}}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("flask")
@@ -354,11 +315,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Source": "https://github.com/owner/repo.git"
-                }
-            }
+            "info": {"project_urls": {"Source": "https://github.com/owner/repo.git"}}
         }
         mock_get.return_value = mock_response
 
@@ -374,11 +331,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Source": "https://github.com/owner/repo#main"
-                }
-            }
+            "info": {"project_urls": {"Source": "https://github.com/owner/repo#main"}}
         }
         mock_get.return_value = mock_response
 
@@ -394,11 +347,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Homepage": "https://example.com"
-                }
-            }
+            "info": {"project_urls": {"Homepage": "https://example.com"}}
         }
         mock_get.return_value = mock_response
 
@@ -411,11 +360,7 @@ class TestPyPIPackageMapper:
         """Test mapping package with empty project URLs."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "info": {
-                "project_urls": {}
-            }
-        }
+        mock_response.json.return_value = {"info": {"project_urls": {}}}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -427,11 +372,7 @@ class TestPyPIPackageMapper:
         """Test mapping package with null project URLs."""
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {
-            "info": {
-                "project_urls": None
-            }
-        }
+        mock_response.json.return_value = {"info": {"project_urls": None}}
         mock_get.return_value = mock_response
 
         result = mapper.map_to_github("test-pkg")
@@ -476,11 +417,7 @@ class TestPyPIPackageMapper:
         mock_response = Mock()
         mock_response.status_code = 200
         mock_response.json.return_value = {
-            "info": {
-                "project_urls": {
-                    "Source": "https://github.com/invalid"
-                }
-            }
+            "info": {"project_urls": {"Source": "https://github.com/invalid"}}
         }
         mock_get.return_value = mock_response
 
@@ -495,15 +432,15 @@ class TestNullMapper:
     def test_null_mapper_always_returns_none(self):
         """Test null mapper always returns None."""
         mapper = NullMapper()
-        
+
         result = mapper.map_to_github("any-package")
-        
+
         assert result is None
 
     def test_null_mapper_multiple_calls(self):
         """Test null mapper consistently returns None."""
         mapper = NullMapper()
-        
+
         assert mapper.map_to_github("package1") is None
         assert mapper.map_to_github("package2") is None
         assert mapper.map_to_github("package3") is None

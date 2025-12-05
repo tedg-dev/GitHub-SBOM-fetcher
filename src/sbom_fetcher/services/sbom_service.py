@@ -139,7 +139,7 @@ class SBOMFetcherService:
 
         logger.info("Mapped %d packages to GitHub repos", stats.github_repos_mapped)
         logger.info("Packages without GitHub repos: %d", stats.packages_without_github)
-        
+
         if unmapped_packages:
             logger.info("\nUnmapped packages:")
             for pkg in unmapped_packages:
