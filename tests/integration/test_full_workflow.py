@@ -8,14 +8,10 @@ These tests verify the complete integration of all layers:
 - Domain (models)
 """
 
-import json
-import tempfile
-from pathlib import Path
-from unittest.mock import MagicMock, Mock, patch
+from unittest.mock import Mock, patch
 
 import pytest
 
-from sbom_fetcher.application.main import main
 from sbom_fetcher.domain.models import (
     ErrorType,
     FailureInfo,
@@ -27,7 +23,6 @@ from sbom_fetcher.infrastructure.config import Config
 from sbom_fetcher.infrastructure.filesystem import FilesystemSBOMRepository
 from sbom_fetcher.services.github_client import GitHubClient
 from sbom_fetcher.services.parsers import SBOMParser
-from sbom_fetcher.services.sbom_service import SBOMFetcherService
 
 
 class TestFullWorkflowIntegration:
