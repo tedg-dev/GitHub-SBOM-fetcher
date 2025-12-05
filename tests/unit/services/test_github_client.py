@@ -13,16 +13,28 @@ class TestGitHubClient:
     """Tests for GitHubClient."""
 
     @pytest.fixture
-    def mock_session(self):
-        """Mock requests session."""
+    def config(self):
+        """Test configuration."""
+        return Config()
+
+    @pytest.fixture
+    def mock_http_client(self):
+        """Mock HTTP client."""
         return Mock()
 
     @pytest.fixture
-    def client(self, mock_session):
-        """GitHub client with mocked session."""
-        config = Config()
-        client = GitHubClient(config, mock_session)
+    def client(self, mock_http_client, config):
+        """GitHub client with mocked HTTP client."""
+        token = "test_token_123"
+        client = GitHubClient(mock_http_client, token, config)
+        # Mock the internal session for backward compatibility
+        client._session = Mock()
         return client
+
+    @pytest.fixture
+    def mock_session(self, client):
+        """Get mock session from client."""
+        return client._session
 
     def test_fetch_root_sbom_success(self, client, mock_session):
         """Test successful root SBOM fetch."""

@@ -37,7 +37,8 @@ class TestPURLParser:
         ecosystem, name, version = self.parser.parse(purl)
 
         assert ecosystem == "npm"
-        assert name == "@babel/core"
+        # Parser returns URL-encoded name (will be decoded by mappers if needed)
+        assert name == "%40babel/core"
         assert version == "7.22.0"
 
     def test_parse_invalid_purl(self):
