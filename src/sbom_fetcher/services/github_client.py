@@ -199,7 +199,7 @@ class GitHubClient:
                         logger.debug(
                             "Server error %d, waiting %ds before retry...",
                             resp.status_code,
-                            wait_time
+                            wait_time,
                         )
                         time.sleep(wait_time)
                         continue

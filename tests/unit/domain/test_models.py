@@ -16,12 +16,9 @@ class TestPackageDependency:
     def test_create_package_dependency(self):
         """Test creating a package dependency."""
         pkg = PackageDependency(
-            name="lodash",
-            version="4.17.21",
-            ecosystem="npm",
-            purl="pkg:npm/lodash@4.17.21"
+            name="lodash", version="4.17.21", ecosystem="npm", purl="pkg:npm/lodash@4.17.21"
         )
-        
+
         assert pkg.name == "lodash"
         assert pkg.version == "4.17.21"
         assert pkg.ecosystem == "npm"
@@ -39,9 +36,9 @@ class TestPackageDependency:
             version="4.17.21",
             ecosystem="npm",
             purl="pkg:npm/lodash@4.17.21",
-            github_repository=repo
+            github_repository=repo,
         )
-        
+
         assert pkg.github_repository == repo
 
     def test_package_dependency_with_error(self):
@@ -52,9 +49,9 @@ class TestPackageDependency:
             ecosystem="npm",
             purl="pkg:npm/test-pkg@1.0.0",
             error="Dependency graph not enabled",
-            error_type=ErrorType.PERMANENT
+            error_type=ErrorType.PERMANENT,
         )
-        
+
         assert pkg.error == "Dependency graph not enabled"
         assert pkg.error_type == ErrorType.PERMANENT
 
@@ -64,11 +61,8 @@ class TestGitHubRepository:
 
     def test_create_github_repository(self):
         """Test creating a GitHub repository."""
-        repo = GitHubRepository(
-            owner="lodash",
-            repo="lodash"
-        )
-        
+        repo = GitHubRepository(owner="lodash", repo="lodash")
+
         assert repo.owner == "lodash"
         assert repo.repo == "lodash"
         assert str(repo) == "lodash/lodash"
@@ -78,7 +72,7 @@ class TestGitHubRepository:
         repo1 = GitHubRepository(owner="lodash", repo="lodash")
         repo2 = GitHubRepository(owner="lodash", repo="lodash")
         repo3 = GitHubRepository(owner="different", repo="lodash")
-        
+
         assert repo1 == repo2
         assert repo1 != repo3
 
@@ -86,7 +80,7 @@ class TestGitHubRepository:
         """Test GitHub repository hashing (for use in sets/dicts)."""
         repo1 = GitHubRepository(owner="lodash", repo="lodash")
         repo2 = GitHubRepository(owner="lodash", repo="lodash")
-        
+
         # Should be able to use in sets
         repo_set = {repo1, repo2}
         assert len(repo_set) == 1
@@ -98,7 +92,7 @@ class TestFetcherStats:
     def test_create_fetcher_stats(self):
         """Test creating fetcher stats."""
         stats = FetcherStats()
-        
+
         assert stats.packages_in_sbom == 0
         assert stats.github_repos_mapped == 0
         assert stats.unique_repos == 0
@@ -117,9 +111,9 @@ class TestFetcherStats:
             duplicates_skipped=5,
             sboms_downloaded=38,
             sboms_failed_permanent=1,
-            sboms_failed_transient=1
+            sboms_failed_transient=1,
         )
-        
+
         assert stats.packages_in_sbom == 50
         assert stats.github_repos_mapped == 45
         assert stats.packages_without_github == 5
@@ -159,9 +153,9 @@ class TestFailureInfo:
             ecosystem="npm",
             versions=["1.0.0"],
             error="Dependency graph not enabled",
-            error_type=ErrorType.PERMANENT
+            error_type=ErrorType.PERMANENT,
         )
-        
+
         assert failure.repository == repo
         assert failure.package_name == "test-pkg"
         assert failure.ecosystem == "npm"
@@ -178,9 +172,9 @@ class TestFailureInfo:
             ecosystem="npm",
             versions=["1.0.0", "1.0.1"],
             error="HTTP 500",
-            error_type=ErrorType.TRANSIENT
+            error_type=ErrorType.TRANSIENT,
         )
-        
+
         result = failure.to_dict()
         assert result["repo"] == "test/repo"
         assert result["package"] == "test-pkg"
@@ -196,13 +190,8 @@ class TestFetcherResult:
     def test_create_fetcher_result(self):
         """Test creating fetcher result."""
         stats = FetcherStats()
-        result = FetcherResult(
-            stats=stats,
-            packages=[],
-            failed_downloads=[],
-            version_mapping={}
-        )
-        
+        result = FetcherResult(stats=stats, packages=[], failed_downloads=[], version_mapping={})
+
         assert result.stats == stats
         assert result.packages == []
         assert result.failed_downloads == []
@@ -212,21 +201,11 @@ class TestFetcherResult:
     def test_fetcher_result_success(self):
         """Test success property."""
         stats = FetcherStats(sboms_failed_permanent=0, sboms_failed_transient=0)
-        result = FetcherResult(
-            stats=stats,
-            packages=[],
-            failed_downloads=[],
-            version_mapping={}
-        )
+        result = FetcherResult(stats=stats, packages=[], failed_downloads=[], version_mapping={})
         assert result.success is True
 
     def test_fetcher_result_failure(self):
         """Test success property with failures."""
         stats = FetcherStats(sboms_failed_permanent=1)
-        result = FetcherResult(
-            stats=stats,
-            packages=[],
-            failed_downloads=[],
-            version_mapping={}
-        )
+        result = FetcherResult(stats=stats, packages=[], failed_downloads=[], version_mapping={})
         assert result.success is False
