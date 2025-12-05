@@ -122,9 +122,10 @@ class TestFullWorkflowIntegration:
             mock_session.get.side_effect = mock_get
 
             # Create service with mocked dependencies
-            github_client = GitHubClient(config, mock_session)
+            mock_http_client = Mock()
+            github_client = GitHubClient(mock_http_client, "test_token", config)
             parser = SBOMParser()
-            filesystem_repo = FilesystemSBOMRepository()
+            filesystem_repo = FilesystemSBOMRepository("/tmp")
 
             # Execute
             with patch.object(github_client, "_session", mock_session):
@@ -174,7 +175,8 @@ class TestFullWorkflowIntegration:
             mock_session.get.side_effect = mock_get_with_failures
 
             # Execute and verify partial success
-            github_client = GitHubClient(config, mock_session)
+            mock_http_client = Mock()
+            github_client = GitHubClient(mock_http_client, "test_token", config)
             result = github_client.fetch_root_sbom("test-owner", "test-repo")
 
             assert result is not None
@@ -208,7 +210,8 @@ class TestFullWorkflowIntegration:
 
             mock_session.get.side_effect = mock_get_with_retry
 
-            github_client = GitHubClient(config, mock_session)
+            mock_http_client = Mock()
+            github_client = GitHubClient(mock_http_client, "test_token", config)
 
             # This should retry and eventually succeed
             # (Note: Current implementation doesn't retry root SBOM,
