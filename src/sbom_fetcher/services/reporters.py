@@ -43,7 +43,6 @@ class MarkdownReporter:
         md_path = output_dir / md_filename
 
         # Prepare data
-        no_github = [p for p in packages if not p.github_repository]
         repos_with_multiple_versions = [
             (repo_key, data)
             for repo_key, data in version_mapping.items()
@@ -121,17 +120,7 @@ class MarkdownReporter:
                     md_content.append(f"- **Versions:** {', '.join(failure.versions)}")
                     md_content.append(f"- **Error:** `{failure.error}`\n")
 
-        # Packages Without GitHub Repositories
-        if no_github:
-            md_content.append("## Packages Without GitHub Repositories\n")
-            for pkg in no_github[:50]:
-                pkg_info = f"{pkg.name} ({pkg.ecosystem}) @ {pkg.version}"
-                md_content.append(f"- `{pkg_info}`")
-
-            if len(no_github) > 50:
-                md_content.append(f"\n*... and {len(no_github) - 50} more*\n")
-            else:
-                md_content.append("")
+        # Old simple section removed - replaced by detailed diagnostic section below
 
         # Repositories with Multiple Versions
         if repos_with_multiple_versions:
