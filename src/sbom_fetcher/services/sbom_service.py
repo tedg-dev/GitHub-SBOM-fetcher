@@ -88,7 +88,13 @@ class SBOMFetcherService:
         if not sbom_data:
             logger.error("Failed to fetch root SBOM. Exiting.")
             # Return empty result
-            return FetcherResult(stats=stats, packages=[], failed_downloads=[], version_mapping={})
+            return FetcherResult(
+                stats=stats,
+                packages=[],
+                failed_downloads=[],
+                version_mapping={},
+                unmapped_packages=[],
+            )
 
         # Save root SBOM
         save_root_sbom(sbom_data, str(output_base), owner, repo)
@@ -103,13 +109,20 @@ class SBOMFetcherService:
 
         if not packages:
             logger.warning("No packages found in SBOM")
-            return FetcherResult(stats=stats, packages=[], failed_downloads=[], version_mapping={})
+            return FetcherResult(
+                stats=stats,
+                packages=[],
+                failed_downloads=[],
+                version_mapping={},
+                unmapped_packages=[],
+            )
 
         # Step 3: Map packages to GitHub repositories
         logger.info("\n" + "=" * 70)
         logger.info("STEP 3: Mapping Packages to GitHub Repositories")
         logger.info("=" * 70)
 
+        unmapped_packages = []
         for i, pkg in enumerate(packages, 1):
             if i % 20 == 0:
                 logger.info("Mapping progress: %d/%d", i, len(packages))
@@ -118,6 +131,7 @@ class SBOMFetcherService:
                 stats.github_repos_mapped += 1
             else:
                 stats.packages_without_github += 1
+                unmapped_packages.append(pkg)
 
             # Rate limiting for registry APIs
             if i % 10 == 0:
@@ -125,6 +139,11 @@ class SBOMFetcherService:
 
         logger.info("Mapped %d packages to GitHub repos", stats.github_repos_mapped)
         logger.info("Packages without GitHub repos: %d", stats.packages_without_github)
+        
+        if unmapped_packages:
+            logger.info("\nUnmapped packages:")
+            for pkg in unmapped_packages:
+                logger.info("  - %s (%s) v%s", pkg.name, pkg.ecosystem, pkg.version)
 
         # Step 4: Download SBOMs for dependencies (with deduplication)
         logger.info("\n" + "=" * 70)
@@ -217,7 +236,14 @@ class SBOMFetcherService:
 
         # Generate Markdown execution report
         md_filename = self._reporter.generate(
-            output_base, owner, repo, stats, packages, version_mapping, failed_sboms
+            output_base,
+            owner,
+            repo,
+            stats,
+            packages,
+            version_mapping,
+            failed_sboms,
+            unmapped_packages,
         )
         logger.info("Generated execution report: %s", md_filename)
 
@@ -229,6 +255,7 @@ class SBOMFetcherService:
             packages=packages,
             failed_downloads=failed_sboms,
             version_mapping=version_mapping,
+            unmapped_packages=unmapped_packages,
         )
 
     def _print_summary(

@@ -19,6 +19,7 @@ class MarkdownReporter:
         packages: List[PackageDependency],
         version_mapping: Dict[str, Any],
         failed_sboms: List[FailureInfo],
+        unmapped_packages: List[PackageDependency],
     ) -> str:
         """
         Generate a Markdown report with execution details.
@@ -33,6 +34,7 @@ class MarkdownReporter:
             packages: List of package dependencies
             version_mapping: Version mapping dictionary
             failed_sboms: List of failed downloads
+            unmapped_packages: Packages without GitHub repository mappings
 
         Returns:
             Filename of generated report
@@ -160,6 +162,27 @@ class MarkdownReporter:
                     "See `version_mapping.json` for complete details.*\n"
                 )
 
+        # Unmapped Packages Section
+        if unmapped_packages:
+            md_content.append("## Packages Without GitHub Repository Mapping\n")
+            md_content.append(
+                f"**Total:** {len(unmapped_packages)} packages could not be mapped "
+                "to GitHub repositories.\n"
+            )
+            md_content.append(
+                "*These are typically platform-specific binaries, native extensions, "
+                "or packages not hosted on GitHub.*\n"
+            )
+            
+            for pkg in unmapped_packages:
+                md_content.append(f"### {pkg.name}\n")
+                md_content.append(f"- **Ecosystem:** {pkg.ecosystem}")
+                md_content.append(f"- **Version:** {pkg.version}")
+                md_content.append(f"- **PURL:** `{pkg.purl}`")
+                md_content.append(
+                    "- **GitHub SBOM:** ❌ Not available (no GitHub repository found)\n"
+                )
+
         # Statistics Breakdown
         md_content.append("## Statistics Breakdown\n")
 
@@ -180,7 +203,7 @@ class MarkdownReporter:
         md_content.append("## Files Generated\n")
         root_file = f"{owner}_{repo}_root.json"
         md_content.append(f"- `{root_file}` - Root repository SBOM")
-        md_content.append("`version_mapping.json` - Version-to-SBOM mapping")
+        md_content.append("- `version_mapping.json` - Version-to-SBOM mapping")
         md_content.append(f"- `{md_filename}` - This execution report")
         md_content.append(
             f"- `dependencies/` - Directory with {stats.sboms_downloaded} " "dependency SBOMs\n"

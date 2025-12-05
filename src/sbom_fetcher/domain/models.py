@@ -111,6 +111,7 @@ class FetcherResult:
     packages: List[PackageDependency]
     failed_downloads: List[FailureInfo]
     version_mapping: Dict[str, Any]
+    unmapped_packages: List[PackageDependency] = field(default_factory=list)
 
     @property
     def success(self) -> bool:
