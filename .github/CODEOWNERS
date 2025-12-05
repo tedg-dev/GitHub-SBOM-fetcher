@@ -1,0 +1,38 @@
+# GitHub CODEOWNERS
+# These owners will be the default owners for everything in the repo.
+# Unless a later match takes precedence, these owners will be requested for
+# review when someone opens a pull request.
+
+# Global owner
+* @tedg-dev
+
+# Source code
+/src/ @tedg-dev
+
+# Tests
+/tests/ @tedg-dev
+
+# Documentation
+/docs/ @tedg-dev
+/*.md @tedg-dev
+
+# CI/CD
+/.github/workflows/ @tedg-dev
+/.github/dependabot.yml @tedg-dev
+
+# Configuration
+/pyproject.toml @tedg-dev
+/pytest.ini @tedg-dev
+/requirements.txt @tedg-dev
+
+# Domain layer (critical business logic)
+/src/sbom_fetcher/domain/ @tedg-dev
+
+# Infrastructure (requires careful review)
+/src/sbom_fetcher/infrastructure/ @tedg-dev
+
+# Services (core functionality)
+/src/sbom_fetcher/services/ @tedg-dev
+
+# Application layer
+/src/sbom_fetcher/application/ @tedg-dev

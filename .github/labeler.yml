@@ -1,0 +1,71 @@
+# Auto-label configuration for pull requests
+
+# Source code changes
+'code':
+  - changed-files:
+    - any-glob-to-any-file: 'src/**/*.py'
+
+# Test changes
+'tests':
+  - changed-files:
+    - any-glob-to-any-file: 'tests/**/*.py'
+
+# Documentation changes
+'documentation':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'docs/**/*.md'
+      - '*.md'
+      - 'README.md'
+
+# CI/CD changes
+'ci/cd':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/workflows/*.yml'
+      - '.github/workflows/*.yaml'
+
+# Configuration changes
+'configuration':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '*.yml'
+      - '*.yaml'
+      - '*.toml'
+      - '*.ini'
+      - '*.json'
+      - '.github/**/*.yml'
+
+# Dependencies
+'dependencies':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'requirements.txt'
+      - 'requirements-dev.txt'
+      - 'pyproject.toml'
+      - 'setup.py'
+      - 'setup.cfg'
+
+# Infrastructure
+'infrastructure':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/sbom_fetcher/infrastructure/**/*.py'
+
+# Services
+'services':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/sbom_fetcher/services/**/*.py'
+
+# Domain
+'domain':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/sbom_fetcher/domain/**/*.py'
+
+# Application
+'application':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/sbom_fetcher/application/**/*.py'
