@@ -1,0 +1,261 @@
+2025-12-05 07:56:40 - INFO - Loading GitHub token...
+2025-12-05 07:56:40 - INFO - Initialized filesystem repository at sboms
+2025-12-05 07:56:40 - INFO - Output directory: sboms/sbom_export_2025-12-05_07.56.40/tedg-dev_beatBot
+2025-12-05 07:56:40 - INFO - 
+======================================================================
+2025-12-05 07:56:40 - INFO - STEP 1: Fetching Root SBOM
+2025-12-05 07:56:40 - INFO - ======================================================================
+2025-12-05 07:56:40 - INFO - Fetching root SBOM: tedg-dev/beatBot
+2025-12-05 07:56:41 - INFO - ✅ Root SBOM fetched successfully
+2025-12-05 07:56:41 - INFO - Saved root SBOM: tedg-dev_beatBot_root.json
+2025-12-05 07:56:41 - INFO - 
+======================================================================
+2025-12-05 07:56:41 - INFO - STEP 2: Parsing Dependency Packages
+2025-12-05 07:56:41 - INFO - ======================================================================
+2025-12-05 07:56:41 - INFO - Parsing SBOM with 230 packages...
+2025-12-05 07:56:41 - INFO - Found 229 valid packages in SBOM
+2025-12-05 07:56:41 - INFO - 
+======================================================================
+2025-12-05 07:56:41 - INFO - STEP 3: Mapping Packages to GitHub Repositories
+2025-12-05 07:56:41 - INFO - ======================================================================
+2025-12-05 07:56:48 - INFO - Mapping progress: 20/229
+2025-12-05 07:56:56 - INFO - Mapping progress: 40/229
+2025-12-05 07:57:03 - INFO - Mapping progress: 60/229
+2025-12-05 07:57:11 - INFO - Mapping progress: 80/229
+2025-12-05 07:57:19 - INFO - Mapping progress: 100/229
+2025-12-05 07:57:27 - INFO - Mapping progress: 120/229
+2025-12-05 07:57:36 - INFO - Mapping progress: 140/229
+2025-12-05 07:57:42 - INFO - Mapping progress: 160/229
+2025-12-05 07:57:50 - INFO - Mapping progress: 180/229
+2025-12-05 07:57:58 - INFO - Mapping progress: 200/229
+2025-12-05 07:58:07 - INFO - Mapping progress: 220/229
+2025-12-05 07:58:11 - INFO - Mapped 222 packages to GitHub repos
+2025-12-05 07:58:11 - INFO - Packages without GitHub repos: 7
+2025-12-05 07:58:11 - INFO - 
+Unmapped packages:
+2025-12-05 07:58:11 - INFO -   - @ffmpeg-installer/win32-x64 (npm) v4.0.2
+2025-12-05 07:58:11 - INFO -   - @ffmpeg-installer/linux-x64 (npm) v4.0.3
+2025-12-05 07:58:11 - INFO -   - @ffmpeg-installer/darwin-x64 (npm) v4.0.4
+2025-12-05 07:58:11 - INFO -   - @ffmpeg-installer/linux-ia32 (npm) v4.0.3
+2025-12-05 07:58:11 - INFO -   - @ffmpeg-installer/win32-ia32 (npm) v4.0.3
+2025-12-05 07:58:11 - INFO -   - eyes (npm) v0.1.8
+2025-12-05 07:58:11 - INFO -   - boolbase (npm) v1.0.0
+2025-12-05 07:58:11 - INFO - 
+======================================================================
+2025-12-05 07:58:11 - INFO - STEP 4: Downloading Dependency SBOMs (Deduplicated)
+2025-12-05 07:58:11 - INFO - ======================================================================
+2025-12-05 07:58:11 - INFO - Total packages: 222
+2025-12-05 07:58:11 - INFO - Unique repositories: 166
+2025-12-05 07:58:11 - INFO - Duplicates to skip: 56
+2025-12-05 07:58:11 - INFO - 
+2025-12-05 07:58:11 - INFO - [1/166] Fetching SBOM for quartzjer/ecc-jsbn (versions: 0.1.1)
+2025-12-05 07:58:13 - INFO - [2/166] Fetching SBOM for hapijs/boom (versions: 4.3.1, 2.10.1, 5.2.0)
+2025-12-05 07:58:14 - INFO - [3/166] Fetching SBOM for caolan/async (versions: 0.1.22, 0.2.10, 2.6.0, +1 more)
+2025-12-05 07:58:16 - INFO - [4/166] Fetching SBOM for lodash/lodash (versions: 4.6.1, 2.4.2, 3.10.1, +4 more)
+2025-12-05 07:58:17 - INFO - [5/166] Fetching SBOM for ahmadnassri/node-har-validator (versions: 5.0.3)
+2025-12-05 07:58:18 - INFO - [6/166] Fetching SBOM for isaacs/fs.realpath (versions: 1.0.0)
+2025-12-05 07:58:19 - INFO - [7/166] Fetching SBOM for flatiron/revalidator (versions: 0.1.8)
+2025-12-05 07:58:20 - INFO - [8/166] Fetching SBOM for alexindigo/asynckit (versions: 0.4.0)
+2025-12-05 07:58:21 - INFO - [9/166] Fetching SBOM for typicaljoe/taffydb (versions: 2.6.2)
+2025-12-05 07:58:22 - INFO - [10/166] Fetching SBOM for ahmadnassri/har-schema (versions: 2.0.0)
+2025-12-05 07:58:23 - INFO - [11/166] Fetching SBOM for mikeal/forever-agent (versions: 0.5.2, 0.6.1)
+2025-12-05 07:58:25 - INFO - [12/166] Fetching SBOM for mozilla/hawk (versions: 6.0.2, 2.3.1)
+2025-12-05 07:58:26 - INFO - [13/166] Fetching SBOM for flatiron/prompt (versions: 0.2.14)
+2025-12-05 07:58:27 - INFO - [14/166] Fetching SBOM for hapijs/cryptiles (versions: 2.0.5, 3.1.2)
+2025-12-05 07:58:28 - INFO - [15/166] Fetching SBOM for gulpjs/findup-sync (versions: 0.3.0, 0.1.3)
+2025-12-05 07:58:29 - INFO - [16/166] Fetching SBOM for mikeal/tunnel-agent (versions: 0.4.3, 0.6.0)
+2025-12-05 07:58:30 - INFO - [17/166] Fetching SBOM for mhart/stringstream (versions: 0.0.5)
+2025-12-05 07:58:31 - INFO - [18/166] Fetching SBOM for fb55/nth-check (versions: 1.0.1)
+2025-12-05 07:58:32 - INFO - [19/166] Fetching SBOM for isaacs/inherits (versions: 2.0.3, 1.0.2)
+2025-12-05 07:58:33 - INFO - [20/166] Fetching SBOM for broofa/node-uuid (versions: 1.4.8)
+2025-12-05 07:58:33 - WARNING -   Failed (permanent): Dependency graph not enabled
+2025-12-05 07:58:34 - INFO - [21/166] Fetching SBOM for isaacs/yallist (versions: 2.1.2)
+2025-12-05 07:58:35 - INFO - [22/166] Fetching SBOM for fb55/domutils (versions: 1.5.1, 1.4.3)
+2025-12-05 07:58:36 - INFO - [23/166] Fetching SBOM for ljharb/qs (versions: 6.5.1, 2.3.3)
+2025-12-05 07:58:37 - INFO - [24/166] Fetching SBOM for felixge/node-stack-trace (versions: 0.0.10)
+2025-12-05 07:58:38 - INFO - [25/166] Fetching SBOM for npm/node-which (versions: 1.0.9, 1.3.0)
+2025-12-05 07:58:39 - INFO - [26/166] Fetching SBOM for isaacs/node-glob (versions: 5.0.15, 3.2.11, 3.1.21, +1 more)
+2025-12-05 07:58:40 - INFO - [27/166] Fetching SBOM for juliangruber/balanced-match (versions: 1.0.0)
+2025-12-05 07:58:42 - INFO - [28/166] Fetching SBOM for hueniverse/sntp (versions: 2.1.0, 1.0.9)
+2025-12-05 07:58:43 - INFO - [29/166] Fetching SBOM for isaacs/minimatch (versions: 3.0.4, 0.3.0, 0.2.14)
+2025-12-05 07:58:44 - INFO - [30/166] Fetching SBOM for npm/nopt (versions: 1.0.10, 3.0.6)
+2025-12-05 07:58:46 - INFO - [31/166] Fetching SBOM for gruntjs/grunt-known-options (versions: 1.1.0)
+2025-12-05 07:58:47 - INFO - [32/166] Fetching SBOM for browserify/resolve (versions: 1.1.7)
+2025-12-05 07:58:48 - INFO - [33/166] Fetching SBOM for ljharb/concat-map (versions: 0.0.1)
+2025-12-05 07:58:49 - INFO - [34/166] Fetching SBOM for andyperlitch/jsbn (versions: 0.1.1)
+2025-12-05 07:58:50 - INFO - [35/166] Fetching SBOM for isaacs/node-lru-cache (versions: 2.7.3, 4.1.1)
+2025-12-05 07:58:51 - INFO - [36/166] Fetching SBOM for petkaantonov/bluebird (versions: 2.11.0, 3.5.1)
+2025-12-05 07:58:53 - INFO - [37/166] Fetching SBOM for kriszyp/json-schema (versions: 0.2.3)
+2025-12-05 07:58:54 - INFO - [38/166] Fetching SBOM for joyent/node-asn1 (versions: 0.2.3, 0.1.11)
+2025-12-05 07:58:56 - INFO - [39/166] Fetching SBOM for dscape/cycle (versions: 1.0.3)
+2025-12-05 07:58:56 - INFO - [40/166] Fetching SBOM for salesforce/tough-cookie (versions: 2.3.3)
+2025-12-05 07:58:59 - INFO - [41/166] Fetching SBOM for hapijs/hoek (versions: 4.2.0, 2.16.3)
+2025-12-05 07:59:00 - INFO - [42/166] Fetching SBOM for joyent/node-jsprim (versions: 1.4.1)
+2025-12-05 07:59:02 - INFO - [43/166] Fetching SBOM for cowboy/node-exit (versions: 0.1.2)
+2025-12-05 07:59:03 - INFO - [44/166] Fetching SBOM for form-data/form-data (versions: 2.3.1, 0.2.0)
+2025-12-05 07:59:03 - INFO - [45/166] Fetching SBOM for felixge/node-delayed-stream (versions: 1.0.0, 0.0.5)
+2025-12-05 07:59:04 - INFO - [46/166] Fetching SBOM for sindresorhus/path-is-absolute (versions: 1.0.1)
+2025-12-05 07:59:05 - INFO - [47/166] Fetching SBOM for rvagg/bl (versions: 0.9.5)
+2025-12-05 07:59:06 - INFO - [48/166] Fetching SBOM for isaacs/rimraf (versions: 2.6.2, 2.2.8)
+2025-12-05 07:59:07 - INFO - [49/166] Fetching SBOM for mikeal/oauth-sign (versions: 0.8.2, 0.6.0)
+2025-12-05 07:59:08 - INFO - [50/166] Fetching SBOM for dchest/tweetnacl-js (versions: 0.14.5)
+2025-12-05 07:59:10 - INFO - [51/166] Fetching SBOM for inspect-js/node-deep-equal (versions: 1.0.1)
+2025-12-05 07:59:11 - INFO - [52/166] Fetching SBOM for mathiasbynens/punycode.js (versions: 1.4.1)
+2025-12-05 07:59:12 - INFO - [53/166] Fetching SBOM for flatiron/utile (versions: 0.2.1)
+2025-12-05 07:59:12 - INFO - [54/166] Fetching SBOM for sindresorhus/strip-json-comments (versions: 2.0.1)
+2025-12-05 07:59:13 - INFO - [55/166] Fetching SBOM for 131/node-vlc-player (versions: 0.12.0)
+2025-12-05 07:59:14 - INFO - [56/166] Fetching SBOM for hegemonic/requizzle (versions: 0.2.1)
+2025-12-05 07:59:16 - INFO - [57/166] Fetching SBOM for indexzero/node-pkginfo (versions: 0.3.1, 0.4.1)
+2025-12-05 07:59:17 - INFO - [58/166] Fetching SBOM for npm/npmlog (versions: 1.2.1)
+2025-12-05 07:59:18 - INFO - [59/166] Fetching SBOM for juliangruber/isarray (versions: 0.0.1, 1.0.0)
+2025-12-05 07:59:18 - INFO - [60/166] Fetching SBOM for npm/are-we-there-yet (versions: 1.0.6)
+2025-12-05 07:59:20 - INFO - [61/166] Fetching SBOM for hij1nx/eventemitter2 (versions: 0.4.14)
+2025-12-05 07:59:22 - INFO - [62/166] Fetching SBOM for documentcloud/underscore-contrib (versions: 0.3.0)
+2025-12-05 07:59:23 - INFO - [63/166] Fetching SBOM for isaacs/once (versions: 1.4.0)
+2025-12-05 07:59:24 - INFO - [64/166] Fetching SBOM for epeli/underscore.string (versions: 2.4.0, 2.2.1, 2.3.3)
+2025-12-05 07:59:26 - INFO - [65/166] Fetching SBOM for mcavage/node-assert-plus (versions: 0.1.5, 1.0.0)
+2025-12-05 07:59:28 - INFO - [66/166] Fetching SBOM for hegemonic/catharsis (versions: 0.8.9)
+2025-12-05 07:59:29 - INFO - [67/166] Fetching SBOM for jmorrell/get-youtube-id (versions: 1.0.0)
+2025-12-05 07:59:29 - INFO - [68/166] Fetching SBOM for michaelkourlas/node-js2xmlparser (versions: 3.0.0)
+2025-12-05 07:59:30 - INFO - [69/166] Fetching SBOM for pksunkara/inflect (versions: 0.3.6)
+2025-12-05 07:59:31 - INFO - [70/166] Fetching SBOM for npm/mute-stream (versions: 0.0.7)
+2025-12-05 07:59:33 - INFO - [71/166] Fetching SBOM for tootallnate/util-deprecate (versions: 1.0.2)
+2025-12-05 07:59:34 - INFO - [72/166] Fetching SBOM for cheeriojs/dom-serializer (versions: 0.1.0)
+2025-12-05 07:59:35 - INFO - [73/166] Fetching SBOM for cowboy/node-getobject (versions: 0.1.0)
+2025-12-05 07:59:36 - INFO - [74/166] Fetching SBOM for mikeal/caseless (versions: 0.9.0, 0.12.0)
+2025-12-05 07:59:37 - INFO - [75/166] Fetching SBOM for jshttp/mime-types (versions: 2.1.17, 2.0.14)
+2025-12-05 07:59:38 - INFO - [76/166] Fetching SBOM for nodeca/js-yaml (versions: 2.0.5)
+2025-12-05 07:59:39 - INFO - [77/166] Fetching SBOM for krampstudio/grunt-jsdoc (versions: 2.2.1)
+2025-12-05 07:59:41 - INFO - [78/166] Fetching SBOM for gruntjs/grunt-legacy-log (versions: 0.1.3)
+2025-12-05 07:59:41 - INFO - [79/166] Fetching SBOM for jsdoc/jsdoc (versions: 3.5.5)
+2025-12-05 07:59:43 - INFO - [80/166] Fetching SBOM for nodejs/readable-stream (versions: 1.0.34, 2.3.4, 1.1.14)
+2025-12-05 07:59:45 - INFO - [81/166] Fetching SBOM for tj/co (versions: 4.6.0)
+2025-12-05 07:59:45 - INFO - [82/166] Fetching SBOM for babel/babylon (versions: 7.0.0-beta.19)
+2025-12-05 07:59:46 - INFO - [83/166] Fetching SBOM for tootallnate/node-bindings (versions: 1.3.0)
+2025-12-05 07:59:47 - INFO - [84/166] Fetching SBOM for tootallnate/node-lame (versions: 1.2.4)
+2025-12-05 07:59:48 - INFO - [85/166] Fetching SBOM for jashkenas/coffeescript (versions: 1.3.3)
+2025-12-05 07:59:49 - INFO - [86/166] Fetching SBOM for sindresorhus/escape-string-regexp (versions: 1.0.5)
+2025-12-05 07:59:50 - INFO - [87/166] Fetching SBOM for npm/wrappy (versions: 1.0.2)
+2025-12-05 07:59:51 - INFO - [88/166] Fetching SBOM for npm/inflight (versions: 1.0.6)
+2025-12-05 07:59:53 - INFO - [89/166] Fetching SBOM for isaacs/sigmund (versions: 1.0.1)
+2025-12-05 07:59:54 - INFO - [90/166] Fetching SBOM for felixge/node-dateformat (versions: 1.0.2-1.2.3)
+2025-12-05 07:59:56 - INFO - [91/166] Fetching SBOM for felixge/node-combined-stream (versions: 1.0.5, 0.0.7)
+2025-12-05 07:59:57 - INFO - [92/166] Fetching SBOM for rmustacc/node-ctype (versions: 0.5.3)
+2025-12-05 07:59:58 - INFO - [93/166] Fetching SBOM for fent/node-m3u8stream (versions: 0.2.1)
+2025-12-05 07:59:59 - INFO - [94/166] Fetching SBOM for epoberezkin/fast-json-stable-stringify (versions: 2.0.0)
+2025-12-05 08:00:00 - INFO - [95/166] Fetching SBOM for isaacs/node-graceful-fs (versions: 1.2.3, 4.1.11)
+2025-12-05 08:00:01 - INFO - [96/166] Fetching SBOM for uuidjs/uuid (versions: 3.2.1)
+2025-12-05 08:00:02 - INFO - [97/166] Fetching SBOM for request/request (versions: 2.53.0, 2.83.0)
+2025-12-05 08:00:03 - INFO - [98/166] Fetching SBOM for isaacs/pseudomap (versions: 1.0.2)
+2025-12-05 08:00:05 - INFO - [99/166] Fetching SBOM for markedjs/marked (versions: 0.3.12)
+2025-12-05 08:00:06 - INFO - [100/166] Fetching SBOM for marak/colors.js (versions: 0.6.2, 1.0.3)
+2025-12-05 08:00:08 - INFO - [101/166] Fetching SBOM for fb55/domelementtype (versions: 1.1.3, 1.3.0)
+2025-12-05 08:00:09 - INFO - [102/166] Fetching SBOM for motdotla/dotenv (versions: 2.0.0)
+2025-12-05 08:00:10 - INFO - [103/166] Fetching SBOM for fb55/domhandler (versions: 2.3.0)
+2025-12-05 08:00:12 - INFO - [104/166] Fetching SBOM for kribblo/node-ffmpeg-installer (versions: 1.0.13)
+2025-12-05 08:00:13 - INFO - [105/166] Fetching SBOM for npm/gauge (versions: 1.2.7)
+2025-12-05 08:00:14 - INFO - [106/166] Fetching SBOM for fb55/css-what (versions: 1.0.0)
+2025-12-05 08:00:15 - INFO - [107/166] Fetching SBOM for nodeca/argparse (versions: 0.1.16)
+2025-12-05 08:00:16 - INFO - [108/166] Fetching SBOM for pillarjs/iconv-lite (versions: 0.2.11)
+2025-12-05 08:00:17 - INFO - [109/166] Fetching SBOM for trentm/node-dashdash (versions: 1.14.1)
+2025-12-05 08:00:18 - INFO - [110/166] Fetching SBOM for isaacs/node-mkdirp (versions: 0.5.1)
+2025-12-05 08:00:20 - INFO - [111/166] Fetching SBOM for visionmedia/node-delegates (versions: 1.0.0)
+2025-12-05 08:00:22 - INFO - [112/166] Fetching SBOM for avianflu/ncp (versions: 0.4.2)
+2025-12-05 08:00:22 - INFO - [113/166] Fetching SBOM for gruntjs/grunt-cli (versions: 1.2.0)
+2025-12-05 08:00:23 - INFO - [114/166] Fetching SBOM for fb55/htmlparser2 (versions: 3.8.3)
+2025-12-05 08:00:24 - INFO - [115/166] Fetching SBOM for gruntjs/grunt-legacy-log-utils (versions: 0.1.1)
+2025-12-05 08:00:25 - INFO - [116/166] Fetching SBOM for vercel/ms (versions: 2.0.0)
+2025-12-05 08:00:27 - INFO - [117/166] Fetching SBOM for minimistjs/minimist (versions: 0.0.8)
+2025-12-05 08:00:28 - INFO - [118/166] Fetching SBOM for tootallnate/ansi.js (versions: 0.3.1)
+2025-12-05 08:00:28 - INFO - [119/166] Fetching SBOM for jshttp/mime-db (versions: 1.12.0, 1.30.0)
+2025-12-05 08:00:29 - INFO - [120/166] Fetching SBOM for jashkenas/underscore (versions: 1.8.3, 1.6.0, 1.7.0)
+2025-12-05 08:00:32 - INFO - [121/166] Fetching SBOM for isaacs/core-util-is (versions: 1.0.2)
+2025-12-05 08:00:33 - INFO - [122/166] Fetching SBOM for joyent/node-sshpk (versions: 1.13.1)
+2025-12-05 08:00:34 - INFO - [123/166] Fetching SBOM for ajv-validator/ajv (versions: 5.5.2)
+2025-12-05 08:00:35 - INFO - [124/166] Fetching SBOM for tritondatacenter/node-http-signature (versions: 1.2.0, 0.10.1)
+2025-12-05 08:00:36 - INFO - [125/166] Fetching SBOM for jquery/esprima (versions: 1.0.4)
+2025-12-05 08:00:38 - INFO - [126/166] Fetching SBOM for paulomcnally/youtube-node (versions: 1.3.2)
+2025-12-05 08:00:39 - INFO - [127/166] Fetching SBOM for calvinmetcalf/process-nextick-args (versions: 2.0.0)
+2025-12-05 08:00:39 - INFO - [128/166] Fetching SBOM for nodejs/nan (versions: 2.8.0)
+2025-12-05 08:00:40 - INFO - [129/166] Fetching SBOM for davepacheco/node-extsprintf (versions: 1.3.0)
+2025-12-05 08:00:42 - INFO - [130/166] Fetching SBOM for fb55/entities (versions: 1.0.0, 1.1.1)
+2025-12-05 08:00:44 - INFO - [131/166] Fetching SBOM for mikeal/aws-sign (versions: 0.5.0, 0.7.0)
+2025-12-05 08:00:45 - INFO - [132/166] Fetching SBOM for mdevils/html-entities (versions: 1.2.1)
+2025-12-05 08:00:47 - INFO - [133/166] Fetching SBOM for fent/node-ytdl-core (versions: 0.20.1)
+2025-12-05 08:00:49 - INFO - [134/166] Fetching SBOM for isaacs/isexe (versions: 2.0.0)
+2025-12-05 08:00:50 - INFO - [135/166] Fetching SBOM for fb55/css-select (versions: 1.0.0)
+2025-12-05 08:00:51 - INFO - [136/166] Fetching SBOM for michaelkourlas/node-xmlcreate (versions: 1.0.2)
+2025-12-05 08:00:52 - INFO - [137/166] Fetching SBOM for epoberezkin/json-schema-traverse (versions: 0.3.1)
+2025-12-05 08:00:52 - INFO - [138/166] Fetching SBOM for mhart/aws4 (versions: 1.6.0)
+2025-12-05 08:00:54 - INFO - [139/166] Fetching SBOM for cheeriojs/cheerio (versions: 0.19.0)
+2025-12-05 08:00:55 - INFO - [140/166] Fetching SBOM for winstonjs/winston (versions: 0.8.3)
+2025-12-05 08:00:58 - INFO - [141/166] Fetching SBOM for justmoon/node-extend (versions: 3.0.1)
+2025-12-05 08:00:58 - INFO - [142/166] Fetching SBOM for npm/abbrev-js (versions: 1.1.1)
+2025-12-05 08:00:59 - INFO - [143/166] Fetching SBOM for arekinath/node-getpass (versions: 0.1.7)
+2025-12-05 08:01:00 - INFO - [144/166] Fetching SBOM for feross/safe-buffer (versions: 5.1.1)
+2025-12-05 08:01:01 - INFO - [145/166] Fetching SBOM for hughsk/is-typedarray (versions: 1.0.0)
+2025-12-05 08:01:02 - INFO - [146/166] Fetching SBOM for iarna/has-unicode (versions: 2.0.1)
+2025-12-05 08:01:02 - INFO - [147/166] Fetching SBOM for epoberezkin/fast-deep-equal (versions: 1.0.0)
+2025-12-05 08:01:03 - INFO - [148/166] Fetching SBOM for gruntjs/grunt-legacy-util (versions: 0.2.0)
+2025-12-05 08:01:05 - INFO - [149/166] Fetching SBOM for nodejs/string_decoder (versions: 1.0.3, 0.10.31)
+2025-12-05 08:01:05 - INFO - [150/166] Fetching SBOM for isaacs/sax-js (versions: 1.2.4)
+2025-12-05 08:01:08 - INFO - [151/166] Fetching SBOM for tootallnate/node-speaker (versions: 0.3.1)
+2025-12-05 08:01:08 - INFO - [152/166] Fetching SBOM for braveg1rl/performance-now (versions: 2.1.0)
+2025-12-05 08:01:09 - INFO - [153/166] Fetching SBOM for npm/read (versions: 1.0.7)
+2025-12-05 08:01:11 - INFO - [154/166] Fetching SBOM for gruntjs/grunt (versions: 0.4.5)
+2025-12-05 08:01:12 - INFO - [155/166] Fetching SBOM for isaacs/json-stringify-safe (versions: 5.0.1)
+2025-12-05 08:01:13 - INFO - [156/166] Fetching SBOM for joyent/node-verror (versions: 1.10.0)
+2025-12-05 08:01:14 - INFO - [157/166] Fetching SBOM for moxystudio/node-cross-spawn (versions: 3.0.1)
+2025-12-05 08:01:16 - INFO - [158/166] Fetching SBOM for debug-js/debug (versions: 2.6.9)
+2025-12-05 08:01:17 - INFO - [159/166] Fetching SBOM for schmavery/facebook-chat-api (versions: 1.2.0)
+2025-12-05 08:01:17 - INFO - [160/166] Fetching SBOM for cowboy/javascript-hooker (versions: 0.2.3)
+2025-12-05 08:01:19 - INFO - [161/166] Fetching SBOM for rvagg/isstream (versions: 0.1.2)
+2025-12-05 08:01:20 - INFO - [162/166] Fetching SBOM for fluent-ffmpeg/node-fluent-ffmpeg (versions: 2.1.2)
+2025-12-05 08:01:20 - WARNING -   Failed (permanent): Dependency graph not enabled
+2025-12-05 08:01:20 - INFO - [163/166] Fetching SBOM for fent/node-miniget (versions: 1.1.0)
+2025-12-05 08:01:21 - INFO - [164/166] Fetching SBOM for juliangruber/brace-expansion (versions: 1.1.11)
+2025-12-05 08:01:22 - INFO - [165/166] Fetching SBOM for jprichardson/node-klaw (versions: 2.0.0)
+2025-12-05 08:01:23 - INFO - [166/166] Fetching SBOM for joyent/node-bcrypt-pbkdf (versions: 1.0.1)
+2025-12-05 08:01:25 - INFO - 
+Saved version mapping: version_mapping.json
+2025-12-05 08:01:25 - INFO - Generated execution report: tedg-dev_beatBot_execution_report.md
+2025-12-05 08:01:25 - INFO - 
+======================================================================
+2025-12-05 08:01:25 - INFO - SUMMARY
+2025-12-05 08:01:25 - INFO - ======================================================================
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO - Root SBOM dependency repositories: 229
+2025-12-05 08:01:25 - INFO - Mapped to GitHub repos: 222
+2025-12-05 08:01:25 - INFO - Unique repositories: 166
+2025-12-05 08:01:25 - INFO - Duplicate versions skipped: 56
+2025-12-05 08:01:25 - INFO - Packages without GitHub repos: 7
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO - SBOMs downloaded successfully: 164
+2025-12-05 08:01:25 - INFO - SBOMs failed (permanent): 2
+2025-12-05 08:01:25 - INFO - SBOMs failed (transient): 0
+2025-12-05 08:01:25 - INFO - SBOMs failed (total): 2
+2025-12-05 08:01:25 - INFO - Elapsed time: 4m 44s
+2025-12-05 08:01:25 - INFO - Output directory: /Users/tedg/workspace/fetch_sbom/sboms/sbom_export_2025-12-05_07.56.40/tedg-dev_beatBot
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO - NOTE: GitHub's SBOM API only provides SBOMs for the current state
+2025-12-05 08:01:25 - INFO -       of repositories (default branch), not for specific versions.
+2025-12-05 08:01:25 - INFO -       See version_mapping.json for details on version deduplication.
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO - ======================================================================
+2025-12-05 08:01:25 - INFO - Failed SBOM Downloads
+2025-12-05 08:01:25 - INFO - ======================================================================
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO - 🔴 PERMANENT FAILURES (2):
+2025-12-05 08:01:25 - INFO -    (These will consistently fail until fixed)
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO -   ❌ broofa/node-uuid
+2025-12-05 08:01:25 - INFO -      Package: node-uuid (npm)
+2025-12-05 08:01:25 - INFO -      Versions: 1.4.8
+2025-12-05 08:01:25 - INFO -      Error: Dependency graph not enabled
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO -   ❌ fluent-ffmpeg/node-fluent-ffmpeg
+2025-12-05 08:01:25 - INFO -      Package: fluent-ffmpeg (npm)
+2025-12-05 08:01:25 - INFO -      Versions: 2.1.2
+2025-12-05 08:01:25 - INFO -      Error: Dependency graph not enabled
+2025-12-05 08:01:25 - INFO - 
+2025-12-05 08:01:25 - INFO - ✅ Done!
