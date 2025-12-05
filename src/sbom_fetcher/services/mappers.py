@@ -52,6 +52,7 @@ class NPMPackageMapper(PackageMapper):
             resp = requests.get(url, timeout=10)
 
             if resp.status_code != 200:
+                logger.debug("npm registry returned %d for %s", resp.status_code, package_name)
                 return None
 
             data = resp.json()
@@ -59,6 +60,7 @@ class NPMPackageMapper(PackageMapper):
             
             # Handle null/missing repository field
             if repo_info is None:
+                logger.debug("Package %s has no repository field (null)", package_name)
                 return None
 
             # Handle both dict and string formats
@@ -75,16 +77,20 @@ class NPMPackageMapper(PackageMapper):
                 return None
 
             if not repo_url:
+                logger.debug("Package %s has empty repository URL", package_name)
                 return None
 
             # Extract GitHub owner/repo from URL
             # Formats: git+https://github.com/owner/repo.git
             #          https://github.com/owner/repo
             #          git://github.com/owner/repo.git
-            repo_url = repo_url.lower()
+            repo_url_lower = repo_url.lower()
 
-            if "github.com" not in repo_url:
+            if "github.com" not in repo_url_lower:
+                logger.debug("Package %s repository is not GitHub: %s", package_name, repo_url)
                 return None
+            
+            repo_url = repo_url_lower
 
             # Clean up URL
             repo_url = (
@@ -106,8 +112,10 @@ class NPMPackageMapper(PackageMapper):
             parts = path.split("/")
             if len(parts) >= 2:
                 owner, repo = parts[0], parts[1]
+                logger.debug("Successfully mapped %s → %s/%s", package_name, owner, repo)
                 return GitHubRepository(owner=owner, repo=repo)
 
+            logger.debug("Package %s: Could not extract owner/repo from path: %s", package_name, path)
             return None
 
         except Exception as e:
