@@ -164,24 +164,77 @@ class MarkdownReporter:
 
         # Unmapped Packages Section
         if unmapped_packages:
-            md_content.append("## Packages Without GitHub Repository Mapping\n")
+            md_content.append("## Packages That Could Not Be Mapped to GitHub\n")
             md_content.append(
                 f"**Total:** {len(unmapped_packages)} packages could not be mapped "
                 "to GitHub repositories.\n"
             )
+            md_content.append("### How Package Mapping Works\n")
             md_content.append(
-                "*These are typically platform-specific binaries, native extensions, "
-                "or packages not hosted on GitHub.*\n"
+                "This tool maps packages to GitHub repositories using the following process:\n"
             )
+            md_content.append(
+                "1. **Query Package Registry**: For npm packages, query "
+                "`https://registry.npmjs.org/{package-name}`"
+            )
+            md_content.append(
+                "2. **Extract Repository Field**: Look for the `\"repository\"` field in the package metadata"
+            )
+            md_content.append(
+                "3. **Validate GitHub URL**: If found, verify it's a GitHub URL and extract owner/repo"
+            )
+            md_content.append(
+                "4. **Fetch SBOM**: Download the SBOM from GitHub's API\n"
+            )
+            md_content.append("### Why Mapping Fails\n")
+            md_content.append(
+                "Packages fail to map when the package registry metadata **does not include** "
+                "a repository field or includes `\"repository\": null`. This commonly occurs with:\n"
+            )
+            md_content.append("- **Old/unmaintained packages**: Published before repository fields were standard")
+            md_content.append("- **Platform-specific binaries**: Wrap native binaries, no source code to link")
+            md_content.append("- **Publisher oversight**: Package maintainer didn't include repository metadata")
+            md_content.append("- **Private/internal packages**: Repository intentionally not disclosed\n")
+            md_content.append(
+                "**Important**: Some packages listed below may have GitHub repositories, "
+                "but the package registry metadata does not link to them. "
+                "Without this metadata, the tool cannot discover the repository location.\n"
+            )
+            md_content.append("### Unmapped Packages Detail\n")
             
             for pkg in unmapped_packages:
-                md_content.append(f"### {pkg.name}\n")
+                md_content.append(f"#### {pkg.name} (v{pkg.version})\n")
                 md_content.append(f"- **Ecosystem:** {pkg.ecosystem}")
-                md_content.append(f"- **Version:** {pkg.version}")
                 md_content.append(f"- **PURL:** `{pkg.purl}`")
                 md_content.append(
-                    "- **GitHub SBOM:** ❌ Not available (no GitHub repository found)\n"
+                    f"- **Package Registry Query:** `https://registry.npmjs.org/{pkg.name}`"
                 )
+                md_content.append(
+                    "- **Registry Response:** Package metadata contains `\"repository\": null` "
+                    "or no repository field"
+                )
+                md_content.append(
+                    "- **Result:** ❌ Cannot determine GitHub repository location from package metadata"
+                )
+                md_content.append(
+                    "- **GitHub SBOM:** ❌ Not available (repository location unknown from registry)\n"
+                )
+            
+            md_content.append("### Important Note\n")
+            md_content.append(
+                "The absence of repository metadata in the package registry **does not necessarily mean** "
+                "the package has no GitHub repository. It means the package publisher did not include "
+                "this information in the package metadata. To fix this:\n"
+            )
+            md_content.append(
+                "1. Contact the package maintainer to add repository field to `package.json`"
+            )
+            md_content.append(
+                "2. Use alternative SBOM tools like `syft` or `grype` that analyze package files directly"
+            )
+            md_content.append(
+                "3. If you know the repository URL, fetch the SBOM manually via GitHub API\n"
+            )
 
         # Statistics Breakdown
         md_content.append("## Statistics Breakdown\n")
