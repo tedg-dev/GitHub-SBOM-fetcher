@@ -235,9 +235,7 @@ class TestMain:
     @patch("sbom_fetcher.application.main.Config")
     @patch("sbom_fetcher.application.cli.parse_arguments")
     @patch("sbom_fetcher.application.cli.setup_logging")
-    def test_main_keyboard_interrupt(
-        self, mock_setup_logging, mock_parse_args, mock_config_class
-    ):
+    def test_main_keyboard_interrupt(self, mock_setup_logging, mock_parse_args, mock_config_class):
         """Test main handles KeyboardInterrupt."""
         mock_args = Mock()
         mock_args.debug = False

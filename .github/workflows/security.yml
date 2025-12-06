@@ -95,8 +95,10 @@ jobs:
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
+          # For push events, scan from previous commit to HEAD
+          # For pull requests, scan from base to head
+          base: ${{ github.event_name == 'push' && github.event.before || github.event.pull_request.base.sha }}
+          head: ${{ github.event_name == 'push' && 'HEAD' || github.event.pull_request.head.sha }}
           extra_args: --debug --only-verified
 
   license-check:
