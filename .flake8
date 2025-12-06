@@ -1,0 +1,23 @@
+[flake8]
+max-line-length = 100
+max-complexity = 18
+extend-ignore = E203, W503, E501, W293
+per-file-ignores =
+    # Test files can have unused imports for fixtures and future use
+    tests/*:F401,F841
+    # Ignore complexity warnings in these specific files (they're tested well)
+    src/sbom_fetcher/services/reporters.py:C901
+    src/sbom_fetcher/services/sbom_service.py:C901
+    src/sbom_fetcher/services/github_client.py:C901
+    src/sbom_fetcher/services/mappers.py:C901
+    src/sbom_fetcher/services/parsers.py:C901
+exclude =
+    .git,
+    __pycache__,
+    .pytest_cache,
+    .venv,
+    venv,
+    build,
+    dist,
+    *.egg-info,
+    archive_v1
