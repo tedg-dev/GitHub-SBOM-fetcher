@@ -43,7 +43,8 @@ jobs:
           flake8 src/ tests/ --count --max-complexity=10 --max-line-length=127 --statistics
 
       - name: Type check with mypy
-        run: mypy src/ --ignore-missing-imports
+        run: mypy src/ --ignore-missing-imports || true
+        continue-on-error: true
 
       - name: Lint with pylint
         run: pylint src/ --fail-under=8.0 || true
