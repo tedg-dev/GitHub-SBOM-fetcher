@@ -6,7 +6,6 @@ from typing import Any, Dict, Optional
 
 import requests
 
-from ..domain.exceptions import GitHubAPIError
 from ..domain.models import ErrorType, PackageDependency
 from ..infrastructure.config import Config
 from ..infrastructure.http_client import HTTPClient

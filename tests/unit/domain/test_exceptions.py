@@ -5,7 +5,6 @@ from sbom_fetcher.domain.exceptions import (
     AuthenticationError,
     DependencyGraphDisabledError,
     GitHubAPIError,
-    InvalidConfigError,
     RateLimitError,
     SBOMFetcherError,
     StorageError,
