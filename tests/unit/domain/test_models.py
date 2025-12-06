@@ -209,3 +209,31 @@ class TestFetcherResult:
         stats = FetcherStats(sboms_failed_permanent=1)
         result = FetcherResult(stats=stats, packages=[], failed_downloads=[], version_mapping={})
         assert result.success is False
+
+    def test_github_repository_validation_empty_owner(self):
+        """Test GitHubRepository validation fails for empty owner."""
+        import pytest
+
+        with pytest.raises(ValueError, match="Owner and repo must be non-empty"):
+            GitHubRepository(owner="", repo="test")
+
+    def test_package_dependency_validation_empty_name(self):
+        """Test PackageDependency validation fails for empty name."""
+        import pytest
+
+        with pytest.raises(ValueError, match="Package name cannot be empty"):
+            PackageDependency(name="", version="1.0.0", ecosystem="npm", purl="pkg:npm/test@1.0.0")
+
+    def test_package_dependency_validation_empty_purl(self):
+        """Test PackageDependency validation fails for empty purl."""
+        import pytest
+
+        with pytest.raises(ValueError, match="PURL cannot be empty"):
+            PackageDependency(name="test", version="1.0.0", ecosystem="npm", purl="")
+
+    def test_package_dependency_validation_empty_ecosystem(self):
+        """Test PackageDependency validation fails for empty ecosystem."""
+        import pytest
+
+        with pytest.raises(ValueError, match="Ecosystem cannot be empty"):
+            PackageDependency(name="test", version="1.0.0", ecosystem="", purl="pkg:npm/test@1.0.0")

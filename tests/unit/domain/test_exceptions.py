@@ -2,7 +2,11 @@
 
 from sbom_fetcher.domain.exceptions import (
     APIError,
+    AuthenticationError,
+    DependencyGraphDisabledError,
     GitHubAPIError,
+    InvalidConfigError,
+    RateLimitError,
     SBOMFetcherError,
     StorageError,
     ValidationError,
@@ -51,3 +55,36 @@ class TestExceptions:
         except APIError as error:
             assert str(error) == "Wrapped error"
             assert error.__cause__ == cause
+
+    def test_rate_limit_error(self):
+        """Test RateLimitError with default message."""
+        error = RateLimitError()
+        assert "Rate limit exceeded" in str(error)
+        assert error.status_code == 429
+
+    def test_rate_limit_error_custom(self):
+        """Test RateLimitError with custom message."""
+        error = RateLimitError("Custom rate limit message", 429)
+        assert str(error) == "Custom rate limit message"
+
+    def test_authentication_error(self):
+        """Test AuthenticationError with default message."""
+        error = AuthenticationError()
+        assert "Authentication failed" in str(error)
+        assert error.status_code == 401
+
+    def test_authentication_error_custom(self):
+        """Test AuthenticationError with custom message."""
+        error = AuthenticationError("Invalid token", 401)
+        assert str(error) == "Invalid token"
+
+    def test_dependency_graph_disabled_error(self):
+        """Test DependencyGraphDisabledError with default message."""
+        error = DependencyGraphDisabledError()
+        assert "Dependency graph not enabled" in str(error)
+        assert error.status_code == 404
+
+    def test_dependency_graph_disabled_error_custom(self):
+        """Test DependencyGraphDisabledError with custom message."""
+        error = DependencyGraphDisabledError("Please enable dependency graph", 404)
+        assert str(error) == "Please enable dependency graph"
