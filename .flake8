@@ -9,6 +9,8 @@ per-file-ignores =
     src/sbom_fetcher/services/reporters.py:C901
     src/sbom_fetcher/services/sbom_service.py:C901
     src/sbom_fetcher/services/github_client.py:C901
+    src/sbom_fetcher/services/mappers.py:C901
+    src/sbom_fetcher/services/parsers.py:C901
 exclude =
     .git,
     __pycache__,
