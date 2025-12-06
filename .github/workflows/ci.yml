@@ -190,7 +190,7 @@ jobs:
 
       - name: Run integration tests
         run: |
-          pytest tests/integration/ -v --tb=short
+          pytest tests/integration/ -v --tb=short --no-cov
 
       - name: Upload integration test results
         uses: actions/upload-artifact@v4
