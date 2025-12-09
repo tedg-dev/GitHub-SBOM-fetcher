@@ -24,10 +24,10 @@ logger = logging.getLogger(__name__)
 def count_sbom_components(sbom_data: Dict[str, Any]) -> int:
     """
     Count the number of components/packages in an SBOM.
-    
+
     Args:
         sbom_data: SBOM JSON data
-        
+
     Returns:
         Number of components/packages in the SBOM
     """
@@ -119,7 +119,7 @@ class SBOMFetcherService:
 
         # Save root SBOM
         save_root_sbom(sbom_data, str(output_base), owner, repo)
-        
+
         # Count root SBOM components
         root_component_count = count_sbom_components(sbom_data)
         logger.info(f"Root SBOM contains {root_component_count} components")
@@ -214,27 +214,31 @@ class SBOMFetcherService:
 
             if self._github_client.download_dependency_sbom(session, pkg, str(deps_dir)):
                 stats.sboms_downloaded += 1
-                
+
                 # Count components in this dependency SBOM
                 component_count = 0
                 try:
                     branch = self._github_client.get_default_branch(
                         session, pkg.github_repository.owner, pkg.github_repository.repo
                     )
-                    sbom_file = f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{branch}.json"
+                    sbom_file = (
+                        f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{branch}.json"
+                    )
                     sbom_path = deps_dir / sbom_file
-                    
+
                     if sbom_path.exists():
-                        with open(sbom_path, 'r') as f:
+                        with open(sbom_path, "r") as f:
                             dep_sbom_data = json.load(f)
                             component_count = count_sbom_components(dep_sbom_data)
                 except (json.JSONDecodeError, OSError, TypeError, AttributeError) as e:
                     logger.debug(f"Could not count components for {repo_key}: {e}")
                     component_count = 0
-                    sbom_file = f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_current.json"
-                    
+                    sbom_file = (
+                        f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_current.json"
+                    )
+
                 dependency_component_counts[repo_key] = component_count
-                
+
                 # Track version mapping
                 version_mapping[repo_key] = {
                     "sbom_file": sbom_file,

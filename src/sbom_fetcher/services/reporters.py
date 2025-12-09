@@ -87,52 +87,52 @@ class MarkdownReporter:
         # Component Count Analysis
         if dependency_component_counts is None:
             dependency_component_counts = {}
-            
+
         if root_component_count > 0 or dependency_component_counts:
             md_content.append("## Component Count Analysis\n")
             md_content.append(
                 "This section shows the total number of components (packages/dependencies) "
                 "found in the root SBOM and each dependency SBOM.\n"
             )
-            
+
             # Root SBOM components
             md_content.append(f"### Root SBOM: `{owner}/{repo}`\n")
             md_content.append(f"- **Components:** {root_component_count}\n")
-            
+
             # Dependency SBOM components
             if dependency_component_counts:
                 md_content.append("### Dependency SBOMs\n")
                 md_content.append(
                     "Each dependency repository's SBOM contains the following number of components:\n"
                 )
-                
+
                 # Sort by component count (descending)
                 sorted_deps = sorted(
-                    dependency_component_counts.items(),
-                    key=lambda x: x[1],
-                    reverse=True
+                    dependency_component_counts.items(), key=lambda x: x[1], reverse=True
                 )
-                
+
                 for repo_key, count in sorted_deps:
                     # Get package info from version_mapping if available
                     pkg_info = version_mapping.get(repo_key, {})
                     pkg_name = pkg_info.get("package_name", "")
                     ecosystem = pkg_info.get("ecosystem", "")
-                    
+
                     if pkg_name and ecosystem:
                         md_content.append(
                             f"- **{repo_key}** ({ecosystem}: `{pkg_name}`): {count} components"
                         )
                     else:
                         md_content.append(f"- **{repo_key}**: {count} components")
-                
+
                 # Grand total
                 total_dependency_components = sum(dependency_component_counts.values())
                 grand_total = root_component_count + total_dependency_components
-                
+
                 md_content.append(f"\n### Grand Total\n")
                 md_content.append(f"- **Root SBOM components:** {root_component_count}")
-                md_content.append(f"- **All dependency SBOM components:** {total_dependency_components}")
+                md_content.append(
+                    f"- **All dependency SBOM components:** {total_dependency_components}"
+                )
                 md_content.append(
                     f"- **🎯 Grand Total (Root + All Dependencies):** "
                     f"**{grand_total} components**\n"
