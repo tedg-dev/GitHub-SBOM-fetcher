@@ -216,16 +216,23 @@ class SBOMFetcherService:
                 stats.sboms_downloaded += 1
                 
                 # Count components in this dependency SBOM
-                branch = self._github_client.get_default_branch(
-                    session, pkg.github_repository.owner, pkg.github_repository.repo
-                )
-                sbom_file = f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{branch}.json"
-                sbom_path = deps_dir / sbom_file
                 component_count = 0
-                if sbom_path.exists():
-                    with open(sbom_path, 'r') as f:
-                        dep_sbom_data = json.load(f)
-                        component_count = count_sbom_components(dep_sbom_data)
+                try:
+                    branch = self._github_client.get_default_branch(
+                        session, pkg.github_repository.owner, pkg.github_repository.repo
+                    )
+                    sbom_file = f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{branch}.json"
+                    sbom_path = deps_dir / sbom_file
+                    
+                    if sbom_path.exists():
+                        with open(sbom_path, 'r') as f:
+                            dep_sbom_data = json.load(f)
+                            component_count = count_sbom_components(dep_sbom_data)
+                except (json.JSONDecodeError, OSError, TypeError, AttributeError) as e:
+                    logger.debug(f"Could not count components for {repo_key}: {e}")
+                    component_count = 0
+                    sbom_file = f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_current.json"
+                    
                 dependency_component_counts[repo_key] = component_count
                 
                 # Track version mapping
