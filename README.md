@@ -43,10 +43,10 @@ cp key.sample.json keys.json
 # Edit keys.json with your token
 
 # Run
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account
 
 # With diagnostic logging
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --debug
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account --debug
 ```
 
 ---
@@ -234,9 +234,25 @@ The execution report includes a detailed "Packages That Could Not Be Mapped to G
 
 ### GitHub Token
 
-Create `keys.json` in the project root:
+Create `keys.json` in the project root with one or more accounts:
 
-**Format:**
+**Multi-Account Format** (Recommended):
+```json
+{
+  "accounts": [
+    {
+      "username": "your-personal-account",
+      "token": "ghp_yourPersonalAccessToken"
+    },
+    {
+      "username": "your-work-account",
+      "token": "ghp_yourWorkAccessToken"
+    }
+  ]
+}
+```
+
+**Legacy Single-Account Format** (Still supported):
 ```json
 {
   "username": "your-github-username",
@@ -255,6 +271,50 @@ Create `keys.json` in the project root:
 - Never commit `keys.json` (already in `.gitignore`)
 - Rotate tokens regularly
 
+### Configuring SSO for Organization Access
+
+**If you need to access repositories in organizations that use SAML Single Sign-On (SSO):**
+
+1. **Create your Personal Access Token:**
+   - Go to: https://github.com/settings/tokens
+   - Click "Generate new token" (Classic)
+   - Select required scopes: `repo`, `read:org`
+   - Generate and copy the token
+
+2. **Authorize the token for SSO:**
+   - Visit: https://github.com/settings/tokens
+   - Find your token in the list
+   - Click **"Configure SSO"** next to the token
+   - Click **"Authorize"** for each organization you need access to
+   - Complete the SAML authentication flow
+
+3. **Add to keys.json:**
+   ```json
+   {
+     "accounts": [
+       {
+         "username": "your-work-account",
+         "token": "ghp_yourSSOAuthorizedToken"
+       }
+     ]
+   }
+   ```
+
+4. **Use with the tool:**
+   ```bash
+   python -m sbom_fetcher --gh-user YourOrg --gh-repo repo-name --account your-work-account
+   ```
+
+**Common SSO Error:**
+```
+❌ Access forbidden (403): Resource protected by organization SAML enforcement.
+   You must grant your Personal Access token access to an organization.
+```
+
+**Solution:** Follow steps 2-3 above to authorize your token for the organization.
+
+**Documentation:** https://docs.github.com/articles/authenticating-to-a-github-organization-with-saml-single-sign-on/
+
 ---
 
 ## Command-Line Options
@@ -265,8 +325,9 @@ python -m sbom_fetcher [OPTIONS]
 
 **Required:**
 ```
---gh-user USER    Repository owner
---gh-repo REPO    Repository name
+--gh-user USER       Repository owner
+--gh-repo REPO       Repository name
+--account ACCOUNT    Account username from keys.json (e.g., your-personal-account)
 ```
 
 **Optional:**
@@ -278,14 +339,20 @@ python -m sbom_fetcher [OPTIONS]
 
 **Examples:**
 ```bash
-# Basic
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot
+# Basic usage with personal account
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-personal-account
+
+# Using work account for SSO-protected organization
+python -m sbom_fetcher --gh-user YourCompany --gh-repo project --account your-work-account
 
 # With diagnostics
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-personal-account --debug
 
-# Custom output
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --output-dir ./my_sboms
+# Custom output directory
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-personal-account --output-dir ./my_sboms
+
+# Using custom keys file
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-personal-account --key-file ./custom-keys.json
 ```
 
 ---
@@ -349,7 +416,7 @@ src/sbom_fetcher/
 
 Enable detailed logging to diagnose issues:
 ```bash
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --debug
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account --debug
 ```
 
 **Shows:**
@@ -375,6 +442,11 @@ python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --debug
 **"Dependency graph not enabled"**
 - GitHub's dependency graph must be enabled
 - Check: `https://github.com/{owner}/{repo}/network/dependencies`
+
+**"Resource protected by organization SAML enforcement"**
+- Your token needs SSO authorization for this organization
+- See "Configuring SSO for Organization Access" section above
+- Visit: https://github.com/settings/tokens and authorize your token
 
 **Packages Without GitHub Repositories**
 - Normal for platform-specific binaries
