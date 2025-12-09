@@ -128,7 +128,7 @@ class MarkdownReporter:
                 total_dependency_components = sum(dependency_component_counts.values())
                 grand_total = root_component_count + total_dependency_components
 
-                md_content.append(f"\n### Grand Total\n")
+                md_content.append("\n### Grand Total\n")
                 md_content.append(f"- **Root SBOM components:** {root_component_count}")
                 md_content.append(
                     f"- **All dependency SBOM components:** {total_dependency_components}"
