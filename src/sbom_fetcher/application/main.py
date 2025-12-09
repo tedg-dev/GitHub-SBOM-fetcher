@@ -47,14 +47,14 @@ def load_token(key_file: Path, account: str = None) -> str:
                         return token
                     else:
                         raise TokenLoadError(f"Account '{account}' found but has no token")
-            
+
             # Account not found
             available = [acc.get("username") for acc in accounts if acc.get("username")]
             raise TokenLoadError(
                 f"Account '{account}' not found in keys file. "
                 f"Available accounts: {', '.join(available) if available else 'none'}"
             )
-        
+
         # Fallback: Try different key formats (backward compatibility)
         token = (
             data.get("github_token")

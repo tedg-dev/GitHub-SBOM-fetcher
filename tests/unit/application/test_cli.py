@@ -18,7 +18,15 @@ class TestParseArguments:
         """Test parsing required arguments."""
         with patch(
             "sys.argv",
-            ["prog", "--gh-user", "test-user", "--gh-repo", "test-repo", "--account", "test-account"],
+            [
+                "prog",
+                "--gh-user",
+                "test-user",
+                "--gh-repo",
+                "test-repo",
+                "--account",
+                "test-account",
+            ],
         ):
             args = parse_arguments()
 
@@ -30,7 +38,15 @@ class TestParseArguments:
         """Test default values for optional arguments."""
         with patch(
             "sys.argv",
-            ["prog", "--gh-user", "test-user", "--gh-repo", "test-repo", "--account", "test-account"],
+            [
+                "prog",
+                "--gh-user",
+                "test-user",
+                "--gh-repo",
+                "test-repo",
+                "--account",
+                "test-account",
+            ],
         ):
             args = parse_arguments()
 
@@ -82,7 +98,16 @@ class TestParseArguments:
         """Test debug flag."""
         with patch(
             "sys.argv",
-            ["prog", "--gh-user", "user", "--gh-repo", "repo", "--account", "test-account", "--debug"],
+            [
+                "prog",
+                "--gh-user",
+                "user",
+                "--gh-repo",
+                "repo",
+                "--account",
+                "test-account",
+                "--debug",
+            ],
         ):
             args = parse_arguments()
 
