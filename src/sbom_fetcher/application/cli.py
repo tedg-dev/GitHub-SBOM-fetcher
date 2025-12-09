@@ -21,18 +21,26 @@ def parse_arguments() -> argparse.Namespace:
         epilog="""
 Examples:
   # Fetch dependencies for a repository
-  python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot
+  python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account tedg-dev
+  
+  # Using a different account (e.g., Cisco)
+  python -m sbom_fetcher --gh-user CiscoSecurityServices --gh-repo corona-sdk --account tedg-cisco
   
   # With debug logging
-  python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug
+  python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account tedg-dev --debug
   
   # Custom output directory
-  python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --output-dir ./my_sboms
+  python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account tedg-dev --output-dir ./my_sboms
         """,
     )
 
     parser.add_argument("--gh-user", required=True, help="GitHub repository owner")
     parser.add_argument("--gh-repo", required=True, help="GitHub repository name")
+    parser.add_argument(
+        "--account",
+        required=True,
+        help="Account username from keys.json (e.g., tedg-dev, tedg-cisco)",
+    )
     parser.add_argument("--key-file", default="keys.json", help="Path to keys.json file")
     parser.add_argument("--output-dir", default="sboms", help="Base output directory")
     parser.add_argument("--debug", action="store_true", help="Enable debug logging")

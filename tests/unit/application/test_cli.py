@@ -18,18 +18,35 @@ class TestParseArguments:
         """Test parsing required arguments."""
         with patch(
             "sys.argv",
-            ["prog", "--gh-user", "test-user", "--gh-repo", "test-repo"],
+            [
+                "prog",
+                "--gh-user",
+                "test-user",
+                "--gh-repo",
+                "test-repo",
+                "--account",
+                "test-account",
+            ],
         ):
             args = parse_arguments()
 
             assert args.gh_user == "test-user"
             assert args.gh_repo == "test-repo"
+            assert args.account == "test-account"
 
     def test_parse_arguments_with_defaults(self):
         """Test default values for optional arguments."""
         with patch(
             "sys.argv",
-            ["prog", "--gh-user", "test-user", "--gh-repo", "test-repo"],
+            [
+                "prog",
+                "--gh-user",
+                "test-user",
+                "--gh-repo",
+                "test-repo",
+                "--account",
+                "test-account",
+            ],
         ):
             args = parse_arguments()
 
@@ -47,6 +64,8 @@ class TestParseArguments:
                 "user",
                 "--gh-repo",
                 "repo",
+                "--account",
+                "test-account",
                 "--key-file",
                 "custom_keys.json",
             ],
@@ -65,6 +84,8 @@ class TestParseArguments:
                 "user",
                 "--gh-repo",
                 "repo",
+                "--account",
+                "test-account",
                 "--output-dir",
                 "/custom/output",
             ],
@@ -77,7 +98,16 @@ class TestParseArguments:
         """Test debug flag."""
         with patch(
             "sys.argv",
-            ["prog", "--gh-user", "user", "--gh-repo", "repo", "--debug"],
+            [
+                "prog",
+                "--gh-user",
+                "user",
+                "--gh-repo",
+                "repo",
+                "--account",
+                "test-account",
+                "--debug",
+            ],
         ):
             args = parse_arguments()
 
@@ -93,6 +123,8 @@ class TestParseArguments:
                 "myuser",
                 "--gh-repo",
                 "myrepo",
+                "--account",
+                "myaccount",
                 "--key-file",
                 "mykeys.json",
                 "--output-dir",
@@ -104,6 +136,7 @@ class TestParseArguments:
 
             assert args.gh_user == "myuser"
             assert args.gh_repo == "myrepo"
+            assert args.account == "myaccount"
             assert args.key_file == "mykeys.json"
             assert args.output_dir == "/my/output"
             assert args.debug is True
@@ -116,13 +149,19 @@ class TestParseArguments:
 
     def test_parse_arguments_missing_gh_user(self):
         """Test error when gh-user missing."""
-        with patch("sys.argv", ["prog", "--gh-repo", "repo"]):
+        with patch("sys.argv", ["prog", "--gh-repo", "repo", "--account", "test-account"]):
             with pytest.raises(SystemExit):
                 parse_arguments()
 
     def test_parse_arguments_missing_gh_repo(self):
         """Test error when gh-repo missing."""
-        with patch("sys.argv", ["prog", "--gh-user", "user"]):
+        with patch("sys.argv", ["prog", "--gh-user", "user", "--account", "test-account"]):
+            with pytest.raises(SystemExit):
+                parse_arguments()
+
+    def test_parse_arguments_missing_account(self):
+        """Test error when account missing."""
+        with patch("sys.argv", ["prog", "--gh-user", "user", "--gh-repo", "repo"]):
             with pytest.raises(SystemExit):
                 parse_arguments()
 
