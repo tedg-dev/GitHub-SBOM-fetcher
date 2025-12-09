@@ -36,7 +36,7 @@
 
 ## Debug Run Results - tedg-dev/beatBot
 
-**Command**: `python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug`  
+**Command**: `python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-account --debug`  
 **Duration**: 5m 3s  
 **Output**: `sboms/sbom_export_2025-12-05_08.09.29/tedg-dev_beatBot/`
 

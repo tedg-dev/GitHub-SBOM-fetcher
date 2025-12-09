@@ -24,7 +24,7 @@ This folder contains detailed technical documentation, analysis reports, and leg
 ### How To Use Debug Mode
 
 1. **Read**: [DEBUG_MAPPING_GUIDE.md](DEBUG_MAPPING_GUIDE.md) - Understand how to use `--debug` flag
-2. **Run**: `python -m sbom_fetcher --gh-user USER --gh-repo REPO --debug`
+2. **Run**: `python -m sbom_fetcher --gh-user USER --gh-repo REPO --account your-account --debug`
 3. **Analyze**: See [DEBUG_RUN_ANALYSIS.md](DEBUG_RUN_ANALYSIS.md) for example analysis
 4. **Solutions**: Check [FINAL_DIAGNOSTIC_SUMMARY.md](FINAL_DIAGNOSTIC_SUMMARY.md) for common issues
 

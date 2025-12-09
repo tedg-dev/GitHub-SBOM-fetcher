@@ -108,7 +108,7 @@ Ran with `psf/requests`:
 
 ```bash
 source venv/bin/activate
-python -m sbom_fetcher --gh-user psf --gh-repo requests --output-dir ./test_correct_structure
+python -m sbom_fetcher --gh-user psf --gh-repo requests --account your-account --output-dir ./test_correct_structure
 ```
 
 **Output Structure** (Perfect!):

@@ -147,7 +147,7 @@ cp keys.sample.json keys.json
 
 # 4. Run
 source venv/bin/activate
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account
 ```
 
 ## 📊 File Count Comparison

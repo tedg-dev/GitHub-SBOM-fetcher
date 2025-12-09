@@ -5,7 +5,7 @@
 **Date**: December 4, 2025 at 12:46 PM HST  
 **Repository**: https://github.com/tedg-dev/beatBot  
 **Setup**: Ran `./setup_environment.sh` before execution  
-**Command**: `python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot`
+**Command**: `python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot` --account your-account
 
 ## 📊 Execution Results
 

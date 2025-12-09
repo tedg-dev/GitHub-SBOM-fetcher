@@ -21,6 +21,27 @@ from .reporters import MarkdownReporter
 logger = logging.getLogger(__name__)
 
 
+def count_sbom_components(sbom_data: Dict[str, Any]) -> int:
+    """
+    Count the number of components/packages in an SBOM.
+
+    Args:
+        sbom_data: SBOM JSON data
+
+    Returns:
+        Number of components/packages in the SBOM
+    """
+    try:
+        # SPDX format has packages list
+        if "sbom" in sbom_data and "packages" in sbom_data["sbom"]:
+            return len(sbom_data["sbom"]["packages"])
+        elif "packages" in sbom_data:
+            return len(sbom_data["packages"])
+        return 0
+    except (KeyError, TypeError):
+        return 0
+
+
 class SBOMFetcherService:
     """
     Main service orchestrating SBOM fetching workflow.
@@ -99,6 +120,10 @@ class SBOMFetcherService:
         # Save root SBOM
         save_root_sbom(sbom_data, str(output_base), owner, repo)
 
+        # Count root SBOM components
+        root_component_count = count_sbom_components(sbom_data)
+        logger.info(f"Root SBOM contains {root_component_count} components")
+
         # Step 2: Parse packages from SBOM
         logger.info("\n" + "=" * 70)
         logger.info("STEP 2: Parsing Dependency Packages")
@@ -169,6 +194,7 @@ class SBOMFetcherService:
         # Download one SBOM per repository
         version_mapping: Dict[str, Any] = {}
         failed_sboms: List[FailureInfo] = []
+        dependency_component_counts: Dict[str, int] = {}  # Track component counts per dependency
 
         for i, (repo_key, pkgs) in enumerate(repo_to_packages.items(), 1):
             pkg = pkgs[0]  # Use first package for download
@@ -188,12 +214,38 @@ class SBOMFetcherService:
 
             if self._github_client.download_dependency_sbom(session, pkg, str(deps_dir)):
                 stats.sboms_downloaded += 1
+
+                # Count components in this dependency SBOM
+                component_count = 0
+                try:
+                    branch = self._github_client.get_default_branch(
+                        session, pkg.github_repository.owner, pkg.github_repository.repo
+                    )
+                    sbom_file = (
+                        f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{branch}.json"
+                    )
+                    sbom_path = deps_dir / sbom_file
+
+                    if sbom_path.exists():
+                        with open(sbom_path, "r") as f:
+                            dep_sbom_data = json.load(f)
+                            component_count = count_sbom_components(dep_sbom_data)
+                except (json.JSONDecodeError, OSError, TypeError, AttributeError) as e:
+                    logger.debug(f"Could not count components for {repo_key}: {e}")
+                    component_count = 0
+                    sbom_file = (
+                        f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_current.json"
+                    )
+
+                dependency_component_counts[repo_key] = component_count
+
                 # Track version mapping
                 version_mapping[repo_key] = {
-                    "sbom_file": f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_current.json",
+                    "sbom_file": sbom_file,
                     "package_name": pkg.name,
                     "ecosystem": pkg.ecosystem,
                     "versions_in_dependency_tree": sorted(set(versions)),
+                    "component_count": component_count,
                     "note": "SBOM represents current repository state (default branch), not historical versions",
                 }
             else:
@@ -244,6 +296,8 @@ class SBOMFetcherService:
             version_mapping,
             failed_sboms,
             unmapped_packages,
+            root_component_count,
+            dependency_component_counts,
         )
         logger.info("Generated execution report: %s", md_filename)
 
