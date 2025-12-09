@@ -18,14 +18,13 @@ from ..services.sbom_service import SBOMFetcherService
 logger = logging.getLogger(__name__)
 
 
-def load_token(key_file: Path) -> str:
+def load_token(key_file: Path, account: str = None) -> str:
     """
-    Load GitHub token from keys file.
-
-    Preserves exact behavior from original load_token function.
+    Load GitHub token from keys file for specified account.
 
     Args:
         key_file: Path to keys.json file
+        account: Account username to look up (e.g., 'tedg-dev', 'tedg-cisco')
 
     Returns:
         GitHub token string
@@ -37,7 +36,26 @@ def load_token(key_file: Path) -> str:
         with open(key_file, "r") as f:
             data = json.load(f)
 
-        # Try different key formats
+        # If account specified, search accounts array
+        if account:
+            accounts = data.get("accounts", [])
+            for acc in accounts:
+                if acc.get("username") == account:
+                    token = acc.get("token")
+                    if token:
+                        logger.info(f"Using account: {account}")
+                        return token
+                    else:
+                        raise TokenLoadError(f"Account '{account}' found but has no token")
+            
+            # Account not found
+            available = [acc.get("username") for acc in accounts if acc.get("username")]
+            raise TokenLoadError(
+                f"Account '{account}' not found in keys file. "
+                f"Available accounts: {', '.join(available) if available else 'none'}"
+            )
+        
+        # Fallback: Try different key formats (backward compatibility)
         token = (
             data.get("github_token")
             or data.get("token")
@@ -145,9 +163,9 @@ def main() -> int:
         if args.key_file:
             config.key_file = Path(args.key_file)
 
-        # Load token
+        # Load token for specified account
         logger.info("Loading GitHub token...")
-        token = load_token(config.key_file)
+        token = load_token(config.key_file, args.account)
 
         # Build session
         session = build_session(token)
