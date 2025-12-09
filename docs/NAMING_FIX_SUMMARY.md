@@ -94,7 +94,7 @@ dependencies/
 Ran test with `requests/requests` repository:
 
 ```bash
-python -m sbom_fetcher --gh-user requests --gh-repo requests --output-dir ./test_fixed_v2
+python -m sbom_fetcher --gh-user requests --gh-repo requests --account your-account --output-dir ./test_fixed_v2
 ```
 
 **Output Structure** (Perfect!):

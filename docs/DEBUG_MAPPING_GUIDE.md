@@ -9,12 +9,12 @@ The mapper now has **comprehensive debug logging** that works with **any GitHub 
 ### Run with Debug Logging
 
 ```bash
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --debug
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account --debug
 ```
 
 Example:
 ```bash
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-account --debug
 ```
 
 ### What Gets Logged
@@ -92,7 +92,7 @@ DEBUG: Error mapping npm package package-name: error details
 ### Step 1: Run with Debug
 
 ```bash
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --debug 2>&1 | tee debug_run.log
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account --debug 2>&1 | tee debug_run.log
 ```
 
 ### Step 2: Filter for Unmapped Packages
@@ -181,7 +181,7 @@ Result: Unmapped (expected - no source repo)
 
 ### Step 1: Run with Debug
 ```bash
-python -m sbom_fetcher --gh-user USER --gh-repo REPO --debug > output.log 2>&1
+python -m sbom_fetcher --gh-user USER --gh-repo REPO --account your-account --debug > output.log 2>&1
 ```
 
 ### Step 2: Check Unmapped Packages

@@ -108,7 +108,7 @@ python -c "import sbom_fetcher, requests, pytest, black, mypy"
 ### Run the Application
 ```bash
 source venv/bin/activate
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account
 ```
 
 ### Run Tests (when adapted)
@@ -173,7 +173,7 @@ rm -rf venv
 source venv/bin/activate
 
 # 3. Run the fetcher
-python -m sbom_fetcher --gh-user psf --gh-repo requests
+python -m sbom_fetcher --gh-user psf --gh-repo requests --account your-account
 
 # 4. Or use interactive mode
 ./setup_environment.sh --run
@@ -182,7 +182,7 @@ python -m sbom_fetcher --gh-user psf --gh-repo requests
 ### Quick Run (Venv Already Exists)
 ```bash
 source venv/bin/activate
-python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --debug
+python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account your-account --debug
 ```
 
 ## ✅ Verification Checklist

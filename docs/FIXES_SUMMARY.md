@@ -196,7 +196,7 @@ or packages not hosted on GitHub.*
 Run the tool again on `tedg-dev/beatBot` to validate:
 
 ```bash
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-account
 ```
 
 ### Expected Validation Results:

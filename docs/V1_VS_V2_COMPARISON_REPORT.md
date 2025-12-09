@@ -10,7 +10,7 @@ Both implementations produce **semantically equivalent** results. All difference
 
 **Test Repository**: `requests/requests` (Python HTTP library)
 - **V1 Command**: `python archive_v1/github_sbom_api_fetcher.py --gh-user requests --gh-repo requests --output-dir ./test_v1_output --key-file ./keys.json`
-- **V2 Command**: `python -m sbom_fetcher --gh-user requests --gh-repo requests --output-dir ./test_v2_output`
+- **V2 Command**: `python -m sbom_fetcher --gh-user requests --gh-repo requests --account your-account --output-dir ./test_v2_output`
 
 **Test Date**: December 4, 2025
 

@@ -136,13 +136,13 @@ fetch_sbom/
 pip install -r requirements.txt
 
 # Run as module (new way)
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-account
 
 # With debug logging
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-account --debug
 
 # Custom output directory
-python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --output-dir ./my_sboms
+python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account your-account --output-dir ./my_sboms
 ```
 
 ## 📝 Git Commit
