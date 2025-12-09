@@ -159,13 +159,9 @@ class TestComponentCountReporting:
         # Verify order: pytest (44) should come before requests (28) before click (13)
         assert pytest_pos < requests_pos < click_pos
 
-    def test_component_count_without_package_info(
-        self, reporter, temp_dir, basic_stats
-    ):
+    def test_component_count_without_package_info(self, reporter, temp_dir, basic_stats):
         """Test component count when version_mapping lacks package info."""
-        version_mapping = {
-            "owner/repo": {}  # Missing package_name and ecosystem
-        }
+        version_mapping = {"owner/repo": {}}  # Missing package_name and ecosystem
         dependency_component_counts = {"owner/repo": 15}
 
         filename = reporter.generate(
@@ -252,9 +248,7 @@ class TestComponentCountReporting:
         # Should not show component count analysis when all zeros
         assert "## Component Count Analysis" not in content
 
-    def test_component_count_grand_total_calculation(
-        self, reporter, temp_dir, basic_stats
-    ):
+    def test_component_count_grand_total_calculation(self, reporter, temp_dir, basic_stats):
         """Test grand total calculation is correct."""
         version_mapping = {
             "repo1": {"package_name": "pkg1", "ecosystem": "npm"},

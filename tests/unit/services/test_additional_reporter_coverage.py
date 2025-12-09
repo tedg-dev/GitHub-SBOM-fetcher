@@ -187,9 +187,7 @@ class TestAdditionalReporterCoverage:
             stats.packages_in_sbom = 1
             stats.sboms_downloaded = 1
 
-            version_mapping = {
-                "single/repo": {"package_name": "single-pkg", "ecosystem": "pypi"}
-            }
+            version_mapping = {"single/repo": {"package_name": "single-pkg", "ecosystem": "pypi"}}
             dependency_component_counts = {"single/repo": 42}
 
             filename = reporter.generate(
