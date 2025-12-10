@@ -163,22 +163,22 @@ class PyPIPackageMapper(PackageMapper):
             # Check project_urls for Source or Repository (with flexible matching)
             project_urls = info.get("project_urls") or {}
             github_url = ""
-            
+
             # Try exact matches first (preferred)
             for key in ["Source", "Repository", "Source Code", "Sources", "Code"]:
                 if key in project_urls and "github.com" in project_urls[key].lower():
                     github_url = project_urls[key]
                     break
-            
+
             # If not found, try case-insensitive partial matching
             if not github_url:
                 for key, value in project_urls.items():
                     key_lower = key.lower()
-                    if ("source" in key_lower or "repository" in key_lower or "code" in key_lower):
+                    if "source" in key_lower or "repository" in key_lower or "code" in key_lower:
                         if "github.com" in value.lower():
                             github_url = value
                             break
-            
+
             # Fallback to Homepage or home_page if they point to GitHub
             if not github_url:
                 homepage = project_urls.get("Homepage") or info.get("home_page") or ""

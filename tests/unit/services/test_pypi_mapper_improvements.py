@@ -182,9 +182,7 @@ class TestPyPIMapperImprovements:
         for url in test_cases:
             mock_response = Mock()
             mock_response.status_code = 200
-            mock_response.json.return_value = {
-                "info": {"project_urls": {"Source": url}}
-            }
+            mock_response.json.return_value = {"info": {"project_urls": {"Source": url}}}
             mock_get.return_value = mock_response
 
             result = mapper.map_to_github("test")
