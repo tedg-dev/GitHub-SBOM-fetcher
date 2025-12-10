@@ -118,8 +118,8 @@ class TestComponentCountReporting:
         # Check grand total
         assert "### Grand Total" in content
         assert "**Root SBOM components:** 22" in content
-        assert "**All dependency SBOM components:** 85" in content
-        assert "**🎯 Grand Total (Root + All Dependencies):** **107 components**" in content
+        assert "**1st level dependency SBOM components:** 85" in content
+        assert "**🎯 Grand Total (Root + 1st level Dependencies):** **107 components**" in content
 
     def test_component_count_sorted_by_count(
         self, reporter, temp_dir, basic_stats, sample_packages
@@ -278,5 +278,5 @@ class TestComponentCountReporting:
 
         # Root: 50, Dependencies: 100+200+300=600, Grand Total: 650
         assert "**Root SBOM components:** 50" in content
-        assert "**All dependency SBOM components:** 600" in content
+        assert "**1st level dependency SBOM components:** 600" in content
         assert "**650 components**" in content

@@ -174,7 +174,7 @@ class TestAdditionalReporterCoverage:
             # Verify grand total calculation: 5000 + (1000 + 1100 + 1200 + 1300 + 1400) = 11000
             assert "**11000 components**" in content
             assert "**Components:** 5000" in content  # Root
-            assert "**All dependency SBOM components:** 6000" in content  # All dependencies
+            assert "**1st level dependency SBOM components:** 6000" in content  # 1st level dependencies
 
     def test_component_count_single_dependency(self):
         """Test component count with only one dependency."""

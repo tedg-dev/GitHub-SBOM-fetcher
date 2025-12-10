@@ -131,10 +131,10 @@ class MarkdownReporter:
                 md_content.append("\n### Grand Total\n")
                 md_content.append(f"- **Root SBOM components:** {root_component_count}")
                 md_content.append(
-                    f"- **All dependency SBOM components:** {total_dependency_components}"
+                    f"- **1st level dependency SBOM components:** {total_dependency_components}"
                 )
                 md_content.append(
-                    f"- **🎯 Grand Total (Root + All Dependencies):** "
+                    f"- **🎯 Grand Total (Root + 1st level Dependencies):** "
                     f"**{grand_total} components**\n"
                 )
 
