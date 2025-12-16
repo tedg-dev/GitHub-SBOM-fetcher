@@ -32,10 +32,8 @@ def count_sbom_components(sbom_data: Dict[str, Any]) -> int:
         Number of components/packages in the SBOM
     """
     try:
-        # SPDX format has packages list
-        if "sbom" in sbom_data and "packages" in sbom_data["sbom"]:
-            return len(sbom_data["sbom"]["packages"])
-        elif "packages" in sbom_data:
+        # Pure SPDX format has packages list at root level
+        if "packages" in sbom_data:
             return len(sbom_data["packages"])
         return 0
     except (KeyError, TypeError):

@@ -47,8 +47,11 @@ class TestFetchRootSBOM:
         return GitHubClient(http_client, "test_token", config)
 
     def test_fetch_root_sbom_success(self, client):
-        """Test successful root SBOM fetch."""
-        expected_sbom = {"sbom": {"packages": []}}
+        """Test successful root SBOM fetch - returns extracted SPDX content."""
+        # GitHub API returns wrapped format
+        api_response = {"sbom": {"spdxVersion": "SPDX-2.3", "packages": []}}
+        # But we expect the extracted SPDX content
+        expected_sbom = {"spdxVersion": "SPDX-2.3", "packages": []}
 
         with patch("requests.Session") as mock_session_class:
             mock_session = Mock()
@@ -56,7 +59,7 @@ class TestFetchRootSBOM:
 
             mock_response = Mock()
             mock_response.status_code = 200
-            mock_response.json.return_value = expected_sbom
+            mock_response.json.return_value = api_response
             mock_session.get.return_value = mock_response
 
             result = client.fetch_root_sbom("owner", "repo")

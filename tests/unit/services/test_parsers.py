@@ -140,34 +140,34 @@ class TestSBOMParserComprehensive:
 
     @pytest.fixture
     def valid_sbom(self):
-        """Valid SBOM data fixture."""
+        """Valid SBOM data fixture in pure SPDX format."""
         return {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-Package-lodash",
-                        "name": "lodash",
-                        "versionInfo": "4.17.21",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            }
-                        ],
-                    },
-                    {
-                        "SPDXID": "SPDXRef-Package-requests",
-                        "name": "requests",
-                        "versionInfo": "2.31.0",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:pypi/requests@2.31.0",
-                            }
-                        ],
-                    },
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "SPDXID": "SPDXRef-DOCUMENT",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-Package-lodash",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        }
+                    ],
+                },
+                {
+                    "SPDXID": "SPDXRef-Package-requests",
+                    "name": "requests",
+                    "versionInfo": "2.31.0",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:pypi/requests@2.31.0",
+                        }
+                    ],
+                },
+            ],
         }
 
     def test_extract_packages_from_valid_sbom(self, parser, valid_sbom):
@@ -184,7 +184,7 @@ class TestSBOMParserComprehensive:
 
     def test_extract_packages_filters_root(self, parser, valid_sbom):
         """Test that root repository package is filtered out."""
-        valid_sbom["sbom"]["packages"].append(
+        valid_sbom["packages"].append(
             {
                 "SPDXID": "SPDXRef-Package-root",
                 "name": "my-repo",
@@ -207,32 +207,31 @@ class TestSBOMParserComprehensive:
     def test_extract_packages_skips_document_spdx(self, parser):
         """Test that SPDXRef-DOCUMENT is skipped."""
         sbom = {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-DOCUMENT",
-                        "name": "document",
-                        "versionInfo": "1.0.0",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/document@1.0.0",
-                            }
-                        ],
-                    },
-                    {
-                        "SPDXID": "SPDXRef-Package-lodash",
-                        "name": "lodash",
-                        "versionInfo": "4.17.21",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            }
-                        ],
-                    },
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-DOCUMENT",
+                    "name": "document",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/document@1.0.0",
+                        }
+                    ],
+                },
+                {
+                    "SPDXID": "SPDXRef-Package-lodash",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        }
+                    ],
+                },
+            ],
         }
 
         packages = parser.extract_packages(sbom)
@@ -243,27 +242,26 @@ class TestSBOMParserComprehensive:
     def test_extract_packages_skips_without_purl(self, parser):
         """Test that packages without PURL are skipped."""
         sbom = {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-Package-nopurl",
-                        "name": "no-purl",
-                        "versionInfo": "1.0.0",
-                        "externalRefs": [],
-                    },
-                    {
-                        "SPDXID": "SPDXRef-Package-lodash",
-                        "name": "lodash",
-                        "versionInfo": "4.17.21",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            }
-                        ],
-                    },
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-Package-nopurl",
+                    "name": "no-purl",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [],
+                },
+                {
+                    "SPDXID": "SPDXRef-Package-lodash",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        }
+                    ],
+                },
+            ],
         }
 
         packages = parser.extract_packages(sbom)
@@ -273,7 +271,7 @@ class TestSBOMParserComprehensive:
 
     def test_extract_packages_handles_empty_sbom(self, parser):
         """Test handling empty SBOM."""
-        sbom = {"sbom": {"packages": []}}
+        sbom = {"spdxVersion": "SPDX-2.3", "packages": []}
 
         packages = parser.extract_packages(sbom)
 
@@ -281,14 +279,14 @@ class TestSBOMParserComprehensive:
 
     def test_extract_packages_handles_missing_packages_key(self, parser):
         """Test handling SBOM without packages key."""
-        sbom = {"sbom": {}}
+        sbom = {"spdxVersion": "SPDX-2.3"}
 
         packages = parser.extract_packages(sbom)
 
         assert len(packages) == 0
 
-    def test_extract_packages_handles_missing_sbom_key(self, parser):
-        """Test handling data without sbom key."""
+    def test_extract_packages_handles_empty_dict(self, parser):
+        """Test handling empty dict."""
         sbom = {}
 
         packages = parser.extract_packages(sbom)
@@ -313,21 +311,20 @@ class TestSBOMParserComprehensive:
     def test_extract_packages_uses_parsed_name_when_missing(self, parser):
         """Test that parser fills in name from PURL if missing."""
         sbom = {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-Package-noname",
-                        "name": "",
-                        "versionInfo": "",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            }
-                        ],
-                    }
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-Package-noname",
+                    "name": "",
+                    "versionInfo": "",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        }
+                    ],
+                }
+            ],
         }
 
         packages = parser.extract_packages(sbom)
@@ -339,21 +336,20 @@ class TestSBOMParserComprehensive:
     def test_extract_packages_uses_parsed_version_when_missing(self, parser):
         """Test that parser fills in version from PURL if missing."""
         sbom = {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-Package-lodash",
-                        "name": "lodash",
-                        "versionInfo": "",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            }
-                        ],
-                    }
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-Package-lodash",
+                    "name": "lodash",
+                    "versionInfo": "",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        }
+                    ],
+                }
+            ],
         }
 
         packages = parser.extract_packages(sbom)
@@ -364,22 +360,21 @@ class TestSBOMParserComprehensive:
     def test_extract_packages_handles_multiple_external_refs(self, parser):
         """Test handling package with multiple external references."""
         sbom = {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-Package-lodash",
-                        "name": "lodash",
-                        "versionInfo": "4.17.21",
-                        "externalRefs": [
-                            {"referenceType": "homepage", "referenceLocator": "https://lodash.com"},
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            },
-                        ],
-                    }
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-Package-lodash",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {"referenceType": "homepage", "referenceLocator": "https://lodash.com"},
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        },
+                    ],
+                }
+            ],
         }
 
         packages = parser.extract_packages(sbom)
@@ -390,21 +385,20 @@ class TestSBOMParserComprehensive:
     def test_extract_packages_scoped_npm(self, parser):
         """Test extracting scoped npm package."""
         sbom = {
-            "sbom": {
-                "packages": [
-                    {
-                        "SPDXID": "SPDXRef-Package-babel",
-                        "name": "@babel/core",
-                        "versionInfo": "7.22.0",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/%40babel/core@7.22.0",
-                            }
-                        ],
-                    }
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-Package-babel",
+                    "name": "@babel/core",
+                    "versionInfo": "7.22.0",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/%40babel/core@7.22.0",
+                        }
+                    ],
+                }
+            ],
         }
 
         packages = parser.extract_packages(sbom)

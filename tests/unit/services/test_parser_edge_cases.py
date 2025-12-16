@@ -55,27 +55,26 @@ class TestSBOMParserEdgeCases:
         """Test that invalid packages are skipped with warning."""
         # This covers lines 148-150: ValueError exception handling
         sbom_data = {
-            "sbom": {
-                "packages": [
-                    {
-                        "name": "valid-package",
-                        "SPDXID": "SPDXRef-Package-valid",
-                        "versionInfo": "1.0.0",
-                        "externalRefs": [
-                            {
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/valid-package@1.0.0",
-                            }
-                        ],
-                    },
-                    {
-                        # Invalid: missing required fields - will trigger ValueError
-                        "name": "",  # Empty name
-                        "SPDXID": "SPDXRef-Package-invalid",
-                        "externalRefs": [],
-                    },
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {
+                    "name": "valid-package",
+                    "SPDXID": "SPDXRef-Package-valid",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [
+                        {
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/valid-package@1.0.0",
+                        }
+                    ],
+                },
+                {
+                    # Invalid: missing required fields - will trigger ValueError
+                    "name": "",  # Empty name
+                    "SPDXID": "SPDXRef-Package-invalid",
+                    "externalRefs": [],
+                },
+            ],
         }
 
         packages = parser.extract_packages(sbom_data)

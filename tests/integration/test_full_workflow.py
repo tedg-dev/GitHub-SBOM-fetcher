@@ -118,10 +118,10 @@ class TestFullWorkflowIntegration:
             # Execute
             result = github_client.fetch_root_sbom("test-owner", "test-repo")
 
-            # Verify root SBOM fetched
+            # Verify root SBOM fetched (now returns extracted SPDX content)
             assert result is not None
-            assert "sbom" in result
-            assert len(result["sbom"]["packages"]) == 2
+            assert "packages" in result
+            assert len(result["packages"]) == 2
 
             # Verify packages extracted
             packages = parser.extract_packages(result, "test-owner", "test-repo")
@@ -169,7 +169,7 @@ class TestFullWorkflowIntegration:
             result = github_client.fetch_root_sbom("test-owner", "test-repo")
 
             assert result is not None
-            assert "sbom" in result
+            assert "packages" in result
 
     def test_workflow_with_transient_errors(self, mock_github_responses):
         """Test workflow with HTTP 5xx transient errors and retry."""
@@ -211,73 +211,72 @@ class TestFullWorkflowIntegration:
             assert mock_session.get.called
 
     def test_parser_integration_with_real_like_data(self):
-        """Test parser with realistic SBOM data."""
+        """Test parser with realistic SBOM data in pure SPDX format."""
         parser = SBOMParser()
 
         sbom_data = {
-            "sbom": {
-                "packages": [
-                    # npm package
-                    {
-                        "SPDXID": "SPDXRef-Package-lodash",
-                        "name": "lodash",
-                        "versionInfo": "4.17.21",
-                        "externalRefs": [
-                            {
-                                "referenceCategory": "PACKAGE-MANAGER",
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/lodash@4.17.21",
-                            }
-                        ],
-                    },
-                    # Scoped npm package
-                    {
-                        "SPDXID": "SPDXRef-Package-babel-core",
-                        "name": "@babel/core",
-                        "versionInfo": "7.22.0",
-                        "externalRefs": [
-                            {
-                                "referenceCategory": "PACKAGE-MANAGER",
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/%40babel/core@7.22.0",
-                            }
-                        ],
-                    },
-                    # PyPI package
-                    {
-                        "SPDXID": "SPDXRef-Package-requests",
-                        "name": "requests",
-                        "versionInfo": "2.31.0",
-                        "externalRefs": [
-                            {
-                                "referenceCategory": "PACKAGE-MANAGER",
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:pypi/requests@2.31.0",
-                            }
-                        ],
-                    },
-                    # Package without PURL (should be skipped)
-                    {
-                        "SPDXID": "SPDXRef-Package-nopurl",
-                        "name": "nopurl",
-                        "versionInfo": "1.0.0",
-                        "externalRefs": [],
-                    },
-                    # Root package (should be skipped)
-                    {
-                        "SPDXID": "SPDXRef-Package-test-repo",
-                        "name": "test-repo",
-                        "versionInfo": "1.0.0",
-                        "externalRefs": [
-                            {
-                                "referenceCategory": "PACKAGE-MANAGER",
-                                "referenceType": "purl",
-                                "referenceLocator": "pkg:npm/test-repo@1.0.0",
-                            }
-                        ],
-                    },
-                ],
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                # npm package
+                {
+                    "SPDXID": "SPDXRef-Package-lodash",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {
+                            "referenceCategory": "PACKAGE-MANAGER",
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/lodash@4.17.21",
+                        }
+                    ],
+                },
+                # Scoped npm package
+                {
+                    "SPDXID": "SPDXRef-Package-babel-core",
+                    "name": "@babel/core",
+                    "versionInfo": "7.22.0",
+                    "externalRefs": [
+                        {
+                            "referenceCategory": "PACKAGE-MANAGER",
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/%40babel/core@7.22.0",
+                        }
+                    ],
+                },
+                # PyPI package
+                {
+                    "SPDXID": "SPDXRef-Package-requests",
+                    "name": "requests",
+                    "versionInfo": "2.31.0",
+                    "externalRefs": [
+                        {
+                            "referenceCategory": "PACKAGE-MANAGER",
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:pypi/requests@2.31.0",
+                        }
+                    ],
+                },
+                # Package without PURL (should be skipped)
+                {
+                    "SPDXID": "SPDXRef-Package-nopurl",
+                    "name": "nopurl",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [],
+                },
+                # Root package (should be skipped)
+                {
+                    "SPDXID": "SPDXRef-Package-test-repo",
+                    "name": "test-repo",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [
+                        {
+                            "referenceCategory": "PACKAGE-MANAGER",
+                            "referenceType": "purl",
+                            "referenceLocator": "pkg:npm/test-repo@1.0.0",
+                        }
+                    ],
+                },
+            ],
         }
 
         packages = parser.extract_packages(sbom_data, "owner", "test-repo")
@@ -470,7 +469,7 @@ class TestConcurrentOperations:
                 }
             )
 
-        sbom_data = {"sbom": {"packages": packages_data}}
+        sbom_data = {"spdxVersion": "SPDX-2.3", "packages": packages_data}
 
         packages = parser.extract_packages(sbom_data, "owner", "repo")
 
