@@ -64,7 +64,10 @@ class GitHubClient:
             resp = session.get(url, timeout=30)
 
             if resp.status_code == 200:
-                sbom_data = resp.json()
+                api_response = resp.json()
+                # GitHub API returns {"sbom": {...SPDX content...}}
+                # Extract just the SPDX content for standards-compliant output
+                sbom_data = api_response.get("sbom", api_response)
                 logger.info("✅ Root SBOM fetched successfully")
                 return sbom_data
             elif resp.status_code == 404:
@@ -167,8 +170,13 @@ class GitHubClient:
                     )
                     filepath = os.path.join(output_dir, filename)
 
+                    # GitHub API returns {"sbom": {...SPDX content...}}
+                    # Extract just the SPDX content for standards-compliant output
+                    api_response = resp.json()
+                    sbom_content = api_response.get("sbom", api_response)
+
                     with open(filepath, "w") as f:
-                        json.dump(resp.json(), f, indent=2)
+                        json.dump(sbom_content, f, indent=2)
 
                     pkg.sbom_downloaded = True
                     return True

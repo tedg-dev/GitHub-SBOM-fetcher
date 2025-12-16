@@ -6,16 +6,15 @@ from sbom_fetcher.services.sbom_service import count_sbom_components
 class TestCountSBOMComponents:
     """Tests for the count_sbom_components helper function."""
 
-    def test_count_components_nested_format(self):
-        """Test counting components in nested SBOM format (sbom.packages)."""
+    def test_count_components_spdx_format(self):
+        """Test counting components in pure SPDX format (packages at root)."""
         sbom_data = {
-            "sbom": {
-                "packages": [
-                    {"name": "pkg1", "version": "1.0"},
-                    {"name": "pkg2", "version": "2.0"},
-                    {"name": "pkg3", "version": "3.0"},
-                ]
-            }
+            "spdxVersion": "SPDX-2.3",
+            "packages": [
+                {"name": "pkg1", "version": "1.0"},
+                {"name": "pkg2", "version": "2.0"},
+                {"name": "pkg3", "version": "3.0"},
+            ],
         }
         assert count_sbom_components(sbom_data) == 3
 
@@ -29,9 +28,9 @@ class TestCountSBOMComponents:
         }
         assert count_sbom_components(sbom_data) == 2
 
-    def test_count_components_empty_nested(self):
-        """Test counting components with empty nested packages."""
-        sbom_data = {"sbom": {"packages": []}}
+    def test_count_components_empty_packages(self):
+        """Test counting components with empty packages list."""
+        sbom_data = {"spdxVersion": "SPDX-2.3", "packages": []}
         assert count_sbom_components(sbom_data) == 0
 
     def test_count_components_empty_direct(self):
@@ -41,7 +40,7 @@ class TestCountSBOMComponents:
 
     def test_count_components_no_packages_key(self):
         """Test counting components when packages key is missing."""
-        sbom_data = {"sbom": {"metadata": "some data"}}
+        sbom_data = {"spdxVersion": "SPDX-2.3", "name": "test"}
         assert count_sbom_components(sbom_data) == 0
 
     def test_count_components_empty_dict(self):
@@ -66,23 +65,26 @@ class TestCountSBOMComponents:
         # This is an edge case but function handles it gracefully
         assert count_sbom_components(sbom_data) == 10  # len("not a list")
 
-    def test_count_components_nested_packages_not_list(self):
-        """Test counting components when nested packages is not a list."""
-        sbom_data = {"sbom": {"packages": "not a list"}}
-        # len() works on strings, so this returns the string length
-        assert count_sbom_components(sbom_data) == 10  # len("not a list")
+    def test_count_components_with_spdx_metadata(self):
+        """Test counting components with full SPDX metadata."""
+        sbom_data = {
+            "spdxVersion": "SPDX-2.3",
+            "dataLicense": "CC0-1.0",
+            "SPDXID": "SPDXRef-DOCUMENT",
+            "packages": [{"name": "pkg1"}, {"name": "pkg2"}],
+        }
+        assert count_sbom_components(sbom_data) == 2
 
     def test_count_components_large_sbom(self):
         """Test counting components with a large SBOM."""
         packages = [{"name": f"pkg{i}", "version": f"{i}.0"} for i in range(100)]
-        sbom_data = {"sbom": {"packages": packages}}
+        sbom_data = {"spdxVersion": "SPDX-2.3", "packages": packages}
         assert count_sbom_components(sbom_data) == 100
 
-    def test_count_components_prefers_nested_format(self):
-        """Test that nested format takes precedence over direct format."""
-        # If both exist, nested should be used
+    def test_count_components_single_package(self):
+        """Test counting components with a single package."""
         sbom_data = {
-            "sbom": {"packages": [{"name": "pkg1"}, {"name": "pkg2"}]},
-            "packages": [{"name": "pkg3"}],  # This should be ignored
+            "spdxVersion": "SPDX-2.3",
+            "packages": [{"name": "single-pkg", "version": "1.0.0"}],
         }
-        assert count_sbom_components(sbom_data) == 2  # Uses nested format
+        assert count_sbom_components(sbom_data) == 1

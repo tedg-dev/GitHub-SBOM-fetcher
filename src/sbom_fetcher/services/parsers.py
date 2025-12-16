@@ -100,8 +100,8 @@ class SBOMParser:
             raise ValidationError("SBOM data must be a dictionary")
 
         packages = []
-        sbom = sbom_data.get("sbom", {})
-        package_list = sbom.get("packages", [])
+        # Support both pure SPDX format (packages at root) and legacy wrapped format
+        package_list = sbom_data.get("packages", [])
 
         self._logger.info(f"Parsing SBOM with {len(package_list)} packages...")
 
