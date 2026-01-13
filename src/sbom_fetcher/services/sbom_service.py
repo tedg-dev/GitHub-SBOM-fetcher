@@ -219,9 +219,9 @@ class SBOMFetcherService:
                     branch = self._github_client.get_default_branch(
                         session, pkg.github_repository.owner, pkg.github_repository.repo
                     )
-                    sbom_file = (
-                        f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{branch}.json"
-                    )
+                    # Sanitize branch name - replace slashes with underscores for valid filenames
+                    safe_branch = branch.replace("/", "_")
+                    sbom_file = f"{pkg.github_repository.owner}_{pkg.github_repository.repo}_{safe_branch}.json"
                     sbom_path = deps_dir / sbom_file
 
                     if sbom_path.exists():

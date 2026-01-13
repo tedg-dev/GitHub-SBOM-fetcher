@@ -102,9 +102,11 @@ class TestNPMPackageMapper:
         assert result is not None
         assert result.owner == "babel"
         assert result.repo == "babel"
-        # Verify URL encoding was used
-        mock_get.assert_called_once()
-        assert "%40babel" in mock_get.call_args[0][0]
+        # Verify URL encoding was used in npm registry call
+        # (Also makes a verification call to check SBOM availability)
+        assert mock_get.call_count >= 1
+        npm_call = mock_get.call_args_list[0]
+        assert "%40babel" in npm_call[0][0]
 
     @patch("requests.get")
     def test_map_package_with_git_protocol(self, mock_get, mapper):

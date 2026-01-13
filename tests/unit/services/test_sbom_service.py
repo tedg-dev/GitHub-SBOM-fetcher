@@ -1,15 +1,15 @@
 """Comprehensive unit tests for SBOM fetcher service - Complete Coverage."""
 
+import json
 import tempfile
 from pathlib import Path
-from unittest.mock import Mock, call, mock_open, patch
+from unittest.mock import Mock, mock_open, patch
 
 import pytest
 
 from sbom_fetcher.domain.models import (
     ErrorType,
     FetcherResult,
-    FetcherStats,
     GitHubRepository,
     PackageDependency,
 )
@@ -345,9 +345,7 @@ class TestSaveRootSBOM:
         expected_file = tmp_path / "owner_repo_root.json"
         assert expected_file.exists()
 
-        with open(expected_file) as f:
-            import json
-
+        with open(expected_file, encoding="utf-8") as f:
             loaded_data = json.load(f)
             assert loaded_data == sbom_data
 
@@ -359,3 +357,82 @@ class TestSaveRootSBOM:
 
         expected_file = tmp_path / "myowner_myrepo_root.json"
         assert expected_file.exists()
+
+
+class TestBranchNameSanitization:
+    """Tests for branch name sanitization in component counting."""
+
+    @pytest.fixture
+    def mock_dependencies(self):
+        """Create all mocked dependencies."""
+        github_client = Mock()
+        mapper_factory = Mock()
+        repository = Mock()
+        reporter = Mock()
+        config = Config()
+        return {
+            "github_client": github_client,
+            "mapper_factory": mapper_factory,
+            "repository": repository,
+            "reporter": reporter,
+            "config": config,
+        }
+
+    @pytest.fixture
+    def service(self, mock_dependencies):
+        """Create service with mocked dependencies."""
+        return SBOMFetcherService(**mock_dependencies)
+
+    @pytest.fixture
+    def mock_session(self):
+        """Create mock requests session."""
+        return Mock()
+
+    @patch("sbom_fetcher.services.sbom_service.save_root_sbom")
+    @patch("sbom_fetcher.services.sbom_service.time.sleep")
+    def test_component_count_with_slash_in_branch_name(
+        self, mock_sleep, mock_save, service, mock_session, mock_dependencies, tmp_path
+    ):
+        """Test component counting works when branch name contains slashes."""
+        root_sbom = {"packages": [{"name": "test"}]}
+        mock_dependencies["github_client"].fetch_root_sbom.return_value = root_sbom
+
+        pkg = PackageDependency(
+            name="@aws-cdk/asset-awscli-v1",
+            version="2.2.242",
+            ecosystem="npm",
+            purl="pkg:npm/@aws-cdk/asset-awscli-v1@2.2.242",
+            github_repository=GitHubRepository(owner="cdklabs", repo="awscdk-asset-awscli"),
+        )
+
+        with patch.object(service._parser, "extract_packages", return_value=[pkg]):
+            mock_dependencies["mapper_factory"].map_package_to_github.return_value = True
+            mock_dependencies["github_client"].download_dependency_sbom.return_value = True
+            # Return branch with slash
+            mock_dependencies["github_client"].get_default_branch.return_value = "awscli-v1/main"
+            mock_dependencies["reporter"].generate.return_value = "report.md"
+
+            # Patch Path to use real tmp_path for deps_dir
+            with patch("sbom_fetcher.services.sbom_service.Path") as mock_path:
+                mock_output_base = Mock()
+                mock_output_base.mkdir = Mock()
+                mock_output_base.__str__ = Mock(return_value=str(tmp_path))
+                mock_output_base.__truediv__ = Mock(side_effect=lambda x: tmp_path / x)
+
+                mock_deps_dir = tmp_path / "dependencies"
+                mock_deps_dir.mkdir(parents=True, exist_ok=True)
+
+                # Create SBOM file with sanitized name (slash -> underscore)
+                sanitized_sbom_file = (
+                    mock_deps_dir / "cdklabs_awscdk-asset-awscli_awscli-v1_main.json"
+                )
+                with open(sanitized_sbom_file, "w", encoding="utf-8") as f:
+                    json.dump({"packages": [{"name": "dep1"}, {"name": "dep2"}]}, f)
+
+                mock_path.return_value = mock_output_base
+
+                with patch("builtins.open", mock_open()):
+                    with patch("sbom_fetcher.services.sbom_service.json.dump"):
+                        result = service.fetch_all_sboms("owner", "repo", mock_session)
+
+        assert result.stats.sboms_downloaded == 1

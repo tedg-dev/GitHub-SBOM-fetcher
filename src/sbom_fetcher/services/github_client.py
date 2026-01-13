@@ -164,9 +164,11 @@ class GitHubClient:
                     branch = self.get_default_branch(
                         session, pkg.github_repository.owner, pkg.github_repository.repo
                     )
+                    # Sanitize branch name - replace slashes with underscores for valid filenames
+                    safe_branch = branch.replace("/", "_")
                     filename = (
                         f"{pkg.github_repository.owner}_"
-                        f"{pkg.github_repository.repo}_{branch}.json"
+                        f"{pkg.github_repository.repo}_{safe_branch}.json"
                     )
                     filepath = os.path.join(output_dir, filename)
 

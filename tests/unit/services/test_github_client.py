@@ -1,9 +1,8 @@
 """Comprehensive unit tests for GitHub API client - Complete Coverage."""
 
-import json
 import tempfile
 from pathlib import Path
-from unittest.mock import Mock, mock_open, patch
+from unittest.mock import Mock, patch
 
 import pytest
 import requests
@@ -406,3 +405,137 @@ class TestDownloadDependencySBOM:
 
         assert result is True
         assert pkg.sbom_downloaded is True
+
+    def test_download_success_with_slash_in_branch_name(self, client, mock_session, temp_dir):
+        """Test SBOM download sanitizes branch names containing slashes."""
+        repo = GitHubRepository(owner="cdklabs", repo="awscdk-asset-awscli")
+        pkg = PackageDependency(
+            name="@aws-cdk/asset-awscli-v1",
+            version="2.2.242",
+            ecosystem="npm",
+            purl="pkg:npm/@aws-cdk/asset-awscli-v1@2.2.242",
+            github_repository=repo,
+        )
+
+        # Mock SBOM download
+        sbom_response = Mock()
+        sbom_response.status_code = 200
+        sbom_response.json.return_value = {"sbom": {"packages": []}}
+
+        # Mock default branch call - branch name contains a slash
+        branch_response = Mock()
+        branch_response.status_code = 200
+        branch_response.json.return_value = {"default_branch": "awscli-v1/main"}
+
+        mock_session.get.side_effect = [sbom_response, branch_response]
+
+        result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
+
+        assert result is True
+        assert pkg.sbom_downloaded is True
+
+        # Verify file was created with sanitized branch name (slash replaced with underscore)
+        expected_file = Path(temp_dir) / "cdklabs_awscdk-asset-awscli_awscli-v1_main.json"
+        assert (
+            expected_file.exists()
+        ), f"Expected {expected_file} but found: {list(Path(temp_dir).iterdir())}"
+
+    def test_download_success_with_multiple_slashes_in_branch_name(
+        self, client, mock_session, temp_dir
+    ):
+        """Test SBOM download sanitizes branch names with multiple slashes."""
+        repo = GitHubRepository(owner="owner", repo="repo")
+        pkg = PackageDependency(
+            name="test-pkg",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/test-pkg@1.0.0",
+            github_repository=repo,
+        )
+
+        # Mock SBOM download
+        sbom_response = Mock()
+        sbom_response.status_code = 200
+        sbom_response.json.return_value = {"sbom": {"packages": []}}
+
+        # Mock default branch call - branch name contains multiple slashes
+        branch_response = Mock()
+        branch_response.status_code = 200
+        branch_response.json.return_value = {"default_branch": "feature/v2/release"}
+
+        mock_session.get.side_effect = [sbom_response, branch_response]
+
+        result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
+
+        assert result is True
+        assert pkg.sbom_downloaded is True
+
+        # Verify file was created with all slashes replaced
+        expected_file = Path(temp_dir) / "owner_repo_feature_v2_release.json"
+        assert expected_file.exists()
+
+    def test_download_429_rate_limit_exhausted(self, client, mock_session, temp_dir):
+        """Test download fails after exhausting retries on rate limiting."""
+        repo = GitHubRepository(owner="test", repo="repo")
+        pkg = PackageDependency(
+            name="test-pkg",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/test-pkg@1.0.0",
+            github_repository=repo,
+        )
+
+        # All calls return rate limited
+        rate_limit_response = Mock()
+        rate_limit_response.status_code = 429
+        mock_session.get.return_value = rate_limit_response
+
+        with patch("time.sleep"):
+            result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
+
+        assert result is False
+        assert pkg.error == "Rate limited"
+        assert pkg.error_type == ErrorType.TRANSIENT
+
+    def test_download_other_4xx_error(self, client, mock_session, temp_dir):
+        """Test download handles other 4xx client errors as permanent."""
+        repo = GitHubRepository(owner="test", repo="repo")
+        pkg = PackageDependency(
+            name="test-pkg",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/test-pkg@1.0.0",
+            github_repository=repo,
+        )
+
+        # Return 410 Gone
+        mock_response = Mock()
+        mock_response.status_code = 410
+        mock_session.get.return_value = mock_response
+
+        result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
+
+        assert result is False
+        assert pkg.error == "HTTP 410"
+        assert pkg.error_type == ErrorType.PERMANENT
+
+    def test_download_request_exception_exhausted(self, client, mock_session, temp_dir):
+        """Test download fails after exhausting retries on request exceptions."""
+        repo = GitHubRepository(owner="test", repo="repo")
+        pkg = PackageDependency(
+            name="test-pkg",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/test-pkg@1.0.0",
+            github_repository=repo,
+        )
+
+        # All calls raise exception
+        mock_session.get.side_effect = requests.RequestException("Connection failed")
+
+        with patch("time.sleep"):
+            result = client.download_dependency_sbom(mock_session, pkg, temp_dir)
+
+        assert result is False
+        assert "Connection failed" in pkg.error
+        assert pkg.error_type == ErrorType.TRANSIENT
