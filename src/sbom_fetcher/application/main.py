@@ -117,8 +117,8 @@ def create_service(config: Config, token: str) -> SBOMFetcherService:
     # Create GitHub client
     github_client = GitHubClient(http_client, token, config)
 
-    # Create mapper factory
-    mapper_factory = MapperFactory(config)
+    # Create mapper factory with GitHub token for search fallback
+    mapper_factory = MapperFactory(config, github_token=token)
 
     # Create repository
     repository = FilesystemSBOMRepository(config.output_dir)

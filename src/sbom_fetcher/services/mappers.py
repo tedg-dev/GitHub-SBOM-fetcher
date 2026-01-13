@@ -12,6 +12,75 @@ from ..infrastructure.config import Config
 logger = logging.getLogger(__name__)
 
 
+def search_github_for_package(
+    package_name: str, ecosystem: str, github_token: Optional[str] = None
+) -> Optional[GitHubRepository]:
+    """
+    Search GitHub for a repository matching the package name.
+
+    This is a generic fallback when registry metadata is missing or stale.
+
+    Args:
+        package_name: Name of the package to search for
+        ecosystem: Package ecosystem (npm, pypi)
+        github_token: Optional GitHub token for authenticated requests
+
+    Returns:
+        GitHubRepository if found, None otherwise
+    """
+    try:
+        # Clean package name for search
+        search_name = package_name
+        if search_name.startswith("@"):
+            # For scoped packages like @ffmpeg-installer/win32-x64,
+            # use the scope name (ffmpeg-installer) which is usually the repo name
+            parts = search_name.split("/")
+            if len(parts) >= 2:
+                scope_name = parts[0][1:]  # ffmpeg-installer (without @)
+                # Search for repos matching the scope name
+                search_name = scope_name
+
+        # Build search query - look for repos with matching name
+        # Note: Language filters are optional to avoid empty results for niche packages
+        query = f"{search_name} in:name"
+
+        headers = {"Accept": "application/vnd.github+json"}
+        if github_token:
+            headers["Authorization"] = f"Bearer {github_token}"
+
+        url = f"https://api.github.com/search/repositories?q={query}&sort=stars&per_page=5"
+        resp = requests.get(url, headers=headers, timeout=10)
+
+        if resp.status_code != 200:
+            logger.debug("GitHub search returned %d for %s", resp.status_code, package_name)
+            return None
+
+        data = resp.json()
+        items = data.get("items", [])
+
+        if not items:
+            return None
+
+        # Return the top result (most stars)
+        top_result = items[0]
+        owner = top_result["owner"]["login"]
+        repo = top_result["name"]
+
+        logger.debug(
+            "GitHub search found %s/%s for package %s (stars: %d)",
+            owner,
+            repo,
+            package_name,
+            top_result.get("stargazers_count", 0),
+        )
+
+        return GitHubRepository(owner=owner, repo=repo)
+
+    except Exception as e:
+        logger.debug("Error searching GitHub for %s: %s", package_name, e)
+        return None
+
+
 class PackageMapper:
     """Base interface for package mappers (Strategy pattern)."""
 
@@ -23,14 +92,16 @@ class PackageMapper:
 class NPMPackageMapper(PackageMapper):
     """Maps NPM packages to GitHub repositories."""
 
-    def __init__(self, config: Config):
+    def __init__(self, config: Config, github_token: Optional[str] = None):
         """
         Initialize NPM mapper.
 
         Args:
             config: Application configuration
+            github_token: Optional GitHub token for search fallback
         """
         self._config = config
+        self._github_token = github_token
 
     def map_to_github(self, package_name: str) -> Optional[GitHubRepository]:
         """
@@ -59,10 +130,12 @@ class NPMPackageMapper(PackageMapper):
             data = resp.json()
             repo_info = data.get("repository")
 
-            # Handle null/missing repository field
+            # Handle null/missing repository field - try GitHub search fallback
             if repo_info is None:
-                logger.debug("Package %s has no repository field (null)", package_name)
-                return None
+                logger.debug(
+                    "Package %s has no repository field, trying GitHub search", package_name
+                )
+                return search_github_for_package(package_name, "npm", self._github_token)
 
             # Handle both dict and string formats
             if isinstance(repo_info, dict):
@@ -78,8 +151,10 @@ class NPMPackageMapper(PackageMapper):
                 return None
 
             if not repo_url:
-                logger.debug("Package %s has empty repository URL", package_name)
-                return None
+                logger.debug(
+                    "Package %s has empty repository URL, trying GitHub search", package_name
+                )
+                return search_github_for_package(package_name, "npm", self._github_token)
 
             # Extract GitHub owner/repo from URL
             # Formats: git+https://github.com/owner/repo.git
@@ -88,8 +163,12 @@ class NPMPackageMapper(PackageMapper):
             repo_url_lower = repo_url.lower()
 
             if "github.com" not in repo_url_lower:
-                logger.debug("Package %s repository is not GitHub: %s", package_name, repo_url)
-                return None
+                logger.debug(
+                    "Package %s repository is not GitHub: %s, trying GitHub search",
+                    package_name,
+                    repo_url,
+                )
+                return search_github_for_package(package_name, "npm", self._github_token)
 
             repo_url = repo_url_lower
 
@@ -119,7 +198,8 @@ class NPMPackageMapper(PackageMapper):
             logger.debug(
                 "Package %s: Could not extract owner/repo from path: %s", package_name, path
             )
-            return None
+            # Fallback to GitHub search
+            return search_github_for_package(package_name, "npm", self._github_token)
 
         except Exception as e:
             logger.debug("Error mapping npm package %s: %s", package_name, e)
@@ -129,14 +209,16 @@ class NPMPackageMapper(PackageMapper):
 class PyPIPackageMapper(PackageMapper):
     """Maps PyPI packages to GitHub repositories."""
 
-    def __init__(self, config: Config):
+    def __init__(self, config: Config, github_token: Optional[str] = None):
         """
         Initialize PyPI mapper.
 
         Args:
             config: Application configuration
+            github_token: Optional GitHub token for search fallback
         """
         self._config = config
+        self._github_token = github_token
 
     def map_to_github(self, package_name: str) -> Optional[GitHubRepository]:
         """
@@ -186,7 +268,8 @@ class PyPIPackageMapper(PackageMapper):
                     github_url = homepage
 
             if not github_url or "github.com" not in github_url.lower():
-                return None
+                logger.debug("Package %s has no GitHub URL, trying GitHub search", package_name)
+                return search_github_for_package(package_name, "pypi", self._github_token)
 
             # Parse GitHub URL
             parsed = urlparse(github_url)

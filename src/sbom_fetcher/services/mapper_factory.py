@@ -1,7 +1,7 @@
 """Mapper factory for creating package mappers (Factory pattern)."""
 
 import logging
-from typing import Dict
+from typing import Dict, Optional
 
 from ..domain.models import PackageDependency
 from ..infrastructure.config import Config
@@ -13,17 +13,18 @@ logger = logging.getLogger(__name__)
 class MapperFactory:
     """Factory for creating package mappers based on ecosystem."""
 
-    def __init__(self, config: Config):
+    def __init__(self, config: Config, github_token: Optional[str] = None):
         """
         Initialize mapper factory.
 
         Args:
             config: Application configuration
+            github_token: Optional GitHub token for search fallback
         """
         self._config = config
         self._mappers: Dict[str, PackageMapper] = {
-            "npm": NPMPackageMapper(config),
-            "pypi": PyPIPackageMapper(config),
+            "npm": NPMPackageMapper(config, github_token),
+            "pypi": PyPIPackageMapper(config, github_token),
         }
         self._null_mapper = NullMapper()
 
