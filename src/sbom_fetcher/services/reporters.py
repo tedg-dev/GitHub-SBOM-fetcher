@@ -84,6 +84,37 @@ class MarkdownReporter:
         )
         md_content.append("> See `version_mapping.json` for details on version deduplication.\n")
 
+        # Dependency Count Discrepancy Explanation
+        md_content.append("### 📊 Why Dependency Counts May Differ from GitHub UI\n")
+        md_content.append(
+            "The dependency count in this report may differ from what GitHub's "
+            "web UI shows. This is expected for several reasons:\n"
+        )
+        md_content.append(
+            "1. **Root repository excluded**: The root repository itself is not "
+            "counted as a dependency"
+        )
+        md_content.append(
+            "2. **Manifest parsing differences**: GitHub's UI may include dependencies "
+            "from all manifest files, while the SBOM API may process them differently"
+        )
+        md_content.append(
+            "3. **Development dependencies**: Some ecosystems separate dev/test "
+            "dependencies which may be included or excluded differently"
+        )
+        md_content.append(
+            "4. **Transitive vs direct**: The SBOM includes both direct and transitive "
+            "dependencies, which may be counted differently in the UI"
+        )
+        md_content.append(
+            "5. **Lockfile state**: The SBOM is generated from the current lockfile state, "
+            "which may differ from the dependency graph analysis"
+        )
+        md_content.append(
+            "6. **Duplicate handling**: Multiple versions of the same package are counted "
+            "separately in the SBOM but may be deduplicated in the UI\n"
+        )
+
         # Component Count Analysis
         if dependency_component_counts is None:
             dependency_component_counts = {}

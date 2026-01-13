@@ -11,6 +11,7 @@ from .mappers import (
     NullMapper,
     PackageMapper,
     PyPIPackageMapper,
+    RubyGemsMapper,
     search_org_for_package,
 )
 
@@ -40,6 +41,7 @@ class MapperFactory:
         self._mappers: Dict[str, PackageMapper] = {
             "npm": NPMPackageMapper(config, github_token),
             "pypi": PyPIPackageMapper(config, github_token),
+            "gem": RubyGemsMapper(config, github_token),
             "githubactions": GitHubActionsMapper(config, github_token),
         }
         self._null_mapper = NullMapper()

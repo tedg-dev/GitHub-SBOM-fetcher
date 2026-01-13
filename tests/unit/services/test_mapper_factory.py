@@ -12,6 +12,7 @@ from sbom_fetcher.services.mappers import (
     NPMPackageMapper,
     NullMapper,
     PyPIPackageMapper,
+    RubyGemsMapper,
 )
 
 
@@ -126,6 +127,18 @@ class TestCreateMapper:
         mapper = factory.create_mapper("GITHUBACTIONS")
 
         assert isinstance(mapper, GitHubActionsMapper)
+
+    def test_create_mapper_gem(self, factory):
+        """Test creating mapper for gem ecosystem."""
+        mapper = factory.create_mapper("gem")
+
+        assert isinstance(mapper, RubyGemsMapper)
+
+    def test_create_mapper_gem_uppercase(self, factory):
+        """Test creating mapper for GEM with uppercase."""
+        mapper = factory.create_mapper("GEM")
+
+        assert isinstance(mapper, RubyGemsMapper)
 
 
 class TestMapPackageToGitHub:

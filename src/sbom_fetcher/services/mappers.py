@@ -376,6 +376,102 @@ class PyPIPackageMapper(PackageMapper):
             return None
 
 
+class RubyGemsMapper(PackageMapper):
+    """Maps RubyGems packages to GitHub repositories.
+
+    Uses the RubyGems API to look up package metadata and extract
+    GitHub repository URLs from source_code_uri, homepage_uri, or other fields.
+    """
+
+    RUBYGEMS_API_URL = "https://rubygems.org/api/v1/gems"
+
+    def __init__(self, config: Config = None, github_token: Optional[str] = None):
+        """
+        Initialize RubyGems mapper.
+
+        Args:
+            config: Application configuration
+            github_token: Optional GitHub token for search fallback
+        """
+        self._config = config
+        self._github_token = github_token
+
+    def map_to_github(self, package_name: str) -> Optional[GitHubRepository]:
+        """
+        Map RubyGem package to its GitHub repository using RubyGems API.
+
+        Args:
+            package_name: RubyGem package name
+
+        Returns:
+            GitHubRepository or None if not found
+        """
+        try:
+            url = f"{self.RUBYGEMS_API_URL}/{package_name}.json"
+            resp = requests.get(url, timeout=10)
+
+            if resp.status_code != 200:
+                logger.debug("RubyGems API returned %d for %s", resp.status_code, package_name)
+                return None
+
+            data = resp.json()
+
+            # Try multiple fields that may contain GitHub URLs
+            # Priority: source_code_uri > homepage_uri > project_uri
+            url_fields = ["source_code_uri", "homepage_uri", "project_uri"]
+
+            for field in url_fields:
+                repo_url = data.get(field)
+                if repo_url and "github.com" in repo_url.lower():
+                    result = self._extract_github_repo(repo_url, package_name)
+                    if result:
+                        return result
+
+            # No GitHub URL found in metadata
+            logger.debug("RubyGem %s has no GitHub URL in metadata", package_name)
+            return search_github_for_package(package_name, "gem", self._github_token)
+
+        except Exception as e:
+            logger.debug("Error mapping RubyGem package %s: %s", package_name, e)
+            return None
+
+    def _extract_github_repo(
+        self, repo_url: str, package_name: str
+    ) -> Optional[GitHubRepository]:
+        """
+        Extract GitHub owner/repo from a URL.
+
+        Args:
+            repo_url: URL that may contain GitHub repository
+            package_name: Package name for logging
+
+        Returns:
+            GitHubRepository or None if extraction fails
+        """
+        repo_url_lower = repo_url.lower()
+
+        # Clean up URL
+        repo_url_clean = (
+            repo_url_lower.replace("git+", "")
+            .replace("git://", "https://")
+            .replace(".git", "")
+            .replace("ssh://git@", "https://")
+        )
+
+        # Parse URL
+        parsed = urlparse(repo_url_clean)
+        path = parsed.path.strip("/")
+
+        # Remove trailing components like /tree/main, /blob/master, etc.
+        path_parts = path.split("/")
+        if len(path_parts) >= 2:
+            owner, repo = path_parts[0], path_parts[1]
+            logger.debug("Successfully mapped RubyGem %s → %s/%s", package_name, owner, repo)
+            return GitHubRepository(owner=owner, repo=repo)
+
+        return None
+
+
 class GitHubActionsMapper(PackageMapper):
     """Maps GitHub Actions to their GitHub repositories.
 
