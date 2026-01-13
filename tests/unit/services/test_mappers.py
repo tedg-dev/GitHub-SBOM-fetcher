@@ -524,9 +524,7 @@ class TestSearchOrgForPackage:
         mock_search_response = Mock()
         mock_search_response.status_code = 200
         mock_search_response.json.return_value = {
-            "items": [
-                {"owner": {"login": "CiscoSecurityServices"}, "name": "corona-sdk-internal"}
-            ]
+            "items": [{"owner": {"login": "CiscoSecurityServices"}, "name": "corona-sdk-internal"}]
         }
 
         # corona-sdk has hyphen, so it tries: corona-sdk, corona_sdk, then search
@@ -651,7 +649,9 @@ class TestGitHubActionsMapper:
 
     def test_map_action_with_deep_path(self, mapper):
         """Test mapping action with deep path."""
-        result = mapper.map_to_github("CiscoSecurityServices/workflows/.github/actions/get-build-credentials")
+        result = mapper.map_to_github(
+            "CiscoSecurityServices/workflows/.github/actions/get-build-credentials"
+        )
 
         assert result is not None
         assert result.owner == "CiscoSecurityServices"

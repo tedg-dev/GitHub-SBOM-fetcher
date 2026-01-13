@@ -106,7 +106,7 @@ section "Installing Dependencies"
 # Install project dependencies
 echo "📦 Installing runtime dependencies from requirements.txt..."
 if [ -f "requirements.txt" ]; then
-    pip install -r requirements.txt -q || error "Failed to install dependencies"
+    python3 -m pip install -r requirements.txt -q || error "Failed to install dependencies"
     echo "✅ Runtime dependencies installed successfully"
 else
     error "requirements.txt not found. Please ensure you're in the project root directory"
@@ -115,7 +115,7 @@ fi
 # Install development dependencies from pyproject.toml
 echo -e "\n📦 Installing development dependencies (pytest, black, mypy, etc.)..."
 if [ -f "pyproject.toml" ]; then
-    pip install -e ".[dev]" -q || warning "Failed to install some development dependencies"
+    python3 -m pip install -e ".[dev]" -q || warning "Failed to install some development dependencies"
     echo "✅ Development dependencies installed"
 else
     warning "pyproject.toml not found. Skipping dev dependencies."
