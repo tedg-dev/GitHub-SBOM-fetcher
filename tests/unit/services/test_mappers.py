@@ -8,10 +8,13 @@ import requests
 from sbom_fetcher.domain.models import GitHubRepository
 from sbom_fetcher.infrastructure.config import Config
 from sbom_fetcher.services.mappers import (
+    GitHubActionsMapper,
     NPMPackageMapper,
     NullMapper,
     PackageMapper,
     PyPIPackageMapper,
+    RubyGemsMapper,
+    search_org_for_package,
 )
 
 
@@ -446,3 +449,458 @@ class TestNullMapper:
         assert mapper.map_to_github("package1") is None
         assert mapper.map_to_github("package2") is None
         assert mapper.map_to_github("package3") is None
+
+
+class TestSearchOrgForPackage:
+    """Tests for search_org_for_package function."""
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_exact_match_found(self, mock_get):
+        """Test finding package by exact repo name match."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "owner": {"login": "CiscoSecurityServices"},
+            "name": "corona-sdk",
+        }
+        mock_get.return_value = mock_response
+
+        result = search_org_for_package("corona-sdk", "CiscoSecurityServices", "test-token")
+
+        assert result is not None
+        assert result.owner == "CiscoSecurityServices"
+        assert result.repo == "corona-sdk"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_exact_match_with_underscore_variation(self, mock_get):
+        """Test finding package with underscore to hyphen conversion."""
+        # First call (exact name) fails, second call (hyphenated) succeeds
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_response_200 = Mock()
+        mock_response_200.status_code = 200
+        mock_response_200.json.return_value = {
+            "owner": {"login": "TestOrg"},
+            "name": "test-package",
+        }
+
+        mock_get.side_effect = [mock_response_404, mock_response_200]
+
+        result = search_org_for_package("test_package", "TestOrg", "test-token")
+
+        assert result is not None
+        assert result.repo == "test-package"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_exact_match_with_hyphen_variation(self, mock_get):
+        """Test finding package with hyphen to underscore conversion."""
+        # First call (exact name) fails, second call (underscored) succeeds
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_response_200 = Mock()
+        mock_response_200.status_code = 200
+        mock_response_200.json.return_value = {
+            "owner": {"login": "TestOrg"},
+            "name": "test_package",
+        }
+
+        mock_get.side_effect = [mock_response_404, mock_response_200]
+
+        result = search_org_for_package("test-package", "TestOrg", "test-token")
+
+        assert result is not None
+        assert result.repo == "test_package"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_org_search_fallback(self, mock_get):
+        """Test falling back to org search when exact match fails."""
+        # All exact matches fail (original name + underscore variation)
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        # Search returns results
+        mock_search_response = Mock()
+        mock_search_response.status_code = 200
+        mock_search_response.json.return_value = {
+            "items": [
+                {"owner": {"login": "CiscoSecurityServices"}, "name": "corona-sdk-internal"}
+            ]
+        }
+
+        # corona-sdk has hyphen, so it tries: corona-sdk, corona_sdk, then search
+        mock_get.side_effect = [mock_response_404, mock_response_404, mock_search_response]
+
+        result = search_org_for_package("corona-sdk", "CiscoSecurityServices", "test-token")
+
+        assert result is not None
+        assert result.owner == "CiscoSecurityServices"
+        assert result.repo == "corona-sdk-internal"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_org_search_no_results(self, mock_get):
+        """Test when org search returns no results."""
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_search_response = Mock()
+        mock_search_response.status_code = 200
+        mock_search_response.json.return_value = {"items": []}
+
+        # "nonexistent" has no hyphens/underscores, so only 1 exact match + search
+        mock_get.side_effect = [mock_response_404, mock_search_response]
+
+        result = search_org_for_package("nonexistent", "TestOrg", "test-token")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_org_search_api_failure(self, mock_get):
+        """Test when org search API returns error."""
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_search_response = Mock()
+        mock_search_response.status_code = 403  # Rate limited
+
+        # "package" has no hyphens/underscores, so only 1 exact match + search
+        mock_get.side_effect = [mock_response_404, mock_search_response]
+
+        result = search_org_for_package("package", "TestOrg", "test-token")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_without_token(self, mock_get):
+        """Test search without authentication token."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "owner": {"login": "TestOrg"},
+            "name": "public-repo",
+        }
+        mock_get.return_value = mock_response
+
+        result = search_org_for_package("public-repo", "TestOrg")
+
+        assert result is not None
+        # Verify no Authorization header
+        call_args = mock_get.call_args
+        headers = call_args[1].get("headers", {})
+        assert "Authorization" not in headers
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_network_error(self, mock_get):
+        """Test handling of network errors."""
+        mock_get.side_effect = requests.RequestException("Connection failed")
+
+        result = search_org_for_package("package", "TestOrg", "test-token")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_json_decode_error(self, mock_get):
+        """Test handling of JSON decode errors."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.side_effect = ValueError("Invalid JSON")
+        mock_get.return_value = mock_response
+
+        result = search_org_for_package("package", "TestOrg", "test-token")
+
+        assert result is None
+
+
+class TestGitHubActionsMapper:
+    """Tests for GitHub Actions mapper."""
+
+    @pytest.fixture
+    def mapper(self):
+        """Create GitHub Actions mapper."""
+        return GitHubActionsMapper()
+
+    def test_initialization(self):
+        """Test mapper initializes correctly."""
+        config = Config()
+        mapper = GitHubActionsMapper(config, "test-token")
+        assert mapper._config == config
+        assert mapper._github_token == "test-token"
+
+    def test_initialization_no_args(self):
+        """Test mapper initializes with no arguments."""
+        mapper = GitHubActionsMapper()
+        assert mapper._config is None
+        assert mapper._github_token is None
+
+    def test_map_simple_action(self, mapper):
+        """Test mapping simple owner/repo action."""
+        result = mapper.map_to_github("docker/build-push-action")
+
+        assert result is not None
+        assert result.owner == "docker"
+        assert result.repo == "build-push-action"
+
+    def test_map_action_with_path(self, mapper):
+        """Test mapping action with subpath (e.g., github/codeql-action/init)."""
+        result = mapper.map_to_github("github/codeql-action/init")
+
+        assert result is not None
+        assert result.owner == "github"
+        assert result.repo == "codeql-action"
+
+    def test_map_action_with_deep_path(self, mapper):
+        """Test mapping action with deep path."""
+        result = mapper.map_to_github("CiscoSecurityServices/workflows/.github/actions/get-build-credentials")
+
+        assert result is not None
+        assert result.owner == "CiscoSecurityServices"
+        assert result.repo == "workflows"
+
+    def test_map_actions_checkout(self, mapper):
+        """Test mapping actions/checkout."""
+        result = mapper.map_to_github("actions/checkout")
+
+        assert result is not None
+        assert result.owner == "actions"
+        assert result.repo == "checkout"
+
+    def test_map_no_slash(self, mapper):
+        """Test mapping action without slash returns None."""
+        result = mapper.map_to_github("invalid-action-name")
+
+        assert result is None
+
+    def test_map_empty_string(self, mapper):
+        """Test mapping empty string returns None."""
+        result = mapper.map_to_github("")
+
+        assert result is None
+
+    def test_map_none(self, mapper):
+        """Test mapping None returns None."""
+        result = mapper.map_to_github(None)
+
+        assert result is None
+
+    def test_map_single_slash_empty_parts(self, mapper):
+        """Test mapping with slash but empty parts returns None."""
+        result = mapper.map_to_github("/")
+
+        assert result is None
+
+    def test_map_empty_owner(self, mapper):
+        """Test mapping with empty owner returns None."""
+        result = mapper.map_to_github("/repo")
+
+        assert result is None
+
+    def test_map_empty_repo(self, mapper):
+        """Test mapping with empty repo returns None."""
+        result = mapper.map_to_github("owner/")
+
+        assert result is None
+
+    def test_map_various_actions(self, mapper):
+        """Test mapping various common GitHub Actions."""
+        test_cases = [
+            ("actions/setup-node", "actions", "setup-node"),
+            ("aws-actions/configure-aws-credentials", "aws-actions", "configure-aws-credentials"),
+            ("dorny/paths-filter", "dorny", "paths-filter"),
+            ("ruby/setup-ruby", "ruby", "setup-ruby"),
+        ]
+
+        for action_name, expected_owner, expected_repo in test_cases:
+            result = mapper.map_to_github(action_name)
+            assert result is not None, f"Failed for {action_name}"
+            assert result.owner == expected_owner, f"Wrong owner for {action_name}"
+            assert result.repo == expected_repo, f"Wrong repo for {action_name}"
+
+
+class TestRubyGemsMapper:
+    """Tests for RubyGems package mapper."""
+
+    @pytest.fixture
+    def mapper(self):
+        """Create RubyGems mapper."""
+        return RubyGemsMapper()
+
+    def test_initialization(self):
+        """Test mapper initializes correctly."""
+        config = Config()
+        mapper = RubyGemsMapper(config, "test-token")
+        assert mapper._config == config
+        assert mapper._github_token == "test-token"
+
+    def test_initialization_no_args(self):
+        """Test mapper initializes with no arguments."""
+        mapper = RubyGemsMapper()
+        assert mapper._config is None
+        assert mapper._github_token is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_with_source_code_uri(self, mock_get):
+        """Test mapping gem with source_code_uri field."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "rails",
+            "source_code_uri": "https://github.com/rails/rails",
+        }
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("rails")
+
+        assert result is not None
+        assert result.owner == "rails"
+        assert result.repo == "rails"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_with_homepage_uri(self, mock_get):
+        """Test mapping gem with homepage_uri field (fallback)."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "nokogiri",
+            "source_code_uri": None,
+            "homepage_uri": "https://github.com/sparklemotion/nokogiri",
+        }
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("nokogiri")
+
+        assert result is not None
+        assert result.owner == "sparklemotion"
+        assert result.repo == "nokogiri"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_with_project_uri(self, mock_get):
+        """Test mapping gem with project_uri field (last fallback)."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "bundler",
+            "source_code_uri": None,
+            "homepage_uri": None,
+            "project_uri": "https://github.com/rubygems/bundler",
+        }
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("bundler")
+
+        assert result is not None
+        assert result.owner == "rubygems"
+        assert result.repo == "bundler"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_with_git_url(self, mock_get):
+        """Test mapping gem with git:// URL format."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "test-gem",
+            "source_code_uri": "git://github.com/owner/repo.git",
+        }
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("test-gem")
+
+        assert result is not None
+        assert result.owner == "owner"
+        assert result.repo == "repo"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_with_tree_path(self, mock_get):
+        """Test mapping gem with /tree/main suffix in URL."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "test-gem",
+            "source_code_uri": "https://github.com/owner/repo/tree/main",
+        }
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("test-gem")
+
+        assert result is not None
+        assert result.owner == "owner"
+        assert result.repo == "repo"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_not_found(self, mock_get):
+        """Test mapping gem that doesn't exist."""
+        mock_response = Mock()
+        mock_response.status_code = 404
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("nonexistent-gem")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    @patch("sbom_fetcher.services.mappers.search_github_for_package")
+    def test_map_gem_no_github_url_falls_back_to_search(self, mock_search, mock_get):
+        """Test mapping gem without GitHub URL falls back to search."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "internal-gem",
+            "source_code_uri": "https://gitlab.com/owner/repo",
+            "homepage_uri": "https://internal.example.com",
+        }
+        mock_get.return_value = mock_response
+        mock_search.return_value = None
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("internal-gem")
+
+        assert result is None
+        mock_search.assert_called_once_with("internal-gem", "gem", None)
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_request_exception(self, mock_get):
+        """Test handling of request exceptions."""
+        mock_get.side_effect = requests.RequestException("Connection failed")
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("test-gem")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_json_error(self, mock_get):
+        """Test handling of JSON decode errors."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.side_effect = ValueError("Invalid JSON")
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("test-gem")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_map_gem_empty_fields(self, mock_get):
+        """Test mapping gem with empty URL fields."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "name": "test-gem",
+            "source_code_uri": "",
+            "homepage_uri": "",
+            "project_uri": "",
+        }
+        mock_get.return_value = mock_response
+
+        mapper = RubyGemsMapper()
+        result = mapper.map_to_github("test-gem")
+
+        # Falls back to GitHub search which returns None
+        assert result is None

@@ -8,9 +8,11 @@ from sbom_fetcher.domain.models import GitHubRepository, PackageDependency
 from sbom_fetcher.infrastructure.config import Config
 from sbom_fetcher.services.mapper_factory import MapperFactory
 from sbom_fetcher.services.mappers import (
+    GitHubActionsMapper,
     NPMPackageMapper,
     NullMapper,
     PyPIPackageMapper,
+    RubyGemsMapper,
 )
 
 
@@ -113,6 +115,30 @@ class TestCreateMapper:
         mapper = factory.create_mapper("maven")
 
         assert isinstance(mapper, NullMapper)
+
+    def test_create_mapper_githubactions(self, factory):
+        """Test creating mapper for githubactions ecosystem."""
+        mapper = factory.create_mapper("githubactions")
+
+        assert isinstance(mapper, GitHubActionsMapper)
+
+    def test_create_mapper_githubactions_uppercase(self, factory):
+        """Test creating mapper for GITHUBACTIONS with uppercase."""
+        mapper = factory.create_mapper("GITHUBACTIONS")
+
+        assert isinstance(mapper, GitHubActionsMapper)
+
+    def test_create_mapper_gem(self, factory):
+        """Test creating mapper for gem ecosystem."""
+        mapper = factory.create_mapper("gem")
+
+        assert isinstance(mapper, RubyGemsMapper)
+
+    def test_create_mapper_gem_uppercase(self, factory):
+        """Test creating mapper for GEM with uppercase."""
+        mapper = factory.create_mapper("GEM")
+
+        assert isinstance(mapper, RubyGemsMapper)
 
 
 class TestMapPackageToGitHub:
@@ -284,3 +310,180 @@ class TestMapPackageToGitHub:
 
         # Should be the same instance (reused)
         assert mapper1 is mapper2
+
+
+class TestMapperFactoryOrgFallback:
+    """Tests for org repository fallback when standard mapping fails."""
+
+    def test_factory_initialization_with_root_org(self):
+        """Test factory initializes with root_org parameter."""
+        config = Config()
+        factory = MapperFactory(config, github_token="test-token", root_org="CiscoSecurityServices")
+
+        assert factory._root_org == "CiscoSecurityServices"
+        assert factory._github_token == "test-token"
+
+    def test_factory_initialization_without_root_org(self):
+        """Test factory initializes without root_org parameter."""
+        config = Config()
+        factory = MapperFactory(config)
+
+        assert factory._root_org is None
+        assert factory._github_token is None
+
+    @patch("sbom_fetcher.services.mapper_factory.search_org_for_package")
+    @patch("sbom_fetcher.services.mappers.NPMPackageMapper.map_to_github")
+    def test_org_fallback_when_standard_mapping_fails(self, mock_npm_map, mock_org_search):
+        """Test that org search is used as fallback when standard mapping fails."""
+        config = Config()
+        factory = MapperFactory(config, github_token="test-token", root_org="CiscoSecurityServices")
+
+        pkg = PackageDependency(
+            name="corona-sdk",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/corona-sdk@1.0.0",
+        )
+
+        # Standard mapping fails
+        mock_npm_map.return_value = None
+
+        # Org search succeeds
+        repo = GitHubRepository(owner="CiscoSecurityServices", repo="corona-sdk")
+        mock_org_search.return_value = repo
+
+        result = factory.map_package_to_github(pkg)
+
+        assert result is True
+        assert pkg.github_repository == repo
+        mock_npm_map.assert_called_once_with("corona-sdk")
+        mock_org_search.assert_called_once_with("corona-sdk", "CiscoSecurityServices", "test-token")
+
+    @patch("sbom_fetcher.services.mapper_factory.search_org_for_package")
+    @patch("sbom_fetcher.services.mappers.NPMPackageMapper.map_to_github")
+    def test_no_org_fallback_when_standard_mapping_succeeds(self, mock_npm_map, mock_org_search):
+        """Test that org search is NOT called when standard mapping succeeds."""
+        config = Config()
+        factory = MapperFactory(config, github_token="test-token", root_org="CiscoSecurityServices")
+
+        pkg = PackageDependency(
+            name="lodash",
+            version="4.17.21",
+            ecosystem="npm",
+            purl="pkg:npm/lodash@4.17.21",
+        )
+
+        # Standard mapping succeeds
+        repo = GitHubRepository(owner="lodash", repo="lodash")
+        mock_npm_map.return_value = repo
+
+        result = factory.map_package_to_github(pkg)
+
+        assert result is True
+        assert pkg.github_repository == repo
+        mock_npm_map.assert_called_once_with("lodash")
+        # Org search should NOT be called
+        mock_org_search.assert_not_called()
+
+    @patch("sbom_fetcher.services.mapper_factory.search_org_for_package")
+    @patch("sbom_fetcher.services.mappers.NPMPackageMapper.map_to_github")
+    def test_no_org_fallback_when_root_org_not_set(self, mock_npm_map, mock_org_search):
+        """Test that org search is NOT called when root_org is not set."""
+        config = Config()
+        factory = MapperFactory(config)  # No root_org
+
+        pkg = PackageDependency(
+            name="internal-pkg",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/internal-pkg@1.0.0",
+        )
+
+        # Standard mapping fails
+        mock_npm_map.return_value = None
+
+        result = factory.map_package_to_github(pkg)
+
+        assert result is False
+        assert pkg.github_repository is None
+        # Org search should NOT be called since no root_org
+        mock_org_search.assert_not_called()
+
+    @patch("sbom_fetcher.services.mapper_factory.search_org_for_package")
+    @patch("sbom_fetcher.services.mappers.NPMPackageMapper.map_to_github")
+    def test_org_fallback_also_fails(self, mock_npm_map, mock_org_search):
+        """Test behavior when both standard mapping and org fallback fail."""
+        config = Config()
+        factory = MapperFactory(config, github_token="test-token", root_org="CiscoSecurityServices")
+
+        pkg = PackageDependency(
+            name="nonexistent-pkg",
+            version="1.0.0",
+            ecosystem="npm",
+            purl="pkg:npm/nonexistent-pkg@1.0.0",
+        )
+
+        # Both fail
+        mock_npm_map.return_value = None
+        mock_org_search.return_value = None
+
+        result = factory.map_package_to_github(pkg)
+
+        assert result is False
+        assert pkg.github_repository is None
+        mock_npm_map.assert_called_once()
+        mock_org_search.assert_called_once()
+
+    @patch("sbom_fetcher.services.mapper_factory.search_org_for_package")
+    @patch("sbom_fetcher.services.mappers.PyPIPackageMapper.map_to_github")
+    def test_org_fallback_works_for_pypi_packages(self, mock_pypi_map, mock_org_search):
+        """Test that org fallback also works for PyPI packages."""
+        config = Config()
+        factory = MapperFactory(config, github_token="test-token", root_org="CiscoSecurityServices")
+
+        pkg = PackageDependency(
+            name="corona-python-sdk",
+            version="2.0.0",
+            ecosystem="pypi",
+            purl="pkg:pypi/corona-python-sdk@2.0.0",
+        )
+
+        # Standard mapping fails
+        mock_pypi_map.return_value = None
+
+        # Org search succeeds
+        repo = GitHubRepository(owner="CiscoSecurityServices", repo="corona-python-sdk")
+        mock_org_search.return_value = repo
+
+        result = factory.map_package_to_github(pkg)
+
+        assert result is True
+        assert pkg.github_repository == repo
+        mock_org_search.assert_called_once_with(
+            "corona-python-sdk", "CiscoSecurityServices", "test-token"
+        )
+
+    @patch("sbom_fetcher.services.mapper_factory.search_org_for_package")
+    def test_org_fallback_for_unsupported_ecosystem(self, mock_org_search):
+        """Test that org fallback is tried even for unsupported ecosystems."""
+        config = Config()
+        factory = MapperFactory(config, github_token="test-token", root_org="CiscoSecurityServices")
+
+        pkg = PackageDependency(
+            name="internal-go-pkg",
+            version="1.0.0",
+            ecosystem="golang",
+            purl="pkg:golang/internal-go-pkg@1.0.0",
+        )
+
+        # Org search succeeds
+        repo = GitHubRepository(owner="CiscoSecurityServices", repo="internal-go-pkg")
+        mock_org_search.return_value = repo
+
+        result = factory.map_package_to_github(pkg)
+
+        assert result is True
+        assert pkg.github_repository == repo
+        mock_org_search.assert_called_once_with(
+            "internal-go-pkg", "CiscoSecurityServices", "test-token"
+        )

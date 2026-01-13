@@ -95,7 +95,7 @@ fi
 
 # Upgrade pip to the latest version
 echo -e "\n🔄 Upgrading pip..."
-python -m pip install --upgrade pip -q || error "Failed to upgrade pip"
+python3 -m pip install --upgrade pip -q || error "Failed to upgrade pip"
 echo "✅ pip upgraded"
 
 # =============================================
@@ -128,7 +128,7 @@ section "Running Post-Installation Checks"
 
 # Verify package is importable
 echo "🔍 Verifying package installation..."
-python -c "import sbom_fetcher; print(f'✅ Package version: {sbom_fetcher.__version__}')" || error "Failed to import sbom_fetcher package"
+python3 -c "import sbom_fetcher; print(f'✅ Package version: {sbom_fetcher.__version__}')" || error "Failed to import sbom_fetcher package"
 
 # Check for keys.json
 echo -e "\n🔑 Checking for GitHub credentials..."
@@ -181,7 +181,7 @@ if [ "$1" = "--run" ]; then
     read -r GH_REPO
     
     echo -e "\n📥 Fetching SBOM for $GH_USER/$GH_REPO..."
-    python -m sbom_fetcher --gh-user "$GH_USER" --gh-repo "$GH_REPO" --debug || error "SBOM fetch failed"
+    python3 -m sbom_fetcher --gh-user "$GH_USER" --gh-repo "$GH_REPO" --debug || error "SBOM fetch failed"
     
     exit 0
 fi
@@ -197,11 +197,11 @@ echo -e "\n1️⃣  Activate the virtual environment:"
 echo "   source venv/bin/activate"
 
 echo -e "\n2️⃣  Run the SBOM fetcher:"
-echo -e "   ${GREEN}python -m sbom_fetcher --gh-user OWNER --gh-repo REPO${NC}"
+echo -e "   ${GREEN}python3 -m sbom_fetcher --gh-user OWNER --gh-repo REPO${NC}"
 echo -e "\n   Examples:"
-echo "   python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot"
-echo "   python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug"
-echo "   python -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --output-dir ./my_sboms"
+echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot"
+echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug"
+echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --output-dir ./my_sboms"
 
 echo -e "\n3️⃣  Optional: Run tests (after adapting from archive_v1/tests/):"
 echo "   pytest tests/ -v"

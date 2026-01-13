@@ -97,13 +97,14 @@ def build_session(token: str) -> requests.Session:
     return s
 
 
-def create_service(config: Config, token: str) -> SBOMFetcherService:
+def create_service(config: Config, token: str, root_org: str = None) -> SBOMFetcherService:
     """
     Create SBOMFetcherService with all dependencies injected.
 
     Args:
         config: Application configuration
         token: GitHub API token
+        root_org: GitHub org to search for internal packages
 
     Returns:
         Fully configured SBOMFetcherService
@@ -117,8 +118,8 @@ def create_service(config: Config, token: str) -> SBOMFetcherService:
     # Create GitHub client
     github_client = GitHubClient(http_client, token, config)
 
-    # Create mapper factory with GitHub token for search fallback
-    mapper_factory = MapperFactory(config, github_token=token)
+    # Create mapper factory with GitHub token for search fallback and root org
+    mapper_factory = MapperFactory(config, github_token=token, root_org=root_org)
 
     # Create repository
     repository = FilesystemSBOMRepository(config.output_dir)
@@ -170,8 +171,8 @@ def main() -> int:
         # Build session
         session = build_session(token)
 
-        # Create service
-        service = create_service(config, token)
+        # Create service with root org for internal package lookup
+        service = create_service(config, token, root_org=args.gh_user)
 
         # Run workflow
         result = service.fetch_all_sboms(args.gh_user, args.gh_repo, session)
