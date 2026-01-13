@@ -12,6 +12,7 @@ from sbom_fetcher.services.mappers import (
     NullMapper,
     PackageMapper,
     PyPIPackageMapper,
+    search_org_for_package,
 )
 
 
@@ -446,3 +447,164 @@ class TestNullMapper:
         assert mapper.map_to_github("package1") is None
         assert mapper.map_to_github("package2") is None
         assert mapper.map_to_github("package3") is None
+
+
+class TestSearchOrgForPackage:
+    """Tests for search_org_for_package function."""
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_exact_match_found(self, mock_get):
+        """Test finding package by exact repo name match."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "owner": {"login": "CiscoSecurityServices"},
+            "name": "corona-sdk",
+        }
+        mock_get.return_value = mock_response
+
+        result = search_org_for_package("corona-sdk", "CiscoSecurityServices", "test-token")
+
+        assert result is not None
+        assert result.owner == "CiscoSecurityServices"
+        assert result.repo == "corona-sdk"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_exact_match_with_underscore_variation(self, mock_get):
+        """Test finding package with underscore to hyphen conversion."""
+        # First call (exact name) fails, second call (hyphenated) succeeds
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_response_200 = Mock()
+        mock_response_200.status_code = 200
+        mock_response_200.json.return_value = {
+            "owner": {"login": "TestOrg"},
+            "name": "test-package",
+        }
+
+        mock_get.side_effect = [mock_response_404, mock_response_200]
+
+        result = search_org_for_package("test_package", "TestOrg", "test-token")
+
+        assert result is not None
+        assert result.repo == "test-package"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_exact_match_with_hyphen_variation(self, mock_get):
+        """Test finding package with hyphen to underscore conversion."""
+        # First call (exact name) fails, second call (underscored) succeeds
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_response_200 = Mock()
+        mock_response_200.status_code = 200
+        mock_response_200.json.return_value = {
+            "owner": {"login": "TestOrg"},
+            "name": "test_package",
+        }
+
+        mock_get.side_effect = [mock_response_404, mock_response_200]
+
+        result = search_org_for_package("test-package", "TestOrg", "test-token")
+
+        assert result is not None
+        assert result.repo == "test_package"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_org_search_fallback(self, mock_get):
+        """Test falling back to org search when exact match fails."""
+        # All exact matches fail (original name + underscore variation)
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        # Search returns results
+        mock_search_response = Mock()
+        mock_search_response.status_code = 200
+        mock_search_response.json.return_value = {
+            "items": [
+                {"owner": {"login": "CiscoSecurityServices"}, "name": "corona-sdk-internal"}
+            ]
+        }
+
+        # corona-sdk has hyphen, so it tries: corona-sdk, corona_sdk, then search
+        mock_get.side_effect = [mock_response_404, mock_response_404, mock_search_response]
+
+        result = search_org_for_package("corona-sdk", "CiscoSecurityServices", "test-token")
+
+        assert result is not None
+        assert result.owner == "CiscoSecurityServices"
+        assert result.repo == "corona-sdk-internal"
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_org_search_no_results(self, mock_get):
+        """Test when org search returns no results."""
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_search_response = Mock()
+        mock_search_response.status_code = 200
+        mock_search_response.json.return_value = {"items": []}
+
+        # "nonexistent" has no hyphens/underscores, so only 1 exact match + search
+        mock_get.side_effect = [mock_response_404, mock_search_response]
+
+        result = search_org_for_package("nonexistent", "TestOrg", "test-token")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_org_search_api_failure(self, mock_get):
+        """Test when org search API returns error."""
+        mock_response_404 = Mock()
+        mock_response_404.status_code = 404
+
+        mock_search_response = Mock()
+        mock_search_response.status_code = 403  # Rate limited
+
+        # "package" has no hyphens/underscores, so only 1 exact match + search
+        mock_get.side_effect = [mock_response_404, mock_search_response]
+
+        result = search_org_for_package("package", "TestOrg", "test-token")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_without_token(self, mock_get):
+        """Test search without authentication token."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {
+            "owner": {"login": "TestOrg"},
+            "name": "public-repo",
+        }
+        mock_get.return_value = mock_response
+
+        result = search_org_for_package("public-repo", "TestOrg")
+
+        assert result is not None
+        # Verify no Authorization header
+        call_args = mock_get.call_args
+        headers = call_args[1].get("headers", {})
+        assert "Authorization" not in headers
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_network_error(self, mock_get):
+        """Test handling of network errors."""
+        mock_get.side_effect = requests.RequestException("Connection failed")
+
+        result = search_org_for_package("package", "TestOrg", "test-token")
+
+        assert result is None
+
+    @patch("sbom_fetcher.services.mappers.requests.get")
+    def test_json_decode_error(self, mock_get):
+        """Test handling of JSON decode errors."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.side_effect = ValueError("Invalid JSON")
+        mock_get.return_value = mock_response
+
+        result = search_org_for_package("package", "TestOrg", "test-token")
+
+        assert result is None

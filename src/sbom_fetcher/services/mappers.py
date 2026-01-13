@@ -12,6 +12,89 @@ from ..infrastructure.config import Config
 logger = logging.getLogger(__name__)
 
 
+def search_org_for_package(
+    package_name: str,
+    org: str,
+    github_token: Optional[str] = None,
+) -> Optional[GitHubRepository]:
+    """
+    Search for a repository in a specific GitHub organization.
+
+    This is used as a fallback when registry metadata is missing for
+    internal/private packages that exist in the same org as the root repo.
+
+    Args:
+        package_name: Name of the package to search for
+        org: GitHub organization to search in
+        github_token: Optional GitHub token for authenticated requests
+
+    Returns:
+        GitHubRepository if found, None otherwise
+    """
+    try:
+        # Clean package name - remove prefixes like 'corona-' and try variations
+        search_names = [package_name]
+
+        # Add hyphenated version if underscores present
+        if "_" in package_name:
+            search_names.append(package_name.replace("_", "-"))
+
+        # Add underscored version if hyphens present
+        if "-" in package_name:
+            search_names.append(package_name.replace("-", "_"))
+
+        headers = {
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        }
+        if github_token:
+            headers["Authorization"] = f"Bearer {github_token}"
+
+        for name in search_names:
+            # Try exact repo name match first
+            url = f"https://api.github.com/repos/{org}/{name}"
+            resp = requests.get(url, headers=headers, timeout=10)
+
+            if resp.status_code == 200:
+                data = resp.json()
+                owner = data["owner"]["login"]
+                repo = data["name"]
+                logger.debug(
+                    "Found %s/%s in org %s for package %s",
+                    owner,
+                    repo,
+                    org,
+                    package_name,
+                )
+                return GitHubRepository(owner=owner, repo=repo)
+
+        # If exact match fails, search within the org
+        query = f"{package_name} in:name org:{org}"
+        url = f"https://api.github.com/search/repositories?q={query}&per_page=5"
+        resp = requests.get(url, headers=headers, timeout=10)
+
+        if resp.status_code == 200:
+            data = resp.json()
+            items = data.get("items", [])
+            if items:
+                top_result = items[0]
+                owner = top_result["owner"]["login"]
+                repo = top_result["name"]
+                logger.debug(
+                    "Org search found %s/%s for package %s",
+                    owner,
+                    repo,
+                    package_name,
+                )
+                return GitHubRepository(owner=owner, repo=repo)
+
+        return None
+
+    except Exception as e:
+        logger.debug("Error searching org %s for %s: %s", org, package_name, e)
+        return None
+
+
 def search_github_for_package(
     package_name: str, ecosystem: str, github_token: Optional[str] = None
 ) -> Optional[GitHubRepository]:
