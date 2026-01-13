@@ -435,9 +435,7 @@ class RubyGemsMapper(PackageMapper):
             logger.debug("Error mapping RubyGem package %s: %s", package_name, e)
             return None
 
-    def _extract_github_repo(
-        self, repo_url: str, package_name: str
-    ) -> Optional[GitHubRepository]:
+    def _extract_github_repo(self, repo_url: str, package_name: str) -> Optional[GitHubRepository]:
         """
         Extract GitHub owner/repo from a URL.
 
