@@ -376,6 +376,56 @@ class PyPIPackageMapper(PackageMapper):
             return None
 
 
+class GitHubActionsMapper(PackageMapper):
+    """Maps GitHub Actions to their GitHub repositories.
+
+    GitHub Actions are already in owner/repo format, so we just need to
+    extract the owner and repo from the action name.
+
+    Formats:
+        - owner/repo (e.g., docker/build-push-action)
+        - owner/repo/path (e.g., github/codeql-action/init)
+    """
+
+    def __init__(self, config: Config = None, github_token: Optional[str] = None):
+        """
+        Initialize GitHub Actions mapper.
+
+        Args:
+            config: Application configuration (unused, kept for interface consistency)
+            github_token: Optional GitHub token (unused for this mapper)
+        """
+        self._config = config
+        self._github_token = github_token
+
+    def map_to_github(self, package_name: str) -> Optional[GitHubRepository]:
+        """
+        Map GitHub Action to its GitHub repository.
+
+        Args:
+            package_name: GitHub Action name (e.g., 'docker/build-push-action')
+
+        Returns:
+            GitHubRepository or None if not valid format
+        """
+        if not package_name or "/" not in package_name:
+            logger.debug("Invalid GitHub Action format: %s", package_name)
+            return None
+
+        # Split on "/" - first two parts are owner/repo
+        parts = package_name.split("/")
+        owner = parts[0]
+        repo = parts[1]
+
+        # Validate owner and repo are non-empty
+        if not owner or not repo:
+            logger.debug("GitHub Action has empty owner or repo: %s", package_name)
+            return None
+
+        logger.debug("Mapped GitHub Action %s → %s/%s", package_name, owner, repo)
+        return GitHubRepository(owner=owner, repo=repo)
+
+
 class NullMapper(PackageMapper):
     """Null object pattern for unsupported ecosystems."""
 

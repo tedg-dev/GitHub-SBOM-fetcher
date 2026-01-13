@@ -8,6 +8,7 @@ import requests
 from sbom_fetcher.domain.models import GitHubRepository
 from sbom_fetcher.infrastructure.config import Config
 from sbom_fetcher.services.mappers import (
+    GitHubActionsMapper,
     NPMPackageMapper,
     NullMapper,
     PackageMapper,
@@ -608,3 +609,108 @@ class TestSearchOrgForPackage:
         result = search_org_for_package("package", "TestOrg", "test-token")
 
         assert result is None
+
+
+class TestGitHubActionsMapper:
+    """Tests for GitHub Actions mapper."""
+
+    @pytest.fixture
+    def mapper(self):
+        """Create GitHub Actions mapper."""
+        return GitHubActionsMapper()
+
+    def test_initialization(self):
+        """Test mapper initializes correctly."""
+        config = Config()
+        mapper = GitHubActionsMapper(config, "test-token")
+        assert mapper._config == config
+        assert mapper._github_token == "test-token"
+
+    def test_initialization_no_args(self):
+        """Test mapper initializes with no arguments."""
+        mapper = GitHubActionsMapper()
+        assert mapper._config is None
+        assert mapper._github_token is None
+
+    def test_map_simple_action(self, mapper):
+        """Test mapping simple owner/repo action."""
+        result = mapper.map_to_github("docker/build-push-action")
+
+        assert result is not None
+        assert result.owner == "docker"
+        assert result.repo == "build-push-action"
+
+    def test_map_action_with_path(self, mapper):
+        """Test mapping action with subpath (e.g., github/codeql-action/init)."""
+        result = mapper.map_to_github("github/codeql-action/init")
+
+        assert result is not None
+        assert result.owner == "github"
+        assert result.repo == "codeql-action"
+
+    def test_map_action_with_deep_path(self, mapper):
+        """Test mapping action with deep path."""
+        result = mapper.map_to_github("CiscoSecurityServices/workflows/.github/actions/get-build-credentials")
+
+        assert result is not None
+        assert result.owner == "CiscoSecurityServices"
+        assert result.repo == "workflows"
+
+    def test_map_actions_checkout(self, mapper):
+        """Test mapping actions/checkout."""
+        result = mapper.map_to_github("actions/checkout")
+
+        assert result is not None
+        assert result.owner == "actions"
+        assert result.repo == "checkout"
+
+    def test_map_no_slash(self, mapper):
+        """Test mapping action without slash returns None."""
+        result = mapper.map_to_github("invalid-action-name")
+
+        assert result is None
+
+    def test_map_empty_string(self, mapper):
+        """Test mapping empty string returns None."""
+        result = mapper.map_to_github("")
+
+        assert result is None
+
+    def test_map_none(self, mapper):
+        """Test mapping None returns None."""
+        result = mapper.map_to_github(None)
+
+        assert result is None
+
+    def test_map_single_slash_empty_parts(self, mapper):
+        """Test mapping with slash but empty parts returns None."""
+        result = mapper.map_to_github("/")
+
+        assert result is None
+
+    def test_map_empty_owner(self, mapper):
+        """Test mapping with empty owner returns None."""
+        result = mapper.map_to_github("/repo")
+
+        assert result is None
+
+    def test_map_empty_repo(self, mapper):
+        """Test mapping with empty repo returns None."""
+        result = mapper.map_to_github("owner/")
+
+        assert result is None
+
+    def test_map_various_actions(self, mapper):
+        """Test mapping various common GitHub Actions."""
+        test_cases = [
+            ("actions/setup-node", "actions", "setup-node"),
+            ("aws-actions/configure-aws-credentials", "aws-actions", "configure-aws-credentials"),
+            ("dorny/paths-filter", "dorny", "paths-filter"),
+            ("ruby/setup-ruby", "ruby", "setup-ruby"),
+        ]
+
+        for action_name, expected_owner, expected_repo in test_cases:
+            result = mapper.map_to_github(action_name)
+            assert result is not None, f"Failed for {action_name}"
+            assert result.owner == expected_owner, f"Wrong owner for {action_name}"
+            assert result.repo == expected_repo, f"Wrong repo for {action_name}"

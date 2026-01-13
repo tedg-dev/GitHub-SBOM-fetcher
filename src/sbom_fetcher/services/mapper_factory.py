@@ -6,6 +6,7 @@ from typing import Dict, Optional
 from ..domain.models import PackageDependency
 from ..infrastructure.config import Config
 from .mappers import (
+    GitHubActionsMapper,
     NPMPackageMapper,
     NullMapper,
     PackageMapper,
@@ -39,6 +40,7 @@ class MapperFactory:
         self._mappers: Dict[str, PackageMapper] = {
             "npm": NPMPackageMapper(config, github_token),
             "pypi": PyPIPackageMapper(config, github_token),
+            "githubactions": GitHubActionsMapper(config, github_token),
         }
         self._null_mapper = NullMapper()
 

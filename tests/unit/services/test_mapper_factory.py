@@ -8,6 +8,7 @@ from sbom_fetcher.domain.models import GitHubRepository, PackageDependency
 from sbom_fetcher.infrastructure.config import Config
 from sbom_fetcher.services.mapper_factory import MapperFactory
 from sbom_fetcher.services.mappers import (
+    GitHubActionsMapper,
     NPMPackageMapper,
     NullMapper,
     PyPIPackageMapper,
@@ -113,6 +114,18 @@ class TestCreateMapper:
         mapper = factory.create_mapper("maven")
 
         assert isinstance(mapper, NullMapper)
+
+    def test_create_mapper_githubactions(self, factory):
+        """Test creating mapper for githubactions ecosystem."""
+        mapper = factory.create_mapper("githubactions")
+
+        assert isinstance(mapper, GitHubActionsMapper)
+
+    def test_create_mapper_githubactions_uppercase(self, factory):
+        """Test creating mapper for GITHUBACTIONS with uppercase."""
+        mapper = factory.create_mapper("GITHUBACTIONS")
+
+        assert isinstance(mapper, GitHubActionsMapper)
 
 
 class TestMapPackageToGitHub:
