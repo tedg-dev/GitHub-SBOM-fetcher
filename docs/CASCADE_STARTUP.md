@@ -4,6 +4,28 @@
 
 This document is intended to be the first thing to open when returning to this repo in Windsurf/Cascade.
 
+---
+
+## ⚠️ FIRST ACTIONS ON EVERY STARTUP
+
+**Before doing ANY work, run the setup script:**
+```bash
+./setup_environment.sh
+```
+
+This is **MANDATORY**. The script:
+- Sets up the Python virtual environment
+- Installs all dependencies
+- Verifies the installation
+- Shows current VERSION
+
+**Critical environment notes:**
+- Use `python3`, NOT `python` (pyenv environment may not have `python` alias)
+- After setup, activate venv: `source venv/bin/activate`
+- Run tests with: `python3 -m pytest tests/ -v`
+
+---
+
 ## Purpose (what this repo/product does)
 
 SBOM Fetcher is a Python tool that:
@@ -19,10 +41,13 @@ Key limitation: GitHub’s SBOM endpoint represents the **current default branch
 
 ## Quick Start (how to run)
 
-- Run as module:
-  - `python -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account ACCOUNT [--debug]`
-- Run installed script (from `pyproject.toml`):
-  - `sbom-fetcher --gh-user OWNER --gh-repo REPO --account ACCOUNT [--debug]`
+```bash
+# Always use python3, not python
+python3 -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account ACCOUNT [--debug]
+
+# Or via installed script
+sbom-fetcher --gh-user OWNER --gh-repo REPO --account ACCOUNT [--debug]
+```
 
 ## Credentials / keys.json formats
 
@@ -213,11 +238,6 @@ Important docs:
 - `tests/TEST_STATUS.md`
 - `docs/CODE_COVERAGE_REQUIREMENTS.md`
 
-Observed state (per `tests/TEST_STATUS.md`):
-
-- 60 tests total (39 passing, 21 failing/errors)
-- Coverage reported around 29%
-
 Coverage threshold is **97%** across all configs:
 
 - `pytest.ini`: `--cov-fail-under=97`
@@ -225,12 +245,14 @@ Coverage threshold is **97%** across all configs:
 - `.github/workflows/ci.yml`: `--fail-under=97`
 - `.github/workflows/release.yml`: `--fail-under=97`
 
-## Operational rules (human process)
+## Operational rules (Cascade process)
 
 ### Rule: PR-first workflow
 
-- Do not commit directly to `main`.
-- Work on a feature branch and merge via PR.
+- **Never** commit directly to `main`.
+- Always work on a feature branch and merge via PR.
+- Cascade chooses branch names (user has delegated this).
+- Use conventional prefixes: `fix/`, `feat/`, `chore/`, `docs/`, `test/`
 
 ### Rule: Version bump workflow
 
@@ -251,6 +273,23 @@ gh run list --workflow=version-bump.yml --limit 1
 ```
 If it failed and a `version-bump/*` branch exists on origin, create and merge the PR using `gh` CLI (see above).
 
+### Rule: PR merge and branch cleanup
+
+1. Merge with squash (do NOT use `--delete-branch` flag):
+   ```bash
+   gh pr merge <PR#> --squash
+   ```
+2. Wait for version-bump workflow to complete (or handle it per above rule)
+3. Switch to main and pull:
+   ```bash
+   git checkout main && git pull --ff-only
+   ```
+4. Delete merged branches **after** confirming VERSION updated:
+   ```bash
+   git branch -d <branch-name>
+   git push origin --delete <branch-name>
+   ```
+
 ### Rule: Releases
 
 - Create an annotated tag `vX.Y.Z` on `main` to trigger release workflow.
@@ -260,17 +299,60 @@ If it failed and a `version-bump/*` branch exists on origin, create and merge th
 - Never commit `keys.json`.
 - Prefer fine-grained PATs where possible; ensure required permissions for dependency graph access.
 
-## Meta-rule (NEW): record new rules here
+---
+
+## Cascade-specific rules (learned behaviors)
+
+### Rule: Command execution
+
+- **Never run `cd` commands** — use `Cwd` parameter instead
+- **Sequential git commands** — always wait for `git add` to complete before `git commit`
+- **Avoid parallel git operations** — git commands that modify state should run sequentially
+- **Use `python3`** — never use bare `python` (may not exist in pyenv)
+
+### Rule: Naming conventions
+
+- Cascade is authorized to choose branch names without asking
+- Use descriptive, conventional branch names:
+  - `fix/descriptive-issue`
+  - `feat/new-feature`
+  - `chore/maintenance-task`
+  - `docs/update-documentation`
+  - `version-bump/X.Y.Z` (for version bumps only)
+
+### Rule: User interaction
+
+- Do not prompt user unless there is a **real choice** to be made
+- If multiple valid options exist, present them and ask
+- If there's an industry-standard approach, use it without asking
+- Proceed autonomously on routine operations (branch names, merge strategy, cleanup)
+
+### Rule: Testing before PR
+
+- Run tests before creating PRs when code changes are involved:
+  ```bash
+  source venv/bin/activate && python3 -m pytest tests/ -v --cov
+  ```
+- Coverage must meet 97% threshold
+
+---
+
+## Meta-rule: record new rules here
 
 **Any time a new rule/process requirement is introduced (CI, release, branching, coverage, security, etc.), it must be added to the “Operational rules” section of this document (or a clearly-labeled new section) in the same PR.**
 
 Rationale: this file is the persistent “startup memory” for returning to the repo.
 
-## What to open first next time
+## What to open/do first next time
 
-- `docs/CASCADE_STARTUP.md` (this file)
-- `README.md`
-- `src/sbom_fetcher/application/main.py`
-- `src/sbom_fetcher/services/sbom_service.py`
-- `.github/workflows/ci.yml` and `version-bump.yml`
+1. **Read this file** (`docs/CASCADE_STARTUP.md`)
+2. **Run setup**: `./setup_environment.sh`
+3. **Check VERSION**: `cat VERSION`
+4. **Check for pending version-bump branches**: `git fetch && git branch -r | grep version-bump`
+
+Key files for context:
+- `README.md` — user-facing documentation
+- `src/sbom_fetcher/application/main.py` — entry point and DI wiring
+- `src/sbom_fetcher/services/sbom_service.py` — core workflow orchestration
+- `.github/workflows/version-bump.yml` — understand the automation
 
