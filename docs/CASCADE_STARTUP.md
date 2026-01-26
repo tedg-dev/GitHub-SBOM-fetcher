@@ -191,8 +191,9 @@ Workflows live in `.github/workflows/`:
   - Publishes to PyPI only if repo is `tedg-dev/GitHub-SBOM-fetcher`
 
 - `version-bump.yml`
-  - Trigger: PR closed on `main` AND merged
-  - Bumps PATCH in `VERSION` and pushes to `main` as `github-actions[bot]`
+  - Trigger: PR closed on `main` AND merged (skips if branch starts with `version-bump/` or title contains `bump version`)
+  - Bumps PATCH in `VERSION`, creates branch `version-bump/X.Y.Z`, and attempts to open a PR
+  - **Note:** GITHUB_TOKEN may lack permission to create PRs; see "Cascade automation" rule below
 
 ## Versioning and releases
 
@@ -217,13 +218,12 @@ Observed state (per `tests/TEST_STATUS.md`):
 - 60 tests total (39 passing, 21 failing/errors)
 - Coverage reported around 29%
 
-Also note there are **multiple coverage thresholds** in different configs:
+Coverage threshold is **97%** across all configs:
 
-- `pytest.ini`: `--cov-fail-under=95`
-- `pyproject.toml`: `--cov-fail-under=90`
-- `.github/workflows/ci.yml` uses `coverage report --fail-under=80` in one place
-
-If you need a single authoritative standard, decide which threshold is intended and align these.
+- `pytest.ini`: `--cov-fail-under=97`
+- `pyproject.toml`: `--cov-fail-under=97`
+- `.github/workflows/ci.yml`: `--fail-under=97`
+- `.github/workflows/release.yml`: `--fail-under=97`
 
 ## Operational rules (human process)
 
@@ -234,8 +234,22 @@ If you need a single authoritative standard, decide which threshold is intended 
 
 ### Rule: Version bump workflow
 
-- PATCH bumps happen automatically on merge (via `version-bump.yml`).
+- PATCH bumps are triggered automatically on PR merge (via `version-bump.yml`).
+- The workflow creates a `version-bump/X.Y.Z` branch and attempts to open a PR.
+- If the workflow fails to create the PR (GITHUB_TOKEN permission), Cascade should create it:
+  ```bash
+  gh pr create --head version-bump/X.Y.Z --base main --title "chore: bump version to X.Y.Z" --body "Automated patch bump"
+  gh pr merge <PR#> --squash
+  ```
 - Do not manually bump PATCH unless you are intentionally overriding automation.
+
+### Rule: Cascade automation for version bumps
+
+After merging any PR to `main`, check if `version-bump.yml` succeeded:
+```bash
+gh run list --workflow=version-bump.yml --limit 1
+```
+If it failed and a `version-bump/*` branch exists on origin, create and merge the PR using `gh` CLI (see above).
 
 ### Rule: Releases
 
