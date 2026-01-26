@@ -231,7 +231,7 @@ jobs:
   notify-release:
     name: Notify Release Complete
     runs-on: ubuntu-latest
-    needs: [create-release, publish-pypi]
+    needs: [validate-tag, create-release, publish-pypi]
     if: always()
     steps:
       - name: Release Summary
