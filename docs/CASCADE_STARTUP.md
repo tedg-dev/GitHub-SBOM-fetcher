@@ -335,6 +335,13 @@ If it failed and a `version-bump/*` branch exists on origin, create and merge th
   ```
 - Coverage must meet 97% threshold
 
+### Rule: Fix pre-existing failures
+
+- **All pre-existing lint failures must be corrected** — do not leave or ignore them
+- **All pre-existing test failures must be corrected** — failing tests block CI
+- When encountering failures, fix the root cause rather than disabling or skipping
+- If a fix is non-trivial, create a dedicated PR to address it before other work
+
 ---
 
 ## Meta-rule: record new rules here
