@@ -76,7 +76,7 @@ jobs:
 
       - name: Check coverage threshold
         run: |
-          coverage report --fail-under=80
+          coverage report --fail-under=97
 
       - name: Build package
         run: python -m build

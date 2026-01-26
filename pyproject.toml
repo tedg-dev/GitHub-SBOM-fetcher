@@ -54,7 +54,7 @@ addopts = [
     "--cov=sbom_fetcher",
     "--cov-report=term-missing",
     "--cov-report=html",
-    "--cov-fail-under=90",
+    "--cov-fail-under=97",
 ]
 
 [tool.coverage.run]
