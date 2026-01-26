@@ -9,9 +9,13 @@ jobs:
   bump-version:
     name: Bump Patch Version
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: |
+      github.event.pull_request.merged == true &&
+      !startsWith(github.event.pull_request.head.ref, 'version-bump/') &&
+      !contains(github.event.pull_request.title, 'bump version')
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -47,11 +51,26 @@ jobs:
           echo "old_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
-      - name: Commit version bump
+      - name: Create pull request for version bump
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NEW_VERSION: ${{ steps.bump.outputs.new_version }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
+          BRANCH="version-bump/${NEW_VERSION}"
+          git checkout -b "$BRANCH"
           git add VERSION
-          git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
-          git push origin main
+          git commit -m "chore: bump version to ${NEW_VERSION} [skip ci]"
+          git push -u origin "$BRANCH"
+
+          gh pr create \
+            --title "chore: bump version to ${NEW_VERSION}" \
+            --body "Automated patch bump after merge of PR #${PR_NUMBER}: ${PR_TITLE}" \
+            --base main \
+            --head "$BRANCH"
+
+          gh pr edit "$BRANCH" --add-label "automerge" || true
 
       - name: Summary
         run: |
