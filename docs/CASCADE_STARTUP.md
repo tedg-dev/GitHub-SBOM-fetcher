@@ -278,22 +278,33 @@ gh run list --workflow=version-bump.yml --limit 1
 ```
 If it failed and a `version-bump/*` branch exists on origin, create and merge the PR using `gh` CLI (see above).
 
-### Rule: PR merge and branch cleanup
+### Rule: Consolidated PR workflow (minimize prompts)
 
-1. Merge with squash (do NOT use `--delete-branch` flag):
-   ```bash
-   gh pr merge <PR#> --squash
-   ```
-2. Wait for version-bump workflow to complete (or handle it per above rule)
-3. Switch to main and pull:
-   ```bash
-   git checkout main && git pull --ff-only
-   ```
-4. Delete merged branches **after** confirming VERSION updated:
-   ```bash
-   git branch -d <branch-name>
-   git push origin --delete <branch-name>
-   ```
+**For code changes (will trigger version bump):**
+```bash
+# 1. Create branch, commit, push, create PR (ONE command)
+git checkout -b <branch> && git add -A && git commit -m "<message>" && git push -u origin <branch> && gh pr create --title "<title>" --body "<body>"
+
+# 2. Merge PR
+gh pr merge <PR#> --squash
+
+# 3. After merge: pull, create version-bump PR, merge it, cleanup (ONE command)
+git checkout main && git pull --ff-only && git fetch && \
+  BUMP_BRANCH=$(git branch -r | grep 'version-bump/' | tail -1 | xargs | sed 's|origin/||') && \
+  gh pr create --head "$BUMP_BRANCH" --base main --title "chore: bump version" --body "Auto bump" && \
+  gh pr merge "$BUMP_BRANCH" --squash && \
+  git pull --ff-only && git branch -d <branch> 2>/dev/null; \
+  git push origin --delete <branch> "$BUMP_BRANCH" 2>/dev/null || true
+```
+
+**For docs-only changes (no version bump):**
+```bash
+# 1. Create branch, commit, push, create PR
+git checkout -b docs/<name> && git add -A && git commit -m "docs: <message>" && git push -u origin docs/<name> && gh pr create --title "docs: <title>" --body "<body>"
+
+# 2. Merge and cleanup
+gh pr merge <PR#> --squash && git checkout main && git pull --ff-only && git branch -d docs/<name> 2>/dev/null; git push origin --delete docs/<name> 2>/dev/null || true
+```
 
 ### Rule: Releases
 
