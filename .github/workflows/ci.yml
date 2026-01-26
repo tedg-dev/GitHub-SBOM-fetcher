@@ -104,7 +104,7 @@ jobs:
         if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.13'
         run: |
           pip install coverage
-          coverage report --fail-under=80
+          coverage report --fail-under=97
 
   security:
     name: Security Checks

@@ -137,7 +137,12 @@ if [ ! -f "keys.json" ]; then
     echo -e "\nCreate a keys.json file with the following format:"
     cat << 'EOF'
 {
-  "github_token": "your_github_token_here"
+  "accounts": [
+    {
+      "username": "your-personal-account",
+      "token": "your_github_token_here"
+    }
+  ]
 }
 EOF
     echo -e "\n💡 You can create a GitHub personal access token at:"
@@ -179,9 +184,11 @@ if [ "$1" = "--run" ]; then
     read -r GH_USER
     echo -e "${YELLOW}Enter repository name (e.g., beatBot):${NC}"
     read -r GH_REPO
+    echo -e "${YELLOW}Enter account username from keys.json (e.g., tedg-dev, tedg-cisco):${NC}"
+    read -r ACCOUNT
     
     echo -e "\n📥 Fetching SBOM for $GH_USER/$GH_REPO..."
-    python3 -m sbom_fetcher --gh-user "$GH_USER" --gh-repo "$GH_REPO" --debug || error "SBOM fetch failed"
+    python3 -m sbom_fetcher --gh-user "$GH_USER" --gh-repo "$GH_REPO" --account "$ACCOUNT" --debug || error "SBOM fetch failed"
     
     exit 0
 fi
@@ -197,11 +204,11 @@ echo -e "\n1️⃣  Activate the virtual environment:"
 echo "   source venv/bin/activate"
 
 echo -e "\n2️⃣  Run the SBOM fetcher:"
-echo -e "   ${GREEN}python3 -m sbom_fetcher --gh-user OWNER --gh-repo REPO${NC}"
+echo -e "   ${GREEN}python3 -m sbom_fetcher --gh-user OWNER --gh-repo REPO --account ACCOUNT${NC}"
 echo -e "\n   Examples:"
-echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot"
-echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --debug"
-echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --output-dir ./my_sboms"
+echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account tedg-dev"
+echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account tedg-dev --debug"
+echo "   python3 -m sbom_fetcher --gh-user tedg-dev --gh-repo beatBot --account tedg-dev --output-dir ./my_sboms"
 
 echo -e "\n3️⃣  Optional: Run tests (after adapting from archive_v1/tests/):"
 echo "   pytest tests/ -v"
