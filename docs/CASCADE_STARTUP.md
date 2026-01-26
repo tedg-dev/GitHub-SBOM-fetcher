@@ -257,6 +257,11 @@ Coverage threshold is **97%** across all configs:
 ### Rule: Version bump workflow
 
 - PATCH bumps are triggered automatically on PR merge (via `version-bump.yml`).
+- **Version bumps only occur for code changes** — documentation-only PRs do NOT bump the version.
+- The workflow skips bumping if:
+  - PR title starts with `docs:`
+  - PR has the `documentation` label
+  - PR is a version-bump PR itself
 - The workflow creates a `version-bump/X.Y.Z` branch and attempts to open a PR.
 - If the workflow fails to create the PR (GITHUB_TOKEN permission), Cascade should create it:
   ```bash
