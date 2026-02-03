@@ -678,3 +678,222 @@ class TestVersionLocationReporter:
         assert "`sbom2.json`" in content
         assert "| lodash | npm |" in content
         assert "| express | npm |" in content
+
+
+class TestGenerateVersionMappingAll:
+    """Tests for generate_version_mapping_all method."""
+
+    def test_generate_version_mapping_all_empty(self, tmp_path):
+        """Test generating version_mapping_all.json with no data."""
+        reporter = VersionLocationReporter()
+
+        filename = reporter.generate_version_mapping_all(tmp_path, "owner", "repo")
+
+        assert filename == "version_mapping_all.json"
+        assert (tmp_path / filename).exists()
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        assert data["repository"] == "owner/repo"
+        assert data["total_unique_packages"] == 0
+        assert data["packages_with_multiple_versions"] == 0
+        assert data["sboms_with_duplicate_package_instances"] == 0
+        assert data["packages"] == {}
+
+    def test_generate_version_mapping_all_with_packages(self, tmp_path):
+        """Test generating version_mapping_all.json with package data."""
+        reporter = VersionLocationReporter()
+
+        sbom = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/lodash@4.17.21"}
+                    ],
+                },
+                {
+                    "SPDXID": "SPDXRef-2",
+                    "name": "express",
+                    "versionInfo": "4.18.0",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/express@4.18.0"}
+                    ],
+                },
+            ]
+        }
+
+        reporter.analyze_sbom(sbom, "root.json")
+
+        filename = reporter.generate_version_mapping_all(tmp_path, "test-owner", "test-repo")
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        assert data["repository"] == "test-owner/test-repo"
+        assert data["total_unique_packages"] == 2
+        assert "npm:lodash" in data["packages"]
+        assert "npm:express" in data["packages"]
+
+        lodash_pkg = data["packages"]["npm:lodash"]
+        assert lodash_pkg["package_name"] == "lodash"
+        assert lodash_pkg["ecosystem"] == "npm"
+        assert lodash_pkg["version_count"] == 1
+        assert "4.17.21" in lodash_pkg["versions"]
+        assert "root.json" in lodash_pkg["versions"]["4.17.21"]["sbom_files"]
+
+    def test_generate_version_mapping_all_multiple_versions(self, tmp_path):
+        """Test version_mapping_all.json with multiple versions of same package."""
+        reporter = VersionLocationReporter()
+
+        sbom1 = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/lodash@4.17.21"}
+                    ],
+                },
+            ]
+        }
+        sbom2 = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "lodash",
+                    "versionInfo": "4.17.20",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/lodash@4.17.20"}
+                    ],
+                },
+            ]
+        }
+
+        reporter.analyze_sbom(sbom1, "sbom1.json")
+        reporter.analyze_sbom(sbom2, "sbom2.json")
+
+        filename = reporter.generate_version_mapping_all(tmp_path, "owner", "repo")
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        assert data["packages_with_multiple_versions"] == 1
+        lodash_pkg = data["packages"]["npm:lodash"]
+        assert lodash_pkg["version_count"] == 2
+        assert "4.17.20" in lodash_pkg["versions"]
+        assert "4.17.21" in lodash_pkg["versions"]
+        assert "sbom1.json" in lodash_pkg["versions"]["4.17.21"]["sbom_files"]
+        assert "sbom2.json" in lodash_pkg["versions"]["4.17.20"]["sbom_files"]
+
+    def test_generate_version_mapping_all_with_duplicates(self, tmp_path):
+        """Test version_mapping_all.json tracks SBOM duplicates count."""
+        reporter = VersionLocationReporter()
+
+        # SBOM with duplicate package instances
+        sbom = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "lodash",
+                    "versionInfo": "4.17.21",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/lodash@4.17.21"}
+                    ],
+                },
+                {
+                    "SPDXID": "SPDXRef-2",
+                    "name": "lodash",
+                    "versionInfo": "4.17.20",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/lodash@4.17.20"}
+                    ],
+                },
+            ]
+        }
+
+        reporter.analyze_sbom(sbom, "root.json")
+
+        filename = reporter.generate_version_mapping_all(tmp_path, "owner", "repo")
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        assert data["sboms_with_duplicate_package_instances"] == 1
+
+    def test_generate_version_mapping_all_version_sorting(self, tmp_path):
+        """Test that versions are sorted correctly in the output."""
+        reporter = VersionLocationReporter()
+
+        sbom1 = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "pkg",
+                    "versionInfo": "2.0.0",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/pkg@2.0.0"}
+                    ],
+                },
+            ]
+        }
+        sbom2 = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "pkg",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/pkg@1.0.0"}
+                    ],
+                },
+            ]
+        }
+        sbom3 = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "pkg",
+                    "versionInfo": "10.0.0",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/pkg@10.0.0"}
+                    ],
+                },
+            ]
+        }
+
+        reporter.analyze_sbom(sbom1, "sbom1.json")
+        reporter.analyze_sbom(sbom2, "sbom2.json")
+        reporter.analyze_sbom(sbom3, "sbom3.json")
+
+        filename = reporter.generate_version_mapping_all(tmp_path, "owner", "repo")
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        # Versions should be sorted numerically
+        versions = list(data["packages"]["npm:pkg"]["versions"].keys())
+        assert versions == ["1.0.0", "2.0.0", "10.0.0"]
+
+    def test_generate_version_mapping_all_generated_timestamp(self, tmp_path):
+        """Test that generated timestamp is included."""
+        reporter = VersionLocationReporter()
+
+        with patch("sbom_fetcher.services.reporters.datetime") as mock_dt:
+            mock_dt.now.return_value.strftime.return_value = "2025-01-15 10:30:00"
+            filename = reporter.generate_version_mapping_all(tmp_path, "owner", "repo")
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        assert data["generated"] == "2025-01-15 10:30:00"

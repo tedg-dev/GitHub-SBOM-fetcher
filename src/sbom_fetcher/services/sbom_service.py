@@ -313,6 +313,14 @@ class SBOMFetcherService:
         )
         logger.info("Generated version location report: %s", version_location_filename)
 
+        # Generate comprehensive version mapping JSON
+        version_mapping_all_filename = version_location_reporter.generate_version_mapping_all(
+            output_base,
+            owner,
+            repo,
+        )
+        logger.info("Generated version mapping all: %s", version_mapping_all_filename)
+
         # Print summary
         self._print_summary(stats, str(output_base), failed_sboms)
 

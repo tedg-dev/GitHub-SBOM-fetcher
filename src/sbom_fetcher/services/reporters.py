@@ -1,5 +1,6 @@
 """Report generation (Builder pattern)."""
 
+import json
 import logging
 from collections import defaultdict
 from datetime import datetime
@@ -353,6 +354,7 @@ class MarkdownReporter:
         md_content.append(f"- `{md_filename}` - This execution report")
         version_location_file = f"{owner}_{repo}_version_location_report.md"
         md_content.append(f"- `{version_location_file}` - Version location report")
+        md_content.append("- `version_mapping_all.json` - Comprehensive package version mapping")
         md_content.append(
             f"- `dependencies/` - Directory with {stats.sboms_downloaded} " "dependency SBOMs\n"
         )
@@ -651,6 +653,57 @@ class VersionLocationReporter:
         logger.info("Generated version location report: %s", md_filename)
 
         return md_filename
+
+    def generate_version_mapping_all(self, output_dir: Path, owner: str, repo: str) -> str:
+        """
+        Generate a comprehensive JSON file with all package versions and their locations.
+
+        Args:
+            output_dir: Output directory path
+            owner: Repository owner
+            repo: Repository name
+
+        Returns:
+            Filename of generated JSON file
+        """
+        mapping_filename = "version_mapping_all.json"
+        mapping_path = output_dir / mapping_filename
+
+        exec_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        multi_version_packages = self.get_packages_with_multiple_versions()
+        sbom_duplicates = self.get_sbom_duplicates()
+
+        packages: Dict[str, Any] = {}
+        for pkg_key, pkg_map in sorted(self._package_map.items()):
+            versions: Dict[str, Any] = {}
+            for version, version_loc in sorted(
+                pkg_map.versions.items(),
+                key=lambda x: self._version_sort_key(x[0]),
+            ):
+                versions[version] = {"sbom_files": sorted(version_loc.sbom_files)}
+
+            packages[pkg_key] = {
+                "package_name": pkg_map.package_name,
+                "ecosystem": pkg_map.ecosystem,
+                "version_count": pkg_map.version_count,
+                "versions": versions,
+            }
+
+        mapping_all: Dict[str, Any] = {
+            "repository": f"{owner}/{repo}",
+            "generated": exec_date,
+            "total_unique_packages": len(self._package_map),
+            "packages_with_multiple_versions": len(multi_version_packages),
+            "sboms_with_duplicate_package_instances": len(sbom_duplicates),
+            "packages": packages,
+        }
+
+        with open(mapping_path, "w", encoding="utf-8") as f:
+            json.dump(mapping_all, f, indent=2)
+
+        logger.info("Generated version mapping all: %s", mapping_filename)
+
+        return mapping_filename
 
     def _version_sort_key(self, version: str) -> Tuple[int, ...]:
         """
