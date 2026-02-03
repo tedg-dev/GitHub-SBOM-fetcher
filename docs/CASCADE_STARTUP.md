@@ -360,6 +360,13 @@ gh pr merge <PR#> --squash && git checkout main && git pull --ff-only && git bra
   ```
 - Coverage must meet 97% threshold
 
+### Rule: Branch work requires explicit user approval to merge
+
+- **DO NOT create a PR or merge to main/master unless the user explicitly asks**
+- When working on a feature branch, keep changes on that branch until user approves
+- The user may want to review, test, or discard the branch work
+- Only proceed with PR creation and merge when the user gives explicit instruction
+
 ### Rule: Fix pre-existing failures
 
 - **All pre-existing lint failures must be corrected** — do not leave or ignore them
