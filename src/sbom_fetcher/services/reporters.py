@@ -351,6 +351,8 @@ class MarkdownReporter:
         md_content.append(f"- `{root_file}` - Root repository SBOM")
         md_content.append("- `version_mapping.json` - Version-to-SBOM mapping")
         md_content.append(f"- `{md_filename}` - This execution report")
+        version_location_file = f"{owner}_{repo}_version_location_report.md"
+        md_content.append(f"- `{version_location_file}` - Version location report")
         md_content.append(
             f"- `dependencies/` - Directory with {stats.sboms_downloaded} " "dependency SBOMs\n"
         )
