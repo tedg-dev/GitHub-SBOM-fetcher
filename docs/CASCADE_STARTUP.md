@@ -326,6 +326,15 @@ gh pr merge <PR#> --squash && git checkout main && git pull --ff-only && git bra
 - **Avoid parallel git operations** — git commands that modify state should run sequentially
 - **Use `python3`** — never use bare `python` (may not exist in pyenv)
 
+### Rule: No parallel execution that causes race conditions
+
+- **DO NOT execute parallel operations that could cause race conditions or merge conflicts**
+- Examples of operations that must be sequential:
+  - Multiple edits to the same file
+  - Git operations (add, commit, push)
+  - Operations where one depends on the result of another
+- Parallel execution is acceptable for independent read-only operations (e.g., reading multiple files)
+
 ### Rule: Naming conventions
 
 - Cascade is authorized to choose branch names without asking

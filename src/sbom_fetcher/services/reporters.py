@@ -1,10 +1,21 @@
 """Report generation (Builder pattern)."""
 
+import logging
+from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
 
-from ..domain.models import ErrorType, FailureInfo, FetcherStats, PackageDependency
+from ..domain.models import (
+    ErrorType,
+    FailureInfo,
+    FetcherStats,
+    PackageDependency,
+    PackageVersionMap,
+    SBOMDuplicateEntry,
+)
+
+logger = logging.getLogger(__name__)
 
 
 class MarkdownReporter:
@@ -354,3 +365,302 @@ class MarkdownReporter:
             f.write("\n".join(md_content))
 
         return md_filename
+
+
+class VersionLocationReporter:
+    """Generates version location reports showing where each package version appears."""
+
+    def __init__(self) -> None:
+        """Initialize the reporter."""
+        self._package_map: Dict[str, PackageVersionMap] = {}
+        self._sbom_duplicates: List[SBOMDuplicateEntry] = []
+
+    def analyze_sbom(self, sbom_data: Dict[str, Any], sbom_filename: str) -> None:
+        """
+        Analyze an SBOM and track package versions.
+
+        Args:
+            sbom_data: SBOM JSON data (can be wrapped or pure SPDX format)
+            sbom_filename: Name of the SBOM file for tracking
+        """
+        packages = self._extract_packages_from_sbom(sbom_data)
+
+        # Track packages within this single SBOM to detect duplicates
+        sbom_package_versions: Dict[Tuple[str, str], List[str]] = defaultdict(list)
+
+        for pkg_name, version, ecosystem, _ in packages:
+            # Create a unique key combining name and ecosystem
+            pkg_key = f"{ecosystem}:{pkg_name}"
+
+            # Track for cross-SBOM version mapping
+            if pkg_key not in self._package_map:
+                self._package_map[pkg_key] = PackageVersionMap(
+                    package_name=pkg_name,
+                    ecosystem=ecosystem,
+                )
+            self._package_map[pkg_key].add_version(version, sbom_filename)
+
+            # Track for within-SBOM duplicate detection
+            sbom_package_versions[(pkg_name, ecosystem)].append(version)
+
+        # Check for duplicates within this SBOM
+        for (pkg_name, ecosystem), versions in sbom_package_versions.items():
+            if len(versions) > 1:
+                self._sbom_duplicates.append(
+                    SBOMDuplicateEntry(
+                        sbom_file=sbom_filename,
+                        package_name=pkg_name,
+                        ecosystem=ecosystem,
+                        versions=sorted(set(versions)),
+                    )
+                )
+
+    def _extract_packages_from_sbom(
+        self, sbom_data: Dict[str, Any]
+    ) -> List[Tuple[str, str, str, str]]:
+        """
+        Extract package info from SBOM data.
+
+        Args:
+            sbom_data: SBOM JSON data
+
+        Returns:
+            List of tuples: (name, version, ecosystem, purl)
+        """
+        packages = []
+
+        # Handle both wrapped format (GitHub API) and pure SPDX format
+        if "sbom" in sbom_data and "packages" in sbom_data["sbom"]:
+            package_list = sbom_data["sbom"]["packages"]
+        elif "packages" in sbom_data:
+            package_list = sbom_data["packages"]
+        else:
+            return packages
+
+        for pkg in package_list:
+            if pkg.get("SPDXID") == "SPDXRef-DOCUMENT":
+                continue
+
+            name = pkg.get("name", "")
+            version = pkg.get("versionInfo", "")
+
+            # Extract PURL for ecosystem info
+            purl = ""
+            external_refs = pkg.get("externalRefs", [])
+            for ref in external_refs:
+                if ref.get("referenceType") == "purl":
+                    purl = ref.get("referenceLocator", "")
+                    break
+
+            if not purl or not name:
+                continue
+
+            # Parse ecosystem from PURL
+            ecosystem = self._parse_ecosystem_from_purl(purl)
+
+            packages.append((name, version, ecosystem, purl))
+
+        return packages
+
+    def _parse_ecosystem_from_purl(self, purl: str) -> str:
+        """Extract ecosystem from a PURL string."""
+        if not purl or not purl.startswith("pkg:"):
+            return "unknown"
+
+        purl = purl[4:]  # Remove pkg: prefix
+        parts = purl.split("/", 1)
+        return parts[0] if parts else "unknown"
+
+    def get_packages_with_multiple_versions(self) -> List[PackageVersionMap]:
+        """Get all packages that have multiple versions across SBOMs."""
+        return [
+            pkg_map
+            for pkg_map in self._package_map.values()
+            if pkg_map.has_multiple_versions
+        ]
+
+    def get_sbom_duplicates(self) -> List[SBOMDuplicateEntry]:
+        """Get all cases where a single SBOM has multiple instances of a package."""
+        return self._sbom_duplicates
+
+    def generate(
+        self,
+        output_dir: Path,
+        owner: str,
+        repo: str,
+    ) -> str:
+        """
+        Generate the version location report.
+
+        Args:
+            output_dir: Output directory path
+            owner: Repository owner
+            repo: Repository name
+
+        Returns:
+            Filename of generated report
+        """
+        md_filename = f"{owner}_{repo}_version_location_report.md"
+        md_path = output_dir / md_filename
+
+        md_content = []
+
+        # Header
+        md_content.append("# Version Location Report\n")
+
+        # Metadata
+        exec_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        md_content.append(f"**Repository:** `{owner}/{repo}`  ")
+        md_content.append(f"**Generated:** {exec_date}  ")
+        md_content.append(f"**Output Directory:** `{output_dir}`\n")
+
+        # Overview
+        multi_version_packages = self.get_packages_with_multiple_versions()
+        sbom_duplicates = self.get_sbom_duplicates()
+
+        md_content.append("## Overview\n")
+        md_content.append(
+            f"- **Packages with multiple versions:** {len(multi_version_packages)}"
+        )
+        md_content.append(
+            f"- **SBOMs with duplicate package instances:** {len(sbom_duplicates)}"
+        )
+        md_content.append(
+            f"- **Total unique packages tracked:** {len(self._package_map)}\n"
+        )
+
+        # Explanation
+        md_content.append("### About This Report\n")
+        md_content.append(
+            "This report identifies packages that appear with multiple versions "
+            "across the collected SBOMs. For each package, it shows exactly which "
+            "SBOM file(s) contain each version.\n"
+        )
+        md_content.append(
+            "> **Note:** A single SBOM may contain multiple instances of the same "
+            "package with different versions (e.g., transitive dependencies). "
+            "These are highlighted in the 'SBOM Internal Duplicates' section.\n"
+        )
+
+        # Packages with Multiple Versions Section
+        if multi_version_packages:
+            md_content.append("## Packages with Multiple Versions\n")
+
+            # Sort by number of versions (most to least)
+            sorted_packages = sorted(
+                multi_version_packages,
+                key=lambda x: x.version_count,
+                reverse=True,
+            )
+
+            for pkg_map in sorted_packages:
+                md_content.append(f"### {pkg_map.package_name}\n")
+                md_content.append(f"- **Ecosystem:** {pkg_map.ecosystem}")
+                md_content.append(f"- **Distinct Versions:** {pkg_map.version_count}\n")
+
+                md_content.append("| Version | Found In |")
+                md_content.append("|---------|----------|")
+
+                # Sort versions (attempt semver-like sorting)
+                sorted_versions = sorted(
+                    pkg_map.versions.items(),
+                    key=lambda x: self._version_sort_key(x[0]),
+                )
+
+                for version, version_loc in sorted_versions:
+                    sbom_files = ", ".join(
+                        f"`{f}`" for f in sorted(version_loc.sbom_files)
+                    )
+                    md_content.append(f"| {version} | {sbom_files} |")
+
+                md_content.append("")
+        else:
+            md_content.append("## Packages with Multiple Versions\n")
+            md_content.append(
+                "*No packages with multiple versions were found across the SBOMs.*\n"
+            )
+
+        # SBOM Internal Duplicates Section
+        md_content.append("## SBOM Internal Duplicates\n")
+        md_content.append(
+            "These are cases where a single SBOM contains multiple instances "
+            "of the same package (potentially with different versions).\n"
+        )
+
+        if sbom_duplicates:
+            # Group by SBOM file
+            duplicates_by_sbom: Dict[str, List[SBOMDuplicateEntry]] = defaultdict(list)
+            for dup in sbom_duplicates:
+                duplicates_by_sbom[dup.sbom_file].append(dup)
+
+            for sbom_file, dups in sorted(duplicates_by_sbom.items()):
+                md_content.append(f"### `{sbom_file}`\n")
+                md_content.append(f"**Packages with multiple instances:** {len(dups)}\n")
+
+                md_content.append("| Package | Ecosystem | Versions |")
+                md_content.append("|---------|-----------|----------|")
+
+                for dup in sorted(dups, key=lambda x: x.package_name):
+                    versions_str = ", ".join(dup.versions)
+                    md_content.append(
+                        f"| {dup.package_name} | {dup.ecosystem} | {versions_str} |"
+                    )
+
+                md_content.append("")
+        else:
+            md_content.append(
+                "*No SBOMs contain multiple instances of the same package.*\n"
+            )
+
+        # Summary Statistics
+        md_content.append("## Summary Statistics\n")
+
+        # Count total versions
+        total_version_instances = sum(
+            len(pkg_map.versions) for pkg_map in self._package_map.values()
+        )
+
+        # Count SBOMs per version
+        all_sbom_files: set = set()
+        for pkg_map in self._package_map.values():
+            for version_loc in pkg_map.versions.values():
+                all_sbom_files.update(version_loc.sbom_files)
+
+        md_content.append(f"- **Total SBOMs analyzed:** {len(all_sbom_files)}")
+        md_content.append(f"- **Total unique packages:** {len(self._package_map)}")
+        md_content.append(f"- **Total package-version combinations:** {total_version_instances}")
+        md_content.append(
+            f"- **Packages with version conflicts:** {len(multi_version_packages)}"
+        )
+        md_content.append(
+            f"- **SBOMs with internal duplicates:** "
+            f"{len(set(d.sbom_file for d in sbom_duplicates))}\n"
+        )
+
+        # Footer
+        md_content.append("---\n")
+        md_content.append("*Generated by GitHub SBOM API Fetcher*  ")
+        md_content.append("*For more information, see README.md*")
+
+        # Write to file
+        with open(md_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(md_content))
+
+        logger.info("Generated version location report: %s", md_filename)
+
+        return md_filename
+
+    def _version_sort_key(self, version: str) -> Tuple[int, ...]:
+        """
+        Generate a sort key for version strings.
+
+        Attempts to parse as semver, falls back to string comparison.
+        """
+        parts = []
+        for part in version.replace("-", ".").split("."):
+            try:
+                parts.append(int(part))
+            except ValueError:
+                # For non-numeric parts, use a high number to sort them last
+                parts.append(999999)
+        return tuple(parts) if parts else (0,)

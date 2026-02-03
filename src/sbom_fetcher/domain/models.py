@@ -104,6 +104,60 @@ class FailureInfo:
 
 
 @dataclass
+class VersionLocation:
+    """Tracks where a specific package version appears across SBOMs."""
+
+    package_name: str
+    version: str
+    ecosystem: str
+    sbom_files: List[str] = field(default_factory=list)
+
+    def add_location(self, sbom_file: str) -> None:
+        """Add an SBOM file where this version was found."""
+        if sbom_file not in self.sbom_files:
+            self.sbom_files.append(sbom_file)
+
+
+@dataclass
+class PackageVersionMap:
+    """Maps a package to all its versions and their locations."""
+
+    package_name: str
+    ecosystem: str
+    versions: Dict[str, VersionLocation] = field(default_factory=dict)
+
+    def add_version(self, version: str, sbom_file: str) -> None:
+        """Add or update a version location."""
+        if version not in self.versions:
+            self.versions[version] = VersionLocation(
+                package_name=self.package_name,
+                version=version,
+                ecosystem=self.ecosystem,
+            )
+        self.versions[version].add_location(sbom_file)
+
+    @property
+    def has_multiple_versions(self) -> bool:
+        """Check if this package has multiple versions."""
+        return len(self.versions) > 1
+
+    @property
+    def version_count(self) -> int:
+        """Get the number of distinct versions."""
+        return len(self.versions)
+
+
+@dataclass
+class SBOMDuplicateEntry:
+    """Tracks when a single SBOM has multiple instances of the same package."""
+
+    sbom_file: str
+    package_name: str
+    ecosystem: str
+    versions: List[str] = field(default_factory=list)
+
+
+@dataclass
 class FetcherResult:
     """Result of SBOM fetching operation."""
 

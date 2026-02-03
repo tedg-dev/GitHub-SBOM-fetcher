@@ -16,7 +16,7 @@ from ..infrastructure.filesystem import SBOMRepository
 from .github_client import GitHubClient
 from .mapper_factory import MapperFactory
 from .parsers import SBOMParser
-from .reporters import MarkdownReporter
+from .reporters import MarkdownReporter, VersionLocationReporter
 
 logger = logging.getLogger(__name__)
 
@@ -116,7 +116,11 @@ class SBOMFetcherService:
             )
 
         # Save root SBOM
-        save_root_sbom(sbom_data, str(output_base), owner, repo)
+        root_sbom_filename = save_root_sbom(sbom_data, str(output_base), owner, repo)
+
+        # Initialize version location reporter and analyze root SBOM
+        version_location_reporter = VersionLocationReporter()
+        version_location_reporter.analyze_sbom(sbom_data, root_sbom_filename)
 
         # Count root SBOM components
         root_component_count = count_sbom_components(sbom_data)
@@ -228,6 +232,8 @@ class SBOMFetcherService:
                         with open(sbom_path, "r") as f:
                             dep_sbom_data = json.load(f)
                             component_count = count_sbom_components(dep_sbom_data)
+                            # Analyze dependency SBOM for version location report
+                            version_location_reporter.analyze_sbom(dep_sbom_data, sbom_file)
                 except (json.JSONDecodeError, OSError, TypeError, AttributeError) as e:
                     logger.debug(f"Could not count components for {repo_key}: {e}")
                     component_count = 0
@@ -299,6 +305,14 @@ class SBOMFetcherService:
         )
         logger.info("Generated execution report: %s", md_filename)
 
+        # Generate version location report
+        version_location_filename = version_location_reporter.generate(
+            output_base,
+            owner,
+            repo,
+        )
+        logger.info("Generated version location report: %s", version_location_filename)
+
         # Print summary
         self._print_summary(stats, str(output_base), failed_sboms)
 
@@ -369,8 +383,12 @@ class SBOMFetcherService:
                     logger.info("")
 
 
-def save_root_sbom(sbom_data: Dict[str, Any], output_dir: str, owner: str, repo: str) -> None:
-    """Save the root repository's SBOM (preserves original v1 naming)."""
+def save_root_sbom(sbom_data: Dict[str, Any], output_dir: str, owner: str, repo: str) -> str:
+    """Save the root repository's SBOM (preserves original v1 naming).
+
+    Returns:
+        The filename of the saved SBOM.
+    """
     filename = f"{owner}_{repo}_root.json"
     filepath = os.path.join(output_dir, filename)
 
@@ -378,3 +396,4 @@ def save_root_sbom(sbom_data: Dict[str, Any], output_dir: str, owner: str, repo:
         json.dump(sbom_data, f, indent=2)
 
     logger.info("Saved root SBOM: %s", filename)
+    return filename
