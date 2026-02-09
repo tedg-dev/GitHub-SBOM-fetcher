@@ -697,9 +697,9 @@ class TestGenerateVersionMappingAll:
             data = json.load(f)
 
         assert data["repository"] == "owner/repo"
-        assert data["total_unique_packages"] == 0
-        assert data["packages_with_multiple_versions"] == 0
-        assert data["sboms_with_duplicate_package_instances"] == 0
+        assert data["summary"]["total_unique_packages"] == 0
+        assert data["summary"]["packages_with_multiple_versions"] == 0
+        assert data["summary"]["sboms_with_duplicate_package_instances"] == 0
         assert data["packages"] == {}
 
     def test_generate_version_mapping_all_with_packages(self, tmp_path):
@@ -736,16 +736,14 @@ class TestGenerateVersionMappingAll:
             data = json.load(f)
 
         assert data["repository"] == "test-owner/test-repo"
-        assert data["total_unique_packages"] == 2
-        assert "npm:lodash" in data["packages"]
-        assert "npm:express" in data["packages"]
+        assert data["summary"]["total_unique_packages"] == 2
+        assert "lodash" in data["packages"]
+        assert "express" in data["packages"]
 
-        lodash_pkg = data["packages"]["npm:lodash"]
-        assert lodash_pkg["package_name"] == "lodash"
+        lodash_pkg = data["packages"]["lodash"]
         assert lodash_pkg["ecosystem"] == "npm"
-        assert lodash_pkg["version_count"] == 1
         assert "4.17.21" in lodash_pkg["versions"]
-        assert "root.json" in lodash_pkg["versions"]["4.17.21"]["sbom_files"]
+        assert "root.json" in lodash_pkg["versions"]["4.17.21"]
 
     def test_generate_version_mapping_all_multiple_versions(self, tmp_path):
         """Test version_mapping_all.json with multiple versions of same package."""
@@ -785,13 +783,13 @@ class TestGenerateVersionMappingAll:
         with open(tmp_path / filename) as f:
             data = json.load(f)
 
-        assert data["packages_with_multiple_versions"] == 1
-        lodash_pkg = data["packages"]["npm:lodash"]
-        assert lodash_pkg["version_count"] == 2
+        assert data["summary"]["packages_with_multiple_versions"] == 1
+        lodash_pkg = data["packages"]["lodash"]
+        assert len(lodash_pkg["versions"]) == 2
         assert "4.17.20" in lodash_pkg["versions"]
         assert "4.17.21" in lodash_pkg["versions"]
-        assert "sbom1.json" in lodash_pkg["versions"]["4.17.21"]["sbom_files"]
-        assert "sbom2.json" in lodash_pkg["versions"]["4.17.20"]["sbom_files"]
+        assert "sbom1.json" in lodash_pkg["versions"]["4.17.21"]
+        assert "sbom2.json" in lodash_pkg["versions"]["4.17.20"]
 
     def test_generate_version_mapping_all_with_duplicates(self, tmp_path):
         """Test version_mapping_all.json tracks SBOM duplicates count."""
@@ -827,7 +825,7 @@ class TestGenerateVersionMappingAll:
         with open(tmp_path / filename) as f:
             data = json.load(f)
 
-        assert data["sboms_with_duplicate_package_instances"] == 1
+        assert data["summary"]["sboms_with_duplicate_package_instances"] == 1
 
     def test_generate_version_mapping_all_version_sorting(self, tmp_path):
         """Test that versions are sorted correctly in the output."""
@@ -881,7 +879,7 @@ class TestGenerateVersionMappingAll:
             data = json.load(f)
 
         # Versions should be sorted numerically
-        versions = list(data["packages"]["npm:pkg"]["versions"].keys())
+        versions = list(data["packages"]["pkg"]["versions"].keys())
         assert versions == ["1.0.0", "2.0.0", "10.0.0"]
 
     def test_generate_version_mapping_all_generated_timestamp(self, tmp_path):
@@ -897,3 +895,43 @@ class TestGenerateVersionMappingAll:
             data = json.load(f)
 
         assert data["generated"] == "2025-01-15 10:30:00"
+
+    def test_generate_version_mapping_all_ecosystem_collision(self, tmp_path):
+        """Test that packages with same name in different ecosystems are disambiguated."""
+        reporter = VersionLocationReporter()
+
+        sbom = {
+            "packages": [
+                {
+                    "SPDXID": "SPDXRef-1",
+                    "name": "requests",
+                    "versionInfo": "2.28.0",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:pypi/requests@2.28.0"}
+                    ],
+                },
+                {
+                    "SPDXID": "SPDXRef-2",
+                    "name": "requests",
+                    "versionInfo": "1.0.0",
+                    "externalRefs": [
+                        {"referenceType": "purl", "referenceLocator": "pkg:npm/requests@1.0.0"}
+                    ],
+                },
+            ]
+        }
+
+        reporter.analyze_sbom(sbom, "root.json")
+
+        filename = reporter.generate_version_mapping_all(tmp_path, "owner", "repo")
+
+        import json
+        with open(tmp_path / filename) as f:
+            data = json.load(f)
+
+        # One should be "requests", other should be "requests (npm)" or similar
+        assert data["summary"]["total_unique_packages"] == 2
+        pkg_names = list(data["packages"].keys())
+        assert len(pkg_names) == 2
+        # Both should contain "requests"
+        assert all("requests" in name for name in pkg_names)

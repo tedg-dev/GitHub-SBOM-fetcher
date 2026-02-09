@@ -658,6 +658,11 @@ class VersionLocationReporter:
         """
         Generate a comprehensive JSON file with all package versions and their locations.
 
+        Format matches version_mapping.json style:
+        - Keyed by package name
+        - Each package shows ecosystem and versions
+        - Each version maps to list of SBOM files containing it
+
         Args:
             output_dir: Output directory path
             owner: Repository owner
@@ -675,26 +680,35 @@ class VersionLocationReporter:
 
         packages: Dict[str, Any] = {}
         for pkg_key, pkg_map in sorted(self._package_map.items()):
-            versions: Dict[str, Any] = {}
+            # Use package_name as key (not ecosystem:package_name)
+            pkg_name = pkg_map.package_name
+
+            versions: Dict[str, List[str]] = {}
             for version, version_loc in sorted(
                 pkg_map.versions.items(),
                 key=lambda x: self._version_sort_key(x[0]),
             ):
-                versions[version] = {"sbom_files": sorted(version_loc.sbom_files)}
+                # Direct list of SBOM files (not nested object)
+                versions[version] = sorted(version_loc.sbom_files)
 
-            packages[pkg_key] = {
-                "package_name": pkg_map.package_name,
+            # Handle potential name collisions across ecosystems
+            if pkg_name in packages:
+                # Append ecosystem to disambiguate
+                pkg_name = f"{pkg_map.package_name} ({pkg_map.ecosystem})"
+
+            packages[pkg_name] = {
                 "ecosystem": pkg_map.ecosystem,
-                "version_count": pkg_map.version_count,
                 "versions": versions,
             }
 
         mapping_all: Dict[str, Any] = {
             "repository": f"{owner}/{repo}",
             "generated": exec_date,
-            "total_unique_packages": len(self._package_map),
-            "packages_with_multiple_versions": len(multi_version_packages),
-            "sboms_with_duplicate_package_instances": len(sbom_duplicates),
+            "summary": {
+                "total_unique_packages": len(self._package_map),
+                "packages_with_multiple_versions": len(multi_version_packages),
+                "sboms_with_duplicate_package_instances": len(sbom_duplicates),
+            },
             "packages": packages,
         }
 
